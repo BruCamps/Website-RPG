@@ -170,6 +170,7 @@ nav {
     top: 0;
 }
 
+/* Estilo da Propriedade da Animação do Scroll */
 .window-scroll {
     background-image: linear-gradient(#680911e5, rgba(58, 3, 3, 0.948)), url('/images/aaa.jpg');
     background-position: bottom;
