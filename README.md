@@ -9,7 +9,7 @@
 
 ##
    
-<h3>Créditos • Staff</h3>
+<h3>Créditos</h3>
 <br>
 
 > O Staff é o trio que trabalha em conjunto para tornar o RPG ainda melhor para os jogadores e os espectadores de OC.
