@@ -1,7 +1,7 @@
 
 <h2>Documentação</h2>
 
-<h3>💻 | Website</h3>
+<h3>💻 | Site</h3>
 
 > Uma plataforma feita para os jogadores do universo de OC.
 
