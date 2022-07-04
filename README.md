@@ -1,7 +1,7 @@
 <h3>Website</h3>
 <br>
 
-> Essa plataforma é focada em jogo de RPG, desde a construção de fichas até girar dados. Ela também permite que o jogador adicione itens ao inventário, rode o dano das armas e altere informações do personagem de forma que o Mestre esteja monitorando. <br> Fora isso, o site dispõe de um layout responsivo e oferece um conteúdo exclusivo voltado para o universo de OC.
+> Uma plataforma feita para quem acompanha o universo de OC como um dos personagens dentro do RPG. O usuário pode girar dados, alterar informações na ficha e até mesmo adicionar itens ao inventário dentro do próprio site. 
 
 ##
 
