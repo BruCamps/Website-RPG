@@ -13,7 +13,9 @@ O site disponibiliza dados, fichas individuais e um inventário. Fora isso, há 
 <h3>História</h3>
 <br>
 
-> Odisseia Carmesim, na verdade, é a saga que dá continuidade a Bloody Crown (Coroa Sangrenta)...
+> A Continuação de uma outra Saga.
+
+...
 
 ##
    
