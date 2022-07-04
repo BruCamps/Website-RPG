@@ -5,7 +5,7 @@
 
 > Uma plataforma feita para os jogadores do universo de OC.
 
-``O site disponibiliza dados, fichas individuais e um inventário. Fora isso, há diversos conteúdos relacionados ao RPG.`` 
+O site disponibiliza ``dados``, ``fichas individuais`` e um ``inventário``. Fora isso, há ``diversos conteúdos`` relacionados ao RPG. 
 
 ##
 
@@ -16,7 +16,7 @@
 
 > A Continuação de uma outra Saga.
 
-``...``
+...
 
 ##
    
@@ -24,7 +24,7 @@
 
 > Um trio de talentosos.
   
-``Um grupo disposto a tornar o RPG melhor para todos.``
+Um grupo disposto a tornar o RPG melhor para todos.
 
 ##
 
