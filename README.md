@@ -22,7 +22,7 @@ O site disponibiliza dados, fichas individuais e um inventário. Fora isso, há 
 
 > Um trio de talentosos.
   
-No Staff, os integrantes trabalham em conjunto para tornar as sessões mais atrativas.
+Um grupo disposto a tornar o RPG melhor para todos.
 
 ##
 
