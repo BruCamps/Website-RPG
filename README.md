@@ -1,5 +1,7 @@
+
+<h2>Documentação</h2>
+
 <h3>Website</h3>
-<br>
 
 > Uma plataforma feita para os jogadores do universo de OC.
 
@@ -11,7 +13,6 @@ O site disponibiliza dados, fichas individuais e um inventário. Fora isso, há 
 
 
 <h3>História</h3>
-<br>
 
 > A Continuação de uma outra Saga.
 
@@ -20,7 +21,6 @@ O site disponibiliza dados, fichas individuais e um inventário. Fora isso, há 
 ##
    
 <h3>Staff</h3>
-<br>
 
 > Um trio de talentosos.
   
