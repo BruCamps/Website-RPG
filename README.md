@@ -5,7 +5,7 @@
 
 > Uma plataforma feita para os jogadores do universo de OC.
 
-O site disponibiliza ``dados``, ``fichas individuais`` e um ``inventário``. Fora isso, há diversos conteúdos relacionados ao RPG. 
+O site disponibiliza **dados**, **fichas individuais** e um **inventário**. Fora isso, há diversos conteúdos relacionados ao RPG. 
 
 ##
 
