@@ -20,7 +20,9 @@ O site disponibiliza dados, fichas individuais e um inventário. Fora isso, há 
 <h3>Staff</h3>
 <br>
 
-> O trio que trabalha em conjunto para tornar o RPG ainda melhor para os jogadores e os espectadores de OC.
+> Um trio de talentosos.
+  
+No Staff, os integrantes trabalham em conjunto para tornar as sessões mais atrativas.
 
 ##
 
