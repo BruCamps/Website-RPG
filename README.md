@@ -1,9 +1,9 @@
 <h3>Website</h3>
 <br>
 
-> Uma plataforma feita para quem acompanha o universo de OC como um jogador.
+> Uma plataforma feita para os jogadores do universo de OC.
 
-O site disponibiliza dados para rodar ações ou dano, fichas individuais e um inventário. Fora isso, há diversos conteúdos relacionados ao RPG. 
+O site disponibiliza dados, fichas individuais e um inventário. Fora isso, há diversos conteúdos relacionados ao RPG. 
 
 ##
 
