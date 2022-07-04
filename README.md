@@ -1,7 +1,7 @@
 
 <h2>Documentação</h2>
 
-<h3>Website</h3>
+<h3>💻 | Website</h3>
 
 > Uma plataforma feita para os jogadores do universo de OC.
 
@@ -12,7 +12,7 @@ O site disponibiliza **dados**, **fichas individuais** e um **inventário**. For
 <img src="https://cdn.discordapp.com/attachments/925439012397809694/993289742609301634/Layout_PC.png" />
 
 
-<h3>História</h3>
+<h3>📕 | História</h3>
 
 > A Continuação de uma outra Saga.
 
@@ -20,7 +20,7 @@ O site disponibiliza **dados**, **fichas individuais** e um **inventário**. For
 
 ##
    
-<h3>Staff</h3>
+<h3>👥 | Staff</h3>
 
 > Um trio de talentosos.
   
