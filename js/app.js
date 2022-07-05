@@ -161,3 +161,31 @@
 
         });
     });
+
+    // Arquivo de Transição
+
+    function done() { 
+        document.getElementById("popup").style.display = "none";
+        var password = document.getElementById("pass").value;
+        if (password === "pericias"){
+            window.location.assign("../html/pericias.html");
+        }
+
+        if (password === "magias"){
+            window.location.assign("../html/magias.html");
+        }
+
+        if (password === "inventario"){
+            window.location.assign("../html/inventario.html");
+        }
+
+        if (password === "combate"){
+            window.location.assign("../html/combate.html");
+        }
+    
+        //DO STUFF WITH PASSWORD HERE
+    };
+    
+    function showPopup() {
+        document.getElementById("popup").style.display = "block";
+    }
