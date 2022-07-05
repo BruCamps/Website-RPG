@@ -175,7 +175,7 @@
                 </a>
 
                 <!-- Item 3 -->
-                <a class="item current-item">
+                <a class="item current-item d2">
 
                     <article class="g d2">
 
@@ -378,13 +378,15 @@
     <!-- -------------------------------------------------------------------------------------- -->
     <!-- Pop-Up de Senhas -->
 
-    <div id="modal-senhas" class="modal-container">
+    <div id="modal-senhas" class="modal-c">
         <div class="modal">
-            <h3 class="subtitle">Insira a Senha</h3>
-        </div>
-        <form>
-            <input type="text">
+            <button class="uil"><i class="uil uil-multiply"></i></button>
+            <h3>Insira a Senha</h3>
+        <form autocomplete="off">
+            <input type="text" placeholder="Senha" class="senha-input" id="ss">
         </form>
+            <button id="butt" class="entrar" onclick="done()">Entrar</button>
+        </div>
     </div>
 
     <!-- -------------------------------------------------------------------------------------- -->

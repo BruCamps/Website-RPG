@@ -164,28 +164,66 @@
 
     // Arquivo de Transição
 
-    function done() { 
-        document.getElementById("popup").style.display = "none";
-        var password = document.getElementById("pass").value;
-        if (password === "pericias"){
-            window.location.assign("../html/pericias.html");
+    function iniciaModal(modalID) {
+        const modal = document.getElementById(modalID);
+
+        if (modal) {
+            modal.classList.add("mostrar");
+            modal.addEventListener("click", (e) => {
+                if(e.target.id == modalID || e.target.className == 'uil uil-multiply') {
+                    modal.classList.remove("mostrar");
+                }
+            });
+        }
+    }
+
+    const ficha = document.querySelector(".d2");
+    ficha.addEventListener("click", () => iniciaModal("modal-senhas"));
+
+    function done() {
+        var password = document.getElementById("ss").value;
+        const butt = document.getElementById('butt');
+
+        butt.addEventListener("click", () => {
+        if (password.value == "a justiça" || password.value == "A justiça" || password.value == "A Justiça"){
+            window.location.assign("../html/fichas/ayama.html");
         }
 
-        if (password === "magias"){
-            window.location.assign("../html/magias.html");
+        if (password == "a imperatriz" || password == "A imperatriz" || password == "A Imperatriz"){
+            window.location.assign("../html/fichas/ella.html");
         }
 
-        if (password === "inventario"){
-            window.location.assign("../html/inventario.html");
+        if (password == "a temperança" || password == "A temperança" || password == "A Temperança"){
+            window.location.assign("../html/fichas/alex.html");
         }
 
-        if (password === "combate"){
-            window.location.assign("../html/combate.html");
+        if (password == "o enforcado" || password == "O enforcado" || password == "O Enforcado"){
+            window.location.assign("../html/fichas/niko.html");
         }
-    
-        //DO STUFF WITH PASSWORD HERE
-    };
-    
-    function showPopup() {
-        document.getElementById("popup").style.display = "block";
+
+        if (password == "o louco" || password == "O louco" || password == "O Louco"){
+            window.location.assign("../html/fichas/stark.html");
+        }
+
+        if (password == "o mago" || password == "O mago" || password == "O Mago"){
+            window.location.assign("../html/fichas/lucius.html");
+        }
+
+        if (password == "o imperador" || password == "O imperador" || password == "O Imperador"){
+            window.location.assign("../html/fichas/demetrius.html");
+        }
+
+        if (password == "o eremita" || password == "O eremita" || password == "O Eremita"){
+            window.location.assign("../html/fichas/amelia.html");
+        }
+
+        if (password == "a roda da fortuna" || password == "A roda da fortuna" || password == "A Roda da Fortuna"){
+            window.location.assign("../html/fichas/amon.html");
+        }
+
+        if (password == "a estrela" || password == "A estrela" || password == "A Estrela"){
+            window.location.assign("../html/fichas/aizen.html");
+        }
+
+        })
     }
