@@ -178,7 +178,7 @@
     }
 
     const ficha = document.querySelector(".d2");
-    ficha.addEventListener("click", () => iniciaModal("modal-senhas"));
+    ficha.addEventListener("click", (e) => iniciaModal("modal-senhas"));
 
     function done() {
         var password = document.getElementById("ss");
@@ -227,10 +227,10 @@
         }
 
         })
-    }
 
-    function handle(e){
-        e.preventDefault(); // Otherwise the form will be submitted
-
-        alert("FORM WAS SUBMITTED");
+        document.addEventListener("keypress", function(e) {
+            if(e.key === 'Enter') {
+                done();
+            }
+        });
     }
