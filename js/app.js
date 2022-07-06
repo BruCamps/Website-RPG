@@ -186,44 +186,44 @@
 
         butt.addEventListener("click", () => {
             
-        if (password.value == "a justiça" || password.value == "A justiça" || password.value == "A Justiça"){
-            window.location.assign("../html/fichas/ayama.html");
+        if (password.value == "a justiça"){
+            window.location.assign("/html/fichas/ayama.html");
         }
 
-        if (password == "a imperatriz" || password == "A imperatriz" || password == "A Imperatriz"){
-            window.location.assign("../html/fichas/ella.html");
+        if (password == "a imperatriz"){
+            window.location.assign("/html/fichas/ella.html");
         }
 
-        if (password == "a temperança" || password == "A temperança" || password == "A Temperança"){
-            window.location.assign("../html/fichas/alex.html");
+        if (password == "a temperança"){
+            window.location.assign("/html/fichas/alex.html");
         }
 
-        if (password == "o enforcado" || password == "O enforcado" || password == "O Enforcado"){
-            window.location.assign("../html/fichas/niko.html");
+        if (password == "o enforcado"){
+            window.location.assign("/html/fichas/niko.html");
         }
 
-        if (password == "o louco" || password == "O louco" || password == "O Louco"){
-            window.location.assign("../html/fichas/stark.html");
+        if (password == "o louco"){
+            window.location.assign("/html/fichas/stark.html");
         }
 
-        if (password == "o mago" || password == "O mago" || password == "O Mago"){
-            window.location.assign("../html/fichas/lucius.html");
+        if (password == "o mago"){
+            window.location.assign("/html/fichas/lucius.html");
         }
 
-        if (password == "o imperador" || password == "O imperador" || password == "O Imperador"){
-            window.location.assign("../html/fichas/demetrius.html");
+        if (password == "o imperador"){
+            window.location.assign("/html/fichas/demetrius.html");
         }
 
-        if (password == "o eremita" || password == "O eremita" || password == "O Eremita"){
-            window.location.assign("../html/fichas/amelia.html");
+        if (password == "o eremita"){
+            window.location.assign("/html/fichas/amelia.html");
         }
 
-        if (password == "a roda da fortuna" || password == "A roda da fortuna" || password == "A Roda da Fortuna"){
-            window.location.assign("../html/fichas/amon.html");
+        if (password == "a roda da fortuna"){
+            window.location.assign("/html/fichas/amon.html");
         }
 
-        if (password == "a estrela" || password == "A estrela" || password == "A Estrela"){
-            window.location.assign("../html/fichas/aizen.html");
+        if (password == "a estrela"){
+            window.location.assign("/html/fichas/aizen.html");
         }
 
         })
