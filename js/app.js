@@ -228,3 +228,9 @@
 
         })
     }
+
+    function handle(e){
+        e.preventDefault(); // Otherwise the form will be submitted
+
+        alert("FORM WAS SUBMITTED");
+    }
