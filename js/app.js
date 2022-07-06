@@ -180,12 +180,11 @@
     const ficha = document.querySelector(".d2");
     ficha.addEventListener("click", (e) => iniciaModal("modal-senhas"));
 
-    function done() {
-        var password = document.getElementById("ss");
-        const butt = document.getElementById('butt');
+    var password = document.getElementById('ss');
+    const butt = document.getElementById('butt');
 
-        butt.addEventListener("click", function() {
-            
+    butt.addEventListener("click", function done() {
+
         if (password.value == "a justiça"){
             window.location.assign("../html/fichas/ayama.html");
         }
@@ -226,11 +225,23 @@
             window.location.assign("../html/fichas/aizen.html");
         }
 
-        })
+    });
+    
 
-        document.addEventListener("keypress", function(e) {
-            if(e.key === 'Enter') {
-                done();
-            }
-        });
-    }
+    // Pega o Input
+    const input = document.querySelector(".senha-input");
+
+    // Executa a função quando clicar na tecla
+    input.addEventListener("keypress", function(e) {
+
+        // Define a tecla enter a ser considerada
+        if (e.key == "Enter") {
+
+            // Cancela ação padrão
+            e.preventDefault();
+            
+            // Pega o botão a ser clicado
+            document.querySelector("#butt").click();
+        }
+
+    });
