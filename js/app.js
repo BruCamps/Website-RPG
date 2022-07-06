@@ -185,6 +185,7 @@
         const butt = document.getElementById('butt');
 
         butt.addEventListener("click", () => {
+            
         if (password.value == "a justiça" || password.value == "A justiça" || password.value == "A Justiça"){
             window.location.assign("../html/fichas/ayama.html");
         }
