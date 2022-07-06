@@ -183,50 +183,51 @@
     var password = document.getElementById('ss');
     const butt = document.getElementById('butt');
 
-    butt.addEventListener("click", function done() {
+    butt.disabled = true;
 
-        if (password.value == "a justiça"){
+    butt.addEventListener("click", function() {
+
+        if (password.value == "a justiça" || password.value == "A Justiça" || password.value == "A justiça"){
             window.location.assign("../html/fichas/ayama.html");
         }
 
-        if (password.value == "a imperatriz"){
+        if (password.value == "a imperatriz" || password.value == "A Imperatriz" || password.value == "A imperatriz"){
             window.location.assign("../html/fichas/ella.html");
         }
 
-        if (password.value == "a temperança"){
+        if (password.value == "a temperança" || password.value == "A Temperança" || password.value == "A temperança"){
             window.location.assign("../html/fichas/alex.html");
         }
 
-        if (password.value == "o enforcado"){
+        if (password.value == "o enforcado" || password.value == "O Enforcado" || password.value == "O enforcado"){
             window.location.assign("../html/fichas/niko.html");
         }
 
-        if (password.value == "o louco"){
+        if (password.value == "o louco" || password.value == "O Louco" || password.value == "O louco"){
             window.location.assign("../html/fichas/stark.html");
         }
 
-        if (password.value == "o mago"){
+        if (password.value == "o mago" || password.value == "O Mago" || password.value == "O mago"){
             window.location.assign("../html/fichas/lucius.html");
         }
 
-        if (password.value == "o imperador"){
+        if (password.value == "o imperador" || password.value == "O Imperador" || password.value == "O imperador"){
             window.location.assign("../html/fichas/demetrius.html");
         }
 
-        if (password.value == "o eremita"){
+        if (password.value == "o eremita" || password.value == "O Eremita" || password.value == "O eremita"){
             window.location.assign("../html/fichas/amelia.html");
         }
 
-        if (password.value == "a roda da fortuna"){
+        if (password.value == "a roda da fortuna" || password.value == "A Roda da Fortuna" || password.value == "A roda da fortuna"){
             window.location.assign("../html/fichas/amon.html");
         }
 
-        if (password.value == "a estrela"){
+        if (password.value == "a estrela" || password.value == "A Estrela" || password.value == "A estrela"){
             window.location.assign("../html/fichas/aizen.html");
         }
 
     });
-    
 
     // Pega o Input
     const input = document.querySelector(".senha-input");
@@ -245,3 +246,18 @@
         }
 
     });
+
+    input.addEventListener("input", function () {
+
+        // Número de caracteres acima de 4 ativa o botão
+        if (input.value.length >= 4) {
+            butt.disabled = false; 
+            butt.classList.add("red");
+        } 
+        // Caso tenha menos que 4, botão desabilitado
+        else {
+            butt.disabled = true;
+            butt.classList.remove("red");
+        }
+    }); 
+        
