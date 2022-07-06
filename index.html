@@ -378,11 +378,11 @@
     <!-- -------------------------------------------------------------------------------------- -->
     <!-- Pop-Up de Senhas -->
 
-    <div id="modal-senhas" class="modal-c" onsubmit="handle()">
+    <div id="modal-senhas" class="modal-c">
         <div class="modal">
             <button class="uil"><i class="uil uil-multiply"></i></button>
             <h3>Insira a Senha</h3>
-        <form autocomplete="off">
+        <form autocomplete="off" onsubmit="handle()">
             <input type="text" placeholder="Senha" class="senha-input" id="ss">
         </form>
             <input type="button" id="butt" class="entrar" onclick="done()" value="Entrar">
