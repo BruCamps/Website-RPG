@@ -186,7 +186,7 @@
 
         butt.addEventListener("click", function() {
             
-        if (password.value == "a justiça"){
+        if (password == "a justiça"){
             window.location.assign("../html/fichas/ayama.html");
         }
 
