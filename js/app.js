@@ -187,43 +187,43 @@
         butt.addEventListener("click", function() {
             
         if (password.value == "a justiça"){
-            window.location.assign("./html/fichas/ayama.html");
+            window.location.assign("../html/fichas/ayama.html");
         }
 
         if (password == "a imperatriz"){
-            window.location.assign("./html/fichas/ella.html");
+            window.location.assign("../html/fichas/ella.html");
         }
 
         if (password == "a temperança"){
-            window.location.assign("./html/fichas/alex.html");
+            window.location.assign("../html/fichas/alex.html");
         }
 
         if (password == "o enforcado"){
-            window.location.assign("./html/fichas/niko.html");
+            window.location.assign("../html/fichas/niko.html");
         }
 
         if (password == "o louco"){
-            window.location.assign("./html/fichas/stark.html");
+            window.location.assign("../html/fichas/stark.html");
         }
 
         if (password == "o mago"){
-            window.location.assign("./html/fichas/lucius.html");
+            window.location.assign("../html/fichas/lucius.html");
         }
 
         if (password == "o imperador"){
-            window.location.assign("./html/fichas/demetrius.html");
+            window.location.assign("../html/fichas/demetrius.html");
         }
 
         if (password == "o eremita"){
-            window.location.assign("./html/fichas/amelia.html");
+            window.location.assign("../html/fichas/amelia.html");
         }
 
         if (password == "a roda da fortuna"){
-            window.location.assign("./html/fichas/amon.html");
+            window.location.assign("../html/fichas/amon.html");
         }
 
         if (password == "a estrela"){
-            window.location.assign("./html/fichas/aizen.html");
+            window.location.assign("../html/fichas/aizen.html");
         }
 
         })
