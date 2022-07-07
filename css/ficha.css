@@ -1,149 +1,221 @@
-/* Arquivo de Estilização do Index.html */
-
 /* Importa a Fonte Poppins do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-/* Retira Características Padrões */
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    overflow-anchor: none;
-    scrollbar-width: thin;
-}
 
-/* Define Variáveis */
+/* Variables */
 :root {
-    --color1: #24252A;
-    --color-sucess: #00bf8e;
-    --color-warning: #f7c94b;
-    --color-danger: #1a1415;
-    --color-danger-variant: rgba(247, 88, 66, 0.4);
-    --color-white: #fff;
-    --color-light: rgba(255,255,255, 0.7);
-    --color-black: #000;
-    --color-a: #6f192e;
-    --color-b: #6f192e;
+	--primary: #354544;
+	--business: #3a82ee;
+	--personal: var(--primary);
+	--light: #24252A;
+	--grey: #5f1a1a;
+    --white: white;
+	--dark: #313154;
+	--danger: #ff5b57;
 
-    --color-bg: #24252A; /*#1f2641*/
-    --color-bg1: #5e1b1b;
-    --color-bg2: #904242;
-    --color-bg2b: #653131;
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-    --container-width-lg: 80%;
-    --container-width-md: 90%;
-    --container-width-sm: 94%;
+	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+/* End of Variables */
 
-    --transition: all 400ms ease;
+/* Resets */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
 
-/* Adiciona uma cor a seleção */
-::selection {
-    color: #fefefe;
-    background: #7d0c16d9;
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
 }
-
-img::selection {
-    background: transparent;
-}
+/* End of Resets */
 
 body {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    text-shadow: 0 2px 2px black;
+	background: var(--light);
+	color: var(--dark);
 }
 
-.aizen {
-    background-color: rgb(251, 131, 131);
-}
-
-.alex {
-    background-color: rgb(240, 104, 104);
-}
-
-.amelia {
-    background-color: rgb(251, 157, 131);
-}
-
-.amon {
-    background-color: rgb(240, 129, 104);
-}
-
-.ayama {
-    background-color: rgb(251, 219, 131);
-}
-
-.demetrius {
-    background-color: rgb(240, 208, 104);
-}
-
-.ella {
-    background-color: rgb(191, 131, 251);
-}
-
-.lucius {
-    background-color: rgb(195, 104, 240);
-}
-
-.niko {
-    background-color: rgb(131, 189, 251);
-}
-
-.stark {
-    background-color: rgb(104, 176, 240);
-}
-
-.section{
-    padding: 7rem 2rem;
-    width: 100%;
-}
-
-.container{
-    max-width: 1230px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 3rem;
-}
-
-section h2 {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-
-h1 {
-    font-size: 4.4rem;
-    font-weight: 500;
+section {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 }
 
 h2 {
-    font-size: 2rem;
+    color: var(--white);
     font-weight: 400;
 }
 
 h3 {
-    font-size: 1.6rem;
+	color: var(--white);
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 0.5rem;
 }
 
 h4 {
-    font-size: 1.4rem;
+	color: var(--grey);
+	font-size: 0.875rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
 }
 
-a {
-    color: var(--color-white);
-}
-
-.meio {
-    width: 100vw;
-    height: 100vh;
-    font-size: 5rem;
+.greeting {
     display: flex;
-    margin-top: -20px;
     justify-content: center;
     align-items: center;
+    margin: 2rem auto 0 6rem;
+}
+
+.greeting .title input {
+	margin-left: 0.5rem;
+	flex: 1 1 0%;
+}
+
+.greeting .title, 
+.greeting .title input {
+	color: var(--white);
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+label {
+    display: flex;
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 0.2rem 1rem 1rem 1rem;
+}
+
+.cont {
+    display: flex;
+}
+
+.todo-list h2 {
+    margin: 0 8% 0.5rem 8%;
+}
+
+.todo-list .list {
+    width: 25%;
+	margin: 1rem 2rem;
+}
+
+.todo-list .todo-item {
+	display: flex;
+	align-items: center;
+	background-color: #FFF;
+	padding: 0.2rem 1rem;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1.4rem;
+}
+
+.todo-list .vida {
+	width: 80%;
+    background-color: #ff5b57;
+}
+
+.todo-list .genki {
+	width: 80%;
+    background-color: #9a57ff;
+}
+
+.todo-list .sanidade {
+	width: 80%;
+    background-color: #5a57ff;
+}
+
+.todo-list .vigor{
+	width: 80%;
+    background-color: #d39b42;
+}
+
+.todo-list .pe {
+	width: 80%;
+    background-color: #37c44e;
+}
+
+.todo-item .todo-content .v {
+    color: white;
+    font-weight: 500;
+}
+
+.todo-item .todo-content {
+	flex: 1 1 0%;
+}
+
+.todo-item .todo-content input {
+	color: rgb(88, 88, 88);
+	font-weight: 600;
+	font-size: 1.125rem;
+}
+
+.todo-item .actions {
+	display: flex;
+	align-items: center;
+}
+
+.todo-item .actions button {
+	display: block;
+	padding: 0.8rem 1.5rem;
+	border-radius: 0.25rem;
+	color: #FFF;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.todo-item .actions button:hover {
+	opacity: 0.75;
+}
+
+.todo-item .actions .edit {
+	margin-left: 8rem;
+	background-color: var(--primary);
+}
+
+.todo-item .actions .dt {
+	margin-left: 3.3rem;
+    background-color: #24252A;
+} 
+
+.todo-item.done .todo-content input {
+	text-decoration: line-through;
+	color: var(--grey);
+}
+
+.linha {
+    content: '';
+	display: inline-block;
+	height: 46rem;
+	width: 3px;
+	border-radius: 5px;
+    margin-top: 2rem;
+	background-color: #2f3034;
+}
+
+
+.image {
+    border-radius: 8px;
+    margin: 1rem 2rem 1rem 8rem;
+    padding: 8px;
+    width: 24rem;
+    height: 48rem;
+    background: linear-gradient(to bottom, #17171a 30%, #222227 70%);
+    box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.821);
+}
+
+picture img {
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 

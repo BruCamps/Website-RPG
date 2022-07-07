@@ -1,27 +1,202 @@
 <!DOCTYPE html>
-
-<html lang="pt-br"> 
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Importando Arquivo CSS -->
-    <link rel="stylesheet" href="/css/ficha.css">
-    <!-- Importando Ícones do Iconscout CDN -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
-    <!-- Importando Favicon de OC -->
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <!-- Título do Site -->
-    <title>Ficha</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Aizen - Ficha</title>
+	<!-- CSS Import -->
+	<link rel="stylesheet" href="/css/ficha.css" />
+	<!-- End of CSS Import -->
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
+<body>
+	<!-- App Wrapper -->
+	<main class="app">
+		<!-- Greeting -->
+		<section class="greeting">
+			<h2 class="title">
+				Dale, <input type="text" id="name" placeholder="Teu nome aqui :3" />
+			</h2>
+		</section>
+		<!-- End of Greeting -->
+	
 
-<body class="aizen">
-    
-<div class="meio">
-<p>AIZEN</p>
-</div>
+		<!-- Todo List -->
+		<section class="todo-list">
+			<h2>Ficha</h2>
 
+            <div class="cont">
+                <div class="image">
+                    <picture>
+                        <img src="/images/personagens/Aizen.png">
+                    </picture>
+                </div>
+                
+                <div class="list" id="todo-list">
+
+                    <label>Nome</label>
+                    <div class="todo-item" >
+
+                    <div class="todo-content">
+                        <input id="nom" type="text" value="Aizen"  readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button id="ed1" class="edit">Edit</button>
+                    </div>
+
+                    </div>
+
+                    <label>Jogador</label>
+                    <div class="todo-item" >
+
+                    <div class="todo-content">
+                        <input id="jog" type="text" value="Samuel"  readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button id="ed2" class="edit">Edit</button>
+                    </div>
+                    
+                    </div>
+
+                    <label>Idade</label>
+                    <div class="todo-item" >
+
+                    <div class="todo-content">
+                        <input id="ida" type="text" value="20 anos" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button id="ed3" class="edit">Edit</button>
+                    </div>
+                    
+                    </div>
+
+                    <label>Altura</label>
+                    <div class="todo-item" >
+
+                    <div class="todo-content">
+                        <input id="alt" type="text" value="1.65 metros" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button id="ed4" class="edit">Edit</button>
+                    </div>
+                    
+                    </div>
+
+                    <label>Taxa de Movimento</label>
+                    <div class="todo-item" >
+
+                    <div class="todo-content">
+                        <input id="tmv" type="text" value="3 metros" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button id="ed5" class="edit">Edit</button>
+                    </div>
+                    
+                    </div>
+
+                    <label>Pessoas/Itens Importantes</label>
+                    <div class="todo-item" >
+
+                    <div class="todo-content">
+                        <input id="pit" type="text" value="Colar" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button id="ed6" class="edit">Edit</button>
+                    </div>
+                    
+                    </div>
+                </div>
+
+                <div class="linha"></div>
+
+                <!-- <div class="list" id="todo-list">
+
+                    <label>Vida</label>
+                    <div class="todo-item vida" >
+                    <div class="todo-content">
+                        <input class="osinput" class="v" type="text" value="17/17" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit dt">Edit</button>
+                    </div>
+
+                    </div>
+
+                    <label>Genki</label>
+                    <div class="todo-item genki" >
+
+                    <div class="todo-content">
+                        <input class="osinput" class="v" type="text" value="13/13" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit dt">Edit</button>
+                    </div>
+                    
+                    </div>
+
+                    <label>Sanidade</label>
+                    <div class="todo-item sanidade" >
+
+                    <div class="todo-content">
+                        <input class="osinput" class="v" type="text" value="11/11" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit dt">Edit</button>
+                    </div>
+                    
+                    </div>
+
+                    <label>Vigor</label>
+                    <div class="todo-item vigor" >
+
+                    <div class="todo-content">
+                        <input class="osinput" class="v" type="text" value="9/9" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit dt">Edit</button>
+                    </div>
+                    
+                    </div>
+
+                    <label>Pontos de Esforço</label>
+                    <div class="todo-item pe" >
+
+                    <div class="todo-content">
+                        <input class="osinput" class="v" type="text" value="8/8" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit dt">Edit</button>
+                    </div>
+                    
+                    </div>
+                    
+                </div> -->
+            </div>
+		</section>
+
+
+        
+		<!-- End of Todo List -->
+
+	</main>
+	<!-- End of App Wrapper -->
+
+	<!-- JS Import -->
+	<script src="/js/ficha.js"></script>
+	<!-- End of JS Import -->
 </body>
-
 </html>
