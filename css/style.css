@@ -172,7 +172,7 @@ nav {
 }
 
 .window-scroll {
-    background-image: linear-gradient(#680911e5, rgba(58, 3, 3, 0.948)), url('../images/aaa.jpg');
+    background-image: linear-gradient(#680911e5, rgba(58, 3, 3, 0.948)), url('/images/aaa.jpg');
     background-position: bottom;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
