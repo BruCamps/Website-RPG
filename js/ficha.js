@@ -299,6 +299,11 @@ window.addEventListener('load', () => {
 
 	});
 
+	num.addEventListener("click", () => {
+		num.removeAttribute('readonly');
+		num.focus();
+	});
+
 	num2.addEventListener("click", () => {
 		num2.removeAttribute('readonly');
 		num2.focus();
