@@ -182,9 +182,10 @@ label {
 #so1.so, #so2.so, #so3.so, #so4.so, #so5.so {
 	color: white;
 	text-align: center;
-	width: 7rem;
+	width: 8rem;
 	font-size: 1.5rem;
 	font-weight: 500;
+	margin-left: 0;
 	margin-right: 2rem;
 	padding-inline-end: 3rem;
 	border-right: 2px solid rgba(0, 0, 0, 0.2);

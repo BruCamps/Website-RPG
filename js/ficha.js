@@ -243,23 +243,57 @@ window.addEventListener('load', () => {
 
 	// Número que vai começar os containers
 
+	let o = 0;
+	
 	let a = 1;
+
+
+	let ac = 10;
+	let ad = 20;
+	let ae = 30;
+	let af = 40;
+	let ag = 50;
+	let ah = 60;
+	let ai = 70;
+	let aj = 80;
+	let ak = 90;
+
 	let a1 = 100;
 	let a2 = 200;
 	let a3 = 300;
+	let a4 = 400;
+	let a5 = 500;
+	let a6 = 600;
+	let a7 = 700;
+	let a8 = 800;
+	let a9 = 900;
+	let a10 = 1000;
+
 	let b = 1;
+
 	let b1 = 100;
 	let b2 = 200;
 	let b3 = 300;
+
+
 	let c = 1;
+
+
 	let c1 = 100;
 	let c2 = 200;
 	let c3 = 300;
+
+
 	let d = 1;
+
 	let d1 = 100;
 	let d2 = 200;
 	let d3 = 300;
+
+
 	let e = 1;
+
+
 	let e1 = 100;
 	let e2 = 200;
 	let e3 = 300;
@@ -272,15 +306,68 @@ window.addEventListener('load', () => {
 
 		so1.style.color = 'white';
 
-		if(num.value <= a){
-			a++;
-			num.value = a;
+		if(num.value == o){
+			o++;
+			num.value = o;
 		}
+		
+		if(num.value == ac){
+			ac++;
+			num.value = ac;
+		}
+
+		if(num.value == ad){
+			ad++;
+			num.value = ad;
+		}
+
+			
+		if(num.value == ae){
+			ae++;
+			num.value = ae;
+		}
+
+		if(num.value == af){
+			af++;
+			num.value = af;
+		}
+
+		
+		if(num.value == ag){
+			ag++;
+			num.value = ag;
+		}
+
+		
+		if(num.value == ah){
+			ah++;
+			num.value = ah;
+		}
+
+		
+		if(num.value == ai){
+			ai++;
+			num.value = ai;
+		}
+
+		
+		if(num.value == aj){
+			aj++;
+			num.value = aj;
+		}
+
+		
+		if(num.value == ak){
+			ak++;
+			num.value = ak;
+		}
+
 		
 		if(num.value == a1){
 			a1++;
 			num.value = a1;
 		}
+
 
 		if(num.value == a2){
 			a2++;
@@ -292,8 +379,42 @@ window.addEventListener('load', () => {
 			num.value = a3;
 		}
 
+		if(num.value == a4){
+			a4++;
+			num.value = a4;
+		}
+
+		if(num.value == a5){
+			a5++;
+			num.value = a5;
+		}
+
+		if(num.value == a6){
+			a6++;
+			num.value = a6;
+		}
+
+		if(num.value == a7){
+			a7++;
+			num.value = a7;
+		}
+
+		if(num.value == a8){
+			a8++;
+			num.value = a8;
+		}
+
+		if(num.value == a9){
+			a9++;
+			num.value = a9;
+		}
+
+		if(num.value == a10){
+			a10++;
+			num.value = a10;
+		}
+
 		so1.addEventListener("click", function() {
-			so1.style.color = 'rgba(0, 0, 0, 0.3)';
 			so1.focus();
 		});
 
@@ -353,7 +474,6 @@ window.addEventListener('load', () => {
 		}
 
 		so2.addEventListener("click", function() {
-			so2.style.color = 'rgba(0, 0, 0, 0.3)';
 			so2.focus();
 		});
 
@@ -384,7 +504,6 @@ window.addEventListener('load', () => {
 		}
 
 		so3.addEventListener("click", function() {
-			so3.style.color = 'rgba(0, 0, 0, 0.3)';
 			so3.focus();
 		});
 
@@ -457,8 +576,63 @@ window.addEventListener('load', () => {
 	inus.addEventListener("click", function() {
 
 		so1.style.color = 'white';
+
+		if(num.value < o){
+			num.value = o;
+		}
+
+		if(num.value == ac){
+			ac--;
+			num.value = ac;
+		}
+
+		if(num.value == ad){
+			ad--;
+			num.value = ad;
+		}
+
+				
+		if(num.value == ae){
+			ae--;
+			num.value = ae;
+		}
+
+		if(num.value == af){
+			af--;
+			num.value = af;
+		}
+
 		
-		if(num.value >= a1){
+		if(num.value == ag){
+			ag--;
+			num.value = ag;
+		}
+
+		
+		if(num.value == ah){
+			ah--;
+			num.value = ah;
+		}
+
+		
+		if(num.value == ai){
+			ai--;
+			num.value = ai;
+		}
+
+		
+		if(num.value == aj){
+			aj--;
+			num.value = aj;
+		}
+
+		
+		if(num.value == ak){
+			ak--;
+			num.value = ak;
+		}
+
+		if(num.value == a1){
 			a1--;
 			num.value = a1;
 		}
@@ -471,6 +645,41 @@ window.addEventListener('load', () => {
 		if(num.value == a3){
 			a3--;
 			num.value = a3;
+		}
+
+		if(num.value == a4){
+			a4--;
+			num.value = a4;
+		}
+
+		if(num.value == a5){
+			a5--;
+			num.value = a5;
+		}
+
+		if(num.value == a6){
+			a6--;
+			num.value = a6;
+		}
+
+		if(num.value == a7){
+			a7--;
+			num.value = a7;
+		}
+
+		if(num.value == a8){
+			a8--;
+			num.value = a8;
+		}
+
+		if(num.value == a9){
+			a9--;
+			num.value = a9;
+		}
+
+		if(num.value == a10){
+			a10--;
+			num.value = a10;
 		}
 
 		so1.addEventListener("click", function() {
@@ -577,7 +786,7 @@ window.addEventListener('load', () => {
 			e3--;
 			num.value = e3;
 		}
-		
+
 		so5.addEventListener("click", function() {
 			so5.style.color = 'rgba(0, 0, 0, 0.3)';
 			so5.focus();

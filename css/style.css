@@ -248,6 +248,7 @@ header::before{
 }
 
 .sobre__container {
+    max-height: 100vh;
     max-width: 200rem;
 }
 
@@ -271,25 +272,43 @@ header::before{
 }
 
 .sinopse {
-    margin-top: 5rem;
+    width: 65rem;
+    height: 20rem;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .sinopse p {
-    font-size: 1.4em;
+    z-index: 5;
+    transform: translate(40rem, -80rem);
+    text-align: left;
+    font-size: 1.5em;
     color: rgb(125, 125, 125);
-    margin: auto 2rem;
-    width: 35%;
+    margin-top: 5rem;
+    margin-left: 15rem;
 }
 
 .jogos__img{
-    margin: auto 2rem;
-    height: 580px;
-    width: 50%;
-    background-color: #7c7c7c;
-    background-size: cover;
+    z-index: 0;
+    margin: 3rem 3rem;
+    height: 80rem;
+    width: 60rem;
+}
+
+.jogos__img::before{
+    z-index: 0;
+    content: '';
+    position: absolute;
+    transform: rotate(-90deg);
+    right: 32rem;
+    top: 85rem;
+    width: 80rem;
+    height: 100vh;
+    background: linear-gradient(#24252a00, #24252a46, #24252ae3, #24252A,  #24252A);
+}
+
+.img-responsive {
+    width: 100%;
 }
 
 
