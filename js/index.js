@@ -187,6 +187,10 @@
 
     butt.addEventListener("click", function() {
 
+        if (password.value == "batata doce" || password.value == "Batata Doce" || password.value == "Batata doce"){
+            window.location.assign("../html/visao_mestre/mestre.html");
+        }
+
         if (password.value == "a justiça" || password.value == "A Justiça" || password.value == "A justiça"){
             window.location.assign("../html/fichas/ayama.html");
         }

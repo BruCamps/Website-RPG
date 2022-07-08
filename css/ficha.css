@@ -71,18 +71,19 @@ h4 {
 .greeting {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 2rem auto 0 6rem;
+	margin: 0;
+	padding: 8px;
+	background: #17171a;
 }
 
 .greeting .title input {
+	color: rgb(225, 168, 76);
 	margin-left: 0.5rem;
 	flex: 1 1 0%;
 }
 
 .greeting .title, 
 .greeting .title input {
-	color: var(--white);
 	font-size: 1.5rem;
 	font-weight: 500;
 }
@@ -118,33 +119,53 @@ label {
 }
 
 .todo-list .vida {
-	width: 80%;
     background-color: #ff5b57;
 }
 
 .todo-list .genki {
-	width: 80%;
     background-color: #9a57ff;
 }
 
 .todo-list .sanidade {
-	width: 80%;
     background-color: #5a57ff;
 }
 
 .todo-list .vigor{
-	width: 80%;
     background-color: #d39b42;
 }
 
 .todo-list .pe {
-	width: 80%;
+	padding: 0.8rem;
     background-color: #37c44e;
 }
 
-.todo-item .todo-content .v {
+.todo-item .nn .v {
+	width: 100%;
     color: white;
     font-weight: 500;
+}
+
+.tam span {
+	width: 100%;
+	margin: 1rem;
+	text-align: center;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+span.num, span.num2, span.num3, span.num4, span.num5  {
+	margin: 0;
+	padding-inline-start: 1.4rem;
+	border-left: 2px solid rgba(0, 0, 0, 0.2);
+	pointer-events: none;
+}
+
+span.so {
+	color: white;
+	font-weight: 500;
+	margin: 0;
+	padding-inline-end: 1.4rem;
+	border-right: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 .todo-item .todo-content {
@@ -155,6 +176,14 @@ label {
 	color: rgb(88, 88, 88);
 	font-weight: 600;
 	font-size: 1.125rem;
+}
+
+.tam {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 55px;
+	width: 320px;
 }
 
 .todo-item .actions {
@@ -176,12 +205,12 @@ label {
 }
 
 .todo-item .actions .edit {
-	margin-left: 8rem;
+	margin-left: 8.22rem;
 	background-color: var(--primary);
 }
 
 .todo-item .actions .dt {
-	margin-left: 3.3rem;
+	margin-left: 2.5rem;
     background-color: #24252A;
 } 
 

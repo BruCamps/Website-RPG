@@ -139,5 +139,124 @@ window.addEventListener('load', () => {
 				})
 	});
 
+	const plus = document.querySelector(".plus");
+	const p2 = document.querySelector(".p2");
+	const p3 = document.querySelector(".p3");
+	const p4 = document.querySelector(".p4");
+	const p5 = document.querySelector(".p5");
+
+
+	const inus = document.querySelector(".inus");
+	
+	const m2 = document.querySelector(".m2");
+	const m3 = document.querySelector(".m3");
+	const m4 = document.querySelector(".m4");
+	const m5 = document.querySelector(".m5");
+	const num = document.querySelector(".num");
+	const num2 = document.querySelector(".num2");
+	const num3 = document.querySelector(".num3");
+	const num4 = document.querySelector(".num4");
+	const num5 = document.querySelector(".num5");
+
+	let a = 1;
+	var b = 1;
+	var c = 1;
+	var d = 1;
+	var e = 1;
+
+	plus.addEventListener("click", () => {
+		a++;
+		a = (a < 10) ? "0" + a : a;
+		num.innerHTML = a;
+
+		if(a > 17){
+			a = 17;
+			num.innerHTML = a;
+		}
+	});
+
+	p2.addEventListener("click", () => {
+		b++;
+		b = (b < 10) ? "0" + b : b;
+		num2.innerHTML = b;
+
+		if(b > 13){
+			b = 13;
+			num2.innerHTML = b;
+		}
+	});
+
+	p3.addEventListener("click", () => {
+		c++;
+		c= (c < 10) ? "0" + c : c;
+		num3.innerHTML = c;
+
+		if(c > 11){
+			c = 11;
+			num3.innerHTML = c;
+		}
+	});
+
+	p4.addEventListener("click", () => {
+		d++;
+		d = (d < 10) ? "0" + d : d
+		num4.innerHTML = d;
+
+		if(d > 9){
+			d = 9;
+			num4.innerHTML = d;
+		}
+	});
+
+	p5.addEventListener("click", () => {
+		e++;
+		e = (e < 10) ? "0" + e : e;
+		num5.innerHTML = e;
+
+		if(e > 8){
+			e = 8;
+			num5.innerHTML = e;
+		}
+	});
+
+	inus.addEventListener("click", () => {
+		if(a > 1){
+			a--;
+			a = (a < 10) ? "0" + a : a;
+			num.innerHTML = a;
+		}
+	});
+
+	m2.addEventListener("click", () => {
+		if(b > 1){
+			b--;
+			b = (b < 10) ? "0" + b : b;
+			num2.innerHTML = b;
+		}
+	});
+
+	m3.addEventListener("click", () => {
+		if(c > 1){
+			c--;
+			c = (c < 10) ? "0" + c : c;
+			num3.innerHTML = c;
+		}
+	});
+
+	m4.addEventListener("click", () => {
+		if(d > 1){
+			d--;
+			d = (d < 10) ? "0" + d : d;
+			num4.innerHTML = d;
+		}
+	});
+
+	m5.addEventListener("click", () => {
+		if(e > 1){
+			e--;
+			e = (e < 10) ? "0" + e : e;
+			num5.innerHTML = e;
+		}
+	});
 
 })
