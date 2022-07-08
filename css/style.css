@@ -279,7 +279,7 @@ header::before{
 }
 
 .sinopse p {
-    z-index: 5;
+    z-index: 0;
     transform: translate(40rem, -80rem);
     text-align: left;
     font-size: 1.5em;
@@ -290,7 +290,7 @@ header::before{
 
 .jogos__img{
     z-index: 0;
-    margin: 3rem 3rem;
+    margin: 3.5rem 3rem;
     height: 80rem;
     width: 60rem;
 }
