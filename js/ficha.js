@@ -456,11 +456,21 @@ window.addEventListener('load', () => {
 
 	inus.addEventListener("click", function() {
 
-		so2.style.color = 'white';
+		so1.style.color = 'white';
+		
+		if(num.value >= a1){
+			a1--;
+			num.value = a1;
+		}
 
-		if(a >= 1){
-			a--;
-			num.value = a;
+		if(num.value == a2){
+			a2--;
+			num.value = a2;
+		}
+
+		if(num.value == a3){
+			a3--;
+			num.value = a3;
 		}
 
 		so1.addEventListener("click", function() {
@@ -474,9 +484,20 @@ window.addEventListener('load', () => {
 
 		so2.style.color = 'white';
 
-		if(b >= 1){
-			b--;
-			num.value = b;
+				
+		if(num.value >= b1){
+			b1--;
+			num.value = b1;
+		}
+
+		if(num.value == b2){
+			b2--;
+			num.value = b2;
+		}
+
+		if(num.value == b3){
+			b3--;
+			num.value = b3;
 		}
 
 		so2.addEventListener("click", function() {
@@ -489,9 +510,20 @@ window.addEventListener('load', () => {
 
 		so3.style.color = 'white';
 
-		if(c >= 1){
-			c--;
-			num.value = c;
+					
+		if(num.value >= c1){
+			c1--;
+			num.value = c1;
+		}
+
+		if(num.value == c2){
+			c2--;
+			num.value = c2;
+		}
+
+		if(num.value == c3){
+			c3--;
+			num.value = c3;
 		}
 
 
@@ -503,11 +535,22 @@ window.addEventListener('load', () => {
 	});
 
 	m4.addEventListener("click", function() {
-		so2.style.color = 'white';
+		so4.style.color = 'white';
 
-		if(d >= 1){
-			d--;
-			num.value = d;
+					
+		if(num.value >= d1){
+			d1--;
+			num.value = d1;
+		}
+
+		if(num.value == d2){
+			d2--;
+			num.value = d2;
+		}
+
+		if(num.value == d3){
+			d3--;
+			num.value = d3;
 		}
 		
 		so4.addEventListener("click", function() {
@@ -519,12 +562,22 @@ window.addEventListener('load', () => {
 
 	m5.addEventListener("click", function() {
 		so5.style.color = 'white';
-
-		if(e >= 1){
-			e--;
-			num.value = e;
+			
+		if(num.value >= e1){
+			e1--;
+			num.value = e1;
 		}
 
+		if(num.value == e2){
+			e2--;
+			num.value = e2;
+		}
+
+		if(num.value == e3){
+			e3--;
+			num.value = e3;
+		}
+		
 		so5.addEventListener("click", function() {
 			so5.style.color = 'rgba(0, 0, 0, 0.3)';
 			so5.focus();
