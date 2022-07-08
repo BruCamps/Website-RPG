@@ -20,6 +20,24 @@
 }
 /* End of Variables */
 
+/* Adiciona uma cor a seleção */
+::selection {
+    color: #fefefe;
+    background: #7d0c16d9;
+}
+
+span::selection{
+	background: transparent;
+}
+
+.nn::selection, .v::selection, .so::selection{
+	background: transparent;
+}
+
+img::selection {
+    background: transparent;
+}
+
 /* Resets */
 * {
 	margin: 0;
@@ -136,7 +154,7 @@ label {
 
 .todo-list .pe {
 	padding: 0.8rem;
-    background-color: #37c44e;
+    background-color: #38a74b;
 }
 
 .todo-item .nn .v {
@@ -146,25 +164,29 @@ label {
 }
 
 .tam span {
-	width: 100%;
-	margin: 1rem;
 	text-align: center;
 	font-size: 1.5rem;
 	cursor: pointer;
 }
 
-span.num, span.num2, span.num3, span.num4, span.num5  {
-	margin: 0;
+#vid.num, #gen.num2, #san.num3, #vig.num4, #pde.num5 {
+	text-align: center;
+	font-size: 1.5rem;
+	width: 5.4rem;
+	margin-left: 1.5rem;
+	margin-right: 0;
 	padding-inline-start: 1.4rem;
 	border-left: 2px solid rgba(0, 0, 0, 0.2);
-	pointer-events: none;
 }
 
-span.so {
+#so1.so, #so2.so, #so3.so, #so4.so, #so5.so {
 	color: white;
+	text-align: center;
+	width: 7rem;
+	font-size: 1.5rem;
 	font-weight: 500;
-	margin: 0;
-	padding-inline-end: 1.4rem;
+	margin-right: 2rem;
+	padding-inline-end: 3rem;
 	border-right: 2px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -183,7 +205,7 @@ span.so {
 	align-items: center;
 	justify-content: center;
 	height: 55px;
-	width: 320px;
+	width: 360px;
 }
 
 .todo-item .actions {
@@ -205,7 +227,7 @@ span.so {
 }
 
 .todo-item .actions .edit {
-	margin-left: 8.22rem;
+	margin-left: 7.4rem;
 	background-color: var(--primary);
 }
 

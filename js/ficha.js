@@ -33,6 +33,46 @@ window.addEventListener('load', () => {
 		document.getElementById('pit').value = localStorage.campo6;
 	}
 
+	if(localStorage.vid){
+		document.getElementById('vid').value = localStorage.vid;
+	}
+
+	if(localStorage.gen){
+		document.getElementById('gen').value = localStorage.gen;
+	}
+
+	if(localStorage.san){
+		document.getElementById('san').value = localStorage.san;
+	}
+
+	if(localStorage.vig){
+		document.getElementById('vig').value = localStorage.vig;
+	}
+
+	if(localStorage.pde){
+		document.getElementById('pde').value = localStorage.pde;
+	}
+
+	if(localStorage.so1){
+		document.getElementById('so1').value = localStorage.so1;
+	}
+
+	if(localStorage.so2){
+		document.getElementById('so2').value = localStorage.so2;
+	}
+
+	if(localStorage.so3){
+		document.getElementById('so3').value = localStorage.so3;
+	}
+
+	if(localStorage.so4){
+		document.getElementById('so4').value = localStorage.so4;
+	}
+
+	if(localStorage.so5){
+		document.getElementById('so5').value = localStorage.so5;
+	}
+
 	var salvarTudo = function() {
 
 		var campo1 = document.getElementById('nom').value;
@@ -41,6 +81,16 @@ window.addEventListener('load', () => {
 		var campo4 = document.getElementById('alt').value;
 		var campo5 = document.getElementById('tmv').value;
 		var campo6 = document.getElementById('pit').value;
+		var vid = document.getElementById('vid').value;
+		var gen = document.getElementById('gen').value;
+		var san = document.getElementById('san').value;
+		var vig = document.getElementById('vig').value;
+		var pde = document.getElementById('pde').value;
+		var so1 = document.getElementById("so1").value;
+		var so2 = document.getElementById("so2").value;
+		var so3 = document.getElementById("so3").value;
+		var so4 = document.getElementById("so4").value;
+		var so5 = document.getElementById("so5").value;
 
 		localStorage.setItem('campo1', campo1);
 		localStorage.setItem('campo2', campo2);
@@ -48,10 +98,24 @@ window.addEventListener('load', () => {
 		localStorage.setItem('campo4', campo4);
 		localStorage.setItem('campo5', campo5);
 		localStorage.setItem('campo6', campo6);
+		localStorage.setItem('vid', vid);
+		localStorage.setItem('gen', gen);
+		localStorage.setItem('san', san);
+		localStorage.setItem('vig', vig);
+		localStorage.setItem('pde', pde);
+		localStorage.setItem('so1', so1);
+		localStorage.setItem('so2', so2);
+		localStorage.setItem('so3', so3);
+		localStorage.setItem('so4', so4);
+		localStorage.setItem('so5', so5);
 
 	}
 
+	// Cada Alteração Feita no Documento é salva
+
 	document.onchange = salvarTudo;
+
+	// Pega o Caminho/Diretório dos Campos/Inputs Brancos
 
 	var campo1 = document.getElementById('nom');
 	var campo2 = document.getElementById('jog');
@@ -60,12 +124,15 @@ window.addEventListener('load', () => {
 	var campo5 = document.getElementById('tmv');
 	var campo6 = document.getElementById('pit');
 
+	// Pega o Caminho/Diretório das Classes dos Botões Edit
+
 	const butt1 = document.getElementById('ed1');
 	const butt2 = document.getElementById('ed2');
 	const butt3 = document.getElementById('ed3');
 	const butt4 = document.getElementById('ed4');
 	const butt5 = document.getElementById('ed5');
 	const butt6 = document.getElementById('ed6');
+
 
 	butt1.addEventListener("click", function() {
 			
@@ -139,124 +206,325 @@ window.addEventListener('load', () => {
 				})
 	});
 
-	const plus = document.querySelector(".plus");
-	const p2 = document.querySelector(".p2");
-	const p3 = document.querySelector(".p3");
-	const p4 = document.querySelector(".p4");
-	const p5 = document.querySelector(".p5");
+	// Pega o Caminho/Diretório das Classes do Botão +
 
+	const plus = document.getElementById("pl");
+	const p2 = document.getElementById("pl2");
+	const p3 = document.getElementById("pl3");
+	const p4 = document.getElementById("pl4");
+	const p5 = document.getElementById("pl5");
 
-	const inus = document.querySelector(".inus");
-	
-	const m2 = document.querySelector(".m2");
-	const m3 = document.querySelector(".m3");
-	const m4 = document.querySelector(".m4");
-	const m5 = document.querySelector(".m5");
-	const num = document.querySelector(".num");
-	const num2 = document.querySelector(".num2");
-	const num3 = document.querySelector(".num3");
-	const num4 = document.querySelector(".num4");
-	const num5 = document.querySelector(".num5");
+	// Pega o Caminho/Diretório das Classes do Botão -
+
+	const inus = document.getElementById("vm");
+	const m2 = document.getElementById("vm2");
+	const m3 = document.getElementById("vm3");
+	const m4 = document.getElementById("vm4");
+	const m5 = document.getElementById("vm5");
+
+	// Seleciona cada Valor dentro dos Inputs
+
+	var num = document.getElementById("vid");
+	var num2 = document.getElementById("gen");
+	var num3 = document.getElementById("san");
+	var num4 = document.getElementById("vig");
+	var num5 = document.getElementById("pde");
+
+	var so1 = document.getElementById("so1");
+	so1.style.color = 'white';
+	var so2 = document.getElementById("so2");
+	so2.style.color = 'white';
+	var so3 = document.getElementById("so3");
+	so3.style.color = 'white';
+	var so4 = document.getElementById("so4");
+	so4.style.color = 'white';
+	var so5 = document.getElementById("so5");
+	so5.style.color = 'white';
+
+	// Número que vai começar os containers
 
 	let a = 1;
-	var b = 1;
-	var c = 1;
-	var d = 1;
-	var e = 1;
+	let a1 = 100;
+	let a2 = 200;
+	let a3 = 300;
+	let b = 1;
+	let b1 = 100;
+	let b2 = 200;
+	let b3 = 300;
+	let c = 1;
+	let c1 = 100;
+	let c2 = 200;
+	let c3 = 300;
+	let d = 1;
+	let d1 = 100;
+	let d2 = 200;
+	let d3 = 300;
+	let e = 1;
+	let e1 = 100;
+	let e2 = 200;
+	let e3 = 300;
 
-	plus.addEventListener("click", () => {
-		a++;
-		a = (a < 10) ? "0" + a : a;
-		num.innerHTML = a;
 
-		if(a > 17){
-			a = 17;
-			num.innerHTML = a;
+
+	// Função do Botão de Mais
+
+	plus.addEventListener("click", function() {
+
+		so1.style.color = 'white';
+
+		if(num.value <= a){
+			a++;
+			num.value = a;
 		}
+		
+		if(num.value == a1){
+			a1++;
+			num.value = a1;
+		}
+
+		if(num.value == a2){
+			a2++;
+			num.value = a2;
+		}
+
+		if(num.value == a3){
+			a3++;
+			num.value = a3;
+		}
+
+		so1.addEventListener("click", function() {
+			so1.style.color = 'rgba(0, 0, 0, 0.3)';
+			so1.focus();
+		});
+
 	});
 
-	p2.addEventListener("click", () => {
-		b++;
-		b = (b < 10) ? "0" + b : b;
-		num2.innerHTML = b;
-
-		if(b > 13){
-			b = 13;
-			num2.innerHTML = b;
-		}
+	num2.addEventListener("click", () => {
+		num2.removeAttribute('readonly');
+		num2.focus();
 	});
 
-	p3.addEventListener("click", () => {
-		c++;
-		c= (c < 10) ? "0" + c : c;
-		num3.innerHTML = c;
-
-		if(c > 11){
-			c = 11;
-			num3.innerHTML = c;
-		}
+	num3.addEventListener("click", () => {
+		num3.removeAttribute('readonly');
+		num3.focus();
 	});
 
-	p4.addEventListener("click", () => {
-		d++;
-		d = (d < 10) ? "0" + d : d
-		num4.innerHTML = d;
-
-		if(d > 9){
-			d = 9;
-			num4.innerHTML = d;
-		}
+	num4.addEventListener("click", () => {
+		num4.removeAttribute('readonly');
+		num4.focus();
 	});
 
-	p5.addEventListener("click", () => {
-		e++;
-		e = (e < 10) ? "0" + e : e;
-		num5.innerHTML = e;
-
-		if(e > 8){
-			e = 8;
-			num5.innerHTML = e;
-		}
+	num4.addEventListener("click", () => {
+		num4.removeAttribute('readonly');
+		num4.focus();
 	});
 
-	inus.addEventListener("click", () => {
-		if(a > 1){
+	num5.addEventListener("click", () => {
+		num5.removeAttribute('readonly');
+		num5.focus();
+	});
+
+	p2.addEventListener("click", function() {
+		so2.style.color = 'white';
+
+		if(num.value <= b){
+			b++;
+			num.value = b;
+		}
+		
+		if(num.value == b1){
+			b1++;
+			num.value = b1;
+		}
+
+		if(num.value == b2){
+			b2++;
+			num.value = b2;
+		}
+
+		if(num.value == b3){
+			b3++;
+			num.value = b3;
+		}
+
+		so2.addEventListener("click", function() {
+			so2.style.color = 'rgba(0, 0, 0, 0.3)';
+			so2.focus();
+		});
+
+	});
+
+	p3.addEventListener("click", function() {
+
+		so3.style.color = 'white';
+
+		if(num.value <= c){
+			c++;
+			num.value = c;
+		}
+		
+		if(num.value == c1){
+			c1++;
+			num.value = c1;
+		}
+
+		if(num.value == c2){
+			c2++;
+			num.value = c2;
+		}
+
+		if(num.value == c3){
+			c3++;
+			num.value = c3;
+		}
+
+		so3.addEventListener("click", function() {
+			so3.style.color = 'rgba(0, 0, 0, 0.3)';
+			so3.focus();
+		});
+
+	});
+
+	p4.addEventListener("click", function() {
+
+		so4.style.color = 'white';
+
+		if(num.value <= d){
+			d++;
+			num.value = d;
+		}
+		
+		if(num.value == d1){
+			d1++;
+			num.value = d1;
+		}
+
+		if(num.value == d2){
+			d2++;
+			num.value = d2;
+		}
+
+		if(num.value == d3){
+			d3++;
+			num.value = d3;
+		}
+
+		so4.addEventListener("click", function() {
+			so4.style.color = 'rgba(0, 0, 0, 0.3)';
+			so4.focus();
+		});
+
+	});
+
+	p5.addEventListener("click", function() {
+
+		so5.style.color = 'white';
+
+		if(num.value <= e){
+			e++;
+			num.value = e;
+		}
+		
+		if(num.value == e1){
+			e1++;
+			num.value = e1;
+		}
+
+		if(num.value == e2){
+			e2++;
+			num.value = e2;
+		}
+
+		if(num.value == e3){
+			e3++;
+			num.value = e3;
+		}
+
+		so5.addEventListener("click", function() {
+			so5.style.color = 'rgba(0, 0, 0, 0.3)';
+			so5.focus();
+		});
+
+	});
+
+	// Função do Botão de Menos
+
+	inus.addEventListener("click", function() {
+
+		so2.style.color = 'white';
+
+		if(a >= 1){
 			a--;
-			a = (a < 10) ? "0" + a : a;
-			num.innerHTML = a;
+			num.value = a;
 		}
+
+		so1.addEventListener("click", function() {
+			so1.style.color = 'rgba(0, 0, 0, 0.3)';
+			so1.focus();
+		});
+
 	});
 
-	m2.addEventListener("click", () => {
-		if(b > 1){
+	m2.addEventListener("click", function() {
+
+		so2.style.color = 'white';
+
+		if(b >= 1){
 			b--;
-			b = (b < 10) ? "0" + b : b;
-			num2.innerHTML = b;
+			num.value = b;
 		}
+
+		so2.addEventListener("click", function() {
+			so2.style.color = 'rgba(0, 0, 0, 0.3)';
+			so2.focus();
+		});
 	});
 
-	m3.addEventListener("click", () => {
-		if(c > 1){
+	m3.addEventListener("click", function() {
+
+		so3.style.color = 'white';
+
+		if(c >= 1){
 			c--;
-			c = (c < 10) ? "0" + c : c;
-			num3.innerHTML = c;
+			num.value = c;
 		}
+
+
+		so3.addEventListener("click", function() {
+			so3.style.color = 'rgba(0, 0, 0, 0.3)';
+			so3.focus();
+		});
+
 	});
 
-	m4.addEventListener("click", () => {
-		if(d > 1){
+	m4.addEventListener("click", function() {
+		so2.style.color = 'white';
+
+		if(d >= 1){
 			d--;
-			d = (d < 10) ? "0" + d : d;
-			num4.innerHTML = d;
+			num.value = d;
 		}
+		
+		so4.addEventListener("click", function() {
+			so4.style.color = 'rgba(0, 0, 0, 0.3)';
+			so4.focus();
+		});
+
 	});
 
-	m5.addEventListener("click", () => {
-		if(e > 1){
+	m5.addEventListener("click", function() {
+		so5.style.color = 'white';
+
+		if(e >= 1){
 			e--;
-			e = (e < 10) ? "0" + e : e;
-			num5.innerHTML = e;
+			num.value = e;
 		}
+
+		so5.addEventListener("click", function() {
+			so5.style.color = 'rgba(0, 0, 0, 0.3)';
+			so5.focus();
+		});
+	
 	});
 
-})
+});
