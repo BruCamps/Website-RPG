@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- CSS Import -->
+	<link rel="stylesheet" href="/css/ficha.css" />
+    <!-- Importando Ícones do Iconscout CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <!-- Importando Ícones de FontAwesome -->
+    <script src="https://kit.fontawesome.com/2986cff14b.js" crossorigin="anonymous"></script>
+    <!-- Importando Favicon de OC -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Título do Site -->
+    <title>Aizen - Ficha</title>
+</head>
+<body>
+	<!-- Container da Primeira parte da Ficha -->
+	<main class="app">
+        
+		<!-- Greeting -->
+		<section class="greeting">
+			<h2 class="title">
+				E aí, <input type="text" id="name" placeholder="Teu nome aqui :3" />
+			</h2>
+		</section>
+	
+
+		<!-- Todo List -->
+		<section class="todo-list">
+			<h2>Ficha</h2>
+
+            <div class="cont">
+                <div class="image">
+                    <picture>
+                        <img src="/images/personagens/Aspaes.png">
+                    </picture>
+                </div>
+                
+                <div class="list" id="todo-list">
+
+                    <label>Nome</label>
+                    <div class="todo-item">
+
+                    <div class="todo-content">
+                        <input class="text-input" id="nom" type="text" value="Aspaes"  readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button id="ed1" class="edit">Editar</button>
+                    </div>
+
+                    </div>
+
+                    <label>Jogador</label>
+                    <div class="todo-item">
+
+                    <div class="todo-content">
+                        <input class="text-input" id="jog" type="text" value="Dante"  readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button id="ed2" class="edit">Editar</button>
+                    </div>
+                    
+                    </div>
+
+                    <label>Idade</label>
+                    <div class="todo-item">
+
+                    <div class="todo-content">
+                        <input class="text-input" id="ida" type="text" value="29" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button id="ed3" class="edit">Editar</button>
+                    </div>
+                    
+                    </div>
+
+                    <label>Altura</label>
+                    <div class="todo-item">
+
+                    <div class="todo-content">
+                        <input class="text-input" id="alt" type="text" value="1.75m" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button id="ed4" class="edit">Editar</button>
+                    </div>
+                    
+                    </div>
+
+                    <label>Taxa de Movimento</label>
+                    <div class="todo-item">
+
+                    <div class="todo-content">
+                        <input class="text-input" id="tmv" type="text" value="5m" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button id="ed5" class="edit">Editar</button>
+                    </div>
+                    
+                    </div>
+
+                    <label>Pessoas/Itens Importantes</label>
+                    <div class="todo-item">
+
+                    <div class="todo-content">
+                        <input class="text-input" id="pit" type="text" value="Nikolas, Kaya, Nathan e Machados do Caos" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button id="ed6" class="edit">Editar</button>
+                    </div>
+                    
+                    </div>
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="list">
+
+                    <label>Vida</label>
+                    <div class="todo-item vida tam">
+                        <div class="nn">
+                            <span id="vm" class="inus v">-</span>
+                            <input id="vid" type="text" class="vid num" value="20" readonly>
+                            <span class="v">/</span>
+                            <input id="so1" type="text" class="so"  value="22">
+                            <span id="pl" class="plus v">+</span>
+                        </div>
+                    </div>
+
+                    <label>Genki</label>
+                    <div class="todo-item genki tam">
+                        <div class="nn">
+                            <span id="vm2" class="m2 v">-</span>
+                            <input id="gen" type="text" class="gen num2" value="10" readonly>
+                            <span class="v">/</span>
+                            <input id="so2" class="so" value="13">
+                            <span id="pl2" class="p2 v">+</span>
+                        </div>
+                    </div>
+
+                    <label>Sanidade</label>
+                    <div class="todo-item sanidade tam">
+                        <div class="nn">
+                            <span id="vm3" class="m3 v">-</span>
+                            <input id="san" type="text" class="san num3" value="9" readonly>
+                            <span class="v">/</span>
+                            <input id="so3" class="so" value="9">
+                            <span id="pl3" class="p3 v">+</span>
+                        </div>
+                    </div>
+
+                    <label>Vigor</label>
+                    <div class="todo-item vigor tam">
+                        <div class="nn">
+                            <span id="vm4" class="m4 v">-</span>
+                            <input id="vig" type="text" class="vig num4" value="10" readonly>
+                            <span class="v">/</span>
+                            <input id="so4" class="so" value="11">
+                            <span id="pl4" class="p4 v">+</span>
+                        </div>
+                    </div>
+
+                    <label>Pontos de Esforço</label>
+                    <div class="todo-item pe tam">
+                        <div class="nn">
+                            <span id="vm5" class="m5 v">-</span>
+                            <input id="pde" type="text" class="pde num5" value="8" readonly>
+                            <span class="v">/</span>
+                            <input id="so5" class="so" value="8">
+                            <span id="pl5" class="p5 v">+</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+		</section>
+        
+
+	</main>
+
+    <div id="modal-alert" class="modal-b">
+        <div class="modal">
+            <button class="uil"><i class="uil uil-multiply"></i></button>
+            <h2>Lembrete:</h2>
+            <h3>Atenção, suas informações serão salvas no navegador que você fizer as alterações, pois no momento não foi inserido um <strong>banco de dados</strong> no site.</h3>
+        </div>
+    </div>
+
+	<!-- JS Import -->
+	<script src="/js/ficha.js"></script>
+
+</body>
+</html>
