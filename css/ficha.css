@@ -290,7 +290,7 @@ label {
     padding: 8px;
     width: 24rem;
     height: 48rem;
-    background: linear-gradient(to bottom, #17171a 30%, #222227 70%);
+    background: linear-gradient(to bottom, #1e0101, #430606, #1e0101);
     box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.821);
 }
 
