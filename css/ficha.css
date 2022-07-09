@@ -56,6 +56,12 @@ input, button {
 	background: none;
 	cursor: initial;
 }
+
+
+.text-input {
+	width: 19.5rem;
+}
+
 /* End of Resets */
 
 body {
@@ -259,7 +265,7 @@ label {
 }
 
 .todo-item .actions .edit {
-	margin-left: 8.1rem;
+	margin-left: 3.95rem;
 	background-color: var(--primary);
 }
 
@@ -267,11 +273,6 @@ label {
 	margin-left: 2.5rem;
     background-color: #24252A;
 } 
-
-.todo-item.done .todo-content input {
-	text-decoration: line-through;
-	color: var(--grey);
-}
 
 .linha {
     content: '';
@@ -304,7 +305,7 @@ picture img {
 
 /* PopUp */
 
-/* PopUp*/
+
 .modal-b {
     z-index: 200;
     width: 100vw;
