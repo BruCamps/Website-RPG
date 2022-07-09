@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Aizen - Ficha</title>
 	<!-- CSS Import -->
 	<link rel="stylesheet" href="/css/ficha.css" />
-	<!-- End of CSS Import -->
-	<!-- Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importando Ícones do Iconscout CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <!-- Importando Ícones de FontAwesome -->
+    <script src="https://kit.fontawesome.com/2986cff14b.js" crossorigin="anonymous"></script>
+    <!-- Importando Favicon de OC -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Título do Site -->
+    <title>Aizen - Ficha</title>
 </head>
 <body>
 	<!-- Container da Primeira parte da Ficha -->
@@ -35,82 +38,82 @@
                     </picture>
                 </div>
                 
-                <div class="list" id="todo-list">
+                <div class="list">
 
                     <label>Nome</label>
-                    <div class="todo-item" >
+                    <div class="todo-item">
 
                     <div class="todo-content">
-                        <input id="nom" type="text" value="Aizen"  readonly>
+                        <input class="pts" type="text" value="Aizen"  readonly>
                     </div>
 
                     <div class="actions">
-                        <button id="ed1" class="edit">Editar</button>
+                        <button class="edit">Editar</button>
                     </div>
 
                     </div>
 
                     <label>Jogador</label>
-                    <div class="todo-item" >
+                    <div class="todo-item">
 
                     <div class="todo-content">
-                        <input id="jog" type="text" value="Samuel"  readonly>
+                        <input class="pts" type="text" value="Samuel"  readonly>
                     </div>
 
                     <div class="actions">
-                        <button id="ed2" class="edit">Editar</button>
+                        <button class="edit">Editar</button>
                     </div>
                     
                     </div>
 
                     <label>Idade</label>
-                    <div class="todo-item" >
+                    <div class="todo-item">
 
                     <div class="todo-content">
-                        <input id="ida" type="text" value="20 anos" readonly>
+                        <input class="pts" type="text" value="" readonly>
                     </div>
 
                     <div class="actions">
-                        <button id="ed3" class="edit">Editar</button>
+                        <button class="edit">Editar</button>
                     </div>
                     
                     </div>
 
                     <label>Altura</label>
-                    <div class="todo-item" >
+                    <div class="todo-item">
 
                     <div class="todo-content">
-                        <input id="alt" type="text" value="1.65 metros" readonly>
+                        <input class="pts" type="text" value="" readonly>
                     </div>
 
                     <div class="actions">
-                        <button id="ed4" class="edit">Editar</button>
+                        <button class="edit">Editar</button>
                     </div>
                     
                     </div>
 
                     <label>Taxa de Movimento</label>
-                    <div class="todo-item" >
+                    <div class="todo-item">
 
                     <div class="todo-content">
-                        <input id="tmv" type="text" value="3 metros" readonly>
+                        <input class="pts" type="text" value="" readonly>
                     </div>
 
                     <div class="actions">
-                        <button id="ed5" class="edit">Editar</button>
+                        <button class="edit">Editar</button>
                     </div>
                     
                     </div>
 
                     <label>Pessoas/Itens Importantes</label>
-                    <div class="todo-item" >
+                    <div class="todo-item">
 
                     <div class="todo-content">
-                        <input id="pit" type="text" value="Colar" readonly>
+                        <input class="pts" type="text" value="" readonly>
                     </div>
 
                     <div class="actions">
-                        <button id="ed6" class="edit">Editar</button>
+                        <button class="edit">Editar</button>
                     </div>
                     
                     </div>
@@ -118,55 +121,60 @@
 
                 <div class="linha"></div>
 
-                <div class="list" id="todo-list">
+                <div class="list">
 
                     <label>Vida</label>
                     <div class="todo-item vida tam">
                         <div class="nn">
-                            <span class="inus v" id="vm">-</span>
-                            <input id="vid" type="text" class="num v" value="1" readonly>
-                            <input id="so1" type="text" class="so"  value="/  22">
-                            <span class="plus v" id="pl">+</span>
+                            <span class="inus v">-</span>
+                            <input type="text" class="vid num" value="20" readonly>
+                            <span class="v">/</span>
+                            <input type="text" class="so1 so"  value="22">
+                            <span class="plus v">+</span>
                         </div>
                     </div>
 
                     <label>Genki</label>
                     <div class="todo-item genki tam">
                         <div class="nn">
-                            <span class="m2 v" id="vm2">-</span>
-                            <input id="gen" type="text" class="num2 v" value="1" readonly>
-                            <input class="so" id="so2" value="/  8">
-                            <span class="p2 v" id="pl2">+</span>
+                            <span class="m2 v">-</span>
+                            <input type="text" class="gen num2" value="8" readonly>
+                            <span class="v">/</span>
+                            <input class="so2 so" value="8">
+                            <span class="p2 v">+</span>
                         </div>
                     </div>
 
                     <label>Sanidade</label>
                     <div class="todo-item sanidade tam">
                         <div class="nn">
-                            <span class="m3 v" id="vm3">-</span>
-                            <input id="san" type="text" class="num3 v" value="1" readonly>
-                            <input class="so" id="so3" value="/  9">
-                            <span class="p3 v" id="pl3">+</span>
+                            <span class="m3 v">-</span>
+                            <input type="text" class="san num3" value="9" readonly>
+                            <span class="v">/</span>
+                            <input class="so3 so" value="9">
+                            <span class="p3 v">+</span>
                         </div>
                     </div>
 
                     <label>Vigor</label>
                     <div class="todo-item vigor tam">
                         <div class="nn">
-                            <span class="m4 v" id="vm4">-</span>
-                            <input id="vig" type="text" class="num4 v" value="1" readonly>
-                            <input class="so" id="so4" value="/  11">
-                            <span class="p4 v" id="pl4">+</span>
+                            <span class="m4 v">-</span>
+                            <input type="text" class="vig num4" value="10" readonly>
+                            <span class="v">/</span>
+                            <input class="so4 so" value="11">
+                            <span class="p4 v">+</span>
                         </div>
                     </div>
 
                     <label>Pontos de Esforço</label>
                     <div class="todo-item pe tam">
                         <div class="nn">
-                            <span class="m5 v" id="vm5">-</span>
-                            <input id="pde" type="text" class="num5 v" value="1" readonly>
-                            <input class="so" id="so5" value="/  8">
-                            <span class="p5 v" id="pl5">+</span>
+                            <span class="m5 v">-</span>
+                            <input type="text" class="pde num5" value="8" readonly>
+                            <span class="v">/</span>
+                            <input class="so5 so" value="8">
+                            <span class="p5 v">+</span>
                         </div>
                     </div>
 
@@ -174,16 +182,20 @@
 
             </div>
 		</section>
-
-
         
-		<!-- End of Todo List -->
 
 	</main>
-	<!-- End of App Wrapper -->
+
+    <div id="modal-alert" class="modal-b">
+        <div class="modal">
+            <button class="uil"><i class="uil uil-multiply"></i></button>
+            <h2>Lembrete:</h2>
+            <h3>Atenção, suas informações serão salvas no navegador que você fizer as alterações, pois no momento não foi inserido um <strong>banco de dados</strong> no site.</h3>
+        </div>
+    </div>
 
 	<!-- JS Import -->
 	<script src="/js/ficha.js"></script>
-	<!-- End of JS Import -->
+
 </body>
 </html>

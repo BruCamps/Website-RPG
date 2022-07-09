@@ -191,6 +191,10 @@
             window.location.assign("../html/visao_mestre/mestre.html");
         }
 
+        if (password.value == "aspaes" || password.value == "Aspaes"){
+            window.location.assign("../html/fichas/aspaes.html");
+        }
+
         if (password.value == "a justiça" || password.value == "A Justiça" || password.value == "A justiça"){
             window.location.assign("../html/fichas/ayama.html");
         }

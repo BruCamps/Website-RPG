@@ -5,8 +5,7 @@
 /* Variables */
 :root {
 	--primary: #354544;
-	--business: #3a82ee;
-	--personal: var(--primary);
+	--color-white: #fff;
 	--light: #24252A;
 	--grey: #5f1a1a;
     --white: white;
@@ -30,8 +29,12 @@ span::selection{
 	background: transparent;
 }
 
-.nn::selection, .v::selection, .so::selection{
+.nn::selection, .num::selection, .num2::selection, .num3::selection, .num4::selection, .num5::selection, .so::selection, .edit::selection{
 	background: transparent;
+}
+
+.pts::selection {
+	background: #cf8b8b;
 }
 
 img::selection {
@@ -117,12 +120,16 @@ label {
     display: flex;
 }
 
+.todo-list {
+	margin: 2rem 5rem;
+}
+
 .todo-list h2 {
     margin: 0 8% 0.5rem 8%;
 }
 
 .todo-list .list {
-    width: 25%;
+    width: 30rem;
 	margin: 1rem 2rem;
 }
 
@@ -172,9 +179,21 @@ label {
 #vid.num, #gen.num2, #san.num3, #vig.num4, #pde.num5 {
 	text-align: center;
 	font-size: 1.5rem;
-	width: 5.4rem;
+	width: 7rem;
 	margin-left: 1.5rem;
 	margin-right: 0;
+	padding-inline-start: 1.4rem;
+	border-left: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.vid.num, .gen.num2, .san.num3, .vig.num4, .pde.num5 {
+	text-align: center;
+	font-size: 1.5rem;
+	width: 7rem;
+	margin-left: 1.5rem;
+	margin-right: 0;
+	color: white;
+	font-weight: 500;
 	padding-inline-start: 1.4rem;
 	border-left: 2px solid rgba(0, 0, 0, 0.2);
 }
@@ -182,10 +201,22 @@ label {
 #so1.so, #so2.so, #so3.so, #so4.so, #so5.so {
 	color: white;
 	text-align: center;
-	width: 8rem;
+	width: 7rem;
 	font-size: 1.5rem;
 	font-weight: 500;
-	margin-left: 0;
+	margin-left: 1rem;
+	margin-right: 2rem;
+	padding-inline-end: 3rem;
+	border-right: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.so1.so, .so2.so, .so3.so, .so4.so, .so5.so {
+	color: white;
+	text-align: center;
+	width: 7rem;
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-left: 1rem;
 	margin-right: 2rem;
 	padding-inline-end: 3rem;
 	border-right: 2px solid rgba(0, 0, 0, 0.2);
@@ -206,7 +237,7 @@ label {
 	align-items: center;
 	justify-content: center;
 	height: 55px;
-	width: 360px;
+	width: 450px;
 }
 
 .todo-item .actions {
@@ -228,7 +259,7 @@ label {
 }
 
 .todo-item .actions .edit {
-	margin-left: 7.4rem;
+	margin-left: 8.1rem;
 	background-color: var(--primary);
 }
 
@@ -271,3 +302,76 @@ picture img {
     width: 100%;
 }
 
+/* PopUp */
+
+/* PopUp*/
+.modal-b {
+    z-index: 200;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal {
+    background: rgb(240, 240, 240);
+    width: 50%;
+    min-width: 300px;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 1px 3px 6px #16161a81;
+    position: relative;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+} 
+
+.mostrar .modal {
+    animation: modal .3s;
+}
+
+.modal .uil {
+	position: absolute;
+    top: 2px;
+    right: 0;
+    background: transparent;
+    font-size: 1.8rem;
+    color: #24252A;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+
+.modal h3 {
+    margin: 2rem 0 1rem 0.8rem;
+	font-size: 1.2rem;
+    font-weight: 500;
+    color: #24252A;
+}
+
+.modal h2 {
+    margin: 0 0 0.5rem 0.8rem;
+	font-size: 1.7rem;
+    font-weight: 500;
+    color: #24252A;
+}
+
+
+.modal-b.mostrar {
+    display: flex;
+}
