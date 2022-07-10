@@ -29,7 +29,7 @@ span::selection{
 	background: transparent;
 }
 
-.nn::selection, .num::selection, .num2::selection, .num3::selection, .num4::selection, .num5::selection, .so::selection, .edit::selection{
+.nn::selection, .num::selection, .num2::selection, .num3::selection, .num4::selection, .num5::selection, .so::selection, .edit::selection, .edita::selection{
 	background: transparent;
 }
 
@@ -127,11 +127,7 @@ label {
 }
 
 .todo-list {
-	margin: 2rem 5rem;
-}
-
-.todo-list h2 {
-    margin: 0 8% 0.5rem 8%;
+	margin: 3rem 5rem 0 5rem;
 }
 
 .todo-list .list {
@@ -142,7 +138,7 @@ label {
 .todo-list .todo-item {
 	display: flex;
 	align-items: center;
-	background-color: #FFF;
+	background-color: #121212;
 	padding: 0.2rem 1rem;
 	border-radius: 0.5rem;
 	box-shadow: var(--shadow);
@@ -170,6 +166,11 @@ label {
     background-color: #38a74b;
 }
 
+.todo-list .xp {
+	padding: 0.8rem;
+    background-color: white;
+}
+
 .todo-item .nn .v {
 	width: 100%;
     color: white;
@@ -190,6 +191,16 @@ label {
 	margin-right: 0;
 	padding-inline-start: 1.4rem;
 	border-left: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+#xp.num6 {
+	color: #24252A;
+	font-weight: 500;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-right: auto;
 }
 
 .vid.num, .gen.num2, .san.num3, .vig.num4, .pde.num5 {
@@ -229,11 +240,15 @@ label {
 }
 
 .todo-item .todo-content {
-	flex: 1 1 0%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 48px;
+	width: 300px;
 }
 
-.todo-item .todo-content input {
-	color: rgb(88, 88, 88);
+.todo-item .todo-content input, #pit {
+	color: rgb(121, 120, 120);
 	font-weight: 600;
 	font-size: 1.125rem;
 }
@@ -265,7 +280,12 @@ label {
 }
 
 .todo-item .actions .edit {
-	margin-left: 3.95rem;
+	margin-left: 8.1rem;
+	background-color: var(--primary);
+}
+
+.todo-item .actions .edita {
+	margin-left: 4.6rem;
 	background-color: var(--primary);
 }
 

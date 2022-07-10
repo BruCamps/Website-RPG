@@ -147,18 +147,27 @@ a {
     border: none;
     outline: none;
     color: var(--white-color);
+    text-transform: uppercase;
     font-size: 1.5rem;
-    padding: 1.2rem 4rem;
-    border-radius: 3rem;
-    background: linear-gradient(to right bottom, #871c1c, #e83737);
+    font-weight: 500;
+    margin: 20px;
+    padding: 24px 50px;
+    width: 800px;
+    border-radius: 6px;
+    background-image: linear-gradient(to left, #941216, #EA2027, #941216);
+    background-size: 200%;
     cursor: pointer;
+    transition: 0.6s;
 }
 
+
+.iniciar:hover {
+    background-position: right;
+}
 /* Seta o .button e adiciona o estilo quando(:where) passar o mouse (:hover) e clicar (:focus) */
 .iniciar:where(:hover, :focus) {
     transform: scale(1.5);
 }
-
 
 /* Navbar */
 
@@ -216,6 +225,7 @@ header {
     position: relative;
     background-repeat: no-repeat;
     background-position: fixed;
+    filter: blur(5px);
     background-image: url('../images/imagem_geral.png');
 }
 
@@ -231,7 +241,7 @@ header::before{
 }
 
 .start {
-    margin-top: -60vh;
+    margin-top: -65vh;
 }
 
 
@@ -239,21 +249,18 @@ header::before{
 
 .sobre {
     z-index: 0;
-    margin-top: 45vh;
+    background: #24252A;
+    margin-top: 55vh;
     margin-bottom: 60rem;
     padding: 4rem auto;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     text-align: center;
 }
 
 .sobre__container {
     height: 250vh;
     max-width: 200rem;
-}
-
-.ae {
-    margin-top: 30rem;
 }
 
 .ae h2 {
@@ -459,6 +466,7 @@ header::before{
     border-radius: 20px;
     position: relative;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .item {
