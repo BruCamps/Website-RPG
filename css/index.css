@@ -1,8 +1,8 @@
 
 /* Arquivo de Estilização do Index.html */
 
-/* Importa a Fonte Poppins do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+/* Importa a Fonte Poppins, Racing Sans One e Work Sans do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@200;300;400;500;600;700&family=Racing+Sans+One&family=Work+Sans:ital,wght@0,700;0,800;0,900;1,900&display=swap');
 
 /* Retira Características Padrões */
 * {
@@ -34,6 +34,26 @@
     --color-bg1: #5e1b1b;
     --color-bg2: #904242;
     --color-bg2b: #653131;
+
+    --gradient: linear-gradient(
+        45deg,
+        #c25e5e,
+        #d65d5d,
+        #ff6f6f,
+        #ff9671,
+        #ffc75f,
+        #f9f871
+    );
+    --gradient2: linear-gradient(
+        45deg,
+        #ffc75f,
+        #efb860,
+        #d48831,
+        #ffc75f,
+        #d48831,
+        #ffc75f,
+        #ffc75f
+    );
 
     --container-width-lg: 80%;
     --container-width-md: 90%;
@@ -109,8 +129,22 @@ section h2 {
 .text-h1 {
     margin-bottom: 3rem;
     font-size: 4.3rem;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
+    background-image: var(--gradient2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
 }
 
 h1 {
@@ -150,9 +184,10 @@ a {
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: 500;
-    margin: 20px;
     padding: 24px 50px;
+    margin: auto;
     width: 800px;
+    justify-content: center;
     border-radius: 6px;
     background-image: linear-gradient(to left, #941216, #EA2027, #941216);
     background-size: 200%;
@@ -207,12 +242,39 @@ nav button {
 
 .nav__menu a {
     font-size: 1.1rem;
-    transition: var(--transition);
+    transition: 0.4s;
 }
 
 .nav__menu a:hover {
-    color: #a8a8a8;
+    color: rgb(183, 183, 183);
 }
+
+/* Para fazer Hover com Linha Embaixo */
+
+/* .nav-link {
+    text-decoration: none;
+    color: #00bf8e;
+    position: relative;
+}
+
+.nav__menu .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #00bf8e;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+.nav__menu .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+} */
 
 
 /* Header */
@@ -251,7 +313,7 @@ header::before{
     z-index: 0;
     background: #24252A;
     margin-top: 55vh;
-    margin-bottom: 60rem;
+    margin-bottom: 55rem;
     padding: 4rem auto;
     width: 100%;
     height: 100vh;
@@ -262,6 +324,50 @@ header::before{
     height: 250vh;
     max-width: 200rem;
 }
+
+.sinopse {
+    padding-top: 80px;
+    padding-bottom: 300px;
+    display: grid;
+    height: 900px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    grid-row-gap: 0px;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+#jogos__img {
+    border-radius: 12px;
+    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-row-start: 1;
+}
+
+#paragrado-left {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: center;
+}
+
+.design {
+    width: 1000px;
+    background: linear-gradient(90deg, #24252a00, #24252a05, #24252a21, #24252ae6,  #24252A), url(/images/batalha-nathan-e-dylan.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sinopsedefato {
+    width: 700px;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
 
 .ae h2 {
     margin: 1rem auto 2rem auto;
@@ -274,15 +380,8 @@ header::before{
 .ae h5 {
     font-weight: 400;
     font-size: 1.5em;
-	color: #b1954a;
+	color: #f3bf32;
     text-align: center;
-}
-
-.sinopse {
-    width: 65rem;
-    height: 20rem;
-    display: flex;
-    align-items: center;
 }
 
 .content-sinopse i {
@@ -303,12 +402,11 @@ header::before{
 
 .content-sinopse {
     justify-content: center;
-    margin: auto;
+    margin: -5rem auto 0 auto;
     border-radius: 15px;
     width: 90rem;
     background: rgb(240, 240, 240);
     padding: 2rem;
-    transform: translate(0, -57rem);
 }
 
 .sinopse2 {
@@ -340,21 +438,10 @@ header::before{
 
 .dst {
     font-weight: 600;
-    color: #ccaa4b;
+    color: #f3bf32;
 }
 
-.sinopse p {
-    z-index: 0;
-    transform: translate(40rem, -80rem);
-    text-align: left;
-    font-size: 1.5em;
-    font-weight: 400;
-    color: rgb(167, 167, 167);
-    margin-top: 5rem;
-    margin-left: 15rem;
-}
-
-.jogos__img{
+.jogos__img {
     z-index: 0;
     margin: 3.5rem 3rem;
     height: 80rem;
@@ -364,12 +451,9 @@ header::before{
 .jogos__img::before{
     z-index: 0;
     content: '';
-    position: absolute;
     transform: rotate(-90deg);
-    right: 32rem;
-    top: 85rem;
     width: 80rem;
-    height: 100vh;
+    height: 80vh;
     background: linear-gradient(#24252a00, #24252a2e, #24252ae3, #24252A,  #24252A);
 }
 
@@ -387,7 +471,6 @@ header::before{
     width: 100%;
     height: 80vh;
     background-color: var(--color-bg);
-    position: relative;
 }
 
 .geral__container h2 {
@@ -401,16 +484,16 @@ header::before{
 .geral__container h5 {
     font-weight: 400;
     font-size: 1.5em;
-	color: #b1954a;
+	color: #f3bf32;
     text-align: center;
     margin: auto;
 }
 
 .wrapper {
+    width: 1080px;
     display: flex;
     padding: 10px 10px;
     margin: auto auto auto 3.5rem;
-    width: calc(90% + 2.8rem);
 }
 
 .carrossel::-webkit-scrollbar {
@@ -448,9 +531,7 @@ header::before{
 }
 
 .carrossel {
-    width: calc(90% + 90px);
     gap: 1rem;
-    white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
     height: 395px;
@@ -463,7 +544,7 @@ header::before{
     height: 21rem;
     background: #212124;
     box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.226);
-    border-radius: 20px;
+    border-radius: 10px;
     position: relative;
     transition: 0.5s;
     cursor: pointer;
@@ -471,7 +552,7 @@ header::before{
 
 .item {
     flex-shrink: 0;
-    transition: all 600ms ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .current-item {
@@ -513,38 +594,48 @@ picture img {
     font-size: 18px;
 }
 
-.g:where(:hover, :focus) {
+.item:hover:not(.current-item) {
     transform: scale(0.98);
 }
 
+.current-item:hover {
+    transform: scale(1.02);
+}
+
 .g.d1 {
-    box-shadow: inset 0 0 3rem rgba(71, 71, 68, 0.847);
-    background: linear-gradient(to top, rgba(115, 37, 37, 0.929), rgba(107, 58, 58, 0.929), #35353700);
+    border-bottom: 8px solid #a92f2f;
+    background: linear-gradient(to top,#1a1a1e, #252529);
+    box-shadow: inset 0 0 3rem #131316;
 }
 
 .g.d2 {
-    box-shadow: inset 0 0 3rem rgba(71, 71, 68, 0.847);
-    background: linear-gradient(to top, rgba(115, 68, 37, 0.929), rgba(107, 73, 58, 0.929), #35353700);
+    border-bottom: 8px solid #a9542f;
+    background: linear-gradient(to top,#1a1a1e, #252529);
+    box-shadow: inset 0 0 3rem #131316;
 }
 
 .g.d3 {
-    box-shadow: inset 0 0 3rem rgba(71, 71, 68, 0.847);
-    background: linear-gradient(to top, rgba(123, 98, 28, 0.929), rgba(106, 102, 62, 0.929), #35353700);
+    border-bottom: 8px solid #a98d2f;
+    background: linear-gradient(to top,#1a1a1e, #252529);
+    box-shadow: inset 0 0 3rem #131316;
 }
 
 .g.d4 {
-    box-shadow: inset 0 0 3rem rgba(71, 71, 68, 0.847);
-    background: linear-gradient(to top, rgba(78, 114, 52, 0.929), rgba(74, 92, 72, 0.929), #35353700);
+    border-bottom: 8px solid #549630;
+    background: linear-gradient(to top,#1a1a1e, #252529);
+    box-shadow: inset 0 0 3rem #131316;
 }
 
 .g.d5 {
-    box-shadow: inset 0 0 3rem rgba(71, 71, 68, 0.847);
-    background: linear-gradient(to top, rgba(41, 111, 110, 0.929), rgba(54, 82, 85, 0.929), #35353700);
+    border-bottom: 8px solid #2bac9a;
+    background: linear-gradient(to top,#1a1a1e, #252529);
+    box-shadow: inset 0 0 3rem #131316;
 }
 
 .g.d6 {
-    box-shadow: inset 0 0 3rem rgba(71, 71, 68, 0.847);
-    background: linear-gradient(to top, rgba(72, 41, 111, 0.929), rgba(70, 54, 85, 0.929), #35353700);
+    border-bottom: 8px solid #7b35cb;
+    background: linear-gradient(to top,#1a1a1e, #252529);
+    box-shadow: inset 0 0 3rem #131316;
 }
 
 
@@ -594,7 +685,7 @@ picture img {
 .suporte h5 {
     font-weight: 400;
     font-size: 1.5em;
-	color: #b1954a;
+	color: #f3bf32;
     text-align: center;
     margin: auto;
 }
@@ -669,7 +760,7 @@ picture img {
 .creditos h5 {
     font-weight: 400;
     font-size: 1.5em;
-	color: #fec426;
+	color: #f3bf32;
     text-align: center;
     margin: auto;
 }
@@ -677,47 +768,11 @@ picture img {
 .trio__fantastico {
     margin: auto;
     margin-top: 4rem;
-    margin-right: 45rem;
     height: 550px;
     width: 880px;
-    background-image: url(/images/Staff-equipe.png);
+    background: linear-gradient(#24252a00, #24252a00,  #24252a7c,  #24252A), url(/images/Staff-equipe.png);
     background-size: cover;
-}
-
-.trio__fantastico::before{
-    z-index: 0;
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 10.5rem;
-    width: 100%;
-    height: 80vh;
-    background: linear-gradient(#24252a00, #24252a00, #24252A,  #24252A);
-}
-
-.producao {
-    height: 540px;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    margin: auto;
-    left: 30rem;
-    top: -40rem;
-    z-index: 0;
-    background: rgba(101, 100, 106, 0.115);
-    border: rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 0 5rem rgba(82, 82, 82, 0.565);
-    border-radius: 10px;
-    backdrop-filter: blur(20px);
-    padding: 40px;
-    width: 420px;
-    transform: translate(-5rem, 6.5rem);
-    justify-content: center;
-}
-
-.perfeicao {
-    margin: 2rem;
-    justify-content: left;
+    background-repeat: no-repeat;
 }
 
 .perfeicao h3 {

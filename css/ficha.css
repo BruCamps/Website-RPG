@@ -54,7 +54,6 @@ input, button {
 	border: none;
 	outline: none;
 	background: none;
-	cursor: initial;
 }
 
 
@@ -124,6 +123,9 @@ label {
 
 .cont {
     display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
 }
 
 .todo-list {
@@ -168,7 +170,7 @@ label {
 
 .todo-list .xp {
 	padding: 0.8rem;
-    background-color: white;
+    background-color: rgb(233, 233, 233);
 }
 
 .todo-item .nn .v {
@@ -184,6 +186,7 @@ label {
 }
 
 #vid.num, #gen.num2, #san.num3, #vig.num4, #pde.num5 {
+	cursor: pointer;
 	text-align: center;
 	font-size: 1.5rem;
 	width: 7rem;
@@ -194,6 +197,7 @@ label {
 }
 
 #xp.num6 {
+	cursor: pointer;
 	color: #24252A;
 	font-weight: 500;
 	display: flex;
@@ -204,18 +208,20 @@ label {
 }
 
 .vid.num, .gen.num2, .san.num3, .vig.num4, .pde.num5 {
+	cursor: pointer;
+	color: white;
 	text-align: center;
+	font-weight: 500;
 	font-size: 1.5rem;
 	width: 7rem;
 	margin-left: 1.5rem;
 	margin-right: 0;
-	color: white;
-	font-weight: 500;
 	padding-inline-start: 1.4rem;
 	border-left: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 #so1.so, #so2.so, #so3.so, #so4.so, #so5.so {
+	cursor: pointer;
 	color: white;
 	text-align: center;
 	width: 7rem;
@@ -228,6 +234,7 @@ label {
 }
 
 .so1.so, .so2.so, .so3.so, .so4.so, .so5.so {
+	cursor: pointer;
 	color: white;
 	text-align: center;
 	width: 7rem;
@@ -247,7 +254,7 @@ label {
 	width: 300px;
 }
 
-.todo-item .todo-content input, #pit {
+.todo-item .todo-content input {
 	color: rgb(121, 120, 120);
 	font-weight: 600;
 	font-size: 1.125rem;
@@ -279,11 +286,6 @@ label {
 	opacity: 0.75;
 }
 
-.todo-item .actions .edit {
-	margin-left: 8.1rem;
-	background-color: var(--primary);
-}
-
 .todo-item .actions .edita {
 	margin-left: 4.6rem;
 	background-color: var(--primary);
@@ -306,21 +308,25 @@ label {
 
 
 .image {
+	display: flex;
+	justify-content: center;
+    align-items: center;
     border-radius: 8px;
-    margin: 1rem 2rem 1rem 8rem;
-    padding: 8px;
     width: 24rem;
-    height: 48rem;
+    height: 50rem;
     background: linear-gradient(to bottom, #1e0101, #430606, #1e0101);
     box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.821);
+	transition: 0.5s ease-in-out;
 }
 
 picture img {
-    object-fit: cover;
+	padding: 0.5rem;
+	margin-top: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+	transition: 0.5s ease-in-out;
 }
 
 /* PopUp */

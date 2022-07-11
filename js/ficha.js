@@ -134,7 +134,7 @@ window.addEventListener('load', () => {
 	butt1.addEventListener("click", function() {
 			
 		campo1.removeAttribute('readonly');
-		campo1.style.color = '#5f1a1a';
+		campo1.style.color = '#803838';
 		campo1.focus();
 	
 				campo1.addEventListener('blur', (e) => {
@@ -146,7 +146,7 @@ window.addEventListener('load', () => {
 	butt2.addEventListener("click", function() {
 			
 		campo2.removeAttribute('readonly');
-		campo2.style.color = '#5f1a1a';
+		campo2.style.color = '#803838';
 		campo2.focus();
 	
 				campo2.addEventListener('blur', (e) => {
@@ -158,7 +158,7 @@ window.addEventListener('load', () => {
 	butt3.addEventListener("click", function() {
 			
 	campo3.removeAttribute('readonly');
-	campo3.style.color = '#5f1a1a';
+	campo3.style.color = '#803838';
 	campo3.focus();
 	
 			campo3.addEventListener('blur', (e) => {
@@ -170,7 +170,7 @@ window.addEventListener('load', () => {
 	butt4.addEventListener("click", function() {
 			
 		campo4.removeAttribute('readonly');
-		campo4.style.color = '#5f1a1a';
+		campo4.style.color = '#803838';
 		campo4.focus();
 
 				campo4.addEventListener('blur', (e) => {
@@ -182,7 +182,7 @@ window.addEventListener('load', () => {
 	butt5.addEventListener("click", function() {
 		
 		campo5.removeAttribute('readonly');
-		campo5.style.color = '#5f1a1a';
+		campo5.style.color = '#803838';
 		campo5.focus();
 
 				campo5.addEventListener('blur', (e) => {
@@ -194,12 +194,12 @@ window.addEventListener('load', () => {
 	butt6.addEventListener("click", function() {
 	
 		campo6.removeAttribute('readonly');
-		campo6.style.color = '#5f1a1a';
+		campo6.style.color = '#803838';
 		campo6.focus();
 
 				campo6.addEventListener('blur', (e) => {
 					campo6.setAttribute('readonly', true);
-					campo6.style.color = 'rgb(88, 88, 88)';
+					campo6.style.color = 'rgb(121, 120, 120)';
 				})
 	});
 
@@ -470,7 +470,7 @@ function iniciaModal(modalID) {
 		// Define a tecla enter a ser considerada
 		if (e.key == "Enter") {
 			
-			input1.style.color = 'rgb(88, 88, 88)';
+			input1.style.color = 'rgb(121, 120, 120)';
 			input1.setAttribute('focus', false);
 			input1.setAttribute('readonly', true);
 		}
@@ -483,7 +483,7 @@ function iniciaModal(modalID) {
 		// Define a tecla enter a ser considerada
 		if (e.key == "Enter") {
 	
-			input2.style.color = 'rgb(88, 88, 88)';
+			input2.style.color = 'rgb(121, 120, 120)';
 			input2.setAttribute('focus', false);
 			input2.setAttribute('readonly', true);
 		}
@@ -496,7 +496,7 @@ function iniciaModal(modalID) {
 		// Define a tecla enter a ser considerada
 		if (e.key == "Enter") {
 
-			input3.style.color = 'rgb(88, 88, 88)';
+			input3.style.color = 'rgb(121, 120, 120)';
 			input3.setAttribute('focus', false);
 			input3.setAttribute('readonly', true);
 
@@ -511,7 +511,7 @@ function iniciaModal(modalID) {
 		// Define a tecla enter a ser considerada
 		if (e.key == "Enter") {
 
-			input4.style.color = 'rgb(88, 88, 88)';
+			input4.style.color = 'rgb(121, 120, 120)';
 			input4.setAttribute('focus', false);
 			input4.setAttribute('readonly', true);
 	
@@ -525,7 +525,7 @@ function iniciaModal(modalID) {
 		// Define a tecla enter a ser considerada
 		if (e.key == "Enter") {
 			
-			input5.style.color = 'rgb(88, 88, 88)';
+			input5.style.color = 'rgb(121, 120, 120)';
 			input5.setAttribute('focus', false);
 			input5.setAttribute('readonly', true);
 
@@ -539,7 +539,7 @@ function iniciaModal(modalID) {
 		// Define a tecla enter a ser considerada
 		if (e.key == "Enter") {
 
-			input6.style.color = 'rgb(88, 88, 88)';
+			input6.style.color = 'rgb(121, 120, 120)';
 			input6.setAttribute('focus', false);
 			input6.setAttribute('readonly', true);
 
