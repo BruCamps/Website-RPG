@@ -41,7 +41,7 @@
         event.preventDefault();
 
         // Faz com que pare no topo descontando 100px da Nav
-        const to = getScrollTopByHref(event.target) - 180;
+        const to = getScrollTopByHref(event.target) - 170;
 
         // Seta a função que diz onde é o topo da seção
         scrollToPosition(to);

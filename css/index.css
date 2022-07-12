@@ -89,21 +89,16 @@ body {
 }
 
 
-.section{
+.section {
     padding: 7rem 2rem;
     width: 100%;
 }
 
-.container{
+.container {
     max-width: 1230px;
     width: 100%;
     margin: 0 auto;
     padding: 0 3rem;
-}
-
-.geral__container {
-    max-width: 79.5rem;
-    margin-bottom: 15rem;
 }
 
 
@@ -207,16 +202,18 @@ a {
 /* Navbar */
 
 nav {
+    --bg-nav: transparent;
+
     z-index: 1;
-    background: transparent;
     width: 100vw;
     height: 7rem;
     position: fixed;
     top: 0;
+    background: var(--bg-nav);
 }
 
 .window-scroll {
-    background-image: linear-gradient(#680911e5, rgba(58, 3, 3, 0.948)), url('/images/aaa.jpg');
+    background: linear-gradient(#680911e5, rgba(58, 3, 3, 0.948)), url('/images/aaa.jpg');
     background-position: bottom;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
@@ -286,20 +283,7 @@ header {
     height: 100vh;
     position: relative;
     background-repeat: no-repeat;
-    background-position: fixed;
-    filter: blur(5px);
-    background-image: url('../images/imagem_geral.png');
-}
-
-header::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.618);
-    z-index: var(--z-overlay);
+    background: linear-gradient(rgba(0, 0, 0, 0.734), rgba(0, 0, 0, 0.734), #111113e2), url('../images/imagem_geral.png');
 }
 
 .start {
@@ -312,22 +296,19 @@ header::before{
 .sobre {
     z-index: 0;
     background: #24252A;
-    margin-top: 55vh;
-    margin-bottom: 55rem;
-    padding: 4rem auto;
+    margin-top: 50vh;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     text-align: center;
 }
 
 .sobre__container {
-    height: 250vh;
-    max-width: 200rem;
+    height: 50vh;
+    max-width: 110rem;
 }
 
 .sinopse {
-    padding-top: 80px;
-    padding-bottom: 300px;
+    padding-top: 5rem;
     display: grid;
     height: 900px;
     -webkit-box-align: stretch;
@@ -356,10 +337,19 @@ header::before{
 }
 
 .design {
-    width: 1000px;
+    max-height: 500px;
+    width: 800px;
     background: linear-gradient(90deg, #24252a00, #24252a05, #24252a21, #24252ae6,  #24252A), url(/images/batalha-nathan-e-dylan.png);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.bg-sinopse {
+    margin-top: -3rem;
+    height: 90vh;
+    width: 100%;
+    padding: 6rem;
+    background: #1b1b1e;
 }
 
 .sinopsedefato {
@@ -402,9 +392,9 @@ header::before{
 
 .content-sinopse {
     justify-content: center;
-    margin: -5rem auto 0 auto;
+    margin: auto;
     border-radius: 15px;
-    width: 90rem;
+    max-width: 1200px;
     background: rgb(240, 240, 240);
     padding: 2rem;
 }
@@ -441,22 +431,6 @@ header::before{
     color: #f3bf32;
 }
 
-.jogos__img {
-    z-index: 0;
-    margin: 3.5rem 3rem;
-    height: 80rem;
-    width: 60rem;
-}
-
-.jogos__img::before{
-    z-index: 0;
-    content: '';
-    transform: rotate(-90deg);
-    width: 80rem;
-    height: 80vh;
-    background: linear-gradient(#24252a00, #24252a2e, #24252ae3, #24252A,  #24252A);
-}
-
 .img-responsive {
     border-radius: 8px;
     width: 100%;
@@ -466,11 +440,11 @@ header::before{
 /* Geral */
 
 .geral__container {
-    margin-top: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     z-index: 0;
     width: 100%;
-    height: 80vh;
-    background-color: var(--color-bg);
+    height: 90vh;
 }
 
 .geral__container h2 {
@@ -486,47 +460,50 @@ header::before{
     font-size: 1.5em;
 	color: #f3bf32;
     text-align: center;
-    margin: auto;
+    padding-top: 2rem;
 }
 
 .wrapper {
-    width: 1080px;
-    display: flex;
-    padding: 10px 10px;
-    margin: auto auto auto 3.5rem;
+    max-width: 1060px;
+    margin: 5rem auto 0 auto;
 }
 
 .carrossel::-webkit-scrollbar {
     display: none;
 }
 
-.er {
-    width: 70rem;
-	height: 60px;
-    margin: auto auto 0 auto;
-	display: flex;
-	align-items: center;
-	padding: 20px;
-	justify-content: flex-end;
-}
-
-.er p span {
-    font-size: 40px;
-	margin: 0 0 20px 5px;
-    padding: 2px;
+p span {
+    font-size: 2rem;
+    margin: auto;
 	cursor: pointer;
 	color: #555;
-    display: inline-block;
-}
-
-.er p {
-    margin-right: 3rem;
-}
-
-.er p span:hover {
-    background-color: #212124;
+    border: 3px solid #555;
     border-radius: 5px;
-    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.807);
+    transition: 0.4s;
+}
+
+.carousel_button {
+    display: flex;
+}
+
+.carousel_button span {
+    position: absolute;
+}
+
+.carousel_button--left span {
+    margin-top: 15rem;
+    left: 21rem;
+}
+
+.carousel_button--right span {
+    margin-top: 15rem;
+    right: 21rem;
+}
+
+
+p span:hover {
+    background-color: #131316;
+    border: 3px solid #131316;
     color: white;
 }
 
@@ -564,7 +541,7 @@ header::before{
 picture {
     width: 15rem;
     height: 15rem;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     overflow: hidden;
     margin-bottom: 1rem;
@@ -661,91 +638,19 @@ picture img {
 }
 
 
-/* Suporte */
-
-.suporte {
-    margin-top: 3rem;
-    margin-bottom: 19rem;
-    z-index: 0;
+.line-border {
+    background: #131316;
     width: 100%;
-    height: 80vh;
-    max-height: 80vh;
-    background-color: var(--color-bg);
-    position: relative;
+    height: 5rem;
 }
-
-.suporte h2 {
-    margin: 1rem auto 2rem auto;
-    font-size: 2rem;
-    line-height: 1.5rem;
-    text-align: center;
-    font-weight: 400;
-}
-
-.suporte h5 {
-    font-weight: 400;
-    font-size: 1.5em;
-	color: #f3bf32;
-    text-align: center;
-    margin: auto;
-}
-
-.suporte__container {
-    max-height: 1000px;
-    max-width: 1400px;
-    display: flex;
-    text-align: left;
-}
-
-.faq {
-    margin: 3rem;
-    max-width: 800px !important;
-}
-
-.question__answer {
-    margin: 4rem;
-    width: 80%;
-}
-
-.faq h4 {
-    font-weight: 500;
-}
-
-.faq p {
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    color: #a8a8a8;
-}
-
-.calc {
-    max-width: 20rem;
-    margin: 0.2rem 0;
-    border-radius: 5px;
-    padding: 10px 15px;
-    text-shadow: none;
-    color: white;
-    background: #191818;
-}
-
-.card {
-    display: flex;
-    margin-top: 2rem;
-    background-color: #2a2a2d;
-    box-shadow: inset 0 0 3rem #131316;
-    border-radius: 8px;
-    width: 2000px;
-    height: 550px;
-}
-
 
 /* Créditos */
 
-.creditos {
-    margin-top: 10rem;
-    margin-bottom: 2.5rem;
+.creditos__container{
     z-index: 0;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
+    background: #131316;
     position: relative;
 }
 
@@ -762,7 +667,6 @@ picture img {
     font-size: 1.5em;
 	color: #f3bf32;
     text-align: center;
-    margin: auto;
 }
 
 .trio__fantastico {
@@ -770,7 +674,7 @@ picture img {
     margin-top: 4rem;
     height: 550px;
     width: 880px;
-    background: linear-gradient(#24252a00, #24252a00,  #24252a7c,  #24252A), url(/images/Staff-equipe.png);
+    background: linear-gradient(#13131600, #13131600,  #1313167c,  #131316), url(/images/Staff-equipe.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -784,11 +688,15 @@ picture img {
     color: #b1954a;
 }
 
+.flex-container {
+    display: flex;
+}
+
 /* PopUp*/
 .modal-c {
     z-index: 200;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     position: fixed;
     top: 0;
     left: 0;
