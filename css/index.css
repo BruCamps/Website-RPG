@@ -283,7 +283,7 @@ header {
     height: 100vh;
     position: relative;
     background-repeat: no-repeat;
-    background: linear-gradient(rgba(0, 0, 0, 0.869),rgba(0, 0, 0, 0.869), #1e1e22de), url('../images/imagem_geral.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.777),rgba(0, 0, 0, 0.777), rgba(0, 0, 0, 0.914)), url('../images/imagem_geral.png');
 }
 
 .start {
