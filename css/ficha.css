@@ -357,18 +357,25 @@ picture img {
 }
 
 @keyframes modal {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -60px, 0);
+    0% {
+        transform: translateX(100%);
     }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
+
+    40% {
+        transform: translateX(-10%);
+    }
+
+    80% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-10px);
     }
 } 
 
 .mostrar .modal {
-    animation: modal .3s;
+    animation: modal 1s ease forwards;
 }
 
 .modal .uil {
