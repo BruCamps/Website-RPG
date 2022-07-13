@@ -725,7 +725,7 @@ picture img {
 .modal-c {
     z-index: 200;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
