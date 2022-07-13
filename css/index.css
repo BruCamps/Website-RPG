@@ -78,6 +78,17 @@ body {
     background: var(--color-bg);
 }
 
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #000; /* or add it to the track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #941216;
+    border-radius: 2px;
+}
+
 
 
 .logo {
@@ -309,7 +320,7 @@ header {
 .sinopse {
     padding-top: 5rem;
     display: flex;
-    gap: 2em;
+    gap: 3em;
     flex-direction: row;
     height: 900px;
 }
