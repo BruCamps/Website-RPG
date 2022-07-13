@@ -394,7 +394,7 @@ header {
 }
 
 .content-sinopse.pergaminho {
-    background: url(/images/pergaminho.png);
+    background: url('../images/pergaminho.png');
     background-repeat: no-repeat;
     background-position: center 30px;
 }
