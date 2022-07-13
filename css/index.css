@@ -401,11 +401,11 @@ header {
 
 .sinopse2 {
     z-index: 0;
-    width: 50%;
+    width: 60rem;
     margin: auto;
     font-style: italic;
-    padding-top: 10rem;
-    font-size: 1.2em;
+    padding-top: 9rem;
+    font-size: 1.3em;
     font-weight: 500;
     color: #a15c25;
     text-align: left;
