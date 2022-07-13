@@ -403,6 +403,7 @@ header {
     z-index: 0;
     width: 50%;
     margin: auto;
+    font-style: italic;
     padding-top: 10rem;
     font-size: 1.2em;
     font-weight: 500;
