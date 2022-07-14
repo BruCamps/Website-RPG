@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Vídeo */
+
+iframe {
+    /* Proporção dos vídeos */
+    width: 80.11vw;
+    height: 42.25vw;
+    max-height: 100vh;
+    max-width: 177.78vh;
+    margin: auto;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    border: none;
+    border-radius: 15px;
+}
+
+@media screen and (min-width: 640px) {
+    iframe {
+        top: 60px;
+    }
+}
