@@ -23,11 +23,10 @@ iframe {
     height: 42.25vw;
     max-height: 100vh;
     max-width: 177.78vh;
-    margin: auto;
-    position: absolute;
-    top: 120px;
-    left: 0;
-    right: 0;
+    margin: 5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     border-radius: 15px;
 }
