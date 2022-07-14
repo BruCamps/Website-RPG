@@ -1,14 +1,25 @@
+/* Arquivo de Estilização do Video.html */
+
+/* Importa a Fonte Poppins, Racing Sans One e Work Sans do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Racing+Sans+One&family=Work+Sans:ital,wght@0,700;0,800;0,900;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: #24252A;
+}
+
 /* Vídeo */
 
 iframe {
     /* Proporção dos vídeos */
-    width: 80.11vw;
+    width: 75.11vw;
     height: 42.25vw;
     max-height: 100vh;
     max-width: 177.78vh;
