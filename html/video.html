@@ -5,10 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/video.css">
+    <!-- Importando Ícones de FontAwesome -->
+    <script src="https://kit.fontawesome.com/2986cff14b.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <title>Vídeo</title>
 </head>
 <body>
-    <iframe src="https://drive.google.com/file/d/1O9fTf3CofsGLM7FjsBNq_Rz1AX6L76Ji/preview" allowfullscreen allow="autoplay"></iframe>
+
+    <h1>Assista ao Trailer da Temporada de OC</h1>
+
+    <div class="thumbnail-container" id="container-tb">
+        <div class="thumbnail">
+        <iframe id="video" src="https://drive.google.com/file/d/1O9fTf3CofsGLM7FjsBNq_Rz1AX6L76Ji/preview" sandbox="allow-same-origin allow-scripts" allow="autoplay" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
+    <div class="social">
+        <p>Acompanha a gente por aqui</p>
+        <i class="fab fa-discord"></i>
+        <i class="fab fa-whatsapp"></i>
+    </div>
+    
+
+    <script>
+        const container = document.getElementById('container-tb');
+        const video = document.getElementById('video');
+
+        container.addEventListener('click', function() {
+            video.style.opacity = 1;
+        });
+    </script>
+
 </body>
 </html>
