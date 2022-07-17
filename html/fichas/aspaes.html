@@ -16,182 +16,585 @@
     <title>Aspaes - Ficha</title>
 </head>
 <body>
-	<!-- Container da Primeira parte da Ficha -->
-	<main class="app">
         
-		<!-- Greeting -->
-		<section class="greeting">
-			<h2 class="title">
-				Ficha do Personagem
-			</h2>
-		</section>
+    <!-- Greeting -->
+    <section class="greeting">
+        <h2 class="title">
+            Ficha do Personagem
+        </h2>
+    </section>
 	
 
-		<!-- Todo List -->
-		<section class="todo-list">
+    <!-- Todo List -->
+    <section class="todo-list">
 
-            <div class="cont">
-                
-                <div class="image">
-                    <picture>
-                        <img src="/images/personagens/Aspaes.png">
-                    </picture>
-                </div>
-                
-                <div class="list" id="todo-list">
+        <div class="cont">
+            
+            <div class="image">
+                <picture>
+                    <img src="/images/personagens/Aspaes.png">
+                </picture>
+            </div>
+            
+            <div class="list" id="todo-list">
 
-                    <label>Nome</label>
-                    <div class="todo-item">
+                <label>Nome</label>
+                <div class="todo-item">
 
-                    <div class="todo-content">
-                        <input class="text-input" id="nom" type="text" value="Aspaes"  readonly>
-                    </div>
-
-                    <div class="actions">
-                        <button id="ed1" class="edita">Editar</button>
-                    </div>
-
-                    </div>
-
-                    <label>Jogador</label>
-                    <div class="todo-item">
-
-                    <div class="todo-content">
-                        <input class="text-input" id="jog" type="text" value="Dante"  readonly>
-                    </div>
-
-                    <div class="actions">
-                        <button id="ed2" class="edita">Editar</button>
-                    </div>
-                    
-                    </div>
-
-                    <label>Idade</label>
-                    <div class="todo-item">
-
-                    <div class="todo-content">
-                        <input class="text-input" id="ida" type="text" value="29 anos" readonly>
-                    </div>
-
-                    <div class="actions">
-                        <button id="ed3" class="edita">Editar</button>
-                    </div>
-                    
-                    </div>
-
-                    <label>Altura</label>
-                    <div class="todo-item">
-
-                    <div class="todo-content">
-                        <input class="text-input" id="alt" type="text" value="1.75m" readonly>
-                    </div>
-
-                    <div class="actions">
-                        <button id="ed4" class="edita">Editar</button>
-                    </div>
-                    
-                    </div>
-
-                    <label>Taxa de Movimento</label>
-                    <div class="todo-item">
-
-                    <div class="todo-content">
-                        <input class="text-input" id="tmv" type="text" value="5m" readonly>
-                    </div>
-
-                    <div class="actions">
-                        <button id="ed5" class="edita">Editar</button>
-                    </div>
-                    
-                    </div>
-
-                    <label>Pessoas/Itens Importantes</label>
-                    <div class="todo-item">
-
-                    <div class="todo-content">
-                        <input class="text-input" id="pit" type="text" value="Nikolas, Kaya, Nathan e Machados do Caos" readonly>
-                    </div>
-
-                    <div class="actions">
-                        <button id="ed6" class="edita">Editar</button>
-                    </div>
-                    
-                    </div>
+                <div class="todo-content">
+                    <input class="text-input" id="nom" type="text" value="Aspaes"  readonly>
                 </div>
 
-                <div class="linha"></div>
+                <div class="actions">
+                    <button id="ed1" class="edita">Editar</button>
+                </div>
 
-                <div class="list">
+                </div>
 
-                    <label>Vida</label>
-                    <div class="todo-item vida tam">
-                        <div class="nn">
-                            <span id="vm" class="inus v">-</span>
-                            <input id="vid" type="text" class="vid num" value="22" readonly>
-                            <span class="v">/</span>
-                            <input id="so1" type="text" class="so"  value="22">
-                            <span id="pl" class="plus v">+</span>
-                        </div>
+                <label>Jogador</label>
+                <div class="todo-item">
+
+                <div class="todo-content">
+                    <input class="text-input" id="jog" type="text" value="Dante"  readonly>
+                </div>
+
+                <div class="actions">
+                    <button id="ed2" class="edita">Editar</button>
+                </div>
+                
+                </div>
+
+                <label>Idade</label>
+                <div class="todo-item">
+
+                <div class="todo-content">
+                    <input class="text-input" id="ida" type="text" value="29 anos" readonly>
+                </div>
+
+                <div class="actions">
+                    <button id="ed3" class="edita">Editar</button>
+                </div>
+                
+                </div>
+
+                <label>Altura</label>
+                <div class="todo-item">
+
+                <div class="todo-content">
+                    <input class="text-input" id="alt" type="text" value="1.75m" readonly>
+                </div>
+
+                <div class="actions">
+                    <button id="ed4" class="edita">Editar</button>
+                </div>
+                
+                </div>
+
+                <label>Taxa de Movimento</label>
+                <div class="todo-item">
+
+                <div class="todo-content">
+                    <input class="text-input" id="tmv" type="text" value="5m" readonly>
+                </div>
+
+                <div class="actions">
+                    <button id="ed5" class="edita">Editar</button>
+                </div>
+                
+                </div>
+
+                <label>Pessoas/Itens Importantes</label>
+                <div class="todo-item">
+
+                <div class="todo-content">
+                    <input class="text-input" id="pit" type="text" value="Nikolas, Kaya, Nathan e Machados do Caos" readonly>
+                </div>
+
+                <div class="actions">
+                    <button id="ed6" class="edita">Editar</button>
+                </div>
+                
+                </div>
+            </div>
+
+            <div class="linha"></div>
+
+            <div class="list">
+
+                <label>Vida</label>
+                <div class="todo-item vida tam">
+                    <div class="nn">
+                        <span id="vm" class="inus v">-</span>
+                        <input id="vid" type="text" class="vid num" value="22" readonly>
+                        <span class="v">/</span>
+                        <input id="so1" type="text" class="so"  value="22">
+                        <span id="pl" class="plus v">+</span>
                     </div>
+                </div>
 
-                    <label>Genki</label>
-                    <div class="todo-item genki tam">
-                        <div class="nn">
-                            <span id="vm2" class="m2 v">-</span>
-                            <input id="gen" type="text" class="gen num2" value="8" readonly>
-                            <span class="v">/</span>
-                            <input id="so2" class="so" value="8">
-                            <span id="pl2" class="p2 v">+</span>
-                        </div>
+                <label>Genki</label>
+                <div class="todo-item genki tam">
+                    <div class="nn">
+                        <span id="vm2" class="m2 v">-</span>
+                        <input id="gen" type="text" class="gen num2" value="8" readonly>
+                        <span class="v">/</span>
+                        <input id="so2" class="so" value="8">
+                        <span id="pl2" class="p2 v">+</span>
                     </div>
+                </div>
 
-                    <label>Sanidade</label>
-                    <div class="todo-item sanidade tam">
-                        <div class="nn">
-                            <span id="vm3" class="m3 v">-</span>
-                            <input id="san" type="text" class="san num3" value="9" readonly>
-                            <span class="v">/</span>
-                            <input id="so3" class="so" value="9">
-                            <span id="pl3" class="p3 v">+</span>
-                        </div>
+                <label>Sanidade</label>
+                <div class="todo-item sanidade tam">
+                    <div class="nn">
+                        <span id="vm3" class="m3 v">-</span>
+                        <input id="san" type="text" class="san num3" value="9" readonly>
+                        <span class="v">/</span>
+                        <input id="so3" class="so" value="9">
+                        <span id="pl3" class="p3 v">+</span>
                     </div>
+                </div>
 
-                    <label>Vigor</label>
-                    <div class="todo-item vigor tam">
-                        <div class="nn">
-                            <span id="vm4" class="m4 v">-</span>
-                            <input id="vig" type="text" class="vig num4" value="8" readonly>
-                            <span class="v">/</span>
-                            <input id="so4" class="so" value="8">
-                            <span id="pl4" class="p4 v">+</span>
-                        </div>
+                <label>Vigor</label>
+                <div class="todo-item vigor tam">
+                    <div class="nn">
+                        <span id="vm4" class="m4 v">-</span>
+                        <input id="vig" type="text" class="vig num4" value="8" readonly>
+                        <span class="v">/</span>
+                        <input id="so4" class="so" value="8">
+                        <span id="pl4" class="p4 v">+</span>
                     </div>
+                </div>
 
-                    <label>Pontos de Esforço</label>
-                    <div class="todo-item pe tam">
-                        <div class="nn">
-                            <span id="vm5" class="m5 v">-</span>
-                            <input id="pde" type="text" class="pde num5" value="8" readonly>
-                            <span class="v">/</span>
-                            <input id="so5" class="so" value="8">
-                            <span id="pl5" class="p5 v">+</span>
-                        </div>
+                <label>Pontos de Esforço</label>
+                <div class="todo-item pe tam">
+                    <div class="nn">
+                        <span id="vm5" class="m5 v">-</span>
+                        <input id="pde" type="text" class="pde num5" value="8" readonly>
+                        <span class="v">/</span>
+                        <input id="so5" class="so" value="8">
+                        <span id="pl5" class="p5 v">+</span>
                     </div>
+                </div>
 
-                    <label>XP</label>
-                    <div class="todo-item xp tam">
-                        <div class="nn">
-                            <input id="xp" type="text" class="xpa num6" value="000" readonly>
-                        </div>
+                <label>XP</label>
+                <div class="todo-item xp tam">
+                    <div class="nn">
+                        <input id="xp" type="text" class="xpa num6" value="000" readonly>
                     </div>
-
                 </div>
 
             </div>
-		</section>
-        
 
-	</main>
+        </div>
+    </section>
+
+
+    <!-- Perícias -->
+
+    <section class="s-t">
+        <h2 class="subtitle">
+            Perícias
+        </h2>
+    </section>
+
+    <section class="s-pericias">
+
+        <h1>Atributos de Agilidade</h1>
+
+        <div class="c-pericias">
+
+            <!-- Atributos de Agilidade -->
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla1()">
+
+                <h3>Agilidade</h3>
+        
+                <input id="ag1" class="modificador" type="text" value="0">
+                <p id="output"></p>
+                <p id="sum"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla2()">
+
+                <h3>Correr</h3>
+        
+                <input id="ag2" class="modificador" type="text" value="0">
+                <p id="output2"></p>
+                <p id="sum2"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla3()">
+
+                <h3>Furtividade</h3>
+        
+                <input id="ag3" class="modificador" type="text" value="0">
+                <p id="output3"></p>
+                <p id="sum3"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla4()">
+
+                <h3>Instinto</h3>
+        
+                <input id="ag4" class="modificador" type="text" value="0">
+                <p id="output4"></p>
+                <p id="sum4"></p>
+            </div>
+
+        </div>
+
+        
+        <h1>Atributos Físicos</h1>
+
+        <div class="c-pericias">
+
+            <!-- Atributos Físicos -->
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla5()">
+
+                <h3>Constituição</h3>
+        
+                <input id="ag5" class="modificador" type="text" value="0">
+                <p id="output5"></p>
+                <p id="sum5"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla6()">
+
+                <h3>Escalar</h3>
+        
+                <input id="ag6" class="modificador" type="text" value="0">
+                <p id="output6"></p>
+                <p id="sum6"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla7()">
+
+                <h3>Força</h3>
+        
+                <input id="ag7" class="modificador" type="text" value="0">
+                <p id="output7"></p>
+                <p id="sum7"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla8()">
+
+                <h3>Nadar</h3>
+        
+                <input id="ag8" class="modificador" type="text" value="0">
+                <p id="output8"></p>
+                <p id="sum8"></p>
+            </div>
+
+            </div>
+
+            <!-- Atributos de Inteligência -- Posteriormente será dividido para Sabedoria -->
+
+            <h1>Atributos de Inteligência</h1>
+
+            <div class="c-pericias">
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" onclick="rolla9()">
+
+                    <h3>Botânica</h3>
+            
+                    <input id="ag9" class="modificador" type="text" value="0">
+                    <p id="output9"></p>
+                    <p id="sum9"></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" onclick="rolla10()">
+
+                    <h3>Cozinhar</h3>
+            
+                    <input id="ag10" class="modificador" type="text" value="0">
+                    <p id="output10"></p>
+                    <p id="sum10"></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" onclick="rolla11()">
+
+                    <h3>Mecânica</h3>
+            
+                    <input id="ag11" class="modificador" type="text" value="0">
+                    <p id="output11"></p>
+                    <p id="sum11"></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+
+                    <h3>Geografia</h3>
+            
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+
+                    <h3>História</h3>
+            
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+
+                    <h3>Intelecto</h3>
+            
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+
+                    <h3>Medicina</h3>
+            
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+
+                    <h3>Pilotar</h3>
+            
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+                    
+                    <h3>Química</h3>
+
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+
+                    <h3>Usar bibliotecas</h3>
+            
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+            </div>
+            
+            <h1>Atributos de Sabedoria</h1>
+
+            <div class="c-pericias">
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+
+                    <h3>Acalmar</h3>
+            
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+
+                    <h3>Arcano</h3>
+            
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+
+                    <h3>Enganar</h3>
+            
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+
+                    <h3>Investigação</h3>
+            
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+
+                    <h3>Percepção</h3>
+            
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+                <div class="item-p">
+                    <img src="/images/dados/d20.png" id="die-1">
+
+                    <h3>Vontade</h3>
+            
+                    <input class="modificador" type="text" value="0">
+                    <p></p>
+                </div>
+
+            </div>
+
+            <!-- Atributos de Batalha / Combate -->
+
+            <h1>Atributos de Combate</h1>
+
+            <div class="c-pericias">
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" id="die-1">
+
+                <h3>Armas Ágeis</h3>
+        
+                <input class="modificador" type="text" value="0">
+                <p id="a"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" id="die-1">
+
+                <h3>Armas Pesadas</h3>
+        
+                <input class="modificador" type="text" value="0">
+                <p id="a"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" id="die-1">
+
+                <h3>Bloquear</h3>
+        
+                <input class="modificador" type="text" value="0">
+                <p id="a"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" id="die-1">
+
+                <h3>Corpo a corpo</h3>
+        
+                <input class="modificador" type="text" value="0">
+                <p id="a"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" id="die-1">
+
+                <h3>Esquivar</h3>
+                        
+                <input class="modificador" type="text" value="0">
+                <p id="a"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" id="die-1">
+
+                <h3>Precisão</h3>
+        
+                <input class="modificador" type="text" value="0">
+                <p id="a"></p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Dados -->
+
+
+    <section class="s-t">
+        <h2 class="subtitle">
+            Dados
+        </h2>
+    </section>
+
+    <section class="s-pericias">
+
+        <div class="c-pericias">
+
+            <div class="item-p">
+                <img src="/images/dados/d4.png" id="die-1">
+        
+                <button href={{roll4}} onclick="roll4()">D4</button>
+                        <p id="totald4"></p>
+                        <p id="a"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d6.png" id="die-1">
+        
+                <button href={{roll6}} onclick="roll6()">D6</button>
+                        <p id="totald6"></p>
+                        <p id="a"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d8.png" id="die-1">
+        
+                <button href={{roll8}} onclick="roll8()">D8</button>
+                        <p id="totald8"></p>
+                        <p id="a"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d10.png" id="die-1">
+        
+                <button href={{roll10}} onclick="roll10()">D10</button>
+                        <p id="totald10"></p>
+                        <p id="a"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d12.png" id="die-1">
+        
+                <button href={{roll12}} onclick="roll12()">D12</button>
+                        <p id="totald12"></p>
+                        <p id="a"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" id="die-1">
+        
+                  <input class="modificador" type="text" value="0">
+                <p id="a"></p>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d100.png" id="die-1">
+        
+                <button href={{roll100}} onclick="roll100()">D100</button>
+                        <p id="totald100"></p>
+                        <p id="a"></p>
+            </div>
+
+
+        </div>
+
+    </section>
+        
 
     <div id="modal-alert" class="modal-b">
         <div class="modal">
