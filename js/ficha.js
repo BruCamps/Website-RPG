@@ -948,11 +948,11 @@ function rolla11() {
 	var sum11 =  total11 + modf11;
 
 
-	if(modf10 == 0 || modf11 == ""){
-		document.getElementById("output10").textContent = "Por favor, especifique o modificador";
-		document.getElementById("sum10").innerHTML = "";
+	if(modf11 == 0 || modf11 == ""){
+		document.getElementById("output11").textContent = "Por favor, especifique o modificador";
+		document.getElementById("sum11").innerHTML = "";
 	} else { 
-		document.getElementById("output10").innerHTML =
+		document.getElementById("output11").innerHTML =
 		"&#40;" + 
 		randomNum11 + 
 		"&#41;" + 
