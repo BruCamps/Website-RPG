@@ -406,6 +406,37 @@ picture img {
     transition: 0.5s ease-in-out;
 }
 
+.item-p2 {
+    margin: 20px 15px;
+    padding: 10px 10px;
+    background: linear-gradient(#131316, #1f2025, #131316);
+    box-shadow: 0 15px 35px rgba(50, 50, 50, 0.2);
+    border-radius: 8px;
+    width: 300px;
+	justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.item-p2 p {
+	text-align: center;
+	color: #bfbfbf;
+	font-size: 0.9rem;
+}
+
+.item-p2 h3 {
+	margin-bottom: 15px;
+}
+
+.item-p2 img {
+	cursor: pointer;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+}
+
 .shake {
     animation: shake 0.5s infinite;
     animation-iteration-count: 3;
@@ -437,6 +468,20 @@ picture img {
 	align-items: center;
 }
 
+.con-tp2 {
+	padding: 0 5px;
+	height: 100px;
+	border-radius: 10px;
+	background: #24252A;
+}
+
+.tput2 {
+	max-width: 160px;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+
 .sgb, .sga {
 	font-weight: 600;
 	color: #4e4f54;
@@ -459,7 +504,15 @@ picture img {
 	color: #4e4f54;
 }
 
-.msgdesastre1, .msgdesastre2, .msgdesastre3, .msgdesastre4, .msgdesastre5, .msgdesastre6, .msgdesastre7, .msgdesastre8, .msgdesastre9, .msgdesastre10, .msgdesastre11, .msgdesastre12, .msgdesastre13, .msgdesastre14, .msgdesastre15, .msgdesastre16, .msgdesastre17, .msgdesastre18, .msgdesastre19, .msgdesastre20, .msgdesastre21, .msgdesastre22, .msgdesastre23, .msgdesastre24, .msgdesastre25, .msgdesastre26, .msgdesastre27, .msgdesastre28, .msgdesastre29, .msgdesastre30 {
+.infs31, .infs32, .infs33, .infs34, .infs35, .infs36, .infs37 {
+	position: absolute;
+	font-size: 1rem;
+	margin: -5px 15px;
+	font-weight: 600;
+	color: #4e4f54;
+}
+
+.msgdesastre1, .msgdesastre2, .msgdesastre3, .msgdesastre4, .msgdesastre5, .msgdesastre6, .msgdesastre7, .msgdesastre8, .msgdesastre9, .msgdesastre10, .msgdesastre11, .msgdesastre12, .msgdesastre13, .msgdesastre14, .msgdesastre15, .msgdesastre16, .msgdesastre17, .msgdesastre18, .msgdesastre19, .msgdesastre20, .msgdesastre21, .msgdesastre22, .msgdesastre23, .msgdesastre24, .msgdesastre25, .msgdesastre26, .msgdesastre27, .msgdesastre28, .msgdesastre29, .msgdesastre30, .msgdesastre31, .msgdesastre32, .msgdesastre33, .msgdesastre34, .msgdesastre35, .msgdesastre36, .msgdesastre37 {
 	position: absolute;
 	font-size: 1rem;
 	text-transform: uppercase;
@@ -467,7 +520,7 @@ picture img {
 	font-weight: 600;
 }
 
-.msgmtboa1, .msgmtboa2, .msgmtboa3, .msgmtboa4, .msgmtboa5, .msgmtboa6, .msgmtboa7, .msgmtboa8, .msgmtboa9, .msgmtboa10, .msgmtboa11, .msgmtboa12, .msgmtboa13, .msgmtboa14, .msgmtboa15, .msgmtboa16, .msgmtboa17, .msgmtboa18, .msgmtboa19, .msgmtboa20, .msgmtboa21, .msgmtboa22, .msgmtboa23, .msgmtboa24, .msgmtboa25, .msgmtboa26, .msgmtboa27, .msgmtboa28, .msgmtboa29, .msgmtboa30 {
+.msgmtboa1, .msgmtboa2, .msgmtboa3, .msgmtboa4, .msgmtboa5, .msgmtboa6, .msgmtboa7, .msgmtboa8, .msgmtboa9, .msgmtboa10, .msgmtboa11, .msgmtboa12, .msgmtboa13, .msgmtboa14, .msgmtboa15, .msgmtboa16, .msgmtboa17, .msgmtboa18, .msgmtboa19, .msgmtboa20, .msgmtboa21, .msgmtboa22, .msgmtboa23, .msgmtboa24, .msgmtboa25, .msgmtboa26, .msgmtboa27, .msgmtboa28, .msgmtboa29, .msgmtboa30, .msgmtboa31, .msgmtboa32, .msgmtboa, .msgmtboa34, .msgmtboa35, .msgmtboa36, .msgmtboa37 {
 	position: absolute;
 	font-size: 1rem;
 	text-transform: uppercase;
@@ -487,9 +540,19 @@ picture img {
 	color: white;
 }
 
+.tput2 p {
+	font-size: 2rem;
+	color: white;
+}
+
 .r1, .r2, .r3, .r4, .r5, .r6, .r7, .r8, .r9, .r10, .r11, .r12, .r13, .r14, .r15, .r16, .r17, .r18, .r19, .r20, .r21, .r22, .r23, .r24, .r25, .r26, .r27, .r28, .r29, .r30 {
 	margin: 0 10px;
 }
+
+.r31, .r32, .r33, .r34, .r35, .r36, .r37 {
+	margin: 27px 10px 0 10px;
+}
+
 
 /* PopUp */
 

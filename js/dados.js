@@ -28,6 +28,13 @@ let dice27 = document.querySelectorAll('#die-27');
 let dice28 = document.querySelectorAll('#die-28');
 let dice29 = document.querySelectorAll('#die-29');
 let dice30 = document.querySelectorAll('#die-30');
+let dice31 = document.querySelectorAll('#die-31');
+let dice32 = document.querySelectorAll('#die-32');
+let dice33 = document.querySelectorAll('#die-33');
+let dice34 = document.querySelectorAll('#die-34');
+let dice35 = document.querySelectorAll('#die-35');
+let dice36 = document.querySelectorAll('#die-36');
+let dice37 = document.querySelectorAll('#die-37');
 
 document.getElementById("con-tp1").style.display = "none";
 document.getElementById("con-tp2").style.display = "none";
@@ -59,6 +66,13 @@ document.getElementById("con-tp27").style.display = "none";
 document.getElementById("con-tp28").style.display = "none";
 document.getElementById("con-tp29").style.display = "none";
 document.getElementById("con-tp30").style.display = "none";
+document.getElementById("con-tp31").style.display = "none";
+document.getElementById("con-tp32").style.display = "none";
+document.getElementById("con-tp33").style.display = "none";
+document.getElementById("con-tp34").style.display = "none";
+document.getElementById("con-tp35").style.display = "none";
+document.getElementById("con-tp36").style.display = "none";
+document.getElementById("con-tp37").style.display = "none";
 
 function rolla1() {
 
@@ -3328,3 +3342,284 @@ function rolla30() {
         }
     }, 1500);
 }
+
+function rolla31() {
+
+    dice31.forEach(function(die) {
+        die.classList.add("shake");
+    });
+
+    document.getElementById("con-tp31").style.display = "none";
+
+    setTimeout(
+
+        function(){
+            dice31.forEach(function(die) {
+                die.classList.remove("shake");
+            });
+
+        document.getElementById("con-tp31").style.display = "";
+
+        var randomNum31 = [];
+        var total31 = 0;
+
+        function random() {
+            randomNum31.push(Math.floor(Math.random() * 4) + 1);
+        }
+
+        for (let i = 0; i < 1; i++) {
+            random();
+        }
+
+        for (let j in randomNum31) {
+            total31 += randomNum31[j];
+        }
+
+        document.getElementById("random31").innerHTML = randomNum31;
+        document.getElementById("infs31").innerHTML = "d4";
+
+    }, 1500);
+}
+
+function rolla32() {
+
+    dice32.forEach(function(die) {
+        die.classList.add("shake");
+    });
+
+    document.getElementById("con-tp32").style.display = "none";
+
+    setTimeout(
+
+        function(){
+            dice32.forEach(function(die) {
+                die.classList.remove("shake");
+            });
+
+        document.getElementById("con-tp32").style.display = "";
+
+        var randomNum32 = [];
+        var total32 = 0;
+
+        function random() {
+            randomNum32.push(Math.floor(Math.random() * 6) + 1);
+        }
+
+        for (let i = 0; i < 1; i++) {
+            random();
+        }
+
+        for (let j in randomNum32) {
+            total32 += randomNum32[j];
+        }
+
+        document.getElementById("random32").innerHTML = randomNum32;
+        document.getElementById("infs32").innerHTML = "d6";
+
+    }, 1500);
+}
+
+function rolla33() {
+
+    dice33.forEach(function(die) {
+        die.classList.add("shake");
+    });
+
+    document.getElementById("con-tp33").style.display = "none";
+
+    setTimeout(
+
+        function(){
+            dice33.forEach(function(die) {
+                die.classList.remove("shake");
+            });
+
+        document.getElementById("con-tp33").style.display = "";
+
+        var randomNum33 = [];
+        var total33 = 0;
+
+        function random() {
+            randomNum33.push(Math.floor(Math.random() * 8) + 1);
+        }
+
+        for (let i = 0; i < 1; i++) {
+            random();
+        }
+
+        for (let j in randomNum33) {
+            total33 += randomNum33[j];
+        }
+
+        document.getElementById("random33").innerHTML = randomNum33;
+        document.getElementById("infs33").innerHTML = "d8";
+
+    }, 1500);
+}
+
+function rolla34() {
+
+    dice34.forEach(function(die) {
+        die.classList.add("shake");
+    });
+
+    document.getElementById("con-tp34").style.display = "none";
+
+    setTimeout(
+
+        function(){
+            dice34.forEach(function(die) {
+                die.classList.remove("shake");
+            });
+
+        document.getElementById("con-tp34").style.display = "";
+
+        var randomNum34 = [];
+        var total34 = 0;
+
+        function random() {
+            randomNum34.push(Math.floor(Math.random() * 10) + 1);
+        }
+
+        for (let i = 0; i < 1; i++) {
+            random();
+        }
+
+        for (let j in randomNum34) {
+            total34 += randomNum34[j];
+        }
+
+        document.getElementById("random34").innerHTML = randomNum34;
+        document.getElementById("infs34").innerHTML = "d10";
+
+    }, 1500);
+}
+
+function rolla35() {
+
+    dice35.forEach(function(die) {
+        die.classList.add("shake");
+    });
+
+    document.getElementById("con-tp35").style.display = "none";
+
+    setTimeout(
+
+        function(){
+            dice35.forEach(function(die) {
+                die.classList.remove("shake");
+            });
+
+        document.getElementById("con-tp35").style.display = "";
+
+        var randomNum35 = [];
+        var total35 = 0;
+
+        function random() {
+            randomNum35.push(Math.floor(Math.random() * 12) + 1);
+        }
+
+        for (let i = 0; i < 1; i++) {
+            random();
+        }
+
+        for (let j in randomNum35) {
+            total35 += randomNum35[j];
+        }
+
+        document.getElementById("random35").innerHTML = randomNum35;
+        document.getElementById("infs35").innerHTML = "d12";
+
+    }, 1500);
+}
+
+function rolla36() {
+
+    dice36.forEach(function(die) {
+        die.classList.add("shake");
+    });
+
+    document.getElementById("con-tp36").style.display = "none";
+    document.getElementById("msgdesastre36").innerHTML = "";
+    document.getElementById("msgmtboa36").innerHTML = "";
+
+    setTimeout(
+
+        function(){
+            dice36.forEach(function(die) {
+                die.classList.remove("shake");
+            });
+
+        document.getElementById("con-tp36").style.display = "";
+
+        var randomNum36 = [];
+        var total36 = 0;
+
+        function random() {
+            randomNum36.push(Math.floor(Math.random() * 20) + 1);
+        }
+
+        for (let i = 0; i < 1; i++) {
+            random();
+        }
+
+        for (let j in randomNum36) {
+            total36 += randomNum36[j];
+        }
+
+        document.getElementById("random36").innerHTML = randomNum36;
+        document.getElementById("infs36").innerHTML = "d20";
+
+        if(randomNum36 == 1) {
+            document.getElementById("msgdesastre36").innerHTML = "Desastre";
+            document.getElementById("msgdesastre36").style.color =
+            "#8b4444";
+        } else if(randomNum36 == 20) {
+            document.getElementById("msgmtboa36").innerHTML = "Extremo";
+            document.getElementById("msgmtboa36").style.color =
+            "#445f8b"; 
+        }
+
+    }, 1500);
+}
+
+function rolla37() {
+
+    dice37.forEach(function(die) {
+        die.classList.add("shake");
+    });
+
+    document.getElementById("con-tp37").style.display = "none";
+
+    setTimeout(
+
+        function(){
+            dice37.forEach(function(die) {
+                die.classList.remove("shake");
+            });
+
+        document.getElementById("con-tp37").style.display = "";
+
+        var randomNum37 = [];
+        var total37 = 0;
+
+        function random() {
+            randomNum37.push(Math.floor(Math.random() * 100) + 1);
+        }
+
+        for (let i = 0; i < 1; i++) {
+            random();
+        }
+
+        for (let j in randomNum37) {
+            total37 += randomNum37[j];
+        }
+
+        document.getElementById("random37").innerHTML = randomNum37;
+        document.getElementById("infs37").innerHTML = "d100";
+
+    }, 1500);
+}
+
+
+
