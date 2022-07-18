@@ -313,6 +313,15 @@ label {
 	background-color: #2f3034;
 }
 
+.lin {
+    content: '';
+	height: 5rem;
+	width: 3px;
+	margin: 20px;
+	border-radius: 5px;
+	background-color: #3a3a3e;
+}
+
 
 .image {
     border-radius: 8px;
@@ -359,12 +368,11 @@ picture img {
 
 .item-p {
     margin: 20px 15px;
-    min-height: 450px;
-    padding: 20px 0;
+    padding: 10px 10px;
     background: linear-gradient(#131316, #1f2025, #131316);
     box-shadow: 0 15px 35px rgba(50, 50, 50, 0.2);
     border-radius: 8px;
-    width: 250px;
+    width: 300px;
 	justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
@@ -372,7 +380,6 @@ picture img {
 
 .item-p p {
 	text-align: center;
-	margin: 1.5rem;
 	color: #bfbfbf;
 	font-size: 0.9rem;
 }
@@ -382,15 +389,16 @@ picture img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem;
+	padding: 0.5rem;
 	width: 50%;
-	margin: 1em auto;
-	border-bottom: #24252A solid 3px;
-	font-size: 1rem;
+	margin: 1em auto 2.5em auto;
+	border-bottom: #24252A solid 4px;
+	font-size: 1.2rem;
 	color: rgb(141, 140, 140);
 }
 
 .item-p img {
+	cursor: pointer;
     margin: auto;
     width: 100%;
     display: flex;
@@ -400,7 +408,7 @@ picture img {
 
 .shake {
     animation: shake 0.5s infinite;
-    animation-iteration-count: 2;
+    animation-iteration-count: 3;
 }
 
 @keyframes shake{
@@ -413,6 +421,74 @@ picture img {
     100%{
         transform: rotate(8deg);
     }
+}
+
+.con-tp {
+	padding: 0 5px;
+	height: 130px;
+	border-radius: 10px;
+	background: #24252A;
+}
+
+.tput {
+	max-width: 220px;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+
+.sgb, .sga {
+	font-weight: 600;
+	color: #4e4f54;
+	font-size: 1.5rem;
+	margin: 0  5px;
+}
+
+.sinal1, .sinal2, .sinal3, .sinal4, .sinal5, .sinal6, .sinal7, .sinal8, .sinal9, .sinal10, .sinal11, .sinal12, .sinal13, .sinal14, .sinal15, .sinal16, .sinal17, .sinal18, .sinal19, .sinal20, .sinal21, .sinal22, .sinal23, .sinal24, .sinal25, .sinal26, .sinal27, .sinal28, .sinal29, .sinal30 {
+	font-weight: 600;
+	color: #4e4f54;
+	font-size: 1.5rem;
+	margin: 0  5px;
+}
+
+.infs1, .infs2, .infs3, .infs4, .infs5, .infs6, .infs7, .infs8, .infs9, .infs10, .infs11, .infs12, .infs13, .infs14, .infs15, .infs16, .infs17, .infs18, .infs19, .infs20, .infs21, .infs22, .infs23, .infs24, .infs25, .infs26, .infs27, .infs28, .infs29, .infs30 {
+	position: absolute;
+	font-size: 1rem;
+	margin: -25px 15px;
+	font-weight: 600;
+	color: #4e4f54;
+}
+
+.msgdesastre1, .msgdesastre2, .msgdesastre3, .msgdesastre4, .msgdesastre5, .msgdesastre6, .msgdesastre7, .msgdesastre8, .msgdesastre9, .msgdesastre10, .msgdesastre11, .msgdesastre12, .msgdesastre13, .msgdesastre14, .msgdesastre15, .msgdesastre16, .msgdesastre17, .msgdesastre18, .msgdesastre19, .msgdesastre20, .msgdesastre21, .msgdesastre22, .msgdesastre23, .msgdesastre24, .msgdesastre25, .msgdesastre26, .msgdesastre27, .msgdesastre28, .msgdesastre29, .msgdesastre30 {
+	position: absolute;
+	font-size: 1rem;
+	text-transform: uppercase;
+	margin: 10px 15px;
+	font-weight: 600;
+}
+
+.msgmtboa1, .msgmtboa2, .msgmtboa3, .msgmtboa4, .msgmtboa5, .msgmtboa6, .msgmtboa7, .msgmtboa8, .msgmtboa9, .msgmtboa10, .msgmtboa11, .msgmtboa12, .msgmtboa13, .msgmtboa14, .msgmtboa15, .msgmtboa16, .msgmtboa17, .msgmtboa18, .msgmtboa19, .msgmtboa20, .msgmtboa21, .msgmtboa22, .msgmtboa23, .msgmtboa24, .msgmtboa25, .msgmtboa26, .msgmtboa27, .msgmtboa28, .msgmtboa29, .msgmtboa30 {
+	position: absolute;
+	font-size: 1rem;
+	text-transform: uppercase;
+	margin: 10px 15px;
+	font-weight: 600;
+}
+
+.tot1, .tot2, .tot3, .tot4, .tot5, .tot6, .tot7, .tot8, .tot9, .tot10, .tot11, .tot12, .tot13, .tot14, .tot15, .tot16, .tot17, .tot18, .tot19, .tot20, .tot21, .tot22, .tot23, .tot24, .tot25, .tot26, .tot27, .tot28, .tot29, .tot30 {
+	font-weight: 500;
+	color: white;
+	font-size: 1.5rem;
+}
+
+
+.tput p {
+	font-size: 1.5rem;
+	color: white;
+}
+
+.r1, .r2, .r3, .r4, .r5, .r6, .r7, .r8, .r9, .r10, .r11, .r12, .r13, .r14, .r15, .r16, .r17, .r18, .r19, .r20, .r21, .r22, .r23, .r24, .r25, .r26, .r27, .r28, .r29, .r30 {
+	margin: 0 10px;
 }
 
 /* PopUp */
