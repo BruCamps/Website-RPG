@@ -380,7 +380,7 @@ picture img {
 	color: #fff;
 	cursor: pointer;
 	text-align: center;
-	font-weight: 900;
+	font-weight: 600;
 	padding: 10px 0;
 	text-transform: uppercase;
 	width: 350px;
@@ -641,6 +641,36 @@ picture img {
         transform: translateX(-10px);
     }
 } 
+
+@keyframes aparecer {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
+} 
+
+@keyframes esconder {
+    0% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+} 
+
+.transition {
+	animation: aparecer 1.5s ease forwards;
+}
+
+.esconder {
+	opacity: 0;
+	transition: opacity 2s;
+	animation: esconder 1.5s ease forwards;
+}
 
 .mostrar .modal {
     animation: modal 1s ease forwards;

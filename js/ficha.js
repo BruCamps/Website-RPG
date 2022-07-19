@@ -555,15 +555,22 @@ function iniciaModal(modalID) {
 	const mostraCards = document.querySelector(".mostra-cards");
 
 	btn1.addEventListener("click", function() {
+		mostraCards.classList.remove('esconder');
+		mostraCards.classList.add('transition');
 		mostraCards.style.display = 'block';
 		btn2.style.display = 'block';
 		btn1.style.display = 'none';
 	});
 
 	btn2.addEventListener("click", function() {
-		mostraCards.style.display = 'none';
-		btn2.style.display = 'none';
-		btn1.style.display = 'block';
+		mostraCards.classList.remove('transition');
+		mostraCards.classList.add('esconder');
+
+		setTimeout( function(){
+			mostraCards.style.display = 'none';
+			btn2.style.display = 'none';
+			btn1.style.display = 'block';
+		}, 950);
 	});
 
 	// let btnBox = document.querySelector("#btnBox").ariaChecked;
