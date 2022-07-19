@@ -83,6 +83,7 @@ function rolla1() {
     document.getElementById("con-tp1").style.display = "none";
     document.getElementById("msgdesastre1").innerHTML = "";
     document.getElementById("msgmtboa1").innerHTML = "";
+    document.getElementById("ag1").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -92,6 +93,7 @@ function rolla1() {
             });
 
         document.getElementById("con-tp1").style.display = "";
+        document.getElementById("ag1").style.marginBottom = "1em";
 
         var randomNum = [];
         var total = 0;
@@ -192,6 +194,7 @@ function rolla2() {
     document.getElementById("con-tp2").style.display = "none";
     document.getElementById("msgdesastre2").innerHTML = "";
     document.getElementById("msgmtboa2").innerHTML = "";
+    document.getElementById("ag2").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -201,6 +204,7 @@ function rolla2() {
             });
 
         document.getElementById("con-tp2").style.display = "";
+        document.getElementById("ag2").style.marginBottom = "1em";
 
         var randomNum2 = [];
         var total2 = 0;
@@ -301,6 +305,7 @@ function rolla3() {
     document.getElementById("con-tp3").style.display = "none";
     document.getElementById("msgdesastre3").innerHTML = "";
     document.getElementById("msgmtboa3").innerHTML = "";
+    document.getElementById("ag3").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -310,6 +315,7 @@ function rolla3() {
             });
 
         document.getElementById("con-tp3").style.display = "";
+        document.getElementById("ag3").style.marginBottom = "1em";
 
         var randomNum3 = [];
         var total3 = 0;
@@ -410,6 +416,7 @@ function rolla4() {
     document.getElementById("con-tp4").style.display = "none";
     document.getElementById("msgdesastre4").innerHTML = "";
     document.getElementById("msgmtboa4").innerHTML = "";
+    document.getElementById("ag4").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -419,6 +426,7 @@ function rolla4() {
             });
 
         document.getElementById("con-tp4").style.display = "";
+        document.getElementById("ag4").style.marginBottom = "1em";
 
         var randomNum4 = [];
         var total4 = 0;
@@ -519,6 +527,7 @@ function rolla5() {
     document.getElementById("con-tp5").style.display = "none";
     document.getElementById("msgdesastre5").innerHTML = "";
     document.getElementById("msgmtboa5").innerHTML = "";
+    document.getElementById("ag5").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -528,6 +537,7 @@ function rolla5() {
             });
 
         document.getElementById("con-tp5").style.display = "";
+        document.getElementById("ag5").style.marginBottom = "1em";
 
         var randomNum5 = [];
         var total5 = 0;
@@ -628,6 +638,7 @@ function rolla6() {
     document.getElementById("con-tp6").style.display = "none";
     document.getElementById("msgdesastre6").innerHTML = "";
     document.getElementById("msgmtboa6").innerHTML = "";
+    document.getElementById("ag6").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -637,6 +648,7 @@ function rolla6() {
             });
 
         document.getElementById("con-tp6").style.display = "";
+        document.getElementById("ag6").style.marginBottom = "1em";
 
         var randomNum6 = [];
         var total6 = 0;
@@ -737,6 +749,7 @@ function rolla7() {
     document.getElementById("con-tp7").style.display = "none";
     document.getElementById("msgdesastre7").innerHTML = "";
     document.getElementById("msgmtboa7").innerHTML = "";
+    document.getElementById("ag7").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -746,6 +759,7 @@ function rolla7() {
             });
 
         document.getElementById("con-tp7").style.display = "";
+        document.getElementById("ag7").style.marginBottom = "1em";
 
         var randomNum7 = [];
         var total7 = 0;
@@ -846,6 +860,7 @@ function rolla8() {
     document.getElementById("con-tp8").style.display = "none";
     document.getElementById("msgdesastre8").innerHTML = "";
     document.getElementById("msgmtboa8").innerHTML = "";
+    document.getElementById("ag8").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -855,6 +870,7 @@ function rolla8() {
             });
 
         document.getElementById("con-tp8").style.display = "";
+        document.getElementById("ag8").style.marginBottom = "1em";
 
         var randomNum8 = [];
         var total8 = 0;
@@ -955,6 +971,7 @@ function rolla9() {
     document.getElementById("con-tp9").style.display = "none";
     document.getElementById("msgdesastre9").innerHTML = "";
     document.getElementById("msgmtboa9").innerHTML = "";
+    document.getElementById("ag9").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -964,6 +981,7 @@ function rolla9() {
             });
 
         document.getElementById("con-tp9").style.display = "";
+        document.getElementById("ag9").style.marginBottom = "1em";
 
         var randomNum9 = [];
         var total9 = 0;
@@ -1064,6 +1082,7 @@ function rolla10() {
     document.getElementById("con-tp10").style.display = "none";
     document.getElementById("msgdesastre10").innerHTML = "";
     document.getElementById("msgmtboa10").innerHTML = "";
+    document.getElementById("ag10").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -1073,6 +1092,7 @@ function rolla10() {
             });
 
         document.getElementById("con-tp10").style.display = "";
+        document.getElementById("ag10").style.marginBottom = "1em";
 
         var randomNum10 = [];
         var total10 = 0;
@@ -1173,6 +1193,7 @@ function rolla11() {
     document.getElementById("con-tp11").style.display = "none";
     document.getElementById("msgdesastre11").innerHTML = "";
     document.getElementById("msgmtboa11").innerHTML = "";
+    document.getElementById("ag11").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -1182,6 +1203,7 @@ function rolla11() {
             });
 
         document.getElementById("con-tp11").style.display = "";
+        document.getElementById("ag11").style.marginBottom = "1em";
 
         var randomNum11 = [];
         var total11 = 0;
@@ -1282,6 +1304,7 @@ function rolla12() {
     document.getElementById("con-tp12").style.display = "none";
     document.getElementById("msgdesastre12").innerHTML = "";
     document.getElementById("msgmtboa12").innerHTML = "";
+    document.getElementById("ag12").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -1291,6 +1314,7 @@ function rolla12() {
             });
 
         document.getElementById("con-tp12").style.display = "";
+        document.getElementById("ag12").style.marginBottom = "1em";
 
         var randomNum12 = [];
         var total12 = 0;
@@ -1391,6 +1415,7 @@ function rolla13() {
     document.getElementById("con-tp13").style.display = "none";
     document.getElementById("msgdesastre13").innerHTML = "";
     document.getElementById("msgmtboa13").innerHTML = "";
+    document.getElementById("ag13").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -1400,6 +1425,7 @@ function rolla13() {
             });
 
         document.getElementById("con-tp13").style.display = "";
+        document.getElementById("ag13").style.marginBottom = "1em";
 
         var randomNum13 = [];
         var total13 = 0;
@@ -1500,6 +1526,7 @@ function rolla14() {
     document.getElementById("con-tp14").style.display = "none";
     document.getElementById("msgdesastre14").innerHTML = "";
     document.getElementById("msgmtboa14").innerHTML = "";
+    document.getElementById("ag14").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -1509,6 +1536,7 @@ function rolla14() {
             });
 
         document.getElementById("con-tp14").style.display = "";
+        document.getElementById("ag14").style.marginBottom = "1em";
 
         var randomNum14 = [];
         var total14 = 0;
@@ -1609,6 +1637,7 @@ function rolla15() {
     document.getElementById("con-tp15").style.display = "none";
     document.getElementById("msgdesastre15").innerHTML = "";
     document.getElementById("msgmtboa15").innerHTML = "";
+    document.getElementById("ag15").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -1618,6 +1647,7 @@ function rolla15() {
             });
 
         document.getElementById("con-tp15").style.display = "";
+        document.getElementById("ag15").style.marginBottom = "1em";
 
         var randomNum15 = [];
         var total15 = 0;
@@ -1718,6 +1748,7 @@ function rolla16() {
     document.getElementById("con-tp16").style.display = "none";
     document.getElementById("msgdesastre16").innerHTML = "";
     document.getElementById("msgmtboa16").innerHTML = "";
+    document.getElementById("ag16").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -1727,6 +1758,7 @@ function rolla16() {
             });
 
         document.getElementById("con-tp16").style.display = "";
+        document.getElementById("ag16").style.marginBottom = "1em";
 
         var randomNum16 = [];
         var total16 = 0;
@@ -1827,6 +1859,7 @@ function rolla17() {
     document.getElementById("con-tp17").style.display = "none";
     document.getElementById("msgdesastre17").innerHTML = "";
     document.getElementById("msgmtboa17").innerHTML = "";
+    document.getElementById("ag17").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -1836,6 +1869,7 @@ function rolla17() {
             });
 
         document.getElementById("con-tp17").style.display = "";
+        document.getElementById("ag17").style.marginBottom = "1em";
 
         var randomNum17 = [];
         var total17 = 0;
@@ -1936,6 +1970,7 @@ function rolla18() {
     document.getElementById("con-tp18").style.display = "none";
     document.getElementById("msgdesastre18").innerHTML = "";
     document.getElementById("msgmtboa18").innerHTML = "";
+    document.getElementById("ag18").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -1945,6 +1980,7 @@ function rolla18() {
             });
 
         document.getElementById("con-tp18").style.display = "";
+        document.getElementById("ag18").style.marginBottom = "1em";
 
         var randomNum18 = [];
         var total18 = 0;
@@ -2045,6 +2081,7 @@ function rolla19() {
     document.getElementById("con-tp19").style.display = "none";
     document.getElementById("msgdesastre19").innerHTML = "";
     document.getElementById("msgmtboa19").innerHTML = "";
+    document.getElementById("ag19").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -2054,6 +2091,7 @@ function rolla19() {
             });
 
         document.getElementById("con-tp19").style.display = "";
+        document.getElementById("ag19").style.marginBottom = "1em";
 
         var randomNum19 = [];
         var total19 = 0;
@@ -2154,6 +2192,7 @@ function rolla20() {
     document.getElementById("con-tp20").style.display = "none";
     document.getElementById("msgdesastre20").innerHTML = "";
     document.getElementById("msgmtboa20").innerHTML = "";
+    document.getElementById("ag20").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -2163,6 +2202,7 @@ function rolla20() {
             });
 
         document.getElementById("con-tp20").style.display = "";
+        document.getElementById("ag20").style.marginBottom = "1em";
 
         var randomNum20 = [];
         var total20 = 0;
@@ -2263,6 +2303,7 @@ function rolla21() {
     document.getElementById("con-tp21").style.display = "none";
     document.getElementById("msgdesastre21").innerHTML = "";
     document.getElementById("msgmtboa21").innerHTML = "";
+    document.getElementById("ag21").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -2272,6 +2313,7 @@ function rolla21() {
             });
 
         document.getElementById("con-tp21").style.display = "";
+        document.getElementById("ag21").style.marginBottom = "1em";
 
         var randomNum21 = [];
         var total21 = 0;
@@ -2372,6 +2414,7 @@ function rolla22() {
     document.getElementById("con-tp22").style.display = "none";
     document.getElementById("msgdesastre22").innerHTML = "";
     document.getElementById("msgmtboa22").innerHTML = "";
+    document.getElementById("ag22").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -2381,6 +2424,7 @@ function rolla22() {
             });
 
         document.getElementById("con-tp22").style.display = "";
+        document.getElementById("ag22").style.marginBottom = "1em";
 
         var randomNum22 = [];
         var total22 = 0;
@@ -2481,6 +2525,7 @@ function rolla23() {
     document.getElementById("con-tp23").style.display = "none";
     document.getElementById("msgdesastre23").innerHTML = "";
     document.getElementById("msgmtboa23").innerHTML = "";
+    document.getElementById("ag23").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -2490,6 +2535,7 @@ function rolla23() {
             });
 
         document.getElementById("con-tp23").style.display = "";
+        document.getElementById("ag23").style.marginBottom = "1em";
 
         var randomNum23 = [];
         var total23 = 0;
@@ -2590,6 +2636,7 @@ function rolla24() {
     document.getElementById("con-tp24").style.display = "none";
     document.getElementById("msgdesastre24").innerHTML = "";
     document.getElementById("msgmtboa24").innerHTML = "";
+    document.getElementById("ag24").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -2599,6 +2646,7 @@ function rolla24() {
             });
 
         document.getElementById("con-tp24").style.display = "";
+        document.getElementById("ag24").style.marginBottom = "1em";
 
         var randomNum24 = [];
         var total24 = 0;
@@ -2698,6 +2746,7 @@ function rolla25() {
     document.getElementById("con-tp25").style.display = "none";
     document.getElementById("msgdesastre25").innerHTML = "";
     document.getElementById("msgmtboa25").innerHTML = "";
+    document.getElementById("ag25").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -2707,6 +2756,7 @@ function rolla25() {
             });
 
         document.getElementById("con-tp25").style.display = "";
+        document.getElementById("ag25").style.marginBottom = "1em";
 
         var randomNum25 = [];
         var total25 = 0;
@@ -2807,6 +2857,7 @@ function rolla26() {
     document.getElementById("con-tp26").style.display = "none";
     document.getElementById("msgdesastre26").innerHTML = "";
     document.getElementById("msgmtboa26").innerHTML = "";
+    document.getElementById("ag26").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -2816,6 +2867,7 @@ function rolla26() {
             });
 
         document.getElementById("con-tp26").style.display = "";
+        document.getElementById("ag26").style.marginBottom = "1em";
 
         var randomNum26 = [];
         var total26 = 0;
@@ -2916,6 +2968,7 @@ function rolla27() {
     document.getElementById("con-tp27").style.display = "none";
     document.getElementById("msgdesastre27").innerHTML = "";
     document.getElementById("msgmtboa27").innerHTML = "";
+    document.getElementById("ag27").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -2925,6 +2978,7 @@ function rolla27() {
             });
 
         document.getElementById("con-tp27").style.display = "";
+        document.getElementById("ag27").style.marginBottom = "1em";
 
         var randomNum27 = [];
         var total27 = 0;
@@ -3025,6 +3079,7 @@ function rolla28() {
     document.getElementById("con-tp28").style.display = "none";
     document.getElementById("msgdesastre28").innerHTML = "";
     document.getElementById("msgmtboa28").innerHTML = "";
+    document.getElementById("ag28").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -3034,6 +3089,7 @@ function rolla28() {
             });
 
         document.getElementById("con-tp28").style.display = "";
+        document.getElementById("ag28").style.marginBottom = "1em";
 
         var randomNum28 = [];
         var total28 = 0;
@@ -3134,6 +3190,7 @@ function rolla29() {
     document.getElementById("con-tp29").style.display = "none";
     document.getElementById("msgdesastre29").innerHTML = "";
     document.getElementById("msgmtboa29").innerHTML = "";
+    document.getElementById("ag29").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -3143,6 +3200,7 @@ function rolla29() {
             });
 
         document.getElementById("con-tp29").style.display = "";
+        document.getElementById("ag29").style.marginBottom = "1em";
 
         var randomNum29 = [];
         var total29 = 0;
@@ -3243,6 +3301,7 @@ function rolla30() {
     document.getElementById("con-tp30").style.display = "none";
     document.getElementById("msgdesastre30").innerHTML = "";
     document.getElementById("msgmtboa30").innerHTML = "";
+    document.getElementById("ag30").style.marginBottom = "2.5em";
 
     setTimeout(
 
@@ -3252,6 +3311,7 @@ function rolla30() {
             });
 
         document.getElementById("con-tp30").style.display = "";
+        document.getElementById("ag30").style.marginBottom = "1em";
 
         var randomNum30 = [];
         var total30 = 0;

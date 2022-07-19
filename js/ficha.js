@@ -546,3 +546,36 @@ function iniciaModal(modalID) {
 		}
 
 	});
+
+	// Botão Mostrar Mais
+
+	const btnArea = document.querySelector(".btn-area");
+	const btn1 = document.querySelector(".btn1");
+	const btn2 = document.querySelector(".btn2");
+	const mostraCards = document.querySelector(".mostra-cards");
+
+	btn1.addEventListener("click", function() {
+		mostraCards.style.display = 'block';
+		btn2.style.display = 'block';
+		btn1.style.display = 'none';
+	});
+
+	btn2.addEventListener("click", function() {
+		mostraCards.style.display = 'none';
+		btn2.style.display = 'none';
+		btn1.style.display = 'block';
+	});
+
+	// let btnBox = document.querySelector("#btnBox").ariaChecked;
+	// let btnArea = document.querySelector(".btn-area");
+	// let btn1 = document.querySelector('.btn1');
+	// let btn2 = document.querySelector('.btn2');
+
+	// btnArea.addEventListener("click", function () {
+	// 	let naparece = [...document.setAttribute('.c-pericias:nth-child(1n + 6), .s-pericias h1:nth-child(2n + 5)')];
+
+	// 	naparece.style.display = 'flex';
+	// 	btn1.style.display = 'none';
+	// 	btn2.style.display = 'block';
+	// 	naparece.style.transition = '0.2s ease-in';
+	// })
