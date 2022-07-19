@@ -563,8 +563,8 @@ function iniciaModal(modalID) {
 	});
 
 	btn2.addEventListener("click", function() {
-		mostraCards.classList.remove('transition');
 		mostraCards.classList.add('esconder');
+		mostraCards.classList.remove('transition');
 
 		setTimeout( function(){
 			mostraCards.style.display = 'none';
