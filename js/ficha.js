@@ -565,11 +565,11 @@ function iniciaModal(modalID) {
 	btn2.addEventListener("click", function() {
 		mostraCards.classList.add('esconder');
 		mostraCards.classList.remove('transition');
+		btn2.style.display = 'none';
+		btn1.style.display = 'block';
 
 		setTimeout( function(){
 			mostraCards.style.display = 'none';
-			btn2.style.display = 'none';
-			btn1.style.display = 'block';
 		}, 950);
 	});
 
