@@ -382,6 +382,7 @@ window.addEventListener('load', () => {
 			const text2 = document.createElement('span');
 			text2.classList.add("text");
 			text2.classList.add("text-2");
+			text2.innerHTML = 'Ainda não pega TwT';
 
 			const i12 = document.createElement('i');
 			i12.classList.add("uil");
@@ -553,6 +554,11 @@ window.addEventListener('load', () => {
 	
 				})
 			});
+
+			i9.addEventListener('click', () => {
+				ul.classList.add("showw");
+			});
+
 	
 			rodaDano.addEventListener('click', () => {
 				toast.classList.add("active");
@@ -562,33 +568,33 @@ window.addEventListener('load', () => {
 				toast.classList.remove("active");
 			});
 
-				let s1 = select3a.value;
-				let ran = [];
-				let ttl = 0;
-				function aff() {
-					if (s1 === "d4") {
-						ran.push(Math.floor(Math.random() * 4) + 1);
-					} else if (s1 === "d6") {
-						ran.push(Math.floor(Math.random() * 6) + 1);
-					} else if (s1 === "d8") {
-						ran.push(Math.floor(Math.random() * 8) + 1);
-					} else if (s1 === "d10") {
-						ran.push(Math.floor(Math.random() * 10) + 1);
-					} else if (s1 === "d12") {
-						ran.push(Math.floor(Math.random() * 12) + 1);
-					} 
-					}
+				// let s1 = select3a.value;
+				// let ran = [];
+				// let ttl = 0;
+				// function aff() {
+				// 	if (s1 === "d4") {
+				// 		ran.push(Math.floor(Math.random() * 4) + 1);
+				// 	} else if (s1 === "d6") {
+				// 		ran.push(Math.floor(Math.random() * 6) + 1);
+				// 	} else if (s1 === "d8") {
+				// 		ran.push(Math.floor(Math.random() * 8) + 1);
+				// 	} else if (s1 === "d10") {
+				// 		ran.push(Math.floor(Math.random() * 10) + 1);
+				// 	} else if (s1 === "d12") {
+				// 		ran.push(Math.floor(Math.random() * 12) + 1);
+				// 	} 
+				// 	}
 
-					for (let i = 0; i < 1; i++) {
-						aff();
-					}
+				// 	for (let i = 0; i < 1; i++) {
+				// 		aff();
+				// 	}
 
-					for (let j in ran) {
-						ttl += ran[j];
-					}
+				// 	for (let j in ran) {
+				// 		ttl += ran[j];
+				// 	}
 
-					text2.innerHTML =
-						"Sem Resultado Ainda";
+				// 	text2.innerHTML =
+				// 		"Sem Resultado Ainda";
 
 	
 			// edit.addEventListener('click', (e) => {

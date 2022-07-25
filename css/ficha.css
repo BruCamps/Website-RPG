@@ -898,7 +898,7 @@ picture img {
 	transition: transform 0.2s ease;
 }
 
-.settings.show .menu {
+.showw{
 	transform: scale(1);
 }
 
