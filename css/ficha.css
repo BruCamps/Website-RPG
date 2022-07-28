@@ -898,7 +898,11 @@ picture img {
 	transition: transform 0.2s ease;
 }
 
-.showw{
+.menu li p {
+	font-weight: 400;
+}
+
+.menu.most{
 	transform: scale(1);
 }
 
@@ -917,7 +921,7 @@ picture img {
 }
 
 .menu li i {
-	padding-right: 10px;
+	padding-right: 15px;
 }
 
 .popup-box {
@@ -1110,12 +1114,14 @@ select::-ms-expand{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35px;
-    width: 35px;
-    background-color: #b88430;
-    color: #ffffff;
-    font-size: 20px;
-    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+}
+
+.toast-content .fis {
+	background-image: url('/images/sword.png');
+	width:45px;
+	background-size: cover;
 }
 
 .toast-content .message{
