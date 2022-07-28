@@ -118,7 +118,7 @@ window.addEventListener('load', () => {
 
 			const select3a = document.createElement('select');
 			select3a.classList.add("dan");
-			select3a.innerHTML = `<option value="dX" selected disabled hidden>dX</option>
+			select3a.innerHTML = `<option value="dX">dX</option>
 			<option value="d4">1d4</option>
 			<option value="d6">1d6</option>
 			<option value="d8">1d8</option>
@@ -137,7 +137,7 @@ window.addEventListener('load', () => {
 
 			const select3b = document.createElement('select');
 			select3b.classList.add("darma");
-			select3b.innerHTML = `<option value="dXb" selected disabled hidden>dX</option>
+			select3b.innerHTML = `<option value="dXb">dX</option>
 			<option value="d4b">1d4</option>
 			<option value="d6b">1d6</option>
 			<option value="d8b">1d8</option>
