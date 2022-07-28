@@ -696,6 +696,7 @@ picture img {
 	justify-content: space-around;
 	margin: 0.5rem auto;
 	background: #131316;
+	border-left: #b83030 8px solid;
 	padding: 17px 5px;
 	border-radius: 8px;
 	height: 70px;
@@ -733,8 +734,8 @@ picture img {
 	font-size: 18px;
 	width: 150px;
 	height: 35px;
-	color: #9f3131;
-	font-weight: 500;
+	color: #676562;
+	font-weight: 600;
 	outline: none;
 	padding: 0 15px;
 }
