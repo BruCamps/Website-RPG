@@ -133,7 +133,7 @@ h4 {
 	font-size: 1.6rem;
     display: flex;
     justify-content: center;
-	margin: 5rem auto 3rem auto;
+	margin: 5rem auto 0 auto;
 	padding: 8px;
 }
 
@@ -152,13 +152,15 @@ h4 {
 
 .cont {
     display: flex;
+	flex-direction: row-reverse;
 	align-items: center;
 	justify-content: center;
 	margin: auto;
+	max-width: 90rem;
 }
 
 .todo-list {
-	margin: 3rem 5rem 0 5rem;
+	margin: 3rem auto 5rem auto;
 }
 
 .todo-list .list {
@@ -327,7 +329,6 @@ h4 {
 
 .linha {
     content: '';
-	display: inline-block;
 	height: 46rem;
 	width: 3px;
 	border-radius: 5px;
@@ -356,17 +357,31 @@ h4 {
 picture img {
 	padding: 0.5rem;
 	margin: 1rem auto;
-    width: 390px;
+    width: 105%;
 	object-fit: cover;
 }
 
 /* Perícias */
 
+.s-pericias {
+	display: flex;
+	flex-direction: column;
+	max-width: 90rem;
+	justify-content: left;
+	margin: auto;
+}
+
+.s-pericias2 {
+	display: flex;
+	flex-direction: column;
+	max-width: 86rem;
+	justify-content: left;
+	margin: auto;
+}
+
 .c-pericias {
-	max-width: 94.5rem;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: left;
 	margin: auto;
 }
 
@@ -380,7 +395,7 @@ picture img {
 
 .s-pericias h1 {
 	color: #bfbfbf;
-	max-width: 85rem;
+	max-width: 80rem;
 	font-size: 1.8rem;
 	font-weight: 500;
 	margin: 3rem auto 1rem auto;
@@ -426,6 +441,10 @@ picture img {
 
 .mostra-cards {
 	display: none;
+}
+
+.mostra-cards h1 {
+	margin: 5rem auto 2rem auto;
 }
 
 .item-p p {
@@ -615,7 +634,7 @@ picture img {
 .wrapper {
 	max-width: 92rem;
 	display: flex;
-	justify-content: left;
+	justify-content: center;
 	margin: 30px auto;
 }
 
@@ -632,12 +651,144 @@ picture img {
 	max-width: 92rem;
 	display: flex;
 	justify-content: center;
-	margin: 20px auto;
+	margin: 20px auto 80px auto;
+}
+
+.s-inv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 20px auto 80px auto;
+}
+
+.cnt-inv {
+	display: flex;
+	margin: auto;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
+	color: white;
+	width: 1400px;
+	border-radius: 15px;
+}
+
+.cnt-inv h1 {
+	margin: 0 auto 2rem auto;
+	font-weight: 500;
+	color: #969696;
+}
+
+.new-itens {
+	display: flex;
+	margin: auto;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
+	color: white;
+	border-radius: 15px;
+}
+
+.itens {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 0.5rem auto;
+	background: #131316;
+	padding: 17px 5px;
+	border-radius: 8px;
+	height: 70px;
+	width: 1000px;
+}
+
+.itens .td-item input {
+	font-size: 18px;
+	width: 250px;
+	height: 35px;
+	color: #b88430;
+	font-weight: 500;
+	outline: none;
+	padding: 0 15px;
+}
+
+.td-item, .td-peso {
+	display: flex;
+}
+
+.dt-inv {
+	transform: scale(0);
+	transform-origin: bottom;
+	transition: transform 0.2s ease;
+	margin: 0 0 0 -15px;
+	color: #474749;
+	font-size: 14px;
+}
+.td-item:hover .dt-inv, .td-peso:hover .dt-inv {
+	transform: scale(1);
+}
+
+.itens .td-peso input {
+	text-align: center;
+	font-size: 18px;
+	width: 150px;
+	height: 35px;
+	color: #9f3131;
+	font-weight: 500;
+	outline: none;
+	padding: 0 15px;
+}
+
+.new-itens h1 {
+	margin: 2rem auto;
+	font-weight: 500;
+	color: #969696;
+}
+
+.br input {
+	width: 150px;
+	height: 35px;
+	outline: none;
+	color: #3d3d41;
+	font-weight: 600;
+	font-size: 17px;
+	padding: 0 15px;
+	background: white;
+	border-radius: 4px;
+}
+
+.br input:nth-child(1) {
+	margin: 0 0px 0 auto;
+}
+
+.br input:nth-child(2) {
+	margin: 0 auto 0 8px;
+}
+
+
+.br {
+	display: flex;
+	flex-direction: row;
+}
+
+.cnt-inv form input[type="submit"] {
+	margin: 15px 0;
+	text-transform: uppercase;
+	width: 320px;
+	height: 45px;
+	outline: none;
+	color: #ffffff;
+	font-weight: 600;
+	cursor: pointer;
+	font-size: 17px;
+	padding: 0 15px;
+	background: #b62d2d;
+	border-radius: 4px;
 }
 
 .wrapper2 li {
-	width: 500px;
-	height: 300px;
+	width: 1400px;
+	height: 250px;
 	color: white;
 	background: #131316;
 	border-radius: 15px;

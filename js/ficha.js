@@ -1311,6 +1311,106 @@ window.addEventListener('load', () => {
 		});
 	}
 
+
+	itis = JSON.parse(localStorage.getItem("itens") || "[]");
+	const newItem = document.querySelector('#new-item-form');
+
+	newItem.addEventListener('submit', e => {
+		e.preventDefault();
+
+		const its = e.target.elements.its.value,
+		peso = e.target.elements.peso.value;
+
+		const novo = {
+			item: its,
+			peso: peso
+		}
+
+		itis.push(novo);
+
+		localStorage.setItem('itens', JSON.stringify(itis));
+
+		DisplayItens();
+	});
+
+	DisplayItens();
+
+	function DisplayItens() {
+		if(!itis) return;
+		document.querySelectorAll(".itens").forEach(item => item.remove());
+		const adf = document.querySelector('#td-itt');
+		adf.innerHTML = "";
+
+		// Appenchild é pra inserir algo dentro
+		// CreateElement é pra criar novo elemento
+	
+		itis.forEach((novo) => {
+
+			const itema = document.createElement("div");
+			itema.classList.add("itens");
+
+			const tdItem = document.createElement("div");
+			tdItem.classList.add("td-item");
+			tdItem.innerHTML = `<input type="text" value="${novo.item}" readonly>`;
+
+			const butt = document.createElement("button");
+			butt.classList.add("dt-inv");
+
+			const icone = document.createElement('i');
+			icone.classList.add("fas");
+			icone.classList.add("fa-pen");
+
+			const tdPeso = document.createElement("div");
+			tdPeso.classList.add("td-peso");
+			tdPeso.innerHTML = `<input type="text" value="${novo.peso}" readonly>`;
+
+			const butt2 = document.createElement("button");
+			butt2.classList.add("dt-inv");
+
+			const icone2 = document.createElement('i');
+			icone2.classList.add("fas");
+			icone2.classList.add("fa-pen");
+
+			itema.appendChild(tdItem);
+			itema.appendChild(tdPeso);
+
+			tdItem.appendChild(butt);
+			butt.appendChild(icone);
+
+			tdPeso.appendChild(butt2);
+			butt2.appendChild(icone2);
+
+			adf.appendChild(itema);
+
+			butt.addEventListener('click', (e) => {
+				const inItem = tdItem.querySelector('input');
+				inItem.removeAttribute('readonly');
+				inItem.focus();
+				inItem.addEventListener('blur', (e) => {
+					inItem.setAttribute('readonly', true);
+					novo.item = e.target.value;
+					localStorage.setItem('itens', JSON.stringify(itis));
+					DisplayItens();
+	
+				})
+			});
+
+			butt2.addEventListener('click', (e) => {
+				const inPeso = tdPeso.querySelector('input');
+				inPeso.removeAttribute('readonly');
+				inPeso.focus();
+				inPeso.addEventListener('blur', (e) => {
+					inPeso.setAttribute('readonly', true);
+					novo.peso = e.target.value;
+					localStorage.setItem('itens', JSON.stringify(itis));
+					DisplayItens();
+	
+				})
+			});
+
+		});
+	}
+
 	if(localStorage.campo1){
 		document.getElementById('nom').value = localStorage.campo1;
 	}
@@ -1868,7 +1968,11 @@ function iniciaModal(modalID) {
 	btn1.addEventListener("click", function() {
 		mostraCards.classList.add('transition');
 		mostraCards.classList.remove('esconder');
-		mostraCards.style.display = 'block';
+		mostraCards.style.display = 'flex';
+		mostraCards.style.margin = 'auto';
+		mostraCards.style.flexDirection = 'column';
+		mostraCards.style.justifyContent = 'left';
+		mostraCards.style.maxWidth = '83rem';
 		btn2.style.display = 'block';
 		btn1.style.display = 'none';
 	});
