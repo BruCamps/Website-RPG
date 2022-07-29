@@ -1269,20 +1269,20 @@ select::-ms-expand{
 
 .toast{
     position: fixed;
-    bottom: 25px;
-    right: 30px;
+    bottom: 2rem;
+	left: 3rem;
     border-radius: 4px;
-    background: #121212;
+    background: #18181c;
     padding: 20px 35px 20px 25px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     border-left: 8px solid #b88430;
     overflow: hidden;
-    transform: translateX(calc(100% + 30px));
+    transform: translateX(calc(100% - 50rem));
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
 }
 
 .toast.active{
-    transform: translateX(0%);
+    transform: translateX(-2rem);
 }
 
 .toast .toast-content{
