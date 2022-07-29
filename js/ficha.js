@@ -283,7 +283,7 @@ window.addEventListener('load', () => {
 			ctnMg.classList.add("cnt-mg");
 
 			const rodaDano = document.createElement('div');
-			rodaDano.innerHTML = `<button onclick="roda();">Rodar Dano</button>`;
+			rodaDano.innerHTML = `<button>Rodar Dano</button>`;
 
 			// ✅
 
@@ -522,31 +522,44 @@ window.addEventListener('load', () => {
 			rodaDano.addEventListener('click', () => {
 				toast.classList.remove("active");
 				
-			imageArray = [
-				'mg-1.png',
-				'mg-2.png',
-				'mg-3.png',
-				'mg-4.png',
-				'mg-5.png',
-				'mg-6.png',
-				'mg-7.png',
-				'mg-8.png',
-				'mg-9.png',
-				'mg-10.png',
-				'mg-11.png',
-				'mg-14.png',
-				'mg-15.png',
-				'mg-16.png',
-				'mg-17.png',
-				'mg-18.png',
-				'mg-20.png',
-				'mg-21.png',
-				'mg-22.png',
-				'mg-23.png',
-				'mg-24.png',
-				'mg-25.png',
-				'mg-26.png'
-			];
+				imageArray = [
+					'mg-1.png',
+					'mg-2.png',
+					'mg-3.png',
+					'mg-4.png',
+					'mg-5.png',
+					'mg-6.png',
+					'mg-7.png',
+					'mg-8.png',
+					'mg-9.png',
+					'mg-10.png',
+					'mg-11.png',
+					'mg-14.png',
+					'mg-15.png',
+					'mg-16.png',
+					'mg-17.png',
+					'mg-18.png',
+					'mg-20.png',
+					'mg-21.png',
+					'mg-22.png',
+					'mg-23.png',
+					'mg-24.png',
+					'mg-25.png',
+					'mg-26.png',
+					'mg-27.png',
+					'mg-28.png',
+					'mg-29.png',
+					'mg-30.png',
+					'mg-31.png',
+					'mg-32.png',
+					'mg-33.png',
+					'mg-34.png',
+					'mg-35.png',
+					'mg-36.png',
+					'mg-37.png',
+					'mg-38.png',
+					'mg-39.png'
+				];
 
 				randomImages = Math.floor(Math.random() * imageArray.length);
 
@@ -1377,12 +1390,14 @@ window.addEventListener('load', () => {
 		if(!itis) return;
 		document.querySelectorAll(".itens").forEach(item => item.remove());
 		const adf = document.querySelector('#td-itt');
-		adf.innerHTML = "";
 
 		// Appenchild é pra inserir algo dentro
 		// CreateElement é pra criar novo elemento
 	
 		itis.forEach((novo) => {
+
+			const msgMg = document.querySelector('.msg-mg');
+			msgMg.innerHTML = "";
 
 			const itema = document.createElement("div");
 			itema.classList.add("itens");
