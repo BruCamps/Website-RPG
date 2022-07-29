@@ -312,10 +312,10 @@ window.addEventListener('load', () => {
 
 			const toastContent = document.createElement('div');
 			toastContent.classList.add("toast-content");
-
-			const i11 = document.createElement('i');
-			i11.classList.add("check");
-			i11.classList.add("fis");
+			
+			const mg = document.createElement('img');
+			mg.classList.add("check");
+			mg.classList.add("fis");
 
 			const message = document.createElement('div');
 			message.classList.add("message");
@@ -342,7 +342,7 @@ window.addEventListener('load', () => {
 			todoArma.appendChild(toast);
 			toast.appendChild(toastContent);
 			toast.appendChild(i12);
-			toastContent.appendChild(i11);
+			toastContent.appendChild(mg);
 			toastContent.appendChild(message);
 			message.appendChild(text1);
 			message.appendChild(text2);
@@ -520,7 +520,39 @@ window.addEventListener('load', () => {
 			});
 
 			rodaDano.addEventListener('click', () => {
-				toast.classList.add("active");
+				toast.classList.remove("active");
+				
+			imageArray = [
+				'mg-1.png',
+				'mg-2.png',
+				'mg-3.png',
+				'mg-4.png',
+				'mg-5.png',
+				'mg-6.png',
+				'mg-7.png',
+				'mg-8.png',
+				'mg-9.png',
+				'mg-10.png',
+				'mg-11.png',
+				'mg-14.png',
+				'mg-15.png',
+				'mg-16.png',
+				'mg-17.png',
+				'mg-18.png',
+				'mg-20.png',
+				'mg-21.png',
+				'mg-22.png',
+				'mg-23.png',
+				'mg-24.png',
+				'mg-25.png',
+				'mg-26.png'
+			];
+
+				randomImages = Math.floor(Math.random() * imageArray.length);
+
+				selectedImages = imageArray[randomImages];
+
+				const affs = toastContent.querySelector('img');
 
 					let dice1 = select3a.value;
 					let dice2 = select3b.value;
@@ -739,9 +771,14 @@ window.addEventListener('load', () => {
 						total += ran[j];
 					}
 
+
+					setTimeout(function() { 
+						toast.classList.add("active");
+						affs.src = `/images/${selectedImages}`;
+
 					if (dice1 === "dX" & dice2 === "dXb") {
 						text2.innerHTML =
-						"Adiciona um valor, parceiro &#x1F60A";
+						"Ué, cadê os valores?";
 					} else if (dice1 === "d4" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d4b") {
 						text2.innerHTML =
 						"d4: " +
@@ -1301,6 +1338,7 @@ window.addEventListener('load', () => {
 						"d20, 2d20: " +
 						ran.join(", ");
 					} 
+				}, 450);
 					
 			});
 

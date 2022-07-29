@@ -703,6 +703,10 @@ picture img {
 	width: 1000px;
 }
 
+.msg-nada p {
+	color: white;
+}
+
 .itens .td-item input {
 	font-size: 18px;
 	width: 250px;
@@ -1266,14 +1270,13 @@ select::-ms-expand{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 45px;
-    width: 45px;
+    height: 65px;
+    width: 65px;
 }
 
 .toast-content .fis {
-	background-image: url('/images/sword.png');
-	width:45px;
-	background-size: cover;
+	width: 65px;
+	height: 65px;
 }
 
 .toast-content .message{
