@@ -785,8 +785,8 @@ window.addEventListener('load', () => {
 
 
 					setTimeout(function() { 
-						toast.classList.add("active");
 						affs.src = `/images/${selectedImages}`;
+						toast.classList.add("active");
 
 					if (dice1 === "dX" & dice2 === "dXb") {
 						text2.innerHTML =
