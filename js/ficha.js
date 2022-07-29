@@ -783,9 +783,10 @@ window.addEventListener('load', () => {
 						total += ran[j];
 					}
 
+					affs.src = `/images/${selectedImages}`;
+
 
 					setTimeout(function() { 
-						affs.src = `/images/${selectedImages}`;
 						toast.classList.add("active");
 
 					if (dice1 === "dX" & dice2 === "dXb") {
