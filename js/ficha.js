@@ -1401,6 +1401,13 @@ window.addEventListener('load', () => {
 			const itema = document.createElement("div");
 			itema.classList.add("itens");
 
+			const buttD = document.createElement("button");
+			buttD.classList.add("btD");
+
+			const trash = document.createElement("i");
+			trash.classList.add("fas");
+			trash.classList.add("fa-trash");
+
 			const tdItem = document.createElement("div");
 			tdItem.classList.add("td-item");
 			tdItem.innerHTML = `<input type="text" value="${novo.item}" readonly>`;
@@ -1423,6 +1430,8 @@ window.addEventListener('load', () => {
 			icone2.classList.add("fas");
 			icone2.classList.add("fa-pen");
 
+			itema.appendChild(buttD);
+			buttD.appendChild(trash);
 			itema.appendChild(tdItem);
 			itema.appendChild(tdPeso);
 
@@ -1458,6 +1467,17 @@ window.addEventListener('load', () => {
 					DisplayItens();
 	
 				})
+			});
+
+			buttD.addEventListener('click', () => {
+				let deleted = confirm("Tem certeza de que quer apagar isso, amigo?");
+				if(!deleted) return;
+
+				itis = itis.filter(i => i != novo);
+				localStorage.setItem('itens', JSON.stringify(itis));
+				DisplayItens();
+				msgMg.innerHTML = `<img src="/images/bag.png" alt="">
+				<p>Parece que não há nada por aqui <br>Que tal começar adicionando um item agora?</p>`;
 			});
 
 		});

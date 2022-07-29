@@ -703,6 +703,12 @@ picture img {
 	width: 1000px;
 }
 
+.itens .btD {
+	font-size: 20px;
+	color: #464646;
+	cursor: pointer;
+}
+
 .msg-nada p {
 	color: white;
 }
