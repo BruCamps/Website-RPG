@@ -175,12 +175,12 @@ function rolla1() {
             document.getElementById("msgdesastre1").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre1").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum == 20) {
             document.getElementById("msgmtboa1").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa1").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -286,12 +286,12 @@ function rolla2() {
             document.getElementById("msgdesastre2").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre2").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum2 == 20) {
             document.getElementById("msgmtboa2").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa2").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -397,12 +397,12 @@ function rolla3() {
             document.getElementById("msgdesastre3").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre3").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum3 == 20) {
             document.getElementById("msgmtboa3").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa3").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -508,12 +508,12 @@ function rolla4() {
             document.getElementById("msgdesastre4").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre4").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum4 == 20) {
             document.getElementById("msgmtboa4").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa4").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -619,12 +619,12 @@ function rolla5() {
             document.getElementById("msgdesastre5").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre5").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum5 == 20) {
             document.getElementById("msgmtboa5").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa5").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -730,12 +730,12 @@ function rolla6() {
             document.getElementById("msgdesastre6").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre6").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum6 == 20) {
             document.getElementById("msgmtboa6").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa6").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -841,12 +841,12 @@ function rolla7() {
             document.getElementById("msgdesastre7").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre7").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum7 == 20) {
             document.getElementById("msgmtboa7").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa7").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -952,12 +952,12 @@ function rolla8() {
             document.getElementById("msgdesastre8").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre8").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum8 == 20) {
             document.getElementById("msgmtboa8").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa8").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -1063,12 +1063,12 @@ function rolla9() {
             document.getElementById("msgdesastre9").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre9").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum9 == 20) {
             document.getElementById("msgmtboa9").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa9").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -1174,12 +1174,12 @@ function rolla10() {
             document.getElementById("msgdesastre10").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre10").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum10 == 20) {
             document.getElementById("msgmtboa10").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa10").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -1285,12 +1285,12 @@ function rolla11() {
             document.getElementById("msgdesastre11").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre11").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum11 == 20) {
             document.getElementById("msgmtboa11").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa11").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -1396,12 +1396,12 @@ function rolla12() {
             document.getElementById("msgdesastre12").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre12").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum12 == 20) {
             document.getElementById("msgmtboa12").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa12").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -1507,12 +1507,12 @@ function rolla13() {
             document.getElementById("msgdesastre13").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre13").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum13 == 20) {
             document.getElementById("msgmtboa13").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa13").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -1618,12 +1618,12 @@ function rolla14() {
             document.getElementById("msgdesastre14").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre14").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum14 == 20) {
             document.getElementById("msgmtboa14").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa14").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -1729,12 +1729,12 @@ function rolla15() {
             document.getElementById("msgdesastre15").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre15").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum15 == 20) {
             document.getElementById("msgmtboa15").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa15").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -1840,12 +1840,12 @@ function rolla16() {
             document.getElementById("msgdesastre16").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre16").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum16 == 20) {
             document.getElementById("msgmtboa16").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa16").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -1951,12 +1951,12 @@ function rolla17() {
             document.getElementById("msgdesastre17").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre17").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum17 == 20) {
             document.getElementById("msgmtboa17").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa17").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -2062,12 +2062,12 @@ function rolla18() {
             document.getElementById("msgdesastre18").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre18").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum18 == 20) {
             document.getElementById("msgmtboa18").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa18").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -2173,12 +2173,12 @@ function rolla19() {
             document.getElementById("msgdesastre19").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre19").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum19 == 20) {
             document.getElementById("msgmtboa19").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa19").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -2284,12 +2284,12 @@ function rolla20() {
             document.getElementById("msgdesastre20").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre20").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum20 == 20) {
             document.getElementById("msgmtboa20").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa20").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -2395,12 +2395,12 @@ function rolla21() {
             document.getElementById("msgdesastre21").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre21").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum21 == 20) {
             document.getElementById("msgmtboa21").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa21").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -2506,12 +2506,12 @@ function rolla22() {
             document.getElementById("msgdesastre22").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre22").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum22 == 20) {
             document.getElementById("msgmtboa22").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa22").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -2617,12 +2617,12 @@ function rolla23() {
             document.getElementById("msgdesastre23").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre23").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum23 == 20) {
             document.getElementById("msgmtboa23").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa23").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -2728,12 +2728,12 @@ function rolla24() {
             document.getElementById("msgdesastre24").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre24").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum24 == 20) {
             document.getElementById("msgmtboa24").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa24").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -2838,12 +2838,12 @@ function rolla25() {
             document.getElementById("msgdesastre25").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre25").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum25 == 20) {
             document.getElementById("msgmtboa25").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa25").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -2949,12 +2949,12 @@ function rolla26() {
             document.getElementById("msgdesastre26").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre26").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum26 == 20) {
             document.getElementById("msgmtboa26").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa26").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -3060,12 +3060,12 @@ function rolla27() {
             document.getElementById("msgdesastre27").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre27").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum27 == 20) {
             document.getElementById("msgmtboa27").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa27").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -3171,12 +3171,12 @@ function rolla28() {
             document.getElementById("msgdesastre28").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre28").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum28 == 20) {
             document.getElementById("msgmtboa28").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa28").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -3282,12 +3282,12 @@ function rolla29() {
             document.getElementById("msgdesastre29").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre29").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum29 == 20) {
             document.getElementById("msgmtboa29").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa29").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -3393,12 +3393,12 @@ function rolla30() {
             document.getElementById("msgdesastre30").innerHTML =
             "Desastre"; 
             document.getElementById("msgdesastre30").style.color =
-            "#8b4444"; 
+            "#B93131"; 
         } else if (randomNum30 == 20) {
             document.getElementById("msgmtboa30").innerHTML =
             "Extremo";
             document.getElementById("msgmtboa30").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
     }, 1500);
 }
@@ -3633,11 +3633,11 @@ function rolla36() {
         if(randomNum36 == 1) {
             document.getElementById("msgdesastre36").innerHTML = "Desastre";
             document.getElementById("msgdesastre36").style.color =
-            "#8b4444";
+            "#B93131";
         } else if(randomNum36 == 20) {
             document.getElementById("msgmtboa36").innerHTML = "Extremo";
             document.getElementById("msgmtboa36").style.color =
-            "#445f8b"; 
+            "#3183B9"; 
         }
 
     }, 1500);

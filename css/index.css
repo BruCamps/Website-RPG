@@ -716,26 +716,13 @@ picture img {
     position: relative;
 }
 
-@keyframes modal {
-    0% {
-        transform: translateX(100%);
-    }
-
-    40% {
-        transform: translateX(-10%);
-    }
-
-    80% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-10px);
-    }
+@keyframes grow {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
 } 
 
 .mostrar .modal {
-    animation: modal 1s ease forwards;
+    animation: grow 1s ease forwards;
 }
 
 .modal .uil{

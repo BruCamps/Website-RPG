@@ -1152,8 +1152,64 @@
 
     <section class="s-t">
         <h2 class="subtitle">
-            Habilidades
+            Habilidades & Passivas
         </h2>
+    </section>
+
+    <section class="habilidades">
+        <div class="cnt-hab">
+
+            <form id="new-hab-form">
+
+                <div class="flex-hab">
+                    <div class="td-h">
+                        <div class="puts-h">
+                        <h1>Nome</h1>
+                        <input type="text" name="nan"
+                        id="nan" required>
+                        </div>
+                        <div class="puts-h">
+                        <h1>Descrição</h1>
+                        <textarea name="dd" id="dd" required></textarea>
+                        </div>
+                    </div>
+                    <div class="mg-td">
+                        <img src="/images/cards.png" alt="">
+                    </div>
+                </div>
+
+                <input id="new-hab" type="submit" value="Registrar">
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div id="nova-hab"></div>
+    </section>
+
+    <section class="s-t2 sbt">
+        <h2 class="subtitle">
+            Poderes
+        </h2>
+    </section>
+
+
+    <section>
+        <div class="escol">
+            <h1>Escolha uma Categoria</h1>
+            <div class="options">
+                <label>
+                    <input type="radio" name="category" id="category1" value="geral" />
+                    <span class="bubble geral-b"></span>
+                    <div class="dsv">Geral</div>
+                </label>
+                <label>
+                    <input type="radio" name="category" id="category2" value="conquistado" />
+                    <span class="bubble conquistado-b"></span>
+                    <div class="dsv">Conquistado</div>
+                </label>
+            </div>
+        </div>
     </section>
 
     <div id="modal-alert" class="modal-b">

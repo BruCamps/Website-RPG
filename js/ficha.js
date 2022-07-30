@@ -1476,8 +1476,88 @@ window.addEventListener('load', () => {
 				itis = itis.filter(i => i != novo);
 				localStorage.setItem('itens', JSON.stringify(itis));
 				DisplayItens();
-				msgMg.innerHTML = `<img src="/images/bag.png" alt="">
-				<p>Parece que não há nada por aqui <br>Que tal começar adicionando um item agora?</p>`;
+
+				if(itis.length == 0){
+					msgMg.innerHTML = `<img src="/images/bag.png" alt="">
+					<p>Parece que não há nada por aqui <br>Que tal começar adicionando um item agora?</p>`;
+				}
+			});
+
+		});
+	}
+
+	habilidades = JSON.parse(localStorage.getItem("habilidades") || "[]");
+	const newHab = document.querySelector('#new-hab-form');
+
+	newHab.addEventListener('submit', e => {
+		e.preventDefault();
+
+		const nan = e.target.elements.nan.value,
+		dd = e.target.elements.dd.value;
+
+		const novaHab = {
+			nan: nan,
+			dd: dd
+		}
+
+		habilidades.push(novaHab);
+
+		localStorage.setItem('habilidades', JSON.stringify(habilidades));
+
+		DisplayHabs();
+	});
+
+	DisplayHabs();
+
+	function DisplayHabs() {
+		if(!habilidades) return;
+		document.querySelectorAll(".habs").forEach(hab => hab.remove());
+		const ha = document.querySelector('#nova-hab');
+		ha.innerHTML = "";
+
+		// Appenchild é pra inserir algo dentro
+		// CreateElement é pra criar novo elemento
+	
+		habilidades.forEach((novaHab) => {
+
+			const hab = document.createElement("div");
+			hab.classList.add("habs");
+
+			const dt = document.createElement("div");
+			dt.classList.add("deleteisso");
+
+			const trashe = document.createElement("i");
+			trashe.classList.add("fas");
+			trashe.classList.add("fa-trash");
+			trashe.classList.add("mano");
+
+			const pasfs = document.createElement("p");
+			pasfs.innerHTML = "Deletar";
+
+
+			const nomHab = document.createElement("div");
+			nomHab.classList.add("nom-hab");
+			nomHab.innerHTML = `<p>${novaHab.nan}</p>`;
+
+			const descHab = document.createElement("div");
+			descHab.classList.add("desc-hab");
+			descHab.innerHTML = `<span>${novaHab.dd}</span>`;
+
+			hab.appendChild(nomHab);
+			hab.appendChild(descHab);
+			hab.appendChild(dt);
+			dt.appendChild(trashe);
+			dt.appendChild(pasfs);
+
+			ha.appendChild(hab);
+
+			dt.addEventListener('click', () => {
+				let deleteisso = confirm("Tem certeza de que quer apagar isso, amigo?");
+				if(!deleteisso) return;
+
+				habilidades = habilidades.filter(h => h != novaHab);
+				localStorage.setItem('habilidades', JSON.stringify(habilidades));
+				DisplayHabs();
 			});
 
 		});
@@ -2057,5 +2137,5 @@ function iniciaModal(modalID) {
 
 		setTimeout( function(){
 			mostraCards.style.display = 'none';
-		}, 950);
+		}, 1800);
 	});
