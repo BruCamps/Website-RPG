@@ -45,10 +45,6 @@
                     <input class="text-input" id="nom" type="text" value="Aspaes"  readonly>
                 </div>
 
-                <div class="actions">
-                    <button id="ed1" class="edita">Editar</button>
-                </div>
-
                 </div>
 
                 <label>Jogador</label>
@@ -58,9 +54,6 @@
                     <input class="text-input" id="jog" type="text" value="Dante"  readonly>
                 </div>
 
-                <div class="actions">
-                    <button id="ed2" class="edita">Editar</button>
-                </div>
                 
                 </div>
 
@@ -71,9 +64,6 @@
                     <input class="text-input" id="ida" type="text" value="29 anos" readonly>
                 </div>
 
-                <div class="actions">
-                    <button id="ed3" class="edita">Editar</button>
-                </div>
                 
                 </div>
 
@@ -84,9 +74,6 @@
                     <input class="text-input" id="alt" type="text" value="1.75m" readonly>
                 </div>
 
-                <div class="actions">
-                    <button id="ed4" class="edita">Editar</button>
-                </div>
                 
                 </div>
 
@@ -96,10 +83,6 @@
                 <div class="todo-content">
                     <input class="text-input" id="tmv" type="text" value="5m" readonly>
                 </div>
-
-                <div class="actions">
-                    <button id="ed5" class="edita">Editar</button>
-                </div>
                 
                 </div>
 
@@ -107,11 +90,7 @@
                 <div class="todo-item">
 
                 <div class="todo-content">
-                    <input class="text-input" id="pit" type="text" value="Nikolas, Kaya, Nathan e Machados do Caos" readonly>
-                </div>
-
-                <div class="actions">
-                    <button id="ed6" class="edita">Editar</button>
+                    <textarea class="text-input" id="pit" readonly>Nikolas, Kaya, Nathan e Machados do Caos</textarea>
                 </div>
                 
                 </div>
@@ -1059,14 +1038,14 @@
 
         <div class="wrapper2">
             <li class="add-box">
-                <div class="icon">+</div>
-                <p>Adicionar Arma</p>
+                <div class="icon"><img src="/images/handgun.png"></div>
+                <p>Equipar Armas</p>
             </li>
         </div>
 
     </section>
 
-    <div class="popup-box">
+    <div id="modal-popup" class="popup-box">
         <div class="popup">
             <div class="content">
                 <header>
@@ -1076,12 +1055,12 @@
                 <form id="new-todo-form">
                     <div class="row name">
                         <label>Nome</label>
-                        <input type="text" name="nome" id="nome">
+                        <input type="text" name="nome" id="nome" required>
                     </div>
                     <div class="tipoedano">
                         <div class="row tipo">
                             <label class="sel">Tipo</label>
-                            <select name="tarma" id="tarma">
+                            <select name="tarma" id="tarma" required>
                                 <option selected disabled hidden>Escolha</option>
                                 <option>Cajado</option>
                                 <option>Distância</option>
@@ -1093,24 +1072,24 @@
                     <div class="mmu">
                         <div class="row municao-atual">
                             <label>Munição Atual</label>
-                            <input type="text" name="matual" id="matual">
+                            <input type="text" name="matual" id="matual" required>
                         </div>
                         <div class="row municao-maxima">
                             <label>Munição Máxima</label>
-                            <input type="text" name="maxima" id="maxima">
+                            <input type="text" name="maxima" id="maxima" required>
                         </div>
                         <div class="row uso-hab">
                             <label>Uso Hab.</label>
-                            <input type="text" name="usohab" id="usohab">
+                            <input type="text" name="usohab" id="usohab" required>
                         </div>
                     </div>
                     <div class="row descricao">
                         <label>Descrição</label>
-                        <textarea name="desc" id="desc"></textarea>
+                        <textarea name="desc" id="desc" required></textarea>
                     </div>
                     <div class="row habilidade">
                         <label>Habilidade</label>
-                        <textarea name="hab" id="hab"></textarea>
+                        <textarea name="hab" id="hab" required></textarea>
                     </div>
                     <input type="submit" value="Registrar Arma">
                 </form>
@@ -1126,19 +1105,19 @@
 
     <section class="s-inv">
         <div class="cnt-inv">
-            <h1>Adicione um Item</h1>
-            <form id="new-item-form">
+            <h1>Adicionar Itens</h1>
+            <form id="new-item-form" autocomplete="off">
                 <div class="br">
                 <input type="text" placeholder="ex.: comida" name="its"
                 id="its" required>
                 <input type="text" placeholder="ex.: 2kg" name="peso" id="peso" required>
                 </div>
-                <input id="new-item" type="submit" value="Adicionar">
+                <input id="new-item" type="submit" value="Guardar Item">
             </form>
         </div>
 
             <div class="new-itens">
-                <h1>Itens</h1>
+                <h1>Itens Coletados</h1>
 
                 <div id="td-itt">
                     <div class="msg-mg">
@@ -1159,7 +1138,7 @@
     <section class="habilidades">
         <div class="cnt-hab">
 
-            <form id="new-hab-form">
+            <form id="new-hab-form" autocomplete="off">
 
                 <div class="flex-hab">
                     <div class="td-h">
@@ -1176,6 +1155,7 @@
                     <div class="mg-td">
                         <img src="/images/cards.png" alt="">
                     </div>
+
                 </div>
 
                 <input id="new-hab" type="submit" value="Registrar">
@@ -1198,17 +1178,171 @@
         <div class="escol">
             <h1>Escolha uma Categoria</h1>
             <div class="options">
-                <label>
+                <label class="ct1">
                     <input type="radio" name="category" id="category1" value="geral" />
                     <span class="bubble geral-b"></span>
                     <div class="dsv">Geral</div>
                 </label>
-                <label>
+                <label class="ct2">
                     <input type="radio" name="category" id="category2" value="conquistado" />
                     <span class="bubble conquistado-b"></span>
                     <div class="dsv">Conquistado</div>
                 </label>
             </div>
+        </div>
+
+        <div class="table-geral">
+            
+            <div class="lado-es">
+                <div class="i-geral">
+                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/categories.png"></div>
+                    <h1>Tipo</h1>
+                    <input type="text" placeholder="..." name="" id="">
+                    </div>
+                </div>
+                <div class="i-geral">
+                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/book.png"></div>
+                    <h1>Nome</h1>
+                    <input type="text" placeholder="..." name="" id="">
+                    </div>
+                </div>
+                <div class="i-geral">
+                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/genk.png"></div>
+                    <h1>Genki</h1>
+                    <input type="number" placeholder="7" name="" id="">
+                    </div>
+                </div>
+                <div class="i-geral">
+                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/energia.png"></div>
+                    <h1>Vigor</h1>
+                    <input type="number" placeholder="6" name="" id="">
+                    </div>
+                </div>
+                <div class="i-geral">
+                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/insane.png"></div>
+                    <h1>Sanidade</h1>
+                    <input type="number" placeholder="5" name="" id="">
+                    </div>
+                </div>
+                <div class="i-geral">
+                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/profic.png"></div>
+                    <h1>Proficiência</h1>
+                    <input type="text" placeholder="..."  name="" id="">
+                    </div>
+                </div>
+                <div class="i-geral">
+                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/elemento.png"></div>
+                    <h1>Elemento</h1>
+                    <input type="text" placeholder="..." name="" id="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="lad">
+
+                            <div class="i-geral">
+                                <div class="cn-img2 ana"><div class="cn-cn"><img src="/images/relogio.png"></div>
+                                    <div class="ca-g">
+                                        <h1>Tempo de Preparo</h1>
+                                        <textarea id="textarsaf3" spellcheck="false" placeholder="..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="i-geral">
+                                <div class="cn-img2 ana"><div class="cn-cn cn3"><img src="/images/arma.png"></div>
+                                    <div class="ca-g">
+                                        <h1>Dano/Efeito</h1>
+                                        <textarea id="textarsaf2" spellcheck="false" placeholder="..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                                
+                            <div class="i-geral">
+                                <div class="cn-img2"><div class="cn-cn2"><img src="/images/nom.png"></div>
+                                    <div class="ca-g">
+                                        <h1>Descrição</h1>
+                                        <textarea id="textarsaf" spellcheck="false" placeholder="..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="i-geral">
+                                <div class="cn-img2"><div class="cn-cn2"><img src="/images/trevo.png"></div>
+                                    <div class="ca-g">
+                                        <h1>Ingredientes</h1>
+                                        <textarea id="textar2" spellcheck="false" placeholder="..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+            </div>
+
+            
+        </div>
+
+
+        <div class="table-geral">
+            
+            <div class="lado-es">
+                <div class="i-geral">
+                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/book.png"></div>
+                    <h1>Nome</h1>
+                    <input type="text" placeholder="..." name="" id="">
+                    </div>
+                </div>
+                <div class="i-geral">
+                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/mana.png"></div>
+                    <h1>Mana</h1>
+                    <input type="text" placeholder="..." name="" id="">
+                    </div>
+                </div>
+                <div class="i-geral">
+                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/profic.png"></div>
+                    <h1>Proficiência</h1>
+                    <input type="text" placeholder="..."  name="" id="">
+                    </div>
+                </div>
+                <div class="i-geral">
+                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/armadura.png"></div>
+                    <h1>Armadura</h1>
+                    <input type="text" placeholder="..." name="" id="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="lad">
+                
+                            <div class="i-geral">
+                                <div class="cn-img2"><div class="cn-cn4 cn3"><img src="/images/arma.png"></div>
+                                <div class="ca-g">
+                                    <h1>Perícias</h1>
+                                    <textarea id="textar1" spellcheck="false" placeholder="..."></textarea>
+                                </div>
+                            </div>
+                            </div>
+                
+                
+                            <div class="i-geral">
+                                <div class="cn-img2"><div class="cn-cn4"><img src="/images/conversacao.png"></div>
+                                    <div class="ca-g">
+                                        <h1>Habilidades</h1>
+                                        <textarea id="textar0" spellcheck="false" placeholder="..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="i-geral">
+                                <div class="cn-img2"><div class="cn-cn4"><img src="/images/nom.png"></div>
+                                    <div class="ca-g">
+                                        <h1>Descrição</h1>
+                                        <textarea id="textar2" spellcheck="false" placeholder="..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+
+            
         </div>
     </section>
 

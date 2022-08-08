@@ -1,3 +1,22 @@
+iniciaPopup("modal-popup");
+
+function iniciaPopup(popupID) {
+
+	const pop = document.getElementById(popupID);
+
+	if (pop) {
+
+		pop.addEventListener("click", (e) => {
+			if(e.target.id == popupID || e.target.className == 'uil uil-times') {
+				pop.classList.remove("show");
+			}
+			
+		});
+	}
+}
+
+	const popupMod = document.getElementById("modal-popup");
+
 window.addEventListener('load', () => {
 
 	todos = JSON.parse(localStorage.getItem("todos") || "[]");
@@ -5,6 +24,8 @@ window.addEventListener('load', () => {
 
 	newTodoForm.addEventListener('submit', e => {
 		e.preventDefault();
+
+		popupMod.click();
 
 		const nome = e.target.elements.nome.value,
 		tarma = e.target.elements.tarma.value,
@@ -29,21 +50,21 @@ window.addEventListener('load', () => {
 		localStorage.setItem('todos', JSON.stringify(todos));
 
 		DisplayArmas();
+
 	});
 
 	DisplayArmas();
 
 	const addBox = document.querySelector(".add-box"), 
-	popupBox = document.querySelector(".popup-box"),
-	closeIcon = popupBox.querySelector("header i");
+	popupBox = document.querySelector(".popup-box");
 
 	addBox.addEventListener("click", () => {
 		popupBox.classList.add("show");
 	});
 
-	closeIcon.addEventListener("click", (e) => {
-		popupBox.classList.remove("show");
-	});
+	// closeIcon.addEventListener("click", (e) => {
+	// 	popupBox.classList.remove("show");
+	// });
 
 	function DisplayArmas() {
 		if(!todos) return;
@@ -97,13 +118,9 @@ window.addEventListener('load', () => {
 			const label2 = document.createElement('label');
 			label2.innerHTML = 'Tipo';
 
-			const select2 = document.createElement('select');
+			const select2 = document.createElement('div');
 			select2.classList.add("tp");
-			select2.innerHTML = `<option selected disabled hidden>${todo.tarma}</option>
-			<option>Cajado</option>
-			<option>Distância</option>
-			<option>Físico</option>
-			<option>Imperial</option>`;
+			select2.innerHTML = `<input value="${todo.tarma}" readonly>`;
 
 			// ✅
 
@@ -116,40 +133,297 @@ window.addEventListener('load', () => {
 			const label3 = document.createElement('label');
 			label3.innerHTML = 'Dano';
 
-			const select3a = document.createElement('select');
-			select3a.classList.add("dan");
-			select3a.innerHTML = `<option value="dX">dX</option>
-			<option value="d4">1d4</option>
-			<option value="d6">1d6</option>
-			<option value="d8">1d8</option>
-			<option value="d10">1d10</option>
-			<option value="d12">1d12</option>
-			<option value="d20">1d20</option>
-			<option value="2d4">2d4</option>
-			<option value="2d6">2d6</option>
-			<option value="2d8">2d8</option>
-			<option value="2d10">2d10</option>
-			<option value="2d12">2d12</option>
-			<option value="2d20">2d20</option>`;
+			const select3a = document.createElement('div');
+			select3a.classList.add("select-box");
+			select3a.innerHTML = `<div class="options-container">
+
+			<div class="option">
+			<input type="radio" class="radio" id="dX" name="category" value="dX"
+			/>
+			<label for="dX">dX</label>
+			</div>
+
+			<div class="option">
+				<input
+					type="radio"
+					class="radio"
+					id="d4"
+					name="category"
+				value="d4"/>
+				<label for="d4">1d4</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="d6" name="category" value="d6"/>
+				<label for="d6">1d6</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="d8" name="category" />
+				<label for="d8">1d8</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="d10" name="category" />
+				<label for="d10">1d10</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="d12" name="category" />
+				<label for="d12">1d12</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="d20" name="category" />
+				<label for="d20">1d20</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="2d4" name="category" />
+				<label for="2d4">2d4</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="2d6" name="category" />
+				<label for="2d6">2d6</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="2d8" name="category" />
+				<label for="2d8">2d8</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="2d10" name="category" />
+				<label for="2d10">2d10</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="2d12" name="category" />
+				<label for="2d12">2d12</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="2d20" name="category" />
+				<label for="2d20">2d20</label>
+				</div>
+			</div>
+	
+			<div class="selected">
+				<input type="text" value="dX" readonly>
+			</div>
+			</div>`;
 
 			const label4 = document.createElement('label');
 			label4.innerHTML = '';
 
-			const select3b = document.createElement('select');
-			select3b.classList.add("darma");
-			select3b.innerHTML = `<option value="dXb">dX</option>
-			<option value="d4b">1d4</option>
-			<option value="d6b">1d6</option>
-			<option value="d8b">1d8</option>
-			<option value="d10b">1d10</option>
-			<option value="d12b">1d12</option>
-			<option value="d20b">1d20</option>
-			<option value="2d4b">2d4</option>
-			<option value="2d6b">2d6</option>
-			<option value="2d8b">2d8</option>
-			<option value="2d10b">2d10</option>
-			<option value="2d12b">2d12</option>
-			<option value="2d20b">2d20</option>`;
+			const select3b = document.createElement('div');
+			select3b.classList.add("select-box");
+			select3b.innerHTML = `<div class="options-container">
+			
+				<div class="option">
+				<input type="radio" class="radio" id="dXb" name="category" value="dXb"
+				/>
+				<label for="dXb">dX</label>
+				</div>
+			
+				<div class="option">
+				<input type="radio" class="radio" id="d4b" name="category" value="d4b"
+				/>
+				<label for="d4b">1d4</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="d6b" name="category" value="d6b"/>
+				<label for="d6b">1d6</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="d8b" name="category" value="d8b"/>
+				<label for="d8b">1d8</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="d10b" name="category" value="d10b" />
+				<label for="d10b">1d10</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="d12b" name="category" value="d12b" />
+				<label for="d12b">1d12</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="d20b" name="category" value="d20b"/>
+				<label for="d20b">1d20</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="2d4b" name="category" />
+				<label for="2d4b">2d4</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="2d6b" name="category" />
+				<label for="2d6b">2d6</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="2d8b" name="category" />
+				<label for="2d8b">2d8</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="2d10b" name="category" />
+				<label for="2d10b">2d10</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="2d12b" name="category" />
+				<label for="2d12b">2d12</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="2d20b" name="category" />
+				<label for="2d20b">2d20</label>
+				</div>
+			</div>
+	
+			<div class="selected">
+				<input type="text" value="dX" readonly>
+			</div>
+			</div>`;
+
+			// ✅
+
+			
+			const select3c = document.createElement('div');
+			select3c.classList.add("select-box");
+			select3c.classList.add("s3c");
+			select3c.innerHTML = `<div class="options-container">
+			<div class="option">
+				<input
+					type="radio"
+					class="radio"
+					id="z"
+					name="category"
+				/>
+				<label for="z">0</label>
+			</div>
+
+			<div class="option">
+				<input
+					type="radio"
+					class="radio"
+					id="b"
+					name="category"
+				/>
+				<label for="b">1</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="c" name="category" />
+				<label for="c">2</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="d" name="category" />
+				<label for="d">3</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="e" name="category" />
+				<label for="e">4</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="f" name="category" />
+				<label for="f">5</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="g" name="category" />
+				<label for="g">6</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="h" name="category" />
+				<label for="h">7</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="i" name="category" />
+				<label for="i">8</label>
+				</div>
+	
+				<div class="option">
+				<input type="radio" class="radio" id="j" name="category" />
+				<label for="j">9</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="k" name="category" />
+				<label for="k">10</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="l" name="category" />
+				<label for="l">11</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="m" name="category" />
+				<label for="m">12</label>
+				</div>
+
+				
+				<div class="option">
+				<input type="radio" class="radio" id="n" name="category" />
+				<label for="n">13</label>
+				</div>
+				
+				<div class="option">
+				<input type="radio" class="radio" id="o" name="category" />
+				<label for="o">14</label>
+				</div>
+				
+				<div class="option">
+				<input type="radio" class="radio" id="p" name="category" />
+				<label for="p">15</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="q" name="category" />
+				<label for="q">16</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="r" name="category" />
+				<label for="r">17</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="s" name="category" />
+				<label for="s">18</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="t" name="category" />
+				<label for="t">19</label>
+				</div>
+
+				<div class="option">
+				<input type="radio" class="radio" id="u" name="category" />
+				<label for="u">20</label>
+				</div>
+
+
+			</div>
+	
+			<div class="selected">
+				<input type="text" value="0" readonly>
+			</div>
+			</div>`;
 
 			// ✅
 
@@ -303,7 +577,7 @@ window.addEventListener('load', () => {
 			const ula = document.createElement('ul');
 			ula.classList.add("menu");
 
-			ula.innerHTML = `<li><i class="fas fa-trash"></i>Deletar</li>`;
+			ula.innerHTML = `<li><i class="fas fa-trash"></i>Descartar</li>`;
 
 			// ✅
 
@@ -323,7 +597,7 @@ window.addEventListener('load', () => {
 			const text1 = document.createElement('span');
 			text1.classList.add("text");
 			text1.classList.add("text-1");
-			text1.innerHTML = 'Dano';
+			text1.innerHTML = 'Dano Causado';
 			
 			const text2 = document.createElement('span');
 			text2.classList.add("text");
@@ -347,11 +621,9 @@ window.addEventListener('load', () => {
 			message.appendChild(text1);
 			message.appendChild(text2);
 
-			edite1.appendChild(i1);
 			cntColumn1.appendChild(label1);
 			cntColumn1.appendChild(socorro1);
 			socorro1.appendChild(content1);
-			socorro1.appendChild(edite1);
 
 
 			cntColumn2.appendChild(label2);
@@ -362,39 +634,31 @@ window.addEventListener('load', () => {
 			fff.appendChild(select3a);
 			fff.appendChild(label4);
 			fff.appendChild(select3b);
+			fff.appendChild(select3c);
 			
-			edite4.appendChild(i4);
 			cntColumn4.appendChild(label5);
 			cntColumn4.appendChild(socorro4);
 			socorro4.appendChild(content4);
-			socorro4.appendChild(edite4);
 
-			edite5.appendChild(i5);
+
 			cntColumn5.appendChild(label6);
 			cntColumn5.appendChild(socorro5);
 			socorro5.appendChild(content5);
-			socorro5.appendChild(edite5);
 
-			edite6.appendChild(i6);
 			cntColumn6.appendChild(label7);
 			cntColumn6.appendChild(socorro6);
 			socorro6.appendChild(content6);
-			socorro6.appendChild(edite6);
 
 			flxMg.appendChild(spara);
 			spara.appendChild(deh);
 			deh.appendChild(socorro7);
 			socorro7.appendChild(label8);
-			socorro7.appendChild(edite7);
-			edite7.appendChild(i7);
 			deh.appendChild(textarea7);
 
 			flxMg.appendChild(spara);
 			spara.appendChild(deh2);
 			deh2.appendChild(socorro8);
 			socorro8.appendChild(label9);
-			socorro8.appendChild(edite8);
-			edite8.appendChild(i8);
 			deh2.appendChild(textarea8);
 
 			flxMg.appendChild(ctnMg);
@@ -416,7 +680,7 @@ window.addEventListener('load', () => {
 
 			wrp.appendChild(todoArma);
 
-			edite1.addEventListener('click', (e) => {
+			content1.addEventListener('click', (e) => {
 				const input1 = content1.querySelector('input');
 				input1.removeAttribute('readonly');
 				input1.focus();
@@ -426,10 +690,24 @@ window.addEventListener('load', () => {
 					localStorage.setItem('todos', JSON.stringify(todos));
 					DisplayArmas();
 	
-				})
+				});
 			});
 
-			edite4.addEventListener('click', (e) => {
+			
+			select2.addEventListener('click', (e) => {
+				const inputna = select2.querySelector('input');
+				inputna.removeAttribute('readonly');
+				inputna.focus();
+				inputna.addEventListener('blur', (e) => {
+					inputna.setAttribute('readonly', true);
+					todo.tarma = e.target.value;
+					localStorage.setItem('todos', JSON.stringify(todos));
+					DisplayArmas();
+	
+				});
+			});
+
+			content4.addEventListener('click', (e) => {
 				const input4 = content4.querySelector('input');
 				input4.removeAttribute('readonly');
 				input4.focus();
@@ -442,7 +720,7 @@ window.addEventListener('load', () => {
 				})
 			});
 
-			edite5.addEventListener('click', (e) => {
+			content5.addEventListener('click', (e) => {
 				const input5 = content5.querySelector('input');
 				input5.removeAttribute('readonly');
 				input5.focus();
@@ -455,7 +733,7 @@ window.addEventListener('load', () => {
 				})
 			});
 
-			edite6.addEventListener('click', (e) => {
+			content6.addEventListener('click', (e) => {
 				const input6 = content6.querySelector('input');
 				input6.removeAttribute('readonly');
 				input6.focus();
@@ -468,11 +746,10 @@ window.addEventListener('load', () => {
 				})
 			});
 
-			edite7.addEventListener('click', (e) => {
+			deh.addEventListener('click', (e) => {
 				const textarea1 = deh.querySelector('textarea');
 				textarea1.removeAttribute('readonly');
 				textarea1.focus();
-
 
 				textarea1.addEventListener('blur', (e) => {
 					textarea1.setAttribute('readonly', true);
@@ -483,11 +760,10 @@ window.addEventListener('load', () => {
 				})
 			});
 
-			edite8.addEventListener('click', (e) => {
+			deh2.addEventListener('click', (e) => {
 				const textarea2 = deh2.querySelector('textarea');
 				textarea2.removeAttribute('readonly');
 				textarea2.focus();
-
 
 				textarea2.addEventListener('blur', (e) => {
 					textarea2.setAttribute('readonly', true);
@@ -497,6 +773,57 @@ window.addEventListener('load', () => {
 	
 				})
 			});
+
+		const selectedcont = select3a.querySelector(".selected");
+		const selected = select3a.querySelector(".selected input");
+		const optionsContainer = select3a.querySelector(".options-container");
+
+		const optionsList = select3a.querySelectorAll(".option");
+
+		selectedcont.addEventListener("click", () => {
+			optionsContainer.classList.toggle("active");
+		});
+
+		optionsList.forEach(o => {
+			o.addEventListener("click", () => {
+				selected.value = o.querySelector("label").innerHTML;
+				optionsContainer.classList.remove("active");
+			});
+		});
+
+		const selectedcont2 = select3b.querySelector(".selected");
+		const selected2 = select3b.querySelector(".selected input");
+		const optionsContainer2 = select3b.querySelector(".options-container");
+
+		const optionsList2 = select3b.querySelectorAll(".option");
+
+		selectedcont2.addEventListener("click", () => {
+			optionsContainer2.classList.toggle("active");
+		});
+
+		optionsList2.forEach(assd => {
+			assd.addEventListener("click", () => {
+				selected2.value = assd.querySelector("label").innerHTML;
+				optionsContainer2.classList.remove("active");
+			});
+		});
+
+		const selectedcont3 = select3c.querySelector(".selected");
+		const selected3 = select3c.querySelector(".selected input");
+		const optionsContainer3 = select3c.querySelector(".options-container");
+
+		const optionsList3 = select3c.querySelectorAll(".option");
+
+		selectedcont3.addEventListener("click", () => {
+			optionsContainer3.classList.toggle("active");
+		});
+
+		optionsList3.forEach(nasf => {
+			nasf.addEventListener("click", (e) => {
+				selected3.value = nasf.querySelector("label").innerHTML;
+				optionsContainer3.classList.remove("active");
+			});
+		});
 
 			i9.addEventListener('click', () => {
 				ula.classList.add("most");
@@ -550,7 +877,6 @@ window.addEventListener('load', () => {
 					'mg-28.png',
 					'mg-30.png',
 					'mg-31.png',
-					'mg-32.png',
 					'mg-33.png',
 					'mg-34.png',
 					'mg-35.png',
@@ -567,211 +893,212 @@ window.addEventListener('load', () => {
 				const affs = toastContent.querySelector('img');
 				affs.src = `/images/${selectedImages}`;
 
-					let dice1 = select3a.value;
-					let dice2 = select3b.value;
+					let dice1 = selected.value;
+					let dice2 = selected2.value;
+					let modf = selected3.value;
 					let ran = [];
 					let total = 0;
 
 					function aff() {
-						if (dice1 === "d4" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d4b") {
+						if (dice1 === "1d4" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1);
-						} else if (dice1 === "d4" & dice2 === "d4b") {
+						} else if (dice1 === "1d4" & dice2 === "1d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1);
-						} else if (dice1 === "2d4" & dice2 === "2d4b") {
+						} else if (dice1 === "2d4" & dice2 === "2d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1);
-						}  else if (dice1 === "2d4" & dice2 === "d4b" || dice1 === "d4" & dice2 === "2d4b") {
+						}  else if (dice1 === "2d4" & dice2 === "1d4" || dice1 === "1d4" & dice2 === "2d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1);
-						} else if (dice1 === "2d4" & dice2 === "dXb" || dice1 === "dX" & dice2 === "2d4b") {
+						} else if (dice1 === "2d4" & dice2 === "dX" || dice1 === "dX" & dice2 === "2d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1);
-						} else if (dice1 === "d6" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d6b") {
+						} else if (dice1 === "1d6" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1);
-						} else if (dice1 === "d6" & dice2 === "d6b") {
+						} else if (dice1 === "1d6" & dice2 === "1d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1);
-						} else if (dice1 === "2d6" & dice2 === "2d6b") {
+						} else if (dice1 === "2d6" & dice2 === "2d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1);
-						}  else if (dice1 === "2d6" & dice2 === "d6b" || dice1 === "d6" & dice2 === "2d6b") {
+						}  else if (dice1 === "2d6" & dice2 === "1d6" || dice1 === "1d6" & dice2 === "2d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1);
-						} else if (dice1 === "2d6" & dice2 === "dXb" || dice1 === "dX" & dice2 === "2d6b") {
+						} else if (dice1 === "2d6" & dice2 === "dX" || dice1 === "dX" & dice2 === "2d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1);
-						} else if (dice1 === "d8" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d8b") {
+						} else if (dice1 === "1d8" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1);
 						}
-						else if (dice1 === "d8" & dice2 === "d8b") {
+						else if (dice1 === "1d8" & dice2 === "1d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1);
-						} else if (dice1 === "2d8" & dice2 === "2d8b") {
+						} else if (dice1 === "2d8" & dice2 === "2d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1);
-						}  else if (dice1 === "2d8" & dice2 === "d8b" || dice1 === "d8" & dice2 === "2d8b") {
+						}  else if (dice1 === "2d8" & dice2 === "1d8" || dice1 === "1d8" & dice2 === "2d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1);
-						} else if (dice1 === "2d8" & dice2 === "dXb" || dice1 === "dX" & dice2 === "2d8b") {
+						} else if (dice1 === "2d8" & dice2 === "dX" || dice1 === "dX" & dice2 === "2d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1);
-						} else if (dice1 === "d10" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d10b") {
+						} else if (dice1 === "1d10" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "d10" & dice2 === "d10b") {
+						} else if (dice1 === "1d10" & dice2 === "1d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "2d10" & dice2 === "2d10b") {
+						} else if (dice1 === "2d10" & dice2 === "2d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1);
-						}  else if (dice1 === "2d10" & dice2 === "d10b" || dice1 === "d10" & dice2 === "2d10b") {
+						}  else if (dice1 === "2d10" & dice2 === "1d10" || dice1 === "1d10" & dice2 === "2d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "2d10" & dice2 === "dXb" || dice1 === "dX" & dice2 === "2d10b") {
+						} else if (dice1 === "2d10" & dice2 === "dX" || dice1 === "dX" & dice2 === "2d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "d12" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d12b") {
+						} else if (dice1 === "1d12" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d12") {
 							ran.push(Math.floor(Math.random() * 12) + 1);
 						}
-						else if (dice1 === "d12" & dice2 === "d12b") {
+						else if (dice1 === "1d12" & dice2 === "1d12") {
 							ran.push(Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "2d12" & dice2 === "2d12b") {
+						} else if (dice1 === "2d12" & dice2 === "2d12") {
 							ran.push(Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
-						}  else if (dice1 === "2d12" & dice2 === "d12b" || dice1 === "d12" & dice2 === "2d12b") {
+						}  else if (dice1 === "2d12" & dice2 === "1d12" || dice1 === "1d12" & dice2 === "2d12") {
 							ran.push(Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "2d12" & dice2 === "dXb" || dice1 === "dX" & dice2 === "2d12b") {
+						} else if (dice1 === "2d12" & dice2 === "dX" || dice1 === "dX" & dice2 === "2d12") {
 							ran.push(Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "d20" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d20b") {
+						} else if (dice1 === "1d20" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d20") {
 							ran.push(Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "d20" & dice2 === "d20b") {
+						} else if (dice1 === "1d20" & dice2 === "1d20") {
 							ran.push(Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "2d20" & dice2 === "2d20b") {
+						} else if (dice1 === "2d20" & dice2 === "2d20") {
 							ran.push(Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
-						}  else if (dice1 === "2d20" & dice2 === "d20b" || dice1 === "d20" & dice2 === "2d20b") {
+						}  else if (dice1 === "2d20" & dice2 === "1d20" || dice1 === "1d20" & dice2 === "2d20") {
 							ran.push(Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "2d20" & dice2 === "dXb" || dice1 === "dX" & dice2 === "2d20b") {
+						} else if (dice1 === "2d20" & dice2 === "dX" || dice1 === "dX" & dice2 === "2d20") {
 							ran.push(Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "d4" & dice2 === "d6b" || dice1 === "d6" & dice2 === "d4b") {
+						} else if (dice1 === "1d4" & dice2 === "1d6" || dice1 === "1d6" & dice2 === "1d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 6) + 1);
-						} else if (dice1 === "d4" & dice2 === "d8b" || dice1 === "d8" & dice2 === "d4b") {
+						} else if (dice1 === "1d4" & dice2 === "1d8" || dice1 === "1d8" & dice2 === "1d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 8) + 1);
-						} else if (dice1 === "d4" & dice2 === "d10b" || dice1 === "d10" & dice2 === "d4b") {
+						} else if (dice1 === "1d4" & dice2 === "1d10" || dice1 === "1d10" & dice2 === "1d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "d4" & dice2 === "d12b" || dice1 === "d12" & dice2 === "d4b") {
+						} else if (dice1 === "1d4" & dice2 === "1d12" || dice1 === "1d12" & dice2 === "1d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "d4" & dice2 === "d20b" || dice1 === "d20" & dice2 === "d4b") {
+						} else if (dice1 === "1d4" & dice2 === "1d20" || dice1 === "1d20" & dice2 === "1d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "d6" & dice2 === "d8b" || dice1 === "d8" & dice2 === "d6b") {
+						} else if (dice1 === "1d6" & dice2 === "1d8" || dice1 === "1d8" & dice2 === "1d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 8) + 1);
-						} else if (dice1 === "d6" & dice2 === "d10b" || dice1 === "d10" & dice2 === "d6b") {
+						} else if (dice1 === "1d6" & dice2 === "1d10" || dice1 === "1d10" & dice2 === "1d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "d6" & dice2 === "d12b" || dice1 === "d12" & dice2 === "d6b") {
+						} else if (dice1 === "1d6" & dice2 === "1d12" || dice1 === "1d12" & dice2 === "1d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "d6" & dice2 === "d20b" || dice1 === "d20" & dice2 === "d6b") {
+						} else if (dice1 === "1d6" & dice2 === "1d20" || dice1 === "1d20" & dice2 === "1d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "d8" & dice2 === "d10b" || dice1 === "d10" & dice2 === "d8b") {
+						} else if (dice1 === "1d8" & dice2 === "1d10" || dice1 === "1d10" & dice2 === "1d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "d8" & dice2 === "d12b" || dice1 === "d12" & dice2 === "d8b") {
+						} else if (dice1 === "1d8" & dice2 === "1d12" || dice1 === "1d12" & dice2 === "1d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "d8" & dice2 === "d20b" || dice1 === "d20" & dice2 === "d8b") {
+						} else if (dice1 === "1d8" & dice2 === "1d20" || dice1 === "1d20" & dice2 === "1d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "d10" & dice2 === "d12b" || dice1 === "d12" & dice2 === "d10b") {
+						} else if (dice1 === "1d10" & dice2 === "1d12" || dice1 === "1d12" & dice2 === "1d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "d10" & dice2 === "d20b" || dice1 === "d20" & dice2 === "d10b") {
+						} else if (dice1 === "1d10" & dice2 === "1d20" || dice1 === "1d20" & dice2 === "1d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 20) + 1);
-						}  else if (dice1 === "d12" & dice2 === "d20b" || dice1 === "d20" & dice2 === "d12b") {
+						}  else if (dice1 === "1d12" & dice2 === "1d20" || dice1 === "1d20" & dice2 === "1d12") {
 							ran.push(Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 20) + 1);
 						} 
 						
 						
-						if (dice1 === "d6" & dice2 === "2d4b" || dice1 === "2d4" & dice2 === "d6b") {
+						if (dice1 === "1d6" & dice2 === "2d4" || dice1 === "2d4" & dice2 === "1d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1);
-						} else if (dice1 === "d8" & dice2 === "2d4b" || dice1 === "2d4" & dice2 === "d8b") {
+						} else if (dice1 === "1d8" & dice2 === "2d4" || dice1 === "2d4" & dice2 === "1d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1);
-						} else if (dice1 === "d10" & dice2 === "2d4b" || dice1 === "2d4" & dice2 === "d10b") {
+						} else if (dice1 === "1d10" & dice2 === "2d4" || dice1 === "2d4" & dice2 === "1d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1);
-						} else if (dice1 === "d12" & dice2 === "2d4b" || dice1 === "2d4" & dice2 === "d12b") {
+						} else if (dice1 === "1d12" & dice2 === "2d4" || dice1 === "2d4" & dice2 === "1d12") {
 							ran.push(Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1);
-						} else if (dice1 === "d20" & dice2 === "2d4b" || dice1 === "2d4" & dice2 === "d20b") {
+						} else if (dice1 === "1d20" & dice2 === "2d4" || dice1 === "2d4" & dice2 === "1d20") {
 							ran.push(Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1);
 						} 
 
 							
-						if (dice1 === "d4" & dice2 === "2d6b" || dice1 === "2d6" & dice2 === "d4b") {
+						if (dice1 === "1d4" & dice2 === "2d6" || dice1 === "2d6" & dice2 === "1d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1);
-						} else if (dice1 === "d8" & dice2 === "2d6b" || dice1 === "2d6" & dice2 === "d8b") {
+						} else if (dice1 === "1d8" & dice2 === "2d6" || dice1 === "2d6" & dice2 === "1d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1);
-						} else if (dice1 === "d10" & dice2 === "2d6b" || dice1 === "2d6" & dice2 === "d10b") {
+						} else if (dice1 === "1d10" & dice2 === "2d6" || dice1 === "2d6" & dice2 === "1d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1);
-						} else if (dice1 === "d12" & dice2 === "2d6b" || dice1 === "2d6" & dice2 === "d12b") {
+						} else if (dice1 === "1d12" & dice2 === "2d6" || dice1 === "2d6" & dice2 === "1d12") {
 							ran.push(Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1);
-						} else if (dice1 === "d20" & dice2 === "2d6b" || dice1 === "2d6" & dice2 === "d20b") {
+						} else if (dice1 === "1d20" & dice2 === "2d6" || dice1 === "2d6" & dice2 === "1d20") {
 							ran.push(Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1);
 						} 
 
-						if (dice1 === "d4" & dice2 === "2d8b" || dice1 === "2d8" & dice2 === "d4b") {
+						if (dice1 === "1d4" & dice2 === "2d8" || dice1 === "2d8" & dice2 === "1d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1);
-						} else if (dice1 === "d6" & dice2 === "2d8b" || dice1 === "2d8" & dice2 === "d6b") {
+						} else if (dice1 === "1d6" & dice2 === "2d8" || dice1 === "2d8" & dice2 === "1d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1);
-						} else if (dice1 === "d10" & dice2 === "2d8b" || dice1 === "2d8" & dice2 === "d10b") {
+						} else if (dice1 === "1d10" & dice2 === "2d8" || dice1 === "2d8" & dice2 === "1d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1);
-						} else if (dice1 === "d12" & dice2 === "2d8b" || dice1 === "2d8" & dice2 === "d12b") {
+						} else if (dice1 === "1d12" & dice2 === "2d8" || dice1 === "2d8" & dice2 === "1d12") {
 							ran.push(Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1);
-						} else if (dice1 === "d20" & dice2 === "2d8b" || dice1 === "2d8" & dice2 === "d20b") {
+						} else if (dice1 === "1d20" & dice2 === "2d8" || dice1 === "2d8" & dice2 === "1d20") {
 							ran.push(Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1);
 						} 
 
-						if (dice1 === "d4" & dice2 === "2d10b" || dice1 === "2d10" & dice2 === "d4b") {
+						if (dice1 === "1d4" & dice2 === "2d10" || dice1 === "2d10" & dice2 === "1d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "d6" & dice2 === "2d10b" || dice1 === "2d10" & dice2 === "d6b") {
+						} else if (dice1 === "1d6" & dice2 === "2d10" || dice1 === "2d10" & dice2 === "1d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "d8" & dice2 === "2d10b" || dice1 === "2d10" & dice2 === "d8b") {
+						} else if (dice1 === "1d8" & dice2 === "2d10" || dice1 === "2d10" & dice2 === "1d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "d12" & dice2 === "2d10b" || dice1 === "2d10" & dice2 === "d12b") {
+						} else if (dice1 === "1d12" & dice2 === "2d10" || dice1 === "2d10" & dice2 === "1d12") {
 							ran.push(Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "d20" & dice2 === "2d10b" || dice1 === "2d10" & dice2 === "d20b") {
+						} else if (dice1 === "1d20" & dice2 === "2d10" || dice1 === "2d10" & dice2 === "1d20") {
 							ran.push(Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1);
 						} 
 
-						if (dice1 === "d4" & dice2 === "2d12b" || dice1 === "2d12" & dice2 === "d4b") {
+						if (dice1 === "1d4" & dice2 === "2d12" || dice1 === "2d12" & dice2 === "1d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "d6" & dice2 === "2d12b" || dice1 === "2d12" & dice2 === "d6b") {
+						} else if (dice1 === "1d6" & dice2 === "2d12" || dice1 === "2d12" & dice2 === "1d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "d8" & dice2 === "2d12b" || dice1 === "2d12" & dice2 === "d8b") {
+						} else if (dice1 === "1d8" & dice2 === "2d12" || dice1 === "2d12" & dice2 === "1d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "d10" & dice2 === "2d12b" || dice1 === "2d12" & dice2 === "d10b") {
+						} else if (dice1 === "1d10" & dice2 === "2d12" || dice1 === "2d12" & dice2 === "1d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "d20" & dice2 === "2d12b" || dice1 === "2d12" & dice2 === "d20b") {
+						} else if (dice1 === "1d20" & dice2 === "2d12" || dice1 === "2d12" & dice2 === "1d20") {
 							ran.push(Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
 						} 
 
-						if (dice1 === "d4" & dice2 === "2d20b" || dice1 === "2d20" & dice2 === "d4b") {
+						if (dice1 === "1d4" & dice2 === "2d20" || dice1 === "2d20" & dice2 === "1d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "d6" & dice2 === "2d20b" || dice1 === "2d20" & dice2 === "d6b") {
+						} else if (dice1 === "1d6" & dice2 === "2d20" || dice1 === "2d20" & dice2 === "1d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "d8" & dice2 === "2d20b" || dice1 === "2d20" & dice2 === "d8b") {
+						} else if (dice1 === "1d8" & dice2 === "2d20" || dice1 === "2d20" & dice2 === "1d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "d10" & dice2 === "2d20b" || dice1 === "2d20" & dice2 === "d10b") {
+						} else if (dice1 === "1d10" & dice2 === "2d20" || dice1 === "2d20" & dice2 === "1d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "d12" & dice2 === "2d20b" || dice1 === "2d20" & dice2 === "d12b") {
+						} else if (dice1 === "1d12" & dice2 === "2d20" || dice1 === "2d20" & dice2 === "1d12") {
 							ran.push(Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
 						} 
 
 
 						
-						if (dice1 === "2d4" & dice2 === "2d6b" || dice1 === "2d6" & dice2 === "2d4b") {
+						if (dice1 === "2d4" & dice2 === "2d6" || dice1 === "2d6" & dice2 === "2d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1);
-						} else if (dice1 === "2d4" & dice2 === "2d8b" || dice1 === "2d8" & dice2 === "2d4b") {
+						} else if (dice1 === "2d4" & dice2 === "2d8" || dice1 === "2d8" & dice2 === "2d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1);
-						} else if (dice1 === "2d4" & dice2 === "2d10b" || dice1 === "d10" & dice2 === "2d4b") {
+						} else if (dice1 === "2d4" & dice2 === "2d10" || dice1 === "d10" & dice2 === "2d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "2d4" & dice2 === "2d12b" || dice1 === "2d12" & dice2 === "2d4b") {
+						} else if (dice1 === "2d4" & dice2 === "2d12" || dice1 === "2d12" & dice2 === "2d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "2d4" & dice2 === "2d20b" || dice1 === "2d20" & dice2 === "2d4b") {
+						} else if (dice1 === "2d4" & dice2 === "2d20" || dice1 === "2d20" & dice2 === "2d4") {
 							ran.push(Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 4) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "2d6" & dice2 === "2d8b" || dice1 === "2d8" & dice2 === "2d6b") {
+						} else if (dice1 === "2d6" & dice2 === "2d8" || dice1 === "2d8" & dice2 === "2d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1);
-						} else if (dice1 === "2d6" & dice2 === "2d10b" || dice1 === "2d10" & dice2 === "2d6b") {
+						} else if (dice1 === "2d6" & dice2 === "2d10" || dice1 === "2d10" & dice2 === "2d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "2d6" & dice2 === "2d12b" || dice1 === "2d12" & dice2 === "2d6b") {
+						} else if (dice1 === "2d6" & dice2 === "2d12" || dice1 === "2d12" & dice2 === "2d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "2d6" & dice2 === "2d20b" || dice1 === "2d20" & dice2 === "2d6b") {
+						} else if (dice1 === "2d6" & dice2 === "2d20" || dice1 === "2d20" & dice2 === "2d6") {
 							ran.push(Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "2d8" & dice2 === "2d10b" || dice1 === "2d10" & dice2 === "2d8b") {
+						} else if (dice1 === "2d8" & dice2 === "2d10" || dice1 === "2d10" & dice2 === "2d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1);
-						} else if (dice1 === "2d8" & dice2 === "2d12b" || dice1 === "2d12" & dice2 === "2d8b") {
+						} else if (dice1 === "2d8" & dice2 === "2d12" || dice1 === "2d12" & dice2 === "2d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "2d8" & dice2 === "2d20b" || dice1 === "2d20" & dice2 === "2d8b") {
+						} else if (dice1 === "2d8" & dice2 === "2d20" || dice1 === "2d20" & dice2 === "2d8") {
 							ran.push(Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 8) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
-						} else if (dice1 === "2d10" & dice2 === "2d12b" || dice1 === "2d12" & dice2 === "2d10b") {
+						} else if (dice1 === "2d10" & dice2 === "2d12" || dice1 === "2d12" & dice2 === "2d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1);
-						} else if (dice1 === "2d10" & dice2 === "2d20b" || dice1 === "2d20" & dice2 === "2d10b") {
+						} else if (dice1 === "2d10" & dice2 === "2d20" || dice1 === "2d20" & dice2 === "2d10") {
 							ran.push(Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 10) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
-						}  else if (dice1 === "2d12" & dice2 === "2d20b" || dice1 === "2d20" & dice2 === "2d12b") {
+						}  else if (dice1 === "2d12" & dice2 === "2d20" || dice1 === "2d20" & dice2 === "2d12") {
 							ran.push(Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 20) + 1, Math.floor(Math.random() * 20) + 1);
 						}
 
@@ -784,572 +1111,1944 @@ window.addEventListener('load', () => {
 						total += ran[j];
 					}
 
+					let suma = +total + +modf;
 
 					setTimeout(function() { 
 						toast.classList.add("active");
-
-					if (dice1 === "dX" & dice2 === "dXb") {
+		
+					if (dice1 === "dX" & dice2 === "dX") {
 						text2.innerHTML =
 						"Ué, cadê os valores?";
-					} else if (dice1 === "d4" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d4b") {
+					} else if (dice1 === "1d4" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d4") {
 						text2.innerHTML =
 						"d4: " +
 						total;
-					} else if (dice1 === "d4" & dice2 === "d4b") {
+					} else if (dice1 === "1d4" & dice2 === "1d4") {
 						text2.innerHTML =
 						"2d4: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
 					} 
-					
-					if (dice1 === "d4" & dice2 === "d6b") {
+
+					if (dice1 === "1d4" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "1d4" & modf > 0) {
 						text2.innerHTML =
-						"d4, d6: " +
-						ran.join(", ");
-					} else if (dice1 === "d4" & dice2 === "d8b") {
-						text2.innerHTML =
-						"d4, d8: " +
-						ran.join(", ");
-					} else if (dice1 === "d4" & dice2 === "d10b") {
-						text2.innerHTML =
-						"d4, d10: " +
-						ran.join(", ");
-					} else if (dice1 === "d4" & dice2 === "d12b") {
-						text2.innerHTML =
-						"d4, d12: " +
-						ran.join(", ");
-					} else if (dice1 === "d4" & dice2 === "d20b") {
-						text2.innerHTML =
-						"d4, d20: " +
-						ran.join(", ");
+						"d4: " +
+						total +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					}
 					
-					if (dice1 === "2d4" & dice2 === "2d4b") {
+					
+					if (dice1 === "1d4" & dice2 === "1d4" & modf > 0) {
 						text2.innerHTML =
-						"4d4: " +
-						ran.join(", ");
+						"2d4: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 					
-					if (dice1 === "2d4" & dice2 === "2d6b") {
+					
+					if (dice1 === "1d4" & dice2 === "1d6") {
+						text2.innerHTML =
+						"d4, d6: " +
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d4" & dice2 === "1d8") {
+						text2.innerHTML =
+						"d4, d8: " +
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d4" & dice2 === "1d10") {
+						text2.innerHTML =
+						"d4, d10: " +
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d4" & dice2 === "1d12") {
+						text2.innerHTML =
+						"d4, d12: " +
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d4" & dice2 === "1d20") {
+						text2.innerHTML =
+						"d4, d20: " +
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					}
+
+					if (dice1 === "1d4" & dice2 === "1d6" & modf > 0) {
+						text2.innerHTML =
+						"d4, d6: " +
+						ran.join(", ") + 
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d4" & dice2 === "1d8" & modf > 0) {
+						text2.innerHTML =
+						"d4, d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d4" & dice2 === "1d10" & modf > 0) {
+						text2.innerHTML =
+						"d4, d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d4" & dice2 === "1d12" & modf > 0) {
+						text2.innerHTML =
+						"d4, d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d4" & dice2 === "1d20" & modf > 0) {
+						text2.innerHTML =
+						"d4, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					}
+
+					
+					if (dice1 === "2d4" & dice2 === "2d4") {
+						text2.innerHTML =
+						"4d4: " +
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+					
+					if (dice1 === "2d4" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"4d4: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} 
+					
+					if (dice1 === "2d4" & dice2 === "2d6") {
 						text2.innerHTML =
 						"2d4, 2d6: " +
-						ran.join(", ");
-					} else if (dice1 === "2d4" & dice2 === "2d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d4" & dice2 === "2d8") {
 						text2.innerHTML =
 						"2d4, 2d8: " +
-						ran.join(", ");
-					} else if (dice1 === "2d4" & dice2 === "2d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d4" & dice2 === "2d10") {
 						text2.innerHTML =
 						"2d4, 2d10: " +
-						ran.join(", ");
-					} else if (dice1 === "2d4" & dice2 === "2d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d4" & dice2 === "2d12") {
 						text2.innerHTML =
 						"2d4, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d4" & dice2 === "2d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d4" & dice2 === "2d20") {
 						text2.innerHTML =
 						"2d4, 2d20: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+					if (dice1 === "2d4" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"2d4, 2d6: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d4" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"2d4, 2d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d4" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"2d4, 2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d4" & dice2 === "2d12" & modf > 0) {
+						text2.innerHTML =
+						"2d4, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d4" & dice2 === "2d20"& modf > 0 ) {
+						text2.innerHTML =
+						"2d4, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 
 					// d6
 
-					if (dice1 === "d6" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d6b") {
+					if (dice1 === "1d6" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d6") {
 						text2.innerHTML =
 						"d6: " +
 						total;
-					} else if (dice1 === "d6" & dice2 === "d6b") {
+					} else if (dice1 === "1d6" & dice2 === "1d6") {
 						text2.innerHTML =
 						"2d6: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
 					}
 
-						if (dice1 === "d6" & dice2 === "d4b") {
+					if (dice1 === "1d6" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "1d6" & modf > 0) {
+						text2.innerHTML =
+						"d6: " +
+						total +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d6" & dice2 === "1d6" &  modf > 0) {
+						text2.innerHTML =
+						"2d6: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					}
+
+					if (dice1 === "1d6" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d6") {
+						text2.innerHTML =
+						"d6: " +
+						total;
+					} else if (dice1 === "1d6" & dice2 === "1d6") {
+						text2.innerHTML =
+						"2d6: " +
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					}
+
+					if (dice1 === "1d6" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "1d6" & modf > 0) {
+						text2.innerHTML =
+						"d6: " +
+						total +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d6" & dice2 === "1d6" & modf > 0) {
+						text2.innerHTML =
+						"2d6: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					}
+
+						if (dice1 === "1d6" & dice2 === "1d4") {
 							text2.innerHTML =
 							"d4, d6: " +
-							ran.join(", ");
-						} else if (dice1 === "d6" & dice2 === "d8b") {
+							ran.join(", ") + 
+						" ➜ " +
+						total;
+						} else if (dice1 === "1d6" & dice2 === "1d8") {
 							text2.innerHTML =
 							"d6, d8: " +
-							ran.join(", ");
-						} else if (dice1 === "d6" & dice2 === "d10b") {
+							ran.join(", ") + 
+						" ➜ " +
+						total;
+						} else if (dice1 === "1d6" & dice2 === "1d10") {
 							text2.innerHTML =
 							"d6, d10: " +
-							ran.join(", ");
-						} else if (dice1 === "d6" & dice2 === "d12b") {
+							ran.join(", ") + 
+						" ➜ " +
+						total;
+						} else if (dice1 === "1d6" & dice2 === "1d12") {
 							text2.innerHTML =
 							"d6, d12: " +
-							ran.join(", ");
-						} else if (dice1 === "d6" & dice2 === "d20b") {
+							ran.join(", ") + 
+						" ➜ " +
+						total;
+						} else if (dice1 === "1d6" & dice2 === "1d20") {
 							text2.innerHTML =
 							"d6, d20: " +
-							ran.join(", ");
+							ran.join(", ") + 
+						" ➜ " +
+						total;
+						}
+
+						if (dice1 === "1d6" & dice2 === "1d4" & modf > 0) {
+							text2.innerHTML =
+							"d4, d6: " +
+							ran.join(", ") +
+							" + " +
+							modf +
+							" ➜ " +
+							suma;
+						} else if (dice1 === "1d6" & dice2 === "1d8" & modf > 0) {
+							text2.innerHTML =
+							"d6, d8: " +
+							ran.join(", ") +
+							" + " +
+							modf +
+							" ➜ " +
+							suma;
+						} else if (dice1 === "1d6" & dice2 === "1d10" & modf > 0) {
+							text2.innerHTML =
+							"d6, d10: " +
+							ran.join(", ") +
+							" + " +
+							modf +
+							" ➜ " +
+							suma;
+						} else if (dice1 === "1d6" & dice2 === "1d12" & modf > 0) {
+							text2.innerHTML =
+							"d6, d12: " +
+							ran.join(", ") +
+							" + " +
+							modf +
+							" ➜ " +
+							suma;
+						} else if (dice1 === "1d6" & dice2 === "1d20" & modf > 0) {
+							text2.innerHTML =
+							"d6, d20: " +
+							ran.join(", ") +
+							" + " +
+							modf +
+							" ➜ " +
+							suma;
 						}
 
 
-					if (dice1 === "2d6" & dice2 === "2d6b") {
+					if (dice1 === "2d6" & dice2 === "2d6") {
 						text2.innerHTML =
 						"4d6: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					}
+
+					if (dice1 === "2d6" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"4d6: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					}
 					
-					if (dice1 === "2d6" & dice2 === "2d4b") {
+					if (dice1 === "2d6" & dice2 === "2d4") {
 						text2.innerHTML =
 						"2d4, 2d6: " +
-						ran.join(", ");
-					} else if (dice1 === "2d6" & dice2 === "2d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d6" & dice2 === "2d8") {
 						text2.innerHTML =
 						"2d6, 2d8: " +
-						ran.join(", ");
-					} else if (dice1 === "2d6" & dice2 === "2d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d6" & dice2 === "2d10") {
 						text2.innerHTML =
 						"2d6, 2d10: " +
-						ran.join(", ");
-					} else if (dice1 === "2d6" & dice2 === "2d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d6" & dice2 === "2d12") {
 						text2.innerHTML =
 						"2d6, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d6" & dice2 === "2d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d6" & dice2 === "2d20") {
 						text2.innerHTML =
 						"2d6, 2d20: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+					if (dice1 === "2d6" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"2d4, 2d6: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d6" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"2d6, 2d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d6" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"2d6, 2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d6" & dice2 === "2d12" & modf > 0) {
+						text2.innerHTML =
+						"2d6, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d6" & dice2 === "2d20" & modf > 0) {
+						text2.innerHTML =
+						"2d6, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 
 					// d8
 
-					if (dice1 === "d8" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d8b") {
+					if (dice1 === "1d8" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d8") {
 						text2.innerHTML =
 						"d8: " +
 						total;
-					} else if (dice1 === "d8" & dice2 === "d8b") {
+					} else if (dice1 === "1d8" & dice2 === "1d8") {
 						text2.innerHTML =
 						"2d8: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+					if (dice1 === "1d8" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "1d8" & modf > 0) {
+						text2.innerHTML =
+						"d8: " +
+						total +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d8" & dice2 === "1d8" & modf > 0) {
+						text2.innerHTML =
+						"2d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 					
 
-					if (dice1 === "d8" & dice2 === "d4b") {
+					if (dice1 === "1d8" & dice2 === "1d4") {
 						text2.innerHTML =
 						"d4, d8: " +
-						ran.join(", ");
-					} else if (dice1 === "d8" & dice2 === "d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d8" & dice2 === "1d6") {
 						text2.innerHTML =
 						"d6, d8: " +
-						ran.join(", ");
-					} else if (dice1 === "d8" & dice2 === "d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d8" & dice2 === "1d10") {
 						text2.innerHTML =
 						"d8, d10: " +
-						ran.join(", ");
-					} else if (dice1 === "d8" & dice2 === "d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d8" & dice2 === "1d12") {
 						text2.innerHTML =
 						"d8, d12: " +
-						ran.join(", ");
-					} else if (dice1 === "d8" & dice2 === "d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d8" & dice2 === "1d20") {
 						text2.innerHTML =
 						"d8, d20: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					}
+
+					
+					if (dice1 === "1d8" & dice2 === "1d4" & modf > 0) {
+						text2.innerHTML =
+						"d4, d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d8" & dice2 === "1d6" & modf > 0) {
+						text2.innerHTML =
+						"d6, d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d8" & dice2 === "1d10" & modf > 0) {
+						text2.innerHTML =
+						"d8, d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d8" & dice2 === "1d12" & modf > 0) {
+						text2.innerHTML =
+						"d8, d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d8" & dice2 === "1d20" & modf > 0) {
+						text2.innerHTML =
+						"d8, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					}
 					
-					if (dice1 === "2d8" & dice2 === "2d8b") {
+					if (dice1 === "2d8" & dice2 === "2d8") {
 						text2.innerHTML =
 						"4d8: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+					if (dice1 === "2d8" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"4d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 					
-					if (dice1 === "2d8" & dice2 === "2d4b") {
+					if (dice1 === "2d8" & dice2 === "2d4") {
 						text2.innerHTML =
 						"2d4, 2d8: " +
-						ran.join(", ");
-					} else if (dice1 === "2d8" & dice2 === "2d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d8" & dice2 === "2d6") {
 						text2.innerHTML =
 						"2d6, 2d8: " +
-						ran.join(", ");
-					} else if (dice1 === "2d8" & dice2 === "2d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d8" & dice2 === "2d10") {
 						text2.innerHTML =
 						"2d8, 2d10: " +
-						ran.join(", ");
-					} else if (dice1 === "2d8" & dice2 === "2d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d8" & dice2 === "2d12") {
 						text2.innerHTML =
 						"2d8, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d8" & dice2 === "2d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d8" & dice2 === "2d20") {
 						text2.innerHTML =
 						"2d8, 2d20: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+					if (dice1 === "2d8" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"2d4, 2d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d8" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"2d6, 2d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d8" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"2d8, 2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d8" & dice2 === "2d12" & modf > 0) {
+						text2.innerHTML =
+						"2d8, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d8" & dice2 === "2d20" & modf > 0) {
+						text2.innerHTML =
+						"2d8, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 
 					// d10
 
-					if (dice1 === "d10" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d10b") {
+					if (dice1 === "1d10" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d10") {
 						text2.innerHTML =
 						"d10: " +
 						total;
-					} else if (dice1 === "d10" & dice2 === "d10b") {
+					} else if (dice1 === "1d10" & dice2 === "1d10") {
 						text2.innerHTML =
 						"2d10: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+					if (dice1 === "1d10" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "1d10" & modf > 0) {
+						text2.innerHTML =
+						"d10: " +
+						total +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d10" & dice2 === "1d10" & modf > 0) {
+						text2.innerHTML =
+						"2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 					
 
-					if (dice1 === "d10" & dice2 === "d4b") {
+					if (dice1 === "1d10" & dice2 === "1d4") {
 						text2.innerHTML =
 						"d4, d10: " +
-						ran.join(", ");
-					} else if (dice1 === "d10" & dice2 === "d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d10" & dice2 === "1d6") {
 						text2.innerHTML =
 						"d6, d10: " +
-						ran.join(", ");
-					} else if (dice1 === "d10" & dice2 === "d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d10" & dice2 === "1d8") {
 						text2.innerHTML =
 						"d8, d10: " +
-						ran.join(", ");
-					} else if (dice1 === "d10" & dice2 === "d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d10" & dice2 === "1d12") {
 						text2.innerHTML =
 						"d10, d12: " +
-						ran.join(", ");
-					} else if (dice1 === "d10" & dice2 === "d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d10" & dice2 === "1d20") {
 						text2.innerHTML =
 						"d10, d20: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					}
+
+					if (dice1 === "1d10" & dice2 === "1d4" & modf > 0) {
+						text2.innerHTML =
+						"d4, d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} 
+					
+					if (dice1 === "1d10" & dice2 === "1d6" & modf > 0) {
+						text2.innerHTML =
+						"d6, d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} 
+					
+					if (dice1 === "1d10" & dice2 === "1d8" & modf > 0) {
+						text2.innerHTML =
+						"d8, d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} 
+					
+					if (dice1 === "1d10" & dice2 === "1d12" & modf > 0) {
+						text2.innerHTML =
+						"d10, d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} 
+					
+					if (dice1 === "1d10" & dice2 === "1d20" & modf > 0) {
+						text2.innerHTML =
+						"d10, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					}
 					
-					if (dice1 === "2d10" & dice2 === "2d10b") {
+					if (dice1 === "2d10" & dice2 === "2d10") {
 						text2.innerHTML =
 						"4d10: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					}
+
+						
+					if (dice1 === "2d10" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"4d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					}
 					
-					if (dice1 === "2d10" & dice2 === "2d4b") {
+					if (dice1 === "2d10" & dice2 === "2d4") {
 						text2.innerHTML =
 						"2d4, 2d10: " +
-						ran.join(", ");
-					} else if (dice1 === "2d10" & dice2 === "2d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d10" & dice2 === "2d6") {
 						text2.innerHTML =
 						"2d6, 2d10: " +
-						ran.join(", ");
-					} else if (dice1 === "2d10" & dice2 === "2d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d10" & dice2 === "2d8") {
 						text2.innerHTML =
 						"2d8, 2d10: " +
-						ran.join(", ");
-					} else if (dice1 === "2d10" & dice2 === "2d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d10" & dice2 === "2d12") {
 						text2.innerHTML =
 						"2d10, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d10" & dice2 === "2d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d10" & dice2 === "2d20") {
 						text2.innerHTML =
 						"2d10, 2d20: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+					if (dice1 === "2d10" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"2d4, 2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d10" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"2d6, 2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d10" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"2d8, 2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d10" & dice2 === "2d12" & modf > 0) {
+						text2.innerHTML =
+						"2d10, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d10" & dice2 === "2d20" & modf > 0) {
+						text2.innerHTML =
+						"2d10, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 
 					// d12
 
-					if (dice1 === "d12" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d12b") {
+					if (dice1 === "1d12" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d12") {
 						text2.innerHTML =
 						"d12: " +
 						total;
-					} else if (dice1 === "d12" & dice2 === "d12b") {
+					} else if (dice1 === "1d12" & dice2 === "1d12") {
 						text2.innerHTML =
 						"2d12: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+					if (dice1 === "1d12" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "1d12" & modf > 0) {
+						text2.innerHTML =
+						"d12: " +
+						total +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d12" & dice2 === "1d12" & modf > 0) {
+						text2.innerHTML =
+						"2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 					
 
-					if (dice1 === "d12" & dice2 === "d4b") {
+					if (dice1 === "1d12" & dice2 === "1d4") {
 						text2.innerHTML =
 						"d4, d12: " +
-						ran.join(", ");
-					} else if (dice1 === "d12" & dice2 === "d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d12" & dice2 === "1d6") {
 						text2.innerHTML =
 						"d6, d12: " +
-						ran.join(", ");
-					} else if (dice1 === "d12" & dice2 === "d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d12" & dice2 === "1d8") {
 						text2.innerHTML =
 						"d8, d12: " +
-						ran.join(", ");
-					} else if (dice1 === "d12" & dice2 === "d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d12" & dice2 === "1d10") {
 						text2.innerHTML =
 						"d10, d12: " +
-						ran.join(", ");
-					} else if (dice1 === "d12" & dice2 === "d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d12" & dice2 === "1d20") {
 						text2.innerHTML =
 						"d12, d20: " +
-						ran.join(", ");
-					} else if (dice1 === "2d12" & dice2 === "2d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d12" & dice2 === "2d12") {
 						text2.innerHTML =
 						"4d12: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+					
+					if (dice1 === "1d12" & dice2 === "1d4" & modf > 0) {
+						text2.innerHTML =
+						"d4, d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d12" & dice2 === "1d6" & modf > 0) {
+						text2.innerHTML =
+						"d6, d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d12" & dice2 === "1d8" & modf > 0) {
+						text2.innerHTML =
+						"d8, d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d12" & dice2 === "1d10" & modf > 0) {
+						text2.innerHTML =
+						"d10, d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d12" & dice2 === "1d20" & modf > 0) {
+						text2.innerHTML =
+						"d12, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d12" & dice2 === "2d12" & modf > 0) {
+						text2.innerHTML =
+						"4d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 					
-					if (dice1 === "2d12" & dice2 === "2d4b") {
+					if (dice1 === "2d12" & dice2 === "2d4") {
 						text2.innerHTML =
 						"2d4, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d12" & dice2 === "2d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d12" & dice2 === "2d6") {
 						text2.innerHTML =
 						"2d6, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d12" & dice2 === "2d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d12" & dice2 === "2d8") {
 						text2.innerHTML =
 						"2d8, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d12" & dice2 === "2d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d12" & dice2 === "2d10") {
 						text2.innerHTML =
 						"2d10, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d12" & dice2 === "2d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d12" & dice2 === "2d20") {
 						text2.innerHTML =
 						"2d12, 2d20: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					}
+
+					if (dice1 === "2d12" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"2d4, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d12" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"2d6, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d12" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"2d8, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d12" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"2d10, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d12" & dice2 === "2d20" & modf > 0) {
+						text2.innerHTML =
+						"2d12, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					}
 
 					// d20
 
-					if (dice1 === "d20" & dice2 === "dXb" || dice1 === "dX" & dice2 === "d20b") {
+					if (dice1 === "1d20" & dice2 === "dX" || dice1 === "dX" & dice2 === "1d20") {
 						text2.innerHTML =
 						"d20: " +
 						total;
-					} else if (dice1 === "d20" & dice2 === "d20b") {
+					} else if (dice1 === "1d20" & dice2 === "1d20") {
 						text2.innerHTML =
 						"2d20: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
 					} 
 					
 
-					if (dice1 === "d20" & dice2 === "d4b") {
+					if (dice1 === "1d20" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "1d20" & modf > 0) {
+						text2.innerHTML =
+						"d20: " +
+						total +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d20" & dice2 === "1d20" & modf > 0) {
+						text2.innerHTML =
+						"2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} 
+
+					if (dice1 === "1d20" & dice2 === "1d4") {
 						text2.innerHTML =
 						"d4, d20: " +
-						ran.join(", ");
-					} else if (dice1 === "d20" & dice2 === "d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d20" & dice2 === "1d6") {
 						text2.innerHTML =
 						"d6, d20: " +
-						ran.join(", ");
-					} else if (dice1 === "d20" & dice2 === "d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d20" & dice2 === "1d8") {
 						text2.innerHTML =
 						"d8, d20: " +
-						ran.join(", ");
-					} else if (dice1 === "d20" & dice2 === "d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d20" & dice2 === "1d10") {
 						text2.innerHTML =
 						"d10, d20: " +
-						ran.join(", ");
-					} else if (dice1 === "d20" & dice2 === "d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d20" & dice2 === "1d12") {
 						text2.innerHTML =
 						"d12, d20: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					}
+
+					if (dice1 === "1d20" & dice2 === "1d4" & modf > 0) {
+						text2.innerHTML =
+						"d4, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d20" & dice2 === "1d6" & modf > 0) {
+						text2.innerHTML =
+						"d6, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d20" & dice2 === "1d8" & modf > 0) {
+						text2.innerHTML =
+						"d8, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d20" & dice2 === "1d10" & modf > 0) {
+						text2.innerHTML =
+						"d10, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d20" & dice2 === "1d12" & modf > 0) {
+						text2.innerHTML =
+						"d12, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					}
+
+					if (dice1 === "1d20" & dice2 === "1d4") {
+						text2.innerHTML =
+						"d4, d20: " +
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d20" & dice2 === "1d6") {
+						text2.innerHTML =
+						"d6, d20: " +
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d20" & dice2 === "1d8") {
+						text2.innerHTML =
+						"d8, d20: " +
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d20" & dice2 === "1d10") {
+						text2.innerHTML =
+						"d10, d20: " +
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "1d20" & dice2 === "1d12") {
+						text2.innerHTML =
+						"d12, d20: " +
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					}
+
+					if (dice1 === "1d20" & dice2 === "1d4" & modf > 0) {
+						text2.innerHTML =
+						"d4, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d20" & dice2 === "1d6" & modf > 0) {
+						text2.innerHTML =
+						"d6, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d20" & dice2 === "1d8" & modf > 0) {
+						text2.innerHTML =
+						"d8, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d20" & dice2 === "1d10" & modf > 0) {
+						text2.innerHTML =
+						"d10, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "1d20" & dice2 === "1d12" & modf > 0) {
+						text2.innerHTML =
+						"d12, d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					}
 					
-					else if (dice1 === "2d20" & dice2 === "2d20b") {
+					if (dice1 === "2d20" & dice2 === "2d20") {
 						text2.innerHTML =
 						"4d20: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
 					} 
 					
-					if (dice1 === "2d20" & dice2 === "2d4b") {
+					if (dice1 === "2d20" & dice2 === "2d20" & modf > 0) {
+						text2.innerHTML =
+						"4d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} 
+					
+					
+					if (dice1 === "2d20" & dice2 === "2d4") {
 						text2.innerHTML =
 						"2d4, 2d20: " +
-						ran.join(", ");
-					} else if (dice1 === "2d20" & dice2 === "2d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d20" & dice2 === "2d6") {
 						text2.innerHTML =
 						"2d6, 2d20: " +
-						ran.join(", ");
-					} else if (dice1 === "2d20" & dice2 === "2d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d20" & dice2 === "2d8") {
 						text2.innerHTML =
 						"2d8, 2d20: " +
-						ran.join(", ");
-					} else if (dice1 === "2d20" & dice2 === "2d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d20" & dice2 === "2d10") {
 						text2.innerHTML =
 						"2d10, 2d20: " +
-						ran.join(", ");
-					} else if (dice1 === "2d20" & dice2 === "2d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d20" & dice2 === "2d12") {
 						text2.innerHTML =
 						"2d12, 2d20: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					}
+
+
+					if (dice1 === "2d20" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"2d4, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d20" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"2d6, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d20" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"2d8, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d20" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"2d10, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d20" & dice2 === "2d12" & modf > 0) {
+						text2.innerHTML =
+						"2d12, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					}
 
 
 					
-					if (dice1 === "2d4" & dice2 === "d4b" || dice1 === "d4" & dice2 === "2d4b") {
+					if (dice1 === "2d4" & dice2 === "1d4" || dice1 === "1d4" & dice2 === "2d4") {
 						text2.innerHTML =
 						"d4, 2d4: " +
-						ran.join(", ");
-					} else if (dice1 === "2d4" & dice2 === "dXb" || dice1 === "dX" & dice2 === "2d4b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d4" & dice2 === "dX" || dice1 === "dX" & dice2 === "2d4") {
 						text2.innerHTML =
 						"2d4: " +
-						ran.join(", ");
-					} else if (dice1 === "2d4" & dice2 === "d6b" || dice1 === "d6" & dice2 === "2d4b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d4" & dice2 === "1d6" || dice1 === "1d6" & dice2 === "2d4") {
 						text2.innerHTML =
 						"d6, 2d4: " +
-						ran.join(", ");
-					} else if (dice1 === "2d4" & dice2 === "d8b" || dice1 === "d8" & dice2 === "2d4b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d4" & dice2 === "1d8" || dice1 === "1d8" & dice2 === "2d4") {
 						text2.innerHTML =
 						"d8, 2d4: " +
-						ran.join(", ");
-					} else if (dice1 === "2d4" & dice2 === "d10b" || dice1 === "d10" & dice2 === "2d4b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d4" & dice2 === "1d10" || dice1 === "1d10" & dice2 === "2d4") {
 						text2.innerHTML =
 						"d10, 2d4: " +
-						ran.join(", ");
-					} else if (dice1 === "2d4" & dice2 === "d12b" || dice1 === "d12" & dice2 === "2d4b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d4" & dice2 === "1d12" || dice1 === "1d12" & dice2 === "2d4") {
 						text2.innerHTML =
 						"d12, 2d4: " +
-						ran.join(", ");
-					} else if (dice1 === "2d4" & dice2 === "d20b" || dice1 === "d20" & dice2 === "2d4b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d4" & dice2 === "1d20" || dice1 === "1d20" & dice2 === "2d4") {
 						text2.innerHTML =
 						"d20, 2d4: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
 					} 
 
-					if (dice1 === "2d6" & dice2 === "d4b" || dice1 === "d4" & dice2 === "2d6b") {
+					if (dice1 === "2d4" & dice2 === "1d4" & modf > 0 || dice1 === "1d4" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"d4, 2d4: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d4" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"2d4: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d4" & dice2 === "1d6" & modf > 0 || dice1 === "1d6" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"d6, 2d4: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d4" & dice2 === "1d8" & modf > 0 || dice1 === "1d8" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"d8, 2d4: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d4" & dice2 === "1d10" & modf > 0 || dice1 === "1d10" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"d10, 2d4: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d4" & dice2 === "1d12" & modf > 0 || dice1 === "1d12" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"d12, 2d4: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d4" & dice2 === "1d20" & modf > 0 || dice1 === "1d20" & dice2 === "2d4" & modf > 0) {
+						text2.innerHTML =
+						"d20, 2d4: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} 
+
+					if (dice1 === "2d6" & dice2 === "1d4" || dice1 === "1d4" & dice2 === "2d6") {
 						text2.innerHTML =
 						"d4, 2d6: " +
-						ran.join(", ");
-					} else if (dice1 === "2d6" & dice2 === "dXb" || dice1 === "dX" & dice2 === "2d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d6" & dice2 === "dX" || dice1 === "dX" & dice2 === "2d6") {
 						text2.innerHTML =
 						"2d6: " +
-						ran.join(", ");
-					} else if (dice1 === "2d6" & dice2 === "d6b" || dice1 === "d6" & dice2 === "2d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d6" & dice2 === "1d6" || dice1 === "1d6" & dice2 === "2d6") {
 						text2.innerHTML =
 						"d6, 2d6: " +
-						ran.join(", ");
-					} else if (dice1 === "2d6" & dice2 === "d8b" || dice1 === "d8" & dice2 === "2d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d6" & dice2 === "1d8" || dice1 === "1d8" & dice2 === "2d6") {
 						text2.innerHTML =
 						"d8, 2d6: " +
-						ran.join(", ");
-					} else if (dice1 === "2d6" & dice2 === "d10b" || dice1 === "d10" & dice2 === "2d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d6" & dice2 === "1d10" || dice1 === "1d10" & dice2 === "2d6") {
 						text2.innerHTML =
 						"d10, 2d6: " +
-						ran.join(", ");
-					} else if (dice1 === "2d6" & dice2 === "d12b" || dice1 === "d12" & dice2 === "2d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d6" & dice2 === "1d12" || dice1 === "1d12" & dice2 === "2d6") {
 						text2.innerHTML =
 						"d12, 2d6: " +
-						ran.join(", ");
-					} else if (dice1 === "2d6" & dice2 === "d20b" || dice1 === "d20" & dice2 === "2d6b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d6" & dice2 === "1d20" || dice1 === "1d20" & dice2 === "2d6") {
 						text2.innerHTML =
 						"d20, 2d6: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+					if (dice1 === "2d6" & dice2 === "1d4" & modf > 0 || dice1 === "1d4" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"d4, 2d6: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d6" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"2d6: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d6" & dice2 === "1d6" & modf > 0 || dice1 === "1d6" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"d6, 2d6: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d6" & dice2 === "1d8" & modf > 0 || dice1 === "1d8" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"d8, 2d6: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d6" & dice2 === "1d10" & modf > 0 || dice1 === "1d10" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"d10, 2d6: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d6" & dice2 === "1d12" & modf > 0 || dice1 === "1d12" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"d12, 2d6: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d6" & dice2 === "1d20" & modf > 0 || dice1 === "1d20" & dice2 === "2d6" & modf > 0) {
+						text2.innerHTML =
+						"d20, 2d6: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 
 
 					
-					if (dice1 === "2d8" & dice2 === "d4b" || dice1 === "d4" & dice2 === "2d8b") {
+					if (dice1 === "2d8" & dice2 === "1d4" || dice1 === "1d4" & dice2 === "2d8") {
 						text2.innerHTML =
 						"d4, 2d8: " +
-						ran.join(", ");
-					} else if (dice1 === "2d8" & dice2 === "dXb" || dice1 === "dX" & dice2 === "2d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d8" & dice2 === "dX" || dice1 === "dX" & dice2 === "2d8") {
 						text2.innerHTML =
 						"2d8: " +
-						ran.join(", ");
-					} else if (dice1 === "2d8" & dice2 === "d6b" || dice1 === "d6" & dice2 === "2d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d8" & dice2 === "1d6" || dice1 === "1d6" & dice2 === "2d8") {
 						text2.innerHTML =
 						"d6, 2d8: " +
-						ran.join(", ");
-					} else if (dice1 === "2d8" & dice2 === "d8b" || dice1 === "d8" & dice2 === "2d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d8" & dice2 === "1d8" || dice1 === "1d8" & dice2 === "2d8") {
 						text2.innerHTML =
 						"d8, 2d8: " +
-						ran.join(", ");
-					} else if (dice1 === "2d8" & dice2 === "d10b" || dice1 === "d10" & dice2 === "2d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d8" & dice2 === "1d10" || dice1 === "1d10" & dice2 === "2d8") {
 						text2.innerHTML =
 						"d10, 2d8: " +
-						ran.join(", ");
-					} else if (dice1 === "2d8" & dice2 === "d12b" || dice1 === "d12" & dice2 === "2d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d8" & dice2 === "1d12" || dice1 === "1d12" & dice2 === "2d8") {
 						text2.innerHTML =
 						"d12, 2d8: " +
-						ran.join(", ");
-					} else if (dice1 === "2d8" & dice2 === "d20b" || dice1 === "d20" & dice2 === "2d8b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d8" & dice2 === "1d20" || dice1 === "1d20" & dice2 === "2d8") {
 						text2.innerHTML =
 						"d20, 2d8: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+							
+					if (dice1 === "2d8" & dice2 === "1d4" & modf > 0 || dice1 === "1d4" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"d4, 2d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d8" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"2d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d8" & dice2 === "1d6" & modf > 0 || dice1 === "1d6" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"d6, 2d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d8" & dice2 === "1d8" & modf > 0 || dice1 === "1d8" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"d8, 2d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d8" & dice2 === "1d10" & modf > 0 || dice1 === "1d10" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"d10, 2d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d8" & dice2 === "1d12" & modf > 0 || dice1 === "1d12" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"d12, 2d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d8" & dice2 === "1d20" & modf > 0 || dice1 === "1d20" & dice2 === "2d8" & modf > 0) {
+						text2.innerHTML =
+						"d20, 2d8: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 
 					
-					if (dice1 === "2d10" & dice2 === "d4b" || dice1 === "d4" & dice2 === "2d10b") {
+					if (dice1 === "2d10" & dice2 === "1d4" || dice1 === "1d4" & dice2 === "2d10") {
 						text2.innerHTML =
 						"d4, 2d10: " +
-						ran.join(", ");
-					} else if (dice1 === "2d10" & dice2 === "d6b" || dice1 === "d6" & dice2 === "2d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d10" & dice2 === "1d6" || dice1 === "1d6" & dice2 === "2d10") {
 						text2.innerHTML =
 						"d6, 2d10: " +
-						ran.join(", ");
-					} else if (dice1 === "2d10" & dice2 === "dXb" || dice1 === "dX" & dice2 === "2d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d10" & dice2 === "dX" || dice1 === "dX" & dice2 === "2d10") {
 						text2.innerHTML =
 						"2d10: " +
-						ran.join(", ");
-					} else if (dice1 === "2d10" & dice2 === "d8b" || dice1 === "d8" & dice2 === "2d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d10" & dice2 === "1d8" || dice1 === "1d8" & dice2 === "2d10") {
 						text2.innerHTML =
 						"d8, 2d10: " +
-						ran.join(", ");
-					} else if (dice1 === "2d10" & dice2 === "d10b" || dice1 === "d10" & dice2 === "2d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d10" & dice2 === "1d10" || dice1 === "1d10" & dice2 === "2d10") {
 						text2.innerHTML =
 						"d10, 2d10: " +
-						ran.join(", ");
-					} else if (dice1 === "2d10" & dice2 === "d12b" || dice1 === "d12" & dice2 === "2d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d10" & dice2 === "1d12" || dice1 === "1d12" & dice2 === "2d10") {
 						text2.innerHTML =
 						"d12, 2d10: " +
-						ran.join(", ");
-					} else if (dice1 === "2d10" & dice2 === "d20b" || dice1 === "d20" & dice2 === "2d10b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d10" & dice2 === "1d20" || dice1 === "1d20" & dice2 === "2d10") {
 						text2.innerHTML =
 						"d20, 2d10: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+					if (dice1 === "2d10" & dice2 === "1d4" & modf > 0 || dice1 === "1d4" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"d4, 2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d10" & dice2 === "1d6" & modf > 0 || dice1 === "1d6" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"d6, 2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d10" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d10" & dice2 === "1d8" & modf > 0 || dice1 === "1d8" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"d8, 2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d10" & dice2 === "1d10" & modf > 0 || dice1 === "1d10" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"d10, 2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d10" & dice2 === "1d12" & modf > 0 || dice1 === "1d12" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"d12, 2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d10" & dice2 === "1d20" & modf > 0 || dice1 === "1d20" & dice2 === "2d10" & modf > 0) {
+						text2.innerHTML =
+						"d20, 2d10: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 
 					
-					if (dice1 === "2d12" & dice2 === "d4b" || dice1 === "d4" & dice2 === "2d12b") {
+					if (dice1 === "2d12" & dice2 === "1d4" || dice1 === "1d4" & dice2 === "2d12") {
 						text2.innerHTML =
 						"d4, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d12" & dice2 === "d6b" || dice1 === "d6" & dice2 === "2d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d12" & dice2 === "1d6" || dice1 === "1d6" & dice2 === "2d12") {
 						text2.innerHTML =
 						"d6, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d12" & dice2 === "dXb" || dice1 === "dX" & dice2 === "2d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d12" & dice2 === "dX" || dice1 === "dX" & dice2 === "2d12") {
 						text2.innerHTML =
 						"2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d12" & dice2 === "d8b" || dice1 === "d8" & dice2 === "2d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d12" & dice2 === "1d8" || dice1 === "1d8" & dice2 === "2d12") {
 						text2.innerHTML =
 						"d8, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d12" & dice2 === "d10b" || dice1 === "d10" & dice2 === "2d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d12" & dice2 === "1d10" || dice1 === "1d10" & dice2 === "2d12") {
 						text2.innerHTML =
 						"d10, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d12" & dice2 === "d12b" || dice1 === "d12" & dice2 === "2d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d12" & dice2 === "1d12" || dice1 === "1d12" & dice2 === "2d12") {
 						text2.innerHTML =
 						"d12, 2d12: " +
-						ran.join(", ");
-					} else if (dice1 === "2d12" & dice2 === "d20b" || dice1 === "d20" & dice2 === "2d12b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d12" & dice2 === "1d20" || dice1 === "1d20" & dice2 === "2d12") {
 						text2.innerHTML =
 						"d20, 2d12: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} 
+
+					if (dice1 === "2d12" & dice2 === "1d4" & modf > 0 || dice1 === "1d4" & dice2 === "2d12" & modf > 0) {
+						text2.innerHTML =
+						"d4, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d12" & dice2 === "1d6" & modf > 0 || dice1 === "1d6" & dice2 === "2d12") {
+						text2.innerHTML =
+						"d6, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d12" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "2d12" & modf > 0) {
+						text2.innerHTML =
+						"2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d12" & dice2 === "1d8" & modf > 0 || dice1 === "1d8" & dice2 === "2d12" & modf > 0) {
+						text2.innerHTML =
+						"d8, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d12" & dice2 === "1d10" & modf > 0 || dice1 === "1d10" & dice2 === "2d12" & modf > 0) {
+						text2.innerHTML =
+						"d10, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d12" & dice2 === "1d12" & modf > 0 || dice1 === "1d12" & dice2 === "2d12" & modf > 0) {
+						text2.innerHTML =
+						"d12, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d12" & dice2 === "1d20" & modf > 0 || dice1 === "1d20" & dice2 === "2d12" & modf > 0) {
+						text2.innerHTML =
+						"d20, 2d12: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
 					} 
 
 					
-					if (dice1 === "2d20" & dice2 === "d4b" || dice1 === "d4" & dice2 === "2d20b") {
+					if (dice1 === "2d20" & dice2 === "1d4" || dice1 === "1d4" & dice2 === "2d20") {
 						text2.innerHTML =
 						"d4, 2d20: " +
-						ran.join(", ");
-					} else if (dice1 === "2d20" & dice2 === "dXb" || dice1 === "dX" & dice2 === "2d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d20" & dice2 === "dX" || dice1 === "dX" & dice2 === "2d20") {
 						text2.innerHTML =
 						"2d20: " +
-						ran.join(", ");
-					} else if (dice1 === "2d20" & dice2 === "d6b" || dice1 === "d6" & dice2 === "2d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d20" & dice2 === "1d6" || dice1 === "1d6" & dice2 === "2d20") {
 						text2.innerHTML =
 						"d6, 2d20: " +
-						ran.join(", ");
-					} else if (dice1 === "2d20" & dice2 === "d8b" || dice1 === "d8" & dice2 === "2d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d20" & dice2 === "1d8" || dice1 === "1d8" & dice2 === "2d20") {
 						text2.innerHTML =
 						"d8, 2d20: " +
-						ran.join(", ");
-					} else if (dice1 === "2d20" & dice2 === "d10b" || dice1 === "d10" & dice2 === "2d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d20" & dice2 === "1d10" || dice1 === "1d10" & dice2 === "2d20") {
 						text2.innerHTML =
 						"d10, 2d20: " +
-						ran.join(", ");
-					} else if (dice1 === "2d20" & dice2 === "d12b" || dice1 === "d12" & dice2 === "2d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d20" & dice2 === "1d12" || dice1 === "1d12" & dice2 === "2d20") {
 						text2.innerHTML =
 						"d12, 2d20: " +
-						ran.join(", ");
-					} else if (dice1 === "2d20" & dice2 === "d20b" || dice1 === "d20" & dice2 === "2d20b") {
+						ran.join(", ") + 
+						" ➜ " +
+						total;
+					} else if (dice1 === "2d20" & dice2 === "1d20" || dice1 === "1d20" & dice2 === "2d20") {
 						text2.innerHTML =
 						"d20, 2d20: " +
-						ran.join(", ");
+						ran.join(", ") + 
+						" ➜ " +
+						total;
 					} 
+
+					if (dice1 === "2d20" & dice2 === "1d4" & modf > 0 || dice1 === "1d4" & dice2 === "2d20" & modf > 0) {
+						text2.innerHTML =
+						"d4, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d20" & dice2 === "dX" & modf > 0 || dice1 === "dX" & dice2 === "2d20" & modf > 0) {
+						text2.innerHTML =
+						"2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d20" & dice2 === "1d6" & modf > 0 || dice1 === "1d6" & dice2 === "2d20" & modf > 0) {
+						text2.innerHTML =
+						"d6, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d20" & dice2 === "1d8" & modf > 0 || dice1 === "1d8" & dice2 === "2d20" & modf > 0) {
+						text2.innerHTML =
+						"d8, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d20" & dice2 === "1d10" & modf > 0 || dice1 === "1d10" & dice2 === "2d20" & modf > 0) {
+						text2.innerHTML =
+						"d10, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d20" & dice2 === "1d12" & modf > 0 || dice1 === "1d12" & dice2 === "2d20" & modf > 0) {
+						text2.innerHTML =
+						"d12, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} else if (dice1 === "2d20" & dice2 === "1d20" & modf > 0 || dice1 === "1d20" & dice2 === "2d20" & modf > 0) {
+						text2.innerHTML =
+						"d20, 2d20: " +
+						ran.join(", ") +
+						" + " +
+						modf +
+						" ➜ " +
+						suma;
+					} 
+
+
 				}, 450);
 					
 			});
@@ -1379,6 +3078,8 @@ window.addEventListener('load', () => {
 		itis.push(novo);
 
 		localStorage.setItem('itens', JSON.stringify(itis));
+
+		e.target.reset();
 
 		DisplayItens();
 	});
@@ -1504,6 +3205,8 @@ window.addEventListener('load', () => {
 
 		localStorage.setItem('habilidades', JSON.stringify(habilidades));
 
+		e.target.reset();
+
 		DisplayHabs();
 	});
 
@@ -1537,11 +3240,11 @@ window.addEventListener('load', () => {
 
 			const nomHab = document.createElement("div");
 			nomHab.classList.add("nom-hab");
-			nomHab.innerHTML = `<p>${novaHab.nan}</p>`;
+			nomHab.innerHTML = `<input type="text" value="${novaHab.nan}">`;
 
 			const descHab = document.createElement("div");
 			descHab.classList.add("desc-hab");
-			descHab.innerHTML = `<span>${novaHab.dd}</span>`;
+			descHab.innerHTML = `<textarea id="textar1a">${novaHab.dd}</textarea>`;
 
 			hab.appendChild(nomHab);
 			hab.appendChild(descHab);
@@ -1559,6 +3262,20 @@ window.addEventListener('load', () => {
 				localStorage.setItem('habilidades', JSON.stringify(habilidades));
 				DisplayHabs();
 			});
+
+	
+
+			const textarna = descHab.querySelector("textarea");
+			textarna.style.height = "0px";
+			let scHeightna = textarna.scrollHeight;
+			textarna.style.height = `${scHeightna}px`;
+
+			textarna.addEventListener("blur", e => {
+					novaHab.dd = e.target.value;
+					localStorage.setItem('habilidades', JSON.stringify(habilidades));
+					DisplayHabs();
+			});
+
 
 		});
 	}
@@ -2138,4 +3855,21 @@ function iniciaModal(modalID) {
 		setTimeout( function(){
 			mostraCards.style.display = 'none';
 		}, 1800);
+	});
+
+	// Resize Textarea
+
+	const textar = document.querySelector("#textar1");
+	textar.addEventListener("keyup", e =>{
+		textar.style.height = "0px";
+		let scHeight = e.target.scrollHeight;
+		textar.style.height = `${scHeight}px`;
+	});
+
+	
+	const textar2 = document.querySelector("#textar2");
+	textar2.addEventListener("keyup", e =>{
+		textar2.style.height = "0px";
+		let scHeight2 = e.target.scrollHeight;
+		textar2.style.height = `${scHeight2}px`;
 	});
