@@ -39,10 +39,10 @@
             <div class="list" id="todo-list">
 
                 <label>Nome</label>
-                <div class="todo-item">
+                <div id="cont-put1" class="todo-item">
 
                 <div class="todo-content">
-                    <input class="text-input" id="nom" type="text" value="Aspaes"  readonly>
+                    <input class="text-input" id="noma" name="nom" type="text" value="" placeholder="" autocomplete="off">
                 </div>
 
                 </div>
@@ -51,7 +51,7 @@
                 <div class="todo-item">
 
                 <div class="todo-content">
-                    <input class="text-input" id="jog" type="text" value="Dante"  readonly>
+                    <input class="text-input" id="jog" name="jog" type="text" value="" placeholder="" autocomplete="off">
                 </div>
 
                 
@@ -61,7 +61,7 @@
                 <div class="todo-item">
 
                 <div class="todo-content">
-                    <input class="text-input" id="ida" type="text" value="29 anos" readonly>
+                    <input class="text-input" id="ida" name="ida" type="text" value="" placeholder="" autocomplete="off">
                 </div>
 
                 
@@ -71,7 +71,7 @@
                 <div class="todo-item">
 
                 <div class="todo-content">
-                    <input class="text-input" id="alt" type="text" value="1.75m" readonly>
+                    <input class="text-input" id="alt" name="alt" type="text" value="" placeholder="" autocomplete="off">
                 </div>
 
                 
@@ -81,21 +81,16 @@
                 <div class="todo-item">
 
                 <div class="todo-content">
-                    <input class="text-input" id="tmv" type="text" value="5m" readonly>
+                    <input class="text-input" id="tmv" name="tmv" type="text" value="" placeholder="" autocomplete="off">
                 </div>
                 
                 </div>
 
                 <label>Pessoas/Itens Importantes</label>
-                <div class="todo-item">
-
-                <div class="todo-content">
-                    <textarea class="text-input" id="pit" readonly>Nikolas, Kaya, Nathan e Machados do Caos</textarea>
-                </div>
-                
+                <div class="todo-item na">
+                    <textarea class="text-textarea" id="pit" name="pit" placeholder="" autocomplete="off"></textarea>
                 </div>
             </div>
-
             <div class="linha"></div>
 
             <div class="list">
@@ -104,9 +99,9 @@
                 <div class="todo-item vida tam">
                     <div class="nn">
                         <span id="vm" class="inus v">-</span>
-                        <input id="vid" type="text" class="vid num" value="22" readonly>
+                        <input id="vid" type="text" class="vid num" value="">
                         <span class="v">/</span>
-                        <input id="so1" type="text" class="so"  value="22">
+                        <input id="so1" type="text" class="so so1" value="">
                         <span id="pl" class="plus v">+</span>
                     </div>
                 </div>
@@ -115,9 +110,9 @@
                 <div class="todo-item genki tam">
                     <div class="nn">
                         <span id="vm2" class="m2 v">-</span>
-                        <input id="gen" type="text" class="gen num2" value="8" readonly>
+                        <input id="gen" type="text" class="gen num2" value="">
                         <span class="v">/</span>
-                        <input id="so2" class="so" value="8">
+                        <input id="so2" class="so" value="">
                         <span id="pl2" class="p2 v">+</span>
                     </div>
                 </div>
@@ -126,9 +121,9 @@
                 <div class="todo-item sanidade tam">
                     <div class="nn">
                         <span id="vm3" class="m3 v">-</span>
-                        <input id="san" type="text" class="san num3" value="9" readonly>
+                        <input id="sani" type="text" class="san num3" value="">
                         <span class="v">/</span>
-                        <input id="so3" class="so" value="9">
+                        <input id="so3" class="so" value="">
                         <span id="pl3" class="p3 v">+</span>
                     </div>
                 </div>
@@ -137,9 +132,9 @@
                 <div class="todo-item vigor tam">
                     <div class="nn">
                         <span id="vm4" class="m4 v">-</span>
-                        <input id="vig" type="text" class="vig num4" value="8" readonly>
+                        <input id="vig" type="text" class="vig num4" value="">
                         <span class="v">/</span>
-                        <input id="so4" class="so" value="8">
+                        <input id="so4" class="so" value="">
                         <span id="pl4" class="p4 v">+</span>
                     </div>
                 </div>
@@ -148,9 +143,9 @@
                 <div class="todo-item pe tam">
                     <div class="nn">
                         <span id="vm5" class="m5 v">-</span>
-                        <input id="pde" type="text" class="pde num5" value="8" readonly>
+                        <input id="pde" type="text" class="pde num5" value="">
                         <span class="v">/</span>
-                        <input id="so5" class="so" value="8">
+                        <input id="so5" class="so" value="">
                         <span id="pl5" class="p5 v">+</span>
                     </div>
                 </div>
@@ -158,7 +153,7 @@
                 <label>XP</label>
                 <div class="todo-item xp tam">
                     <div class="nn">
-                        <input id="xp" type="text" class="xpa num6" value="000" readonly>
+                        <input id="xp" type="text" class="xpa num6" value="">
                     </div>
                 </div>
 
@@ -1178,135 +1173,44 @@
         <div class="escol">
             <h1>Escolha uma Categoria</h1>
             <div class="options">
-                <label class="ct1">
-                    <input type="radio" name="category" id="category1" value="geral" />
-                    <span class="bubble geral-b"></span>
-                    <div class="dsv">Geral</div>
-                </label>
                 <label class="ct2">
-                    <input type="radio" name="category" id="category2" value="conquistado" />
-                    <span class="bubble conquistado-b"></span>
                     <div class="dsv">Conquistado</div>
                 </label>
+                <label class="ct1">
+                    <div class="dsv">Comum</div>
+                </label>
             </div>
-        </div>
+        </div>    
+    </section>
 
-        <div class="table-geral">
-            
-            <div class="lado-es">
-                <div class="i-geral">
-                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/categories.png"></div>
-                    <h1>Tipo</h1>
-                    <input type="text" placeholder="..." name="" id="">
-                    </div>
-                </div>
-                <div class="i-geral">
-                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/book.png"></div>
-                    <h1>Nome</h1>
-                    <input type="text" placeholder="..." name="" id="">
-                    </div>
-                </div>
-                <div class="i-geral">
-                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/genk.png"></div>
-                    <h1>Genki</h1>
-                    <input type="number" placeholder="7" name="" id="">
-                    </div>
-                </div>
-                <div class="i-geral">
-                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/energia.png"></div>
-                    <h1>Vigor</h1>
-                    <input type="number" placeholder="6" name="" id="">
-                    </div>
-                </div>
-                <div class="i-geral">
-                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/insane.png"></div>
-                    <h1>Sanidade</h1>
-                    <input type="number" placeholder="5" name="" id="">
-                    </div>
-                </div>
-                <div class="i-geral">
-                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/profic.png"></div>
-                    <h1>Proficiência</h1>
-                    <input type="text" placeholder="..."  name="" id="">
-                    </div>
-                </div>
-                <div class="i-geral">
-                    <div class="cn-img ana"><div class="cn-cn"><img src="/images/elemento.png"></div>
-                    <h1>Elemento</h1>
-                    <input type="text" placeholder="..." name="" id="">
-                    </div>
-                </div>
-            </div>
+    <section>
+        <div id="newPower">.</div>
 
-            <div class="lad">
-
-                            <div class="i-geral">
-                                <div class="cn-img2 ana"><div class="cn-cn"><img src="/images/relogio.png"></div>
-                                    <div class="ca-g">
-                                        <h1>Tempo de Preparo</h1>
-                                        <textarea id="textarsaf3" spellcheck="false" placeholder="..."></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="i-geral">
-                                <div class="cn-img2 ana"><div class="cn-cn cn3"><img src="/images/arma.png"></div>
-                                    <div class="ca-g">
-                                        <h1>Dano/Efeito</h1>
-                                        <textarea id="textarsaf2" spellcheck="false" placeholder="..."></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                                
-                            <div class="i-geral">
-                                <div class="cn-img2"><div class="cn-cn2"><img src="/images/nom.png"></div>
-                                    <div class="ca-g">
-                                        <h1>Descrição</h1>
-                                        <textarea id="textarsaf" spellcheck="false" placeholder="..."></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="i-geral">
-                                <div class="cn-img2"><div class="cn-cn2"><img src="/images/trevo.png"></div>
-                                    <div class="ca-g">
-                                        <h1>Ingredientes</h1>
-                                        <textarea id="textar2" spellcheck="false" placeholder="..."></textarea>
-                                    </div>
-                                </div>
-                            </div>
-
-            </div>
-
-            
-        </div>
-
-
-        <div class="table-geral">
+        <div class="table-geral ct-table2">
             
             <div class="lado-es">
                 <div class="i-geral">
                     <div class="cn-img ana"><div class="cn-cn"><img src="/images/book.png"></div>
                     <h1>Nome</h1>
-                    <input type="text" placeholder="..." name="" id="">
+                    <input type="text" placeholder="." name="" id="">
                     </div>
                 </div>
                 <div class="i-geral">
                     <div class="cn-img ana"><div class="cn-cn"><img src="/images/mana.png"></div>
                     <h1>Mana</h1>
-                    <input type="text" placeholder="..." name="" id="">
+                    <input type="text" placeholder="." name="" id="">
                     </div>
                 </div>
                 <div class="i-geral">
                     <div class="cn-img ana"><div class="cn-cn"><img src="/images/profic.png"></div>
                     <h1>Proficiência</h1>
-                    <input type="text" placeholder="..."  name="" id="">
+                    <input type="text" placeholder="."  name="" id="">
                     </div>
                 </div>
                 <div class="i-geral">
                     <div class="cn-img ana"><div class="cn-cn"><img src="/images/armadura.png"></div>
                     <h1>Armadura</h1>
-                    <input type="text" placeholder="..." name="" id="">
+                    <input type="text" placeholder="." name="" id="">
                     </div>
                 </div>
             </div>
@@ -1317,7 +1221,7 @@
                                 <div class="cn-img2"><div class="cn-cn4 cn3"><img src="/images/arma.png"></div>
                                 <div class="ca-g">
                                     <h1>Perícias</h1>
-                                    <textarea id="textar1" spellcheck="false" placeholder="..."></textarea>
+                                    <textarea id="textar1" spellcheck="false" placeholder="."></textarea>
                                 </div>
                             </div>
                             </div>
@@ -1327,7 +1231,7 @@
                                 <div class="cn-img2"><div class="cn-cn4"><img src="/images/conversacao.png"></div>
                                     <div class="ca-g">
                                         <h1>Habilidades</h1>
-                                        <textarea id="textar0" spellcheck="false" placeholder="..."></textarea>
+                                        <textarea id="textar0" spellcheck="false" placeholder="."></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -1336,13 +1240,11 @@
                                 <div class="cn-img2"><div class="cn-cn4"><img src="/images/nom.png"></div>
                                     <div class="ca-g">
                                         <h1>Descrição</h1>
-                                        <textarea id="textar2" spellcheck="false" placeholder="..."></textarea>
+                                        <textarea id="textar2" spellcheck="false" placeholder="."></textarea>
                                     </div>
                                 </div>
                             </div>
             </div>
-
-            
         </div>
     </section>
 

@@ -17,7 +17,7 @@ function iniciaPopup(popupID) {
 
 	const popupMod = document.getElementById("modal-popup");
 
-window.addEventListener('load', () => {
+window.addEventListener('load', (e) => {
 
 	todos = JSON.parse(localStorage.getItem("todos") || "[]");
 	const newTodoForm = document.querySelector('#new-todo-form');
@@ -61,10 +61,6 @@ window.addEventListener('load', () => {
 	addBox.addEventListener("click", () => {
 		popupBox.classList.add("show");
 	});
-
-	// closeIcon.addEventListener("click", (e) => {
-	// 	popupBox.classList.remove("show");
-	// });
 
 	function DisplayArmas() {
 		if(!todos) return;
@@ -746,6 +742,16 @@ window.addEventListener('load', () => {
 				})
 			});
 
+			textarea7.style.height = "30px";
+			let sctext1 = textarea7.scrollHeight;
+			textarea7.style.height = `${sctext1}px`;
+
+			textarea7.addEventListener('keyup', (e) => {
+				textarea7.style.height = "30px";
+				let sctext1 = textarea7.scrollHeight;
+				textarea7.style.height = `${sctext1}px`;
+			});
+
 			deh.addEventListener('click', (e) => {
 				const textarea1 = deh.querySelector('textarea');
 				textarea1.removeAttribute('readonly');
@@ -772,6 +778,16 @@ window.addEventListener('load', () => {
 					DisplayArmas();
 	
 				})
+			});
+
+			textarea8.style.height = "30px";
+			let sctext2 = textarea8.scrollHeight;
+			textarea8.style.height = `${sctext2}px`;
+
+			textarea8.addEventListener('keyup', (e) => {
+				textarea8.style.height = "30px";
+				let sctext2 = textarea8.scrollHeight;
+				textarea8.style.height = `${sctext2}px`;
 			});
 
 		const selectedcont = select3a.querySelector(".selected");
@@ -3280,439 +3296,598 @@ window.addEventListener('load', () => {
 		});
 	}
 
-	if(localStorage.campo1){
-		document.getElementById('nom').value = localStorage.campo1;
-	}
-
-	if(localStorage.campo2){
-		document.getElementById('jog').value = localStorage.campo2;
-	}
-
-	if(localStorage.campo3){
-		document.getElementById('ida').value = localStorage.campo3
-	}
-
-	if(localStorage.campo4){
-		document.getElementById('alt').value = localStorage.campo4;
-	}
-
-	if(localStorage.campo5){
-		document.getElementById('tmv').value = localStorage.campo5;
-	}
-
-	if(localStorage.campo6){
-		document.getElementById('pit').value = localStorage.campo6;
-	}
-
-	if(localStorage.vid){
-		document.getElementById('vid').value = localStorage.vid;
-	}
-
-	if(localStorage.gen){
-		document.getElementById('gen').value = localStorage.gen;
-	}
-
-	if(localStorage.san){
-		document.getElementById('san').value = localStorage.san;
-	}
-
-	if(localStorage.vig){
-		document.getElementById('vig').value = localStorage.vig;
-	}
-
-	if(localStorage.pde){
-		document.getElementById('pde').value = localStorage.pde;
-	}
-
-	if(localStorage.so1){
-		document.getElementById('so1').value = localStorage.so1;
-	}
-
-	if(localStorage.so2){
-		document.getElementById('so2').value = localStorage.so2;
-	}
-
-	if(localStorage.so3){
-		document.getElementById('so3').value = localStorage.so3;
-	}
-
-	if(localStorage.so4){
-		document.getElementById('so4').value = localStorage.so4;
-	}
-
-	if(localStorage.so5){
-		document.getElementById('so5').value = localStorage.so5;
-	}
-
-	if(localStorage.xp){
-		document.getElementById('xp').value = localStorage.xp;
-	}
-
-	var salvarTudo = function() {
-
-		var campo1 = document.getElementById('nom').value;
-		var campo2 = document.getElementById('jog').value;
-		var campo3 = document.getElementById('ida').value;
-		var campo4 = document.getElementById('alt').value;
-		var campo5 = document.getElementById('tmv').value;
-		var campo6 = document.getElementById('pit').value;
-		var vid = document.getElementById('vid').value;
-		var gen = document.getElementById('gen').value;
-		var san = document.getElementById('san').value;
-		var vig = document.getElementById('vig').value;
-		var pde = document.getElementById('pde').value;
-		var so1 = document.getElementById("so1").value;
-		var so2 = document.getElementById("so2").value;
-		var so3 = document.getElementById("so3").value;
-		var so4 = document.getElementById("so4").value;
-		var so5 = document.getElementById("so5").value;
-		var xp = document.getElementById('xp').value;
-
-		localStorage.setItem('campo1', campo1);
-		localStorage.setItem('campo2', campo2);
-		localStorage.setItem('campo3', campo3);
-		localStorage.setItem('campo4', campo4);
-		localStorage.setItem('campo5', campo5);
-		localStorage.setItem('campo6', campo6);
-		localStorage.setItem('vid', vid);
-		localStorage.setItem('gen', gen);
-		localStorage.setItem('san', san);
-		localStorage.setItem('vig', vig);
-		localStorage.setItem('pde', pde);
-		localStorage.setItem('so1', so1);
-		localStorage.setItem('so2', so2);
-		localStorage.setItem('so3', so3);
-		localStorage.setItem('so4', so4);
-		localStorage.setItem('so5', so5);
-		localStorage.setItem('xp', xp);
-
-	}
-
-	// Cada Alteração Feita no Documento é salva
-
-	document.onchange = salvarTudo;
-
 	// Pega o Caminho/Diretório dos Campos/Inputs Brancos
 
-	var campo1 = document.getElementById('nom');
-	var campo2 = document.getElementById('jog');
-	var campo3 = document.getElementById('ida');
-	var campo4 = document.getElementById('alt');
-	var campo5 = document.getElementById('tmv');
-	var campo6 = document.getElementById('pit');
+	const nameInput1 = document.querySelector('#noma');
 
-	// Pega o Caminho/Diretório das Classes dos Botões Edit
+	const nameplay = localStorage.getItem('Personagem') || 'Aspaes Leone';
 
-	const butt1 = document.getElementById('ed1');
-	const butt2 = document.getElementById('ed2');
-	const butt3 = document.getElementById('ed3');
-	const butt4 = document.getElementById('ed4');
-	const butt5 = document.getElementById('ed5');
-	const butt6 = document.getElementById('ed6');
+	nameInput1.value = nameplay;
 
+	nameInput1.addEventListener('change', (e) => {
+		localStorage.setItem('Personagem', e.target.value);
+	});
 
-	butt1.addEventListener("click", function() {
-			
-		campo1.removeAttribute('readonly');
-		campo1.style.color = '#803838';
-		campo1.focus();
+	const nameInput2 = document.querySelector('#jog');
+
+	const nameuser = localStorage.getItem('Jogador') || 'Dante Leonel';
+
+	nameInput2.value = nameuser;
+
+	nameInput2.addEventListener('change', (e) => {
+		localStorage.setItem('Jogador', e.target.value);
+	});
+
+	const nameInput3 = document.querySelector('#ida');
+
+	const idad = localStorage.getItem('Idade') || '29 anos';
+
+	nameInput3.value = idad;
+
+	nameInput3.addEventListener('change', (e) => {
+		localStorage.setItem('Idade', e.target.value);
+	});
+
+	const nameInput4 = document.querySelector('#alt');
+
+	const altur = localStorage.getItem('Altura') || '1.75m';
+
+	nameInput4.value = altur;
+
+	nameInput4.addEventListener('change', (e) => {
+		localStorage.setItem('Altura', e.target.value);
+	});
+
+	const nameInput5 = document.querySelector('#tmv');
+
+	const taxademov = localStorage.getItem('Movimento') || '5m';
+
+	nameInput5.value = taxademov;
+
+	nameInput5.addEventListener('change', (e) => {
+		localStorage.setItem('Movimento', e.target.value);
+	});
+
+	const nameInput6 = document.querySelector('#pit');
+
+	const textdesc = localStorage.getItem('Itens Importantes') || 'Nikolas, Kaya, Bill e Machados do Caos';
+
+	nameInput6.value = textdesc;
+
+	nameInput6.style.height = "30px";
+	let scHeight1 = nameInput6.scrollHeight;
+	nameInput6.style.height = `${scHeight1}px`;
+
+	nameInput6.addEventListener("keyup", () => {
+		nameInput6.style.height = "0px";
+		let scHeight1 = nameInput6.scrollHeight;
+		nameInput6.style.height = `${scHeight1}px`;
+	});
+
+	nameInput6.addEventListener("change", e => {
+		localStorage.setItem('Itens Importantes', e.target.value);
+	});
+
+	// Números Variáveis
+
+	const numPut6 = document.querySelector('#xp');
+
+	const numna6 = localStorage.getItem('XP') || '0';
+
+	numPut6.value = numna6;
+
+	numPut6.addEventListener('change', (e) => {
+		localStorage.setItem('XP', e.target.value);
+	});
+
+	const pl = document.querySelector("#pl");
+
+	pl.addEventListener('click', () => {
+		var value = parseInt(document.getElementById('vid').value, 10);
+		value = isNaN(value) ? 0 : value;
+		value++;
+		document.getElementById('vid').value = value;
+		localStorage.setItem('Vida', value);
+		localStorage.setItem('Vida pt2', value);
+	});
+
+	const vm = document.querySelector("#vm");
+
+	vm.addEventListener('click', () => {
+		var value = parseInt(document.getElementById('vid').value, 10);
+		value = isNaN(value) ? 0 : value;
+		value--;
+		document.getElementById('vid').value = value;
+		localStorage.setItem('Vida', value);
+		localStorage.setItem('Vida pt2', value);
+	});
+
+	const pl2 = document.querySelector("#pl2");
+
+	pl2.addEventListener('click', () => {
+		var value2 = parseInt(document.getElementById('gen').value, 10);
+		value2 = isNaN(value2) ? 0 : value2;
+		value2++;
+		document.getElementById('gen').value = value2;
+		localStorage.setItem('Genki', value2);
+		localStorage.setItem('Genki pt2', value2);
+	});
+
+	const vm2 = document.querySelector("#vm2");
+
+	vm2.addEventListener('click', () => {
+		var value2 = parseInt(document.getElementById('gen').value, 10);
+		value2 = isNaN(value2) ? 0 : value2;
+		value2--;
+		document.getElementById('gen').value = value2;
+		localStorage.setItem('Genki', value2);
+		localStorage.setItem('Genki pt2', value2);
+	});
+
+	const pl3 = document.querySelector("#pl3");
+
+	pl3.addEventListener('click', () => {
+		var value3 = parseInt(document.getElementById('sani').value, 10);
+		value3 = isNaN(value3) ? 0 : value3;
+		value3++;
+		document.getElementById('sani').value = value3;
+		localStorage.setItem('Sanidade', value3);
+		localStorage.setItem('Sanidade pt2', value3);
+	});
+
+	const vm3 = document.querySelector("#vm3");
+
+	vm3.addEventListener('click', () => {
+		var value3 = parseInt(document.getElementById('sani').value, 10);
+		value3 = isNaN(value3) ? 0 : value3;
+		value3--;
+		document.getElementById('sani').value = value3;
+		localStorage.setItem('Sanidade', value3);
+		localStorage.setItem('Sanidade pt2', value3);
+	});
+
+	const pl4 = document.querySelector("#pl4");
+
+	pl4.addEventListener('click', () => {
+		var value4 = parseInt(document.getElementById('vig').value, 10);
+		value4 = isNaN(value4) ? 0 : value4;
+		value4++;
+		document.getElementById('vig').value = value4;
+		localStorage.setItem('Vigor', value4);
+		localStorage.setItem('Vigor pt2', value4);
+	});
+
+	const vm4 = document.querySelector("#vm4");
+
+	vm4.addEventListener('click', () => {
+		var value4 = parseInt(document.getElementById('vig').value, 10);
+		value4 = isNaN(value4) ? 0 : value4;
+		value4--;
+		document.getElementById('vig').value = value4;
+		localStorage.setItem('Vigor', value4);
+		localStorage.setItem('Vigor pt2', value4);
+	});
+
+	const pl5 = document.querySelector("#pl5");
+
+	pl5.addEventListener('click', () => {
+		var value5 = parseInt(document.getElementById('pde').value, 10);
+		value5 = isNaN(value5) ? 0 : value5;
+		value5++;
+		document.getElementById('pde').value = value5;
+		localStorage.setItem('PE', value5);
+		localStorage.setItem('PE pt2', value5);
+	});
+
+	const vm5 = document.querySelector("#vm5");
+
+	vm5.addEventListener('click', () => {
+		var value5 = parseInt(document.getElementById('pde').value, 10);
+		value5 = isNaN(value5) ? 0 : value5;
+		value5--;
+		document.getElementById('pde').value = value5;
+		localStorage.setItem('PE', value5);
+		localStorage.setItem('PE pt2', value5);
+	});
+
 	
-				campo1.addEventListener('blur', (e) => {
-					campo1.setAttribute('readonly', true);
-					campo1.style.color = 'rgb(88, 88, 88)';
-				})
+	const numputdp1 = document.querySelector('#so1');
+
+	const numnadp1 = localStorage.getItem('Vida pt2') || '22';
+
+	numputdp1.value = numnadp1;
+
+	numputdp1.addEventListener('change', (e) => {
+		localStorage.setItem('Vida pt2', e.target.value);
 	});
 
-	butt2.addEventListener("click", function() {
-			
-		campo2.removeAttribute('readonly');
-		campo2.style.color = '#803838';
-		campo2.focus();
+	const numPut1 = document.querySelector('#vid');
+
+	const numna1 = localStorage.getItem('Vida') || '22';
+
+	numPut1.value = numna1;
+
+	numPut1.addEventListener('change', (e) => {
+		localStorage.setItem('Vida', e.target.value);
+		localStorage.setItem('Vida pt2', e.target.value);
+	});
+
+	const numputdp2 = document.querySelector('#so2');
+
+	const numnadp2 = localStorage.getItem('Genki pt2') || '8';
+
+	numputdp2.value = numnadp2;
+
+	numputdp2.addEventListener('change', (e) => {
+		localStorage.setItem('Genki pt2', e.target.value);
+	});
+
+	const numPut2 = document.querySelector('#gen');
+
+	const numna2 = localStorage.getItem('Genki') || '8';
+
+	numPut2.value = numna2;
+
+	numPut2.addEventListener('change', (e) => {
+		localStorage.setItem('Genki', e.target.value);
+		localStorage.setItem('Genki pt2', e.target.value);
+	});
+
+	const numputdp3 = document.querySelector('#so3');
+
+	const numnadp3 = localStorage.getItem('Sanidade pt2') || '9';
+
+	numputdp3.value = numnadp3;
+
+	numputdp3.addEventListener('change', (e) => {
+		localStorage.setItem('Sanidade pt2', e.target.value);
+	});
+
+
+	const numPut3 = document.querySelector('#sani');
+
+	const numna3 = localStorage.getItem('Sanidade') || '9';
+
+	numPut3.value = numna3;
+
+	numPut3.addEventListener('change', (e) => {
+		localStorage.setItem('Sanidade', e.target.value);
+		localStorage.setItem('Sanidade pt2', e.target.value);
+	});
+
+	const numputdp4 = document.querySelector('#so4');
+
+	const numnadp4 = localStorage.getItem('Vigor pt2') || '11';
+
+	numputdp4.value = numnadp4;
+
+	numputdp4.addEventListener('change', (e) => {
+		localStorage.setItem('Vigor pt2', e.target.value);
+	});
+
 	
-				campo2.addEventListener('blur', (e) => {
-					campo2.setAttribute('readonly', true);
-					campo2.style.color = 'rgb(88, 88, 88)';
-				})
-	})
+	const numPut4 = document.querySelector('#vig');
 
-	butt3.addEventListener("click", function() {
-			
-	campo3.removeAttribute('readonly');
-	campo3.style.color = '#803838';
-	campo3.focus();
+	const numna4 = localStorage.getItem('Vigor') || '11';
+
+	numPut4.value = numna4;
+
+	numPut4.addEventListener('change', (e) => {
+		localStorage.setItem('Vigor', e.target.value);
+		localStorage.setItem('Vigor pt2', e.target.value);
+	});
+
 	
-			campo3.addEventListener('blur', (e) => {
-				campo3.setAttribute('readonly', true);
-				campo3.style.color = 'rgb(88, 88, 88)';
-			})
+	const numputdp5 = document.querySelector('#so5');
+
+	const numnadp5 = localStorage.getItem('PE pt2') || '8';
+
+	numputdp5.value = numnadp5;
+
+	numputdp5.addEventListener('change', (e) => {
+		localStorage.setItem('PE pt2', e.target.value);
 	});
 
-	butt4.addEventListener("click", function() {
-			
-		campo4.removeAttribute('readonly');
-		campo4.style.color = '#803838';
-		campo4.focus();
 
-				campo4.addEventListener('blur', (e) => {
-					campo4.setAttribute('readonly', true);
-					campo4.style.color = 'rgb(88, 88, 88)';
-				})
-	});
+	const numPut5 = document.querySelector('#pde');
 
-	butt5.addEventListener("click", function() {
-		
-		campo5.removeAttribute('readonly');
-		campo5.style.color = '#803838';
-		campo5.focus();
+	const numna5 = localStorage.getItem('PE') || '8';
 
-				campo5.addEventListener('blur', (e) => {
-					campo5.setAttribute('readonly', true);
-					campo5.style.color = 'rgb(88, 88, 88)';
-				})
-	});
+	numPut5.value = numna5;
 
-	butt6.addEventListener("click", function() {
-	
-		campo6.removeAttribute('readonly');
-		campo6.style.color = '#803838';
-		campo6.focus();
-
-				campo6.addEventListener('blur', (e) => {
-					campo6.setAttribute('readonly', true);
-					campo6.style.color = 'rgb(121, 120, 120)';
-				})
-	});
-
-	// Pega o Caminho/Diretório das Classes do Botão +
-
-	const plus = document.getElementById("pl");
-	const p2 = document.getElementById("pl2");
-	const p3 = document.getElementById("pl3");
-	const p4 = document.getElementById("pl4");
-	const p5 = document.getElementById("pl5");
-
-	// Pega o Caminho/Diretório das Classes do Botão -
-
-	const inus = document.getElementById("vm");
-	const m2 = document.getElementById("vm2");
-	const m3 = document.getElementById("vm3");
-	const m4 = document.getElementById("vm4");
-	const m5 = document.getElementById("vm5");
-
-	// Seleciona cada Valor dentro dos Inputs
-
-	var num = document.getElementById("vid");
-	var num2 = document.getElementById("gen");
-	var num3 = document.getElementById("san");
-	var num4 = document.getElementById("vig");
-	var num5 = document.getElementById("pde");
-	var num6 = document.getElementById("xp");
-
-	var so1 = document.getElementById("so1");
-	so1.style.color = 'white';
-	var so2 = document.getElementById("so2");
-	so2.style.color = 'white';
-	var so3 = document.getElementById("so3");
-	so3.style.color = 'white';
-	var so4 = document.getElementById("so4");
-	so4.style.color = 'white';
-	var so5 = document.getElementById("so5");
-	so5.style.color = 'white';
-
-
-	// Função do Botão de Mais
-
-	plus.addEventListener("click", function() {
-
-		so1.style.color = 'white';
-
-		num.value = parseInt(num.value) + 1;
-		if (num.value >= parseInt(max)) {
-			num.value = max;
-		}
-
-		so1.addEventListener("click", function() {
-			so1.focus();
-		});
-
-	});
-
-	num.addEventListener("click", () => {
-		num.removeAttribute('readonly');
-		num.focus();
-	});
-
-	num2.addEventListener("click", () => {
-		num2.removeAttribute('readonly');
-		num2.focus();
-	});
-
-	num3.addEventListener("click", () => {
-		num3.removeAttribute('readonly');
-		num3.focus();
-	});
-
-	num4.addEventListener("click", () => {
-		num4.removeAttribute('readonly');
-		num4.focus();
-	});
-
-	num4.addEventListener("click", () => {
-		num4.removeAttribute('readonly');
-		num4.focus();
-	});
-
-	num5.addEventListener("click", () => {
-		num5.removeAttribute('readonly');
-		num5.focus();
-	});
-
-	num6.addEventListener("click", () => {
-		num6.removeAttribute('readonly');
-		num6.focus();
-	});
-
-	p2.addEventListener("click", function() {
-		so2.style.color = 'white';
-
-		num2.value = parseInt(num2.value) + 1;
-		if (num2.value >= parseInt(max)) {
-			num2.value = max;
-		}
-
-		so2.addEventListener("click", function() {
-			so2.focus();
-		});
-
-	});
-
-	p3.addEventListener("click", function() {
-
-		so3.style.color = 'white';
-
-		num3.value = parseInt(num3.value) + 1;
-		if (num3.value >= parseInt(max)) {
-			num3.value = max;
-		}
-
-		so3.addEventListener("click", function() {
-			so3.focus();
-		});
-
-	});
-
-	p4.addEventListener("click", function() {
-
-		so4.style.color = 'white';
-
-		num4.value = parseInt(num4.value) + 1;
-		if (num4.value >= parseInt(max)) {
-			num4.value = max;
-		}
-
-		so4.addEventListener("click", function() {
-			so4.style.color = 'rgba(0, 0, 0, 0.3)';
-			so4.focus();
-		});
-
-	});
-
-	p5.addEventListener("click", function() {
-
-		so5.style.color = 'white';
-
-		num5.value = parseInt(num5.value) + 1;
-		if (num5.value >= parseInt(max)) {
-			num5.value = max;
-		}
-
-		so5.addEventListener("click", function() {
-			so5.style.color = 'rgba(0, 0, 0, 0.3)';
-			so5.focus();
-		});
-
-	});
-
-	// Função do Botão de Menos
-
-	inus.addEventListener("click", function() {
-
-		so1.style.color = 'white';
-
-		num.value = parseInt(num.value) -  1;
-		if (num.value >= parseInt(min)) {
-			num.value = min;
-		}
-
-		so1.addEventListener("click", function() {
-			so1.style.color = 'rgba(0, 0, 0, 0.3)';
-			so1.focus();
-		});
-
-	});
-
-	m2.addEventListener("click", function() {
-
-		so2.style.color = 'white';
-	
-		num2.value = parseInt(num2.value) -  1;
-		if (num2.value >= parseInt(min)) {
-			num2.value = min;
-		}
-		
-		so2.addEventListener("click", function() {
-			so2.style.color = 'rgba(0, 0, 0, 0.3)';
-			so2.focus();
-		});
-	});
-
-	m3.addEventListener("click", function() {
-
-		so3.style.color = 'white';
-
-		num3.value = parseInt(num3.value) -  1;
-		if (num3.value >= parseInt(min)) {
-			num3.value = min;
-		}
-
-		so3.addEventListener("click", function() {
-			so3.style.color = 'rgba(0, 0, 0, 0.3)';
-			so3.focus();
-		});
-
-	});
-
-	m4.addEventListener("click", function() {
-		so4.style.color = 'white';
-
-		num4.value = parseInt(num4.value) -  1;
-		if (num4.value >= parseInt(min)) {
-			num4.value = min;
-		}		
-		
-		so4.addEventListener("click", function() {
-			so4.style.color = 'rgba(0, 0, 0, 0.3)';
-			so4.focus();
-		});
-
-	});
-
-	m5.addEventListener("click", function() {
-		so5.style.color = 'white';
-
-		num5.value = parseInt(num5.value) -  1;
-		if (num5.value >= parseInt(min)) {
-			num5.value = min;
-		}
-
-		so5.addEventListener("click", function() {
-			so5.style.color = 'rgba(0, 0, 0, 0.3)';
-			so5.focus();
-		});
-	
+	numPut5.addEventListener('change', (e) => {
+		localStorage.setItem('PE', e.target.value);
+		localStorage.setItem('PE pt2', e.target.value);
 	});
 
 	iniciaModal("modal-alert");
+
+	poderesComuns = JSON.parse(localStorage.getItem("poderes") || "[]");
+	const PowerComum = document.querySelector('.ct1');
+
+	PowerComum.addEventListener("click", e => {
+		DisplayPower1();
+	});
+
+	DisplayPower1();
+
+	function DisplayPower1() {
+		document.querySelectorAll(".ct-table").forEach(power => power.remove());
+		const po = document.querySelector("#newPower");
+		po.innerHTML = "";
+
+		poderesComuns.forEach((Comum) => {
+
+			const tableGeral = document.createElement("div");
+			tableGeral.classList.add("table-geral");
+			tableGeral.classList.add("ct-table");
+
+			const ladoEs = document.createElement("div");
+			ladoEs.classList.add("lado-es");
+
+
+			const iGeral1 = document.createElement("div");
+			iGeral1.classList.add("i-geral");
+			const cnImg1 = document.createElement("div");
+			cnImg1.classList.add("cn-img");
+			cnImg1.classList.add("ana");
+			const cnCn1 = document.createElement("div");
+			cnCn1.classList.add("cn-cn");
+			const imgCn1 = document.createElement("img");
+			imgCn1.src = "/images/categories.png";
+			const h1c1 = document.createElement("h1");
+			h1c1.innerText = "Tipo";
+			const nana1 = document.createElement("div");
+			nana1.classList.add("nana");
+			nana1.innerHTML = `<input type="text" placeholder=".">`;
+
+			
+			const iGeral2 = document.createElement("div");
+			iGeral2.classList.add("i-geral");
+			const cnImg2 = document.createElement("div");
+			cnImg2.classList.add("cn-img");
+			cnImg2.classList.add("ana");
+			const cnCn2 = document.createElement("div");
+			cnCn2.classList.add("cn-cn");
+			const imgCn2 = document.createElement("img");
+			imgCn2.src = "/images/book.png";
+			const h2c2 = document.createElement("h1");
+			h2c2.innerText = "Nome";
+			const nana2 = document.createElement("div");
+			nana2.classList.add("nana");
+			nana2.innerHTML = `<input type="text" placeholder=".">`;
+
+			const iGeral3 = document.createElement("div");
+			iGeral3.classList.add("i-geral");
+			const cnImg3 = document.createElement("div");
+			cnImg3.classList.add("cn-img");
+			cnImg3.classList.add("ana");
+			const cnCn3 = document.createElement("div");
+			cnCn3.classList.add("cn-cn");
+			const imgCn3 = document.createElement("img");
+			imgCn3.src = "/images/genk.png";
+			const h3c3 = document.createElement("h1");
+			h3c3.innerText = "Genki";
+			const nana3 = document.createElement("div");
+			nana3.classList.add("nana");
+			nana3.innerHTML = `<input type="number" placeholder=".">`;
+
+			const iGeral4 = document.createElement("div");
+			iGeral4.classList.add("i-geral");
+			const cnImg4 = document.createElement("div");
+			cnImg4.classList.add("cn-img");
+			cnImg4.classList.add("ana");
+			const cnCn4 = document.createElement("div");
+			cnCn4.classList.add("cn-cn");
+			const imgCn4 = document.createElement("img");
+			imgCn4.src = "/images/energia.png";
+			const h4c4 = document.createElement("h1");
+			h4c4.innerText = "Vigor";
+			const nana4 = document.createElement("div");
+			nana4.classList.add("nana");
+			nana4.innerHTML = `<input type="number" placeholder=".">`;
+
+			const iGeral5 = document.createElement("div");
+			iGeral5.classList.add("i-geral");
+			const cnImg5 = document.createElement("div");
+			cnImg5.classList.add("cn-img");
+			cnImg5.classList.add("ana");
+			const cnCn5 = document.createElement("div");
+			cnCn5.classList.add("cn-cn");
+			const imgCn5 = document.createElement("img");
+			imgCn5.src = "/images/insane.png";
+			const h5c5 = document.createElement("h1");
+			h5c5.innerText = "Sanidade";
+			const nana5 = document.createElement("div");
+			nana5.classList.add("nana");
+			nana5.innerHTML = `<input type="number" placeholder=".">`;
+
+			const iGeral6 = document.createElement("div");
+			iGeral6.classList.add("i-geral");
+			const cnImg6 = document.createElement("div");
+			cnImg6.classList.add("cn-img");
+			cnImg6.classList.add("ana");
+			const cnCn6 = document.createElement("div");
+			cnCn6.classList.add("cn-cn");
+			const imgCn6 = document.createElement("img");
+			imgCn6.src = "/images/profic.png";
+			const h6c6 = document.createElement("h1");
+			h6c6.innerText = "Proficiência";
+			const nana6 = document.createElement("div");
+			nana6.classList.add("nana");
+			nana6.innerHTML = `<input type="text" placeholder=".">`;
+
+			const iGeral7 = document.createElement("div");
+			iGeral7.classList.add("i-geral");
+			const cnImg7 = document.createElement("div");
+			cnImg7.classList.add("cn-img");
+			cnImg7.classList.add("ana");
+			const cnCn7 = document.createElement("div");
+			cnCn7.classList.add("cn-cn");
+			const imgCn7 = document.createElement("img");
+			imgCn7.src = "/images/elemento.png";
+			const h7c7 = document.createElement("h1");
+			h7c7.innerText = "Elemento";
+			const nana7 = document.createElement("div");
+			nana7.classList.add("nana");
+			nana7.innerHTML = `<input type="text" placeholder=".">`;
+
+
+			const lad = document.createElement("div");
+			lad.classList.add("lad");
+
+			const iGeral8 = document.createElement("div");
+			iGeral8.classList.add("i-geral");
+			const cnImg8 = document.createElement("div");
+			cnImg8.classList.add("cn-img2");
+			cnImg8.classList.add("ana");
+			const cnCn8 = document.createElement("div");
+			cnCn8.classList.add("cn-cn");
+			const imgCn8 = document.createElement("img");
+			imgCn8.src = "/images/relogio.png";
+			const h8c8 = document.createElement("h1");
+			h8c8.innerText = "Tempo de Preparo";
+			const nana8 = document.createElement("div");
+			nana8.classList.add("nana");
+			nana8.innerHTML = `<textarea placeholder="."></textarea>`;
+
+			const iGeral9 = document.createElement("div");
+			iGeral9.classList.add("i-geral");
+			const cnImg9 = document.createElement("div");
+			cnImg9.classList.add("cn-img2");
+			cnImg9.classList.add("ana");
+			const cnCn9 = document.createElement("div");
+			cnCn9.classList.add("cn-cn");
+			cnCn9.classList.add("cn3");
+			const imgCn9 = document.createElement("img");
+			imgCn9.src = "/images/arma.png";
+			const h9c9 = document.createElement("h1");
+			h9c9.innerText = "Dano/Efeito";
+			const nana9 = document.createElement("div");
+			nana9.classList.add("nana");
+			nana9.innerHTML = `<textarea placeholder="."></textarea>`;
+
+			const iGeral10 = document.createElement("div");
+			iGeral10.classList.add("i-geral");
+			const cnImg10 = document.createElement("div");
+			cnImg10.classList.add("cn-img2");
+			cnImg10.classList.add("ana");
+			const cnCn10 = document.createElement("div");
+			cnCn10.classList.add("cn-cn2");
+			const imgCn10 = document.createElement("img");
+			imgCn10.src = "/images/nom.png";
+			const h10c10 = document.createElement("h1");
+			h10c10.innerText = "Descrição";
+			const nana10 = document.createElement("div");
+			nana10.classList.add("nana");
+			nana10.innerHTML = `<textarea placeholder="."></textarea>`;
+
+			const iGeral11 = document.createElement("div");
+			iGeral11.classList.add("i-geral");
+			const cnImg11 = document.createElement("div");
+			cnImg11.classList.add("cn-img2");
+			const cnCn11 = document.createElement("div");
+			cnCn11.classList.add("cn-cn2");
+			const imgCn11 = document.createElement("img");
+			imgCn11.src = "/images/trevo.png";
+			const h11c11 = document.createElement("h1");
+			h11c11.innerText = "Ingredientes";
+			const nana11 = document.createElement("div");
+			nana11.classList.add("nana");
+			nana11.innerHTML = `<textarea placeholder="."></textarea>`;
+
+			tableGeral.appendChild(ladoEs);
+			ladoEs.appendChild(iGeral1);
+
+			iGeral1.appendChild(cnImg1);
+			cnImg1.appendChild(cnCn1);
+			cnCn1.appendChild(imgCn1);
+			iGeral1.appendChild(h1c1);
+			cnImg1.appendChild(nana1);
+
+			
+			iGeral2.appendChild(cnImg2);
+			cnImg2.appendChild(cnCn2);
+			cnCn2.appendChild(imgCn2);
+			iGeral2.appendChild(h2c2);
+			cnImg2.appendChild(nana2);
+
+			
+			iGeral3.appendChild(cnImg3);
+			cnImg3.appendChild(cnCn3);
+			cnCn3.appendChild(imgCn3);
+			iGeral3.appendChild(h3c3);
+			cnImg3.appendChild(nana3);
+
+			
+			iGeral4.appendChild(cnImg4);
+			cnImg4.appendChild(cnCn4);
+			cnCn4.appendChild(imgCn4);
+			iGeral4.appendChild(h4c4);
+			cnImg4.appendChild(nana4);
+
+			
+			iGeral5.appendChild(cnImg5);
+			cnImg5.appendChild(cnCn5);
+			cnCn5.appendChild(imgCn5);
+			iGeral5.appendChild(h5c5);
+			cnImg5.appendChild(nana5);
+
+			
+			iGeral6.appendChild(cnImg6);
+			cnImg6.appendChild(cnCn6);
+			cnCn6.appendChild(imgCn6);
+			iGeral6.appendChild(h6c6);
+			cnImg6.appendChild(nana6);
+
+			
+			iGeral7.appendChild(cnImg7);
+			cnImg7.appendChild(cnCn7);
+			cnCn7.appendChild(imgCn7);
+			iGeral7.appendChild(h7c7);
+			cnImg7.appendChild(nana7);
+
+			
+			iGeral8.appendChild(cnImg8);
+			cnImg8.appendChild(cnCn8);
+			cnCn8.appendChild(imgCn8);
+			iGeral8.appendChild(h8c8);
+			cnImg8.appendChild(nana8);
+
+			
+			iGeral9.appendChild(cnImg9);
+			cnImg9.appendChild(cnCn9);
+			cnCn9.appendChild(imgCn9);
+			iGeral9.appendChild(h9c9);
+			cnImg9.appendChild(nana9);
+
+			
+			iGeral10.appendChild(cnImg10);
+			cnImg10.appendChild(cnCn10);
+			cnCn10.appendChild(imgCn10);
+			iGeral10.appendChild(h10c10);
+			cnImg10.appendChild(nana10);
+
+			
+			iGeral11.appendChild(cnImg11);
+			cnImg11.appendChild(cnCn11);
+			cnCn11.appendChild(imgCn11);
+			iGeral11.appendChild(h11c11);
+			cnImg11.appendChild(nana11);
+			
+
+			po.appendChild(tableGeral);
+			
+		});
+	}
+
+	const PowerConquistado = document.querySelector('.ct2');
+
+	PowerConquistado.addEventListener("click", e => {
+		DisplayPower2();
+	});
+
+	DisplayPower2();
 
 });
 
@@ -3735,97 +3910,6 @@ function iniciaModal(modalID) {
 		}
 	}
 }
-
-	// Pega o Input
-	const input1 = document.getElementById("nom");
-	const input2 = document.getElementById("jog");
-	const input3 = document.getElementById("ida");
-	const input4 = document.getElementById("alt");
-	const input5 = document.getElementById("tmv");
-	const input6 = document.getElementById("pit");
-
-	// Executa a função quando clicar na tecla
-	input1.addEventListener("keypress", function(e) {
-
-		// Define a tecla enter a ser considerada
-		if (e.key == "Enter") {
-			
-			input1.style.color = 'rgb(121, 120, 120)';
-			input1.setAttribute('focus', false);
-			input1.setAttribute('readonly', true);
-		}
-
-	});
-
-	// Executa a função quando clicar na tecla
-	input2.addEventListener("keypress", function(e) {
-
-		// Define a tecla enter a ser considerada
-		if (e.key == "Enter") {
-	
-			input2.style.color = 'rgb(121, 120, 120)';
-			input2.setAttribute('focus', false);
-			input2.setAttribute('readonly', true);
-		}
-
-	});
-
-	// Executa a função quando clicar na tecla
-	input3.addEventListener("keypress", function(e) {
-
-		// Define a tecla enter a ser considerada
-		if (e.key == "Enter") {
-
-			input3.style.color = 'rgb(121, 120, 120)';
-			input3.setAttribute('focus', false);
-			input3.setAttribute('readonly', true);
-
-		}
-
-	});
-
-
-	// Executa a função quando clicar na tecla
-	input4.addEventListener("keypress", function(e) {
-
-		// Define a tecla enter a ser considerada
-		if (e.key == "Enter") {
-
-			input4.style.color = 'rgb(121, 120, 120)';
-			input4.setAttribute('focus', false);
-			input4.setAttribute('readonly', true);
-	
-		}
-
-	});
-
-	// Executa a função quando clicar na tecla
-	input5.addEventListener("keypress", function(e) {
-
-		// Define a tecla enter a ser considerada
-		if (e.key == "Enter") {
-			
-			input5.style.color = 'rgb(121, 120, 120)';
-			input5.setAttribute('focus', false);
-			input5.setAttribute('readonly', true);
-
-		}
-
-	});
-
-	// Executa a função quando clicar na tecla
-	input6.addEventListener("keypress", function(e) {
-
-		// Define a tecla enter a ser considerada
-		if (e.key == "Enter") {
-
-			input6.style.color = 'rgb(121, 120, 120)';
-			input6.setAttribute('focus', false);
-			input6.setAttribute('readonly', true);
-
-		}
-
-	});
 
 	// Botão Mostrar Mais
 
@@ -3872,4 +3956,25 @@ function iniciaModal(modalID) {
 		textar2.style.height = "0px";
 		let scHeight2 = e.target.scrollHeight;
 		textar2.style.height = `${scHeight2}px`;
+	});
+
+	const ct1 = document.querySelector(".ct1");
+	const ct2 = document.querySelector(".ct2");
+	const ctTable2 = document.querySelector(".ct-table2");
+
+	ct1.addEventListener("click", () => {
+
+		setTimeout( function() {
+			ctTable.style.display = 'flex';
+			ct1.style.display = 'none';
+			ct2.style.display = 'none';
+		}, 1500);
+	});
+
+	ct2.addEventListener("click", () => {
+		setTimeout( function() {
+			ctTable2.style.display = 'flex';
+			ct1.style.display = 'none';
+			ct2.style.display = 'none';
+		}, 1500);
 	});

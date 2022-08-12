@@ -56,9 +56,40 @@ input, button {
 	background: none;
 }
 
+textarea {
+	outline: none;
+	border: none;
+}
 
 .text-input {
-	width: 19.5rem;
+	font-size: 600;
+	width: 26.5rem;
+	border: none;
+}
+
+.todo-item.na {
+	min-height: 55px;
+	width: 28.5rem;
+}
+
+.todo-item textarea {
+	max-width: 27rem;
+	width: 100%;
+	resize: none;
+	height: 30px;
+	word-break: break-all;
+	margin: 10px 0 0 15px;
+	border: none;
+	outline: none;
+	padding: 0 10px 0 0;
+	font-size: 18px;
+	color: #6a6a6a;
+	font-weight: 600;
+	background: transparent;
+}
+
+.todo-item textarea::-webkit-scrollbar {
+	width: 0;
 }
 
 /* End of Resets */
@@ -167,18 +198,16 @@ h4 {
 }
 
 .todo-list .list {
-    width: 30rem;
 	margin: 1rem 2rem;
 }
 
-.todo-list .todo-item {
-	display: flex;
-	align-items: center;
+.todo-item {
+	width: 460px;
+	padding: 3px;
 	background: #121212;
-	padding: 0.2rem 1rem;
 	border-radius: 0.5rem;
 	box-shadow: var(--shadow);
-	margin-bottom: 1.4rem;
+	margin: 1.3rem auto;
 }
 
 /* .todo-list .vida {
@@ -306,7 +335,6 @@ h4 {
 	align-items: center;
 	justify-content: center;
 	height: 48px;
-	width: 300px;
 }
 
 .todo-item .todo-content input {
@@ -371,6 +399,7 @@ h4 {
 
 
 .image {
+	object-fit: cover;
     border-radius: 8px;
     width: 24rem;
     height: 50rem;
@@ -380,8 +409,8 @@ h4 {
 
 picture img {
 	padding: 0.5rem;
-	margin: 1rem auto;
-    width: 105%;
+	margin: 0.5rem auto;
+    width: 400px;
 	object-fit: cover;
 }
 
@@ -1099,7 +1128,7 @@ picture img {
 	margin-top: 15px;
 }
 
-.spara textarea {
+.spara textarea:nth-last-child(1) {
 	font-size: 17px;
 	font-weight: 500;
 	color: #0f779f;
@@ -1107,20 +1136,14 @@ picture img {
 	background: transparent;
 	resize: none;
 	border: none;
-	width: 900px;
+	width: 500px;
 	padding: 0 15px 0 0;
 	outline: none;
+	margin-bottom: 22px;
 }
 
 .spara textarea::-webkit-scrollbar{
-	width: 8px;
-    height: 8px;
-    background-color: transparent; /* or add it to the track */
-}
-
-.spara textarea::-webkit-scrollbar-thumb {
-    background: #737373;
-    border-radius: 2px;
+	width: 0px; /* or add it to the track */
 }
 
 .tp input {
@@ -1580,8 +1603,6 @@ select::-ms-expand{
 /* Poderes / Magias */
 
 .escol {
-	width: 1000px;
-	margin: auto;
 	justify-content: center;
 }
 
@@ -1594,49 +1615,55 @@ select::-ms-expand{
 }
 
 .options {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	width: 1000px;
+	margin: auto;
+	display: flex;
 	margin-bottom: 1.5rem;
 }
 
 .ct1 {
+	font-size: 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 400px;
+	width: 450px;
 	height: 150px;
 	padding: 1.5rem;
 	margin: 3rem auto;
 	background: #1c1d21;
 	border-radius: 5px;
 	box-shadow: inset rgba(0, 0, 0, 0.37) 0 0 3rem;
-	border-bottom: 7px rgb(62, 85, 196) groove;
+	border-bottom: 7px #509628 groove;
 	cursor: pointer;
 	transition: 0.6s ease-in-out;
 }
 
 .ct2 {
+	font-size: 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 400px;
+	width: 450px;
 	height: 150px;
 	padding: 1.5rem;
 	margin: 3rem auto;
 	background: #1c1d21;
 	border-radius: 5px;
-	border-bottom: 7px rgb(15, 122, 151) groove;
+	border-bottom: 7px #1b88a0 groove;
 	box-shadow: inset rgba(0, 0, 0, 0.397) 0 0 3rem;
 	cursor: pointer;
 	transition: 0.6s ease-in-out;
 }
 
-.ct1:hover, .ct2:hover {
-	transform: scale(1.04);
+/* .table-geral.ct-table {
+	display: none;
 }
 
+.table-geral.ct-table2 {
+	display: none;
+} */
 
 .dsv {
 	font-size: 18px;
@@ -1654,11 +1681,11 @@ input[type="checkbox"], input[type="radio"] {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	border: 3px solid rgb(90, 114, 231);
+	border: 3px solid #448221;
 }
 
 .bubble.conquistado-b {
-	border-color: #2ab2d1;
+	border-color: #1b88a0;
 }
 
 .bubble::after {
@@ -1667,13 +1694,13 @@ input[type="checkbox"], input[type="radio"] {
 	opacity: 0;
 	width: 0;
 	height: 0;
-	background: rgb(90, 114, 231);
+	background: #448221;
 	border-radius: 50%;
 	transition: 0.2s ease-in-out;
 }
 
 .bubble.conquistado-b::after {
-	background: #2ab2d1;
+	background: #1b88a0;
 	box-shadow: 0px 0px 4px rgba(46, 204, 248, 0.75);
 }
 
@@ -1792,7 +1819,12 @@ input:checked ~ .bubble::after {
 	padding: 0 15px;
 }
 
-.cn-img2  textarea {
+.cn-img input::-webkit-outer-spin-button,
+.cn-img input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+.cn-img2 textarea {
 	float: right;
 	width: 500px;
 	resize: none;
@@ -1963,7 +1995,7 @@ input:checked ~ .bubble::after {
     animation: modal 1s ease forwards;
 }
 
-.modal .uil {
+.modal button {
 	position: absolute;
     top: 2px;
     right: 0;
