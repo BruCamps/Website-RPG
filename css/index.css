@@ -333,7 +333,7 @@ header {
     border-radius: 1rem;
     height: 30rem;
     width: 50rem;
-    background: url(/images/NewCanvas3.jpg);
+    background-image: url(/images/NewCanvas3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -521,7 +521,6 @@ p span:hover {
 }
 
 .item {
-    flex-shrink: 0;
     transition: all 0.4s ease-in-out;
 }
 
@@ -781,7 +780,7 @@ picture img {
     display: flex;
 }
 
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 980px) {
 	body {
 		overflow-x: hidden;
 	}
@@ -789,21 +788,19 @@ picture img {
         width: 0;
     }
     header {
-        width: 100%;
-        height:100vh;
-        background-position: center;
-        background-size: 120%;
-        background-attachment:fixed;
-        filter: blur(5px);
-        -webkit-filter: blur(5px);
+        background-position: center top;
+        background-size: 100%;
+        /* filter: blur(5px);
+        -webkit-filter: blur(5px); */
         background-blend-mode: darken;
+        margin-bottom: -42vh;
     }
     .header__container {
         position: absolute;
         top: 50%;
         left: 50%;
         max-width: 100%;
-        transform: translate(-50%, 250%);
+        transform: translate(-50%, 270%);
     }
     .header__left {
         padding: 0;
@@ -813,5 +810,176 @@ picture img {
     }
     .iniciar {
         padding: 22px 35px;
+    }
+
+    .container.sobre__container{
+        width: 100rem;
+        max-width: 55rem;
+        padding: 0;
+    }
+
+    .sinopse {
+        flex-direction: column;
+    }
+
+    .sobre {
+        padding-top: 5rem;
+        margin-top: 50vh;
+        height: 90vh;
+    }
+
+    .design {
+        margin: -3rem auto 0 auto;
+        padding: 0 10px;
+        height: 16rem;
+        width: 48rem;
+        background-size: 100%;
+        background-position: top center;
+    }
+
+    .start {
+        margin-top: 0;
+    }
+    .hm {
+        margin-top: -8.5vh;
+    }
+
+    .sinopsedefato {
+        font-size: 1.2rem;
+        margin: 1rem auto;
+        width: 750px;
+    }
+
+    .ae h2, .geral__container h2 {
+        font-size: 1.5rem;
+    }
+
+    .ae h5, .geral__container h5 {
+        font-size: 1.4rem;
+    }
+
+    .content-sinopse.pergaminho {
+        background: none;
+    }
+
+    .bg-sinopse {
+        height: 70vh;
+        background: linear-gradient(#feb868e2, #fbb86beb, #e9aa63eb, #fda155de, #f19b54ef, #b1703ee5), url(/images/text.jfif);
+        box-shadow: inset 0 0 4rem 0.9rem #76370d;
+    }
+
+    .content-sinopse {
+        justify-content: center;
+        margin: 0 auto;
+        width: 50rem;
+        height: 100vh;
+    }
+
+    .sinopse2 {
+        position: relative;
+        color: #824b1e;
+        font-size: 1.2rem;
+        width: 750px;
+        margin: -3rem auto;
+    }
+
+    .carrossel {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 350px;
+    }
+
+    .carousel_button--left span {
+        margin-top: 15rem;
+        left: 3rem;
+    }
+
+    .carousel_button--right span {
+        margin-top: 15rem;
+        right: 3rem;
+    }
+
+    .wrapper {
+        max-width: 710px;
+        margin: 5rem auto 0 auto;
+    }
+
+    .creditos__container {
+        height: 82vh;
+    }
+
+    .trio__fantastico {
+        height: 480px;
+        width: 800px;
+        margin: 4rem auto 0 auto;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .producao {
+        margin: auto;
+        max-width: 50rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .perfeicao {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dev, .idealizador, .ilustrador {
+        margin: 0.5rem 2.5rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .design {
+        max-width: 75%;
+        padding: 0 10px;
+        height: 20rem;
+        width: 30.5rem;
+        background-size: 110%;
+        background-position: top right;
+        box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.226);
+    }
+    .carrossel {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 350px;
+    }
+
+    .carousel_button--left span {
+        margin-top: 15rem;
+        left: 3rem;
+    }
+
+    .carousel_button--right span {
+        margin-top: 15rem;
+        right: 3rem;
+    }
+
+    .wrapper {
+        max-width: 285px;
+        margin: 5rem auto 0 auto;
+    }
+
+    .carrossel .g {
+        width: 17rem;
+        height: 17rem;
+    }
+
+    picture {
+        width: 14rem;
+        height: 14rem;
+        padding: 0 10px;
+        margin-bottom: 0;
+    }
+
+    .detail {
+        padding: 5rem;
     }
 }
