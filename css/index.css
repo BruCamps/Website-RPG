@@ -79,6 +79,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--color-white);
     background: var(--color-bg);
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -100,6 +101,26 @@ body::-webkit-scrollbar-thumb {
 
 .logo:hover {
     cursor: pointer;
+}
+
+.menu-toggler{
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    z-index: 1000;
+    display: none;
+}
+
+.menu-toggler span{
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    position: relative;
+    transition: .3s linear;
 }
 
 
@@ -253,39 +274,16 @@ nav button {
 
 .nav__menu a {
     font-size: 1.1rem;
-    transition: 0.4s;
+    transition:.2s linear;
 }
 
 .nav__menu a:hover {
     color: rgb(183, 183, 183);
 }
 
-/* Para fazer Hover com Linha Embaixo */
-
-/* .nav-link {
-    text-decoration: none;
-    color: #00bf8e;
-    position: relative;
+.nav__menu a{
+    color: white;
 }
-
-.nav__menu .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #00bf8e;
-
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 250ms ease-in;
-}
-
-.nav__menu .nav-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-} */
 
 
 /* Header */
@@ -667,6 +665,44 @@ header {
     margin: -2rem auto;
 }
 
+/* Créditos */
+
+.flex-is {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem auto;
+    align-items: center;
+}
+
+.flex-is i {
+    color: #313238dd;
+    cursor: pointer;
+    font-size: 5rem;
+    margin: 3rem 1.5rem 0 1.5rem;
+    transition: 0.5s ease-in-out;
+}
+
+.flex-is i:nth-child(3) {
+    font-size: 4.5rem;
+}
+
+.flex-is i:where(:hover, :active) {
+    transform: scale(1.1) translateY(-5px);
+}
+
+.flex-is a:nth-child(1) i:where(:hover, :active) {
+    color: #e15543;
+}
+
+.flex-is a:nth-child(2) i:where(:hover, :active) {
+    color: #ecd877;
+}
+
+.flex-is a:nth-child(3) i:where(:hover, :active) {
+    color: #e29247;
+}
+
+
 /* Carrossel */
 
 .slide-container {
@@ -766,8 +802,22 @@ header {
     }
 }
 
+#open-menu-btn {
+    display: none;
+}
+
 
 @media screen and (max-width: 980px) {
+    #open-menu-btn {
+        display: flex;
+        cursor: pointer;
+        background: transparent;
+        color: white;
+        font-size: 1.4rem;
+    }
+    .nav__menu {
+        display: none;
+    }
 	body {
 		overflow-x: hidden;
 	}
@@ -879,44 +929,28 @@ header {
     .trio__fantastico {
         height: 480px;
         width: 800px;
-        margin: 4rem auto 0 auto;
+        margin: 5rem auto 0 auto;
     }
 
     .flex-container {
         flex-direction: column;
     }
 
-    .producao {
-        margin: auto;
-        max-width: 50rem;
+    .flex-is {
         display: flex;
         flex-direction: row;
+        margin: auto;
+    }
+    .flex-container {
+        flex-direction: column-reverse;
     }
 
-    .perfeicao {
-        margin-left: 0;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .dev, .idealizador, .ilustrador {
-        margin: 1rem 2.8rem 0 2.8rem;
-    }
-
-    .perfeicao h3 {
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
-
-    .perfeicao h4 {
-        font-size: 1.2rem;
-    }
-
-    picture {
-        width: 14rem;
-        height: 12rem;
-        padding: 0 10px;
-        margin-bottom: 1rem;
+    .flex-is i {
+        color: #24252add;
+        cursor: pointer;
+        font-size: 65px;
+        margin: 3rem 1.5rem 0 1.5rem;
+        transition: 0.5s ease-in-out;
     }
 }
 
@@ -944,7 +978,7 @@ header {
     }
 
     .sinopse2 {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         width: 100%;
         color: #824b1e;
         padding: 0;
@@ -956,5 +990,85 @@ header {
         display: flex;
         justify-content: center;
         padding: 5px;
+    }
+    .header__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 100%;
+        transform: translate(-50%, 260%);
+    }
+    .header__left .text-h1 {
+        font-size: 2.3rem;
+    }
+    .sinopse {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 10px;
+    }
+    .sinopsedefato {
+        margin: 1.5rem 1.5rem;
+        max-width: 450px;
+        font-size: 1.1rem;
+    }
+    .design {
+        margin: -3rem 1rem;
+        padding: 0 10px;
+        height: 14rem;
+        width: 28rem;
+        background-size: 100%;
+        background-position: top right;
+    }
+    .card-content h2 {
+        font-size: 1.4rem;
+    }
+    .creditos__container {
+        height: 80vh;
+    }
+    .flex-container {
+        flex-direction: column-reverse;
+    }
+    .trio__fantastico {
+        height: 460px;
+        width: 660px;
+        margin: 6rem 0 0 -7.5rem;
+    }
+
+    .flex-is {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+    
+    .flex-is i {
+        color: #313238dd;
+        cursor: pointer;
+        font-size: 65px;
+        margin: 3rem 1.5rem 0 1.5rem;
+        transition: 0.5s ease-in-out;
+    }
+
+    .flex-is i:where(:hover, :active) {
+        transform: scale(1.1)  translateY(-5px);
+    }
+
+    .flex-is i:nth-child(3) {
+        font-size: 60px;
+    }
+
+    .flex-is i:nth-child(1):where(:hover, :active) {
+        color: #e15543;
+    }
+
+    .flex-is i:nth-child(2):where(:hover, :active) {
+        color: #ecd877;
+    }
+
+    .flex-is i:nth-child(3):where(:hover, :active) {
+        color: #e09a59;
+    }
+
+    .modal .uil {
+        font-size: 1.3rem;
     }
 }

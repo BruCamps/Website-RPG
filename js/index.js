@@ -73,21 +73,21 @@
     const closeBtn = document.querySelector("#close-menu-btn");
 
     // Passa a função que define como o ícone de abertura estará na tela
-    menuBtn.addEventListener('click', () => {
-        menu.style.display = 'flex';
-        closeBtn.style.display = 'inline-block';
-        menuBtn.style.display = 'none';
-    })
+    // menuBtn.addEventListener('click', () => {
+    //     menu.style.display = 'flex';
+    //     closeBtn.style.display = 'inline-block';
+    //     menuBtn.style.display = 'none';
+    // })
 
     // Passa a função que define como o ícone de fechamento estará na tela
-    const closeNav = () => {
-        menu.style.display = 'none';
-        closeBtn.style.display = 'none';
-        menuBtn.style.display = 'inline-block';
-    }
+    // const closeNav = () => {
+    //     menu.style.display = 'none';
+    //     closeBtn.style.display = 'none';
+    //     menuBtn.style.display = 'inline-block';
+    // }
 
     // Executa a Função
-    closeBtn.addEventListener('click', closeNav);
+    // closeBtn.addEventListener('click', closeNav);
 
 
 

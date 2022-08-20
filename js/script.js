@@ -28,3 +28,6 @@
             },
         },
     });
+
+    // const menutog = document.querySelector(".menu-toggler");
+    // const navbar = document.querySelector(".nav__menu");
