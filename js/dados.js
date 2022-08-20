@@ -74,6 +74,258 @@ document.getElementById("con-tp35").style.display = "none";
 document.getElementById("con-tp36").style.display = "none";
 document.getElementById("con-tp37").style.display = "none";
 
+const fechar1 = document.querySelector(".cntp1 i");
+
+    fechar1.addEventListener("click", () => {
+        document.getElementById("con-tp1").style.display = "none";
+        document.getElementById("ag1").style.marginBottom = "2.5em";
+    });
+
+const fechar2 = document.querySelector(".cntp2 i");
+
+    fechar2.addEventListener("click", () => {
+        document.getElementById("con-tp2").style.display = "none";
+        document.getElementById("ag2").style.marginBottom = "2.5em";
+});
+
+const fechar3 = document.querySelector(".cntp3 i");
+
+    fechar3.addEventListener("click", () => {
+        document.getElementById("con-tp3").style.display = "none";
+        document.getElementById("ag3").style.marginBottom = "2.5em";
+});
+
+const fechar4 = document.querySelector(".cntp4 i");
+
+    fechar4.addEventListener("click", () => {
+        document.getElementById("con-tp4").style.display = "none";
+        document.getElementById("ag4").style.marginBottom = "2.5em";
+});
+
+const fechar5 = document.querySelector(".cntp5 i");
+
+    fechar5.addEventListener("click", () => {
+        document.getElementById("con-tp5").style.display = "none";
+        document.getElementById("ag5").style.marginBottom = "2.5em";
+});
+
+const fechar6 = document.querySelector(".cntp6 i");
+
+    fechar6.addEventListener("click", () => {
+        document.getElementById("con-tp6").style.display = "none";
+        document.getElementById("ag6").style.marginBottom = "2.5em";
+});
+
+const fechar7 = document.querySelector(".cntp7 i");
+
+    fechar7.addEventListener("click", () => {
+        document.getElementById("con-tp7").style.display = "none";
+        document.getElementById("ag7").style.marginBottom = "2.5em";
+});
+
+const fechar8 = document.querySelector(".cntp8 i");
+
+    fechar8.addEventListener("click", () => {
+        document.getElementById("con-tp8").style.display = "none";
+        document.getElementById("ag8").style.marginBottom = "2.5em";
+});
+
+const fechar9 = document.querySelector(".cntp9 i");
+
+    fechar9.addEventListener("click", () => {
+        document.getElementById("con-tp9").style.display = "none";
+        document.getElementById("ag9").style.marginBottom = "2.5em";
+});
+
+const fechar10 = document.querySelector(".cntp10 i");
+
+    fechar10.addEventListener("click", () => {
+        document.getElementById("con-tp10").style.display = "none";
+        document.getElementById("ag10").style.marginBottom = "2.5em";
+});
+
+const fechar11 = document.querySelector(".cntp11 i");
+
+    fechar11.addEventListener("click", () => {
+        document.getElementById("con-tp11").style.display = "none";
+        document.getElementById("ag11").style.marginBottom = "2.5em";
+});
+
+const fechar12 = document.querySelector(".cntp12 i");
+
+    fechar12.addEventListener("click", () => {
+        document.getElementById("con-tp12").style.display = "none";
+        document.getElementById("ag12").style.marginBottom = "2.5em";
+});
+
+const fechar13 = document.querySelector(".cntp13 i");
+
+    fechar13.addEventListener("click", () => {
+        document.getElementById("con-tp13").style.display = "none";
+        document.getElementById("ag13").style.marginBottom = "2.5em";
+});
+
+const fechar14 = document.querySelector(".cntp14 i");
+
+    fechar14.addEventListener("click", () => {
+        document.getElementById("con-tp14").style.display = "none";
+        document.getElementById("ag14").style.marginBottom = "2.5em";
+});
+
+const fechar15 = document.querySelector(".cntp15 i");
+
+    fechar15.addEventListener("click", () => {
+        document.getElementById("con-tp15").style.display = "none";
+        document.getElementById("ag15").style.marginBottom = "2.5em";
+});
+
+const fechar16 = document.querySelector(".cntp16 i");
+
+    fechar16.addEventListener("click", () => {
+        document.getElementById("con-tp16").style.display = "none";
+        document.getElementById("ag16").style.marginBottom = "2.5em";
+});
+
+const fechar17 = document.querySelector(".cntp17 i");
+
+    fechar17.addEventListener("click", () => {
+        document.getElementById("con-tp17").style.display = "none";
+        document.getElementById("ag17").style.marginBottom = "2.5em";
+});
+
+const fechar18 = document.querySelector(".cntp18 i");
+
+    fechar18.addEventListener("click", () => {
+        document.getElementById("con-tp18").style.display = "none";
+        document.getElementById("ag18").style.marginBottom = "2.5em";
+});
+
+const fechar19 = document.querySelector(".cntp19 i");
+
+    fechar19.addEventListener("click", () => {
+        document.getElementById("con-tp19").style.display = "none";
+        document.getElementById("ag19").style.marginBottom = "2.5em";
+});
+
+const fechar20 = document.querySelector(".cntp20 i");
+
+    fechar20.addEventListener("click", () => {
+        document.getElementById("con-tp20").style.display = "none";
+        document.getElementById("ag20").style.marginBottom = "2.5em";
+});
+
+const fechar21 = document.querySelector(".cntp21 i");
+
+    fechar21.addEventListener("click", () => {
+        document.getElementById("con-tp21").style.display = "none";
+        document.getElementById("ag21").style.marginBottom = "2.5em";
+});
+
+const fechar22 = document.querySelector(".cntp22 i");
+
+    fechar22.addEventListener("click", () => {
+        document.getElementById("con-tp22").style.display = "none";
+        document.getElementById("ag22").style.marginBottom = "2.5em";
+});
+
+const fechar23 = document.querySelector(".cntp23 i");
+
+    fechar23.addEventListener("click", () => {
+        document.getElementById("con-tp23").style.display = "none";
+        document.getElementById("ag23").style.marginBottom = "2.5em";
+});
+
+const fechar24 = document.querySelector(".cntp24 i");
+
+    fechar24.addEventListener("click", () => {
+        document.getElementById("con-tp24").style.display = "none";
+        document.getElementById("ag24").style.marginBottom = "2.5em";
+});
+
+const fechar25 = document.querySelector(".cntp25 i");
+
+    fechar25.addEventListener("click", () => {
+        document.getElementById("con-tp25").style.display = "none";
+        document.getElementById("ag25").style.marginBottom = "2.5em";
+});
+
+const fechar26 = document.querySelector(".cntp26 i");
+
+    fechar26.addEventListener("click", () => {
+        document.getElementById("con-tp26").style.display = "none";
+        document.getElementById("ag26").style.marginBottom = "2.5em";
+});
+
+const fechar27 = document.querySelector(".cntp27 i");
+
+    fechar27.addEventListener("click", () => {
+        document.getElementById("con-tp27").style.display = "none";
+        document.getElementById("ag27").style.marginBottom = "2.5em";
+});
+
+const fechar28 = document.querySelector(".cntp28 i");
+
+    fechar28.addEventListener("click", () => {
+        document.getElementById("con-tp28").style.display = "none";
+        document.getElementById("ag28").style.marginBottom = "2.5em";
+});
+
+const fechar29 = document.querySelector(".cntp29 i");
+
+    fechar29.addEventListener("click", () => {
+        document.getElementById("con-tp29").style.display = "none";
+        document.getElementById("ag29").style.marginBottom = "2.5em";
+});
+
+const fechar30 = document.querySelector(".cntp30 i");
+
+    fechar30.addEventListener("click", () => {
+        document.getElementById("con-tp30").style.display = "none";
+        document.getElementById("ag30").style.marginBottom = "2.5em";
+});
+
+const fechar31 = document.querySelector(".cntp31 i");
+
+    fechar31.addEventListener("click", () => {
+        document.getElementById("con-tp31").style.display = "none";
+});
+
+const fechar32 = document.querySelector(".cntp32 i");
+
+    fechar32.addEventListener("click", () => {
+        document.getElementById("con-tp32").style.display = "none";
+});
+
+const fechar33 = document.querySelector(".cntp33 i");
+
+    fechar33.addEventListener("click", () => {
+        document.getElementById("con-tp33").style.display = "none";
+});
+
+const fechar34 = document.querySelector(".cntp34 i");
+
+    fechar34.addEventListener("click", () => {
+        document.getElementById("con-tp34").style.display = "none";
+});
+
+const fechar35 = document.querySelector(".cntp35 i");
+
+    fechar35.addEventListener("click", () => {
+        document.getElementById("con-tp35").style.display = "none";
+});
+
+const fechar36 = document.querySelector(".cntp36 i");
+
+    fechar36.addEventListener("click", () => {
+        document.getElementById("con-tp36").style.display = "none";
+});
+
+const fechar37 = document.querySelector(".cntp37 i");
+
+    fechar37.addEventListener("click", () => {
+        document.getElementById("con-tp37").style.display = "none";
+});
+
 function rolla1() {
 
     dice1.forEach(function(die) {

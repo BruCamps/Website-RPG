@@ -191,7 +191,7 @@
             window.location.assign("../html/visao_mestre/mestre.html");
         }
 
-        if (password.value == "aspaes" || password.value == "Aspaes"){
+        if (password.value == "a lua" || password.value == "A lua" || password.value == "A Lua"){
             window.location.assign("../html/fichas/aspaes.html");
         }
 

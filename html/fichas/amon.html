@@ -16,191 +16,1249 @@
     <title>Amon - Ficha</title>
 </head>
 <body>
-	<!-- Container da Primeira parte da Ficha -->
-	<main class="app">
         
-		<!-- Greeting -->
-		<section class="greeting">
-			<h2 class="title">
-				E aí, <input type="text" id="name" placeholder="Teu nome aqui :3" />
-			</h2>
-		</section>
+    <!-- Greeting -->
+    <section class="greeting">
+        <h2 class="title">
+            Ficha do Personagem
+        </h2>
+    </section>
 	
 
-		<!-- Todo List -->
-		<section class="todo-list">
-			<h2>Ficha</h2>
+    <!-- Todo List -->
+    <section class="todo-list">
 
-            <div class="cont">
-                <div class="image">
-                    <picture>
-                        <img src="/images/personagens/Amon.png">
-                    </picture>
+        <div class="cont">
+            
+            <div class="image image-amon">
+                <picture></picture>
+            </div>
+            
+            <div class="list" id="todo-list">
+
+                <label>Nome</label>
+                <div id="cont-put1" class="todo-item">
+
+                <div class="todo-content">
+                    <input class="text-input" id="noma" name="nom" type="text" value="" placeholder="" autocomplete="off">
+                </div>
+
+                </div>
+
+                <label>Jogador</label>
+                <div class="todo-item">
+
+                <div class="todo-content">
+                    <input class="text-input" id="jog" name="jog" type="text" value="" placeholder="" autocomplete="off">
+                </div>
+
+                
+                </div>
+
+                <label>Idade</label>
+                <div class="todo-item">
+
+                <div class="todo-content">
+                    <input class="text-input" id="ida" name="ida" type="text" value="" placeholder="" autocomplete="off">
+                </div>
+
+                
+                </div>
+
+                <label>Altura</label>
+                <div class="todo-item">
+
+                <div class="todo-content">
+                    <input class="text-input" id="alt" name="alt" type="text" value="" placeholder="" autocomplete="off">
+                </div>
+
+                
+                </div>
+
+                <label>Taxa de Movimento</label>
+                <div class="todo-item">
+
+                <div class="todo-content">
+                    <input class="text-input" id="tmv" name="tmv" type="text" value="" placeholder="" autocomplete="off">
                 </div>
                 
-                <div class="list">
+                </div>
 
-                    <label>Nome</label>
-                    <div class="todo-item">
+                <label>Pessoas/Itens Importantes</label>
+                <div class="todo-item na">
+                    <textarea class="text-textarea" id="pit" name="pit" placeholder="" autocomplete="off"></textarea>
+                </div>
+            </div>
+            <div class="linha"></div>
 
-                    <div class="todo-content">
-                        <input class="pts" type="text" value="Amon"  readonly>
-                    </div>
+            <div class="list">
 
-                    <div class="actions">
-                        <button class="edit">Editar</button>
-                    </div>
-
-                    </div>
-
-                    <label>Jogador</label>
-                    <div class="todo-item">
-
-                    <div class="todo-content">
-                        <input class="pts" type="text" value="Robson"  readonly>
-                    </div>
-
-                    <div class="actions">
-                        <button class="edit">Editar</button>
-                    </div>
-                    
-                    </div>
-
-                    <label>Idade</label>
-                    <div class="todo-item">
-
-                    <div class="todo-content">
-                        <input class="pts" type="text" value="" readonly>
-                    </div>
-
-                    <div class="actions">
-                        <button class="edit">Editar</button>
-                    </div>
-                    
-                    </div>
-
-                    <label>Altura</label>
-                    <div class="todo-item">
-
-                    <div class="todo-content">
-                        <input class="pts" type="text" value="" readonly>
-                    </div>
-
-                    <div class="actions">
-                        <button class="edit">Editar</button>
-                    </div>
-                    
-                    </div>
-
-                    <label>Taxa de Movimento</label>
-                    <div class="todo-item">
-
-                    <div class="todo-content">
-                        <input class="pts" type="text" value="" readonly>
-                    </div>
-
-                    <div class="actions">
-                        <button class="edit">Editar</button>
-                    </div>
-                    
-                    </div>
-
-                    <label>Pessoas/Itens Importantes</label>
-                    <div class="todo-item">
-
-                    <div class="todo-content">
-                        <input class="pts" type="text" value="" readonly>
-                    </div>
-
-                    <div class="actions">
-                        <button class="edit">Editar</button>
-                    </div>
-                    
+                <label>Vida</label>
+                <div class="todo-item vida tam">
+                    <div class="nn">
+                        <span id="vm" class="inus v">-</span>
+                        <input id="vid" type="text" class="vid num" value="">
+                        <span class="v">/</span>
+                        <input id="so1" type="text" class="so so1" value="">
+                        <span id="pl" class="plus v">+</span>
                     </div>
                 </div>
 
-                <div class="linha"></div>
-
-                <div class="list">
-
-                    <label>Vida</label>
-                    <div class="todo-item vida tam">
-                        <div class="nn">
-                            <span class="inus v">-</span>
-                            <input type="text" class="vid num" value="20" readonly>
-                            <span class="v">/</span>
-                            <input type="text" class="so1 so" value="22" readonly>
-                            <span class="plus v">+</span>
-                        </div>
+                <label>Genki</label>
+                <div class="todo-item genki tam">
+                    <div class="nn">
+                        <span id="vm2" class="m2 v">-</span>
+                        <input id="gen" type="text" class="gen num2" value="">
+                        <span class="v">/</span>
+                        <input id="so2" class="so" value="">
+                        <span id="pl2" class="p2 v">+</span>
                     </div>
+                </div>
 
-                    <label>Genki</label>
-                    <div class="todo-item genki tam">
-                        <div class="nn">
-                            <span class="m2 v">-</span>
-                            <input type="text" class="gen num2" value="8" readonly>
-                            <span class="v">/</span>
-                            <input class="so2 so" value="8" readonly>
-                            <span class="p2 v">+</span>
-                        </div>
+                <label>Sanidade</label>
+                <div class="todo-item sanidade tam">
+                    <div class="nn">
+                        <span id="vm3" class="m3 v">-</span>
+                        <input id="sani" type="text" class="san num3" value="">
+                        <span class="v">/</span>
+                        <input id="so3" class="so" value="">
+                        <span id="pl3" class="p3 v">+</span>
                     </div>
+                </div>
 
-                    <label>Sanidade</label>
-                    <div class="todo-item sanidade tam">
-                        <div class="nn">
-                            <span class="m3 v">-</span>
-                            <input type="text" class="san num3" value="9" readonly>
-                            <span class="v">/</span>
-                            <input class="so3 so" value="9" readonly>
-                            <span class="p3 v">+</span>
-                        </div>
+                <label>Vigor</label>
+                <div class="todo-item vigor tam">
+                    <div class="nn">
+                        <span id="vm4" class="m4 v">-</span>
+                        <input id="vig" type="text" class="vig num4" value="">
+                        <span class="v">/</span>
+                        <input id="so4" class="so" value="">
+                        <span id="pl4" class="p4 v">+</span>
                     </div>
+                </div>
 
-                    <label>Vigor</label>
-                    <div class="todo-item vigor tam">
-                        <div class="nn">
-                            <span class="m4 v">-</span>
-                            <input type="text" class="vig num4" value="10" readonly>
-                            <span class="v">/</span>
-                            <input class="so4 so" value="11" readonly>
-                            <span class="p4 v">+</span>
-                        </div>
+                <label>Pontos de Esforço</label>
+                <div class="todo-item pe tam">
+                    <div class="nn">
+                        <span id="vm5" class="m5 v">-</span>
+                        <input id="pde" type="text" class="pde num5" value="">
+                        <span class="v">/</span>
+                        <input id="so5" class="so" value="">
+                        <span id="pl5" class="p5 v">+</span>
                     </div>
+                </div>
 
-                    <label>Pontos de Esforço</label>
-                    <div class="todo-item pe tam">
-                        <div class="nn">
-                            <span class="m5 v">-</span>
-                            <input type="text" class="pde num5" value="8" readonly>
-                            <span class="v">/</span>
-                            <input class="so5 so" value="8" readonly>
-                            <span class="p5 v">+</span>
-                        </div>
+                <label>XP</label>
+                <div class="todo-item xp tam">
+                    <div class="nn">
+                        <input id="xp" type="text" class="xpa num6" value="">
                     </div>
-
                 </div>
 
             </div>
-		</section>
+
+        </div>
+    </section>
+
+
+    <!-- Perícias -->
+
+    <section class="s-t">
+        <h2 class="subtitle">
+            Perícias
+        </h2>
+    </section>
+
+    <section class="s-pericias">
+
+        <h1>Atributos de Agilidade</h1>
+
+        <div class="c-pericias">
+
+            <!-- Atributos de Agilidade -->
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla1()" id="die-1">
+
+                <h3>Agilidade</h3>
         
+                <input id="ag1" class="modificador" type="text" value="">
 
-	</main>
+                <div class="con-tp cntp1" id="con-tp1">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre1" class="msgdesastre1"></p>
+                    <p id="msgmtboa1" class="msgmtboa1"></p>
+                    <div class="tput">
+                        <p class="r1" id="random1"></p>
+                        <span class="sinal1" id="sinal1"></span>
+                        <span class="sga" id="sgaa1">&#40;</span>
+                        <p id="modf1"></p>
+                        <span class="sgb" id="sgab1">&#41;</span>
+                        <div id="lin1" class="lin"></div>
+                        <span id="total1" class="tot1"></span>
+                    </div>
+                    <span id="infs1" class="infs1"></span>
+                </div>
+            </div>
 
-    <div class="c-pericias">
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla2()" id="die-2">
 
-        <!-- Atributos de Agilidade -->
+                <h3>Correr</h3>
+        
+                <input id="ag2" class="modificador" type="text" value="">
+        
+                <div class="con-tp cntp2" id="con-tp2">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre2" class="msgdesastre2"></p>
+                    <p id="msgmtboa2" class="msgmtboa2"></p>
+                    <div class="tput">
+                        <p class="r2" id="random2"></p>
+                        <span class="sinal2" id="sinal2"></span>
+                        <span class="sga" id="sgaa2">&#40;</span>
+                        <p id="modf2"></p>
+                        <span class="sgb" id="sgab2">&#41;</span>
+                        <div id="lin2" class="lin"></div>
+                        <span id="total2" class="tot2"></span>
+                    </div>
+                    <span id="infs2" class="infs2"></span>
+                </div>
+            </div>
 
-        <div class="item-p">
-            <img src="/images/dados/d20.png" onclick="rolla1()" id="die-1">
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla3()" id="die-3">
 
-            <h3>Agilidade</h3>
+                <h3>Furtividade</h3>
+        
+                <input id="ag3" class="modificador" type="text" value="">
+
+                <div class="con-tp cntp3" id="con-tp3">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre3" class="msgdesastre3"></p>
+                    <p id="msgmtboa3" class="msgmtboa3"></p>
+                    <div class="tput">
+                        <p class="r3" id="random3"></p>
+                        <span class="sinal3" id="sinal3"></span>
+                        <span class="sga" id="sgaa3">&#40;</span>
+                        <p id="modf3"></p>
+                        <span class="sgb" id="sgab3">&#41;</span>
+                        <div id="lin3" class="lin"></div>
+                        <span id="total3" class="tot3"></span>
+                    </div>
+                    <span id="infs3" class="infs3"></span>
+                </div>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla4()" id="die-4">
+
+                <h3>Instinto</h3>
+        
+                <input id="ag4" class="modificador" type="text" value="">
+
+                <div class="con-tp cntp4" id="con-tp4">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre4" class="msgdesastre4"></p>
+                    <p id="msgmtboa4" class="msgmtboa4"></p>
+                    <div class="tput">
+                        <p class="r4" id="random4"></p>
+                        <span class="sinal4" id="sinal4"></span>
+                        <span class="sga" id="sgaa4">&#40;</span>
+                        <p id="modf4"></p>
+                        <span class="sgb" id="sgab4">&#41;</span>
+                        <div id="lin4" class="lin"></div>
+                        <span id="total4" class="tot4"></span>
+                    </div>
+                    <span id="infs4" class="infs4"></span>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <h1>Atributos Físicos</h1>
+
+        <div class="c-pericias">
+
+            <!-- Atributos Físicos -->
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla5()" id="die-5">
+
+                <h3>Constituição</h3>
+        
+                <input id="ag5" class="modificador" type="text" value="">
+                
+                <div class="con-tp cntp5" id="con-tp5">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre5" class="msgdesastre5"></p>
+                    <p id="msgmtboa5" class="msgmtboa5"></p>
+                    <div class="tput">
+                        <p class="r5" id="random5"></p>
+                        <span class="sinal5" id="sinal5"></span>
+                        <span class="sga" id="sgaa5">&#40;</span>
+                        <p id="modf5"></p>
+                        <span class="sgb" id="sgab5">&#41;</span>
+                        <div id="lin5" class="lin"></div>
+                        <span id="total5" class="tot5"></span>
+                    </div>
+                    <span id="infs5" class="infs5"></span>
+                </div>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla6()" id="die-6">
+
+                <h3>Escalar</h3>
+        
+                <input id="ag6" class="modificador" type="text" value="">
+                
+                <div class="con-tp cntp6" id="con-tp6">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre6" class="msgdesastre6"></p>
+                    <p id="msgmtboa6" class="msgmtboa6"></p>
+                    <div class="tput">
+                        <p class="r6" id="random6"></p>
+                        <span class="sinal6" id="sinal6"></span>
+                        <span class="sga" id="sgaa6">&#40;</span>
+                        <p id="modf6"></p>
+                        <span class="sgb" id="sgab6">&#41;</span>
+                        <div id="lin6" class="lin"></div>
+                        <span id="total6" class="tot6"></span>
+                    </div>
+                    <span id="infs6" class="infs6"></span>
+                </div>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla7()" id="die-7">
+
+                <h3>Força</h3>
+        
+                <input id="ag7" class="modificador" type="text" value="">
+                
+                <div class="con-tp cntp7" id="con-tp7">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre7" class="msgdesastre7"></p>
+                    <p id="msgmtboa7" class="msgmtboa7"></p>
+                    <div class="tput">
+                        <p class="r7" id="random7"></p>
+                        <span class="sinal7" id="sinal7"></span>
+                        <span class="sga" id="sgaa7">&#40;</span>
+                        <p id="modf7"></p>
+                        <span class="sgb" id="sgab7">&#41;</span>
+                        <div id="lin7" class="lin"></div>
+                        <span id="total7" class="tot7"></span>
+                    </div>
+                    <span id="infs7" class="infs7"></span>
+                </div>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla8()" id="die-8">
+
+                <h3>Nadar</h3>
+        
+                <input id="ag8" class="modificador" type="text" value="">
+                
+                <div class="con-tp cntp8" id="con-tp8">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre8" class="msgdesastre8"></p>
+                    <p id="msgmtboa8" class="msgmtboa8"></p>
+                    <div class="tput">
+                        <p class="r8" id="random8"></p>
+                        <span class="sinal8" id="sinal8"></span>
+                        <span class="sga" id="sgaa8">&#40;</span>
+                        <p id="modf8"></p>
+                        <span class="sgb" id="sgab8">&#41;</span>
+                        <div id="lin8" class="lin"></div>
+                        <span id="total8" class="tot8"></span>
+                    </div>
+                    <span id="infs8" class="infs8"></span>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- Atributos de Inteligência -- Posteriormente será dividido para Sabedoria -->
+            <div class="mostra-cards">
     
-            <input id="ag1" class="modificador" type="text" value="0">
+                <h1>Atributos de Inteligência</h1>
+    
+                <div class="c-pericias">
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla9()" id="die-9">
+    
+                        <h3>Botânica</h3>
+    
+                        <input id="ag9" class="modificador" type="text" value="">
+    
+                        <div class="con-tp cntp9" id="con-tp9">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre9" class="msgdesastre9"></p>
+                            <p id="msgmtboa9" class="msgmtboa9"></p>
+                            <div class="tput">
+                                <p class="r9" id="random9"></p>
+                                <span class="sinal9" id="sinal9"></span>
+                                <span class="sga" id="sgaa9">&#40;</span>
+                                <p id="modf9"></p>
+                                <span class="sgb" id="sgab9">&#41;</span>
+                                <div id="lin9" class="lin"></div>
+                                <span id="total9" class="tot9"></span>
+                            </div>
+                            <span id="infs9" class="infs9"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla10()" id="die-10">
+    
+                        <h3>Cozinhar</h3>
+    
+                        <input id="ag10" class="modificador" type="text" value="">
+    
+                        <div class="con-tp cntp10" id="con-tp10">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre10" class="msgdesastre10"></p>
+                            <p id="msgmtboa10" class="msgmtboa10"></p>
+                            <div class="tput">
+                                <p class="r10" id="random10"></p>
+                                <span class="sinal10" id="sinal10"></span>
+                                <span class="sga" id="sgaa10">&#40;</span>
+                                <p id="modf10"></p>
+                                <span class="sgb" id="sgab10">&#41;</span>
+                                <div id="lin10" class="lin"></div>
+                                <span id="total10" class="tot10"></span>
+                            </div>
+                            <span id="infs10" class="infs10"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla11()" id="die-11">
+    
+                        <h3>Mecânica</h3>
+    
+                        <input id="ag11" class="modificador" type="text" value="">
+    
+                        <div class="con-tp cntp11" id="con-tp11">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre11" class="msgdesastre11"></p>
+                            <p id="msgmtboa11" class="msgmtboa11"></p>
+                            <div class="tput">
+                                <p class="r11" id="random11"></p>
+                                <span class="sinal11" id="sinal11"></span>
+                                <span class="sga" id="sgaa11">&#40;</span>
+                                <p id="modf11"></p>
+                                <span class="sgb" id="sgab11">&#41;</span>
+                                <div id="lin11" class="lin"></div>
+                                <span id="total11" class="tot11"></span>
+                            </div>
+                            <span id="infs11" class="infs11"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla12()" id="die-12">
+    
+                        <h3>Geografia</h3>
+    
+                        <input id="ag12" class="modificador" type="text" value="">
+    
+                        <div class="con-tp cntp12" id="con-tp12">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre12" class="msgdesastre12"></p>
+                            <p id="msgmtboa12" class="msgmtboa12"></p>
+                            <div class="tput">
+                                <p class="r12" id="random12"></p>
+                                <span class="sinal12" id="sinal12"></span>
+                                <span class="sga" id="sgaa12">&#40;</span>
+                                <p id="modf12"></p>
+                                <span class="sgb" id="sgab12">&#41;</span>
+                                <div id="lin12" class="lin"></div>
+                                <span id="total12" class="tot12"></span>
+                            </div>
+                            <span id="infs12" class="infs12"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla13()" id="die-13">
+    
+                        <h3>História</h3>
+    
+                        <input id="ag13" class="modificador" type="text" value="">
+    
+                        <div class="con-tp cntp13" id="con-tp13">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre13" class="msgdesastre13"></p>
+                            <p id="msgmtboa13" class="msgmtboa13"></p>
+                            <div class="tput">
+                                <p class="r13" id="random13"></p>
+                                <span class="sinal13" id="sinal13"></span>
+                                <span class="sga" id="sgaa13">&#40;</span>
+                                <p id="modf13"></p>
+                                <span class="sgb" id="sgab13">&#41;</span>
+                                <div id="lin13" class="lin"></div>
+                                <span id="total13" class="tot13"></span>
+                            </div>
+                            <span id="infs13" class="infs13"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla14()" id="die-14">
+    
+                        <h3>Intelecto</h3>
+    
+                        <input id="ag14" class="modificador" type="text" value="">
+    
+                        <div class="con-tp cntp14" id="con-tp14">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre14" class="msgdesastre14"></p>
+                            <p id="msgmtboa14" class="msgmtboa14"></p>
+                            <div class="tput">
+                                <p class="r14" id="random14"></p>
+                                <span class="sinal14" id="sinal14"></span>
+                                <span class="sga" id="sgaa14">&#40;</span>
+                                <p id="modf14"></p>
+                                <span class="sgb" id="sgab14">&#41;</span>
+                                <div id="lin14" class="lin"></div>
+                                <span id="total14" class="tot14"></span>
+                            </div>
+                            <span id="infs14" class="infs14"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla15()" id="die-15">
+    
+                        <h3>Medicina</h3>
+    
+                        <input id="ag15" class="modificador" type="text" value="">
+    
+                        <div class="con-tp cntp15" id="con-tp15">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre15" class="msgdesastre15"></p>
+                            <p id="msgmtboa15" class="msgmtboa15"></p>
+                            <div class="tput">
+                                <p class="r15" id="random15"></p>
+                                <span class="sinal15" id="sinal15"></span>
+                                <span class="sga" id="sgaa15">&#40;</span>
+                                <p id="modf15"></p>
+                                <span class="sgb" id="sgab15">&#41;</span>
+                                <div id="lin15" class="lin"></div>
+                                <span id="total15" class="tot15"></span>
+                            </div>
+                            <span id="infs15" class="infs15"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla16()" id="die-16">
+    
+                        <h3>Pilotar</h3>
+    
+                        <input id="ag16" class="modificador" type="text" value="">
+    
+                        <div class="con-tp cntp16" id="con-tp16">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre16" class="msgdesastre16"></p>
+                            <p id="msgmtboa16" class="msgmtboa16"></p>
+                            <div class="tput">
+                                <p class="r16" id="random16"></p>
+                                <span class="sinal16" id="sinal16"></span>
+                                <span class="sga" id="sgaa16">&#40;</span>
+                                <p id="modf16"></p>
+                                <span class="sgb" id="sgab16">&#41;</span>
+                                <div id="lin16" class="lin"></div>
+                                <span id="total16" class="tot16"></span>
+                            </div>
+                            <span id="infs16" class="infs16"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla17()" id="die-17">
+    
+                        <h3>Química</h3>
+    
+                        <input id="ag17" class="modificador" type="text" value="">
+                        <div class="con-tp cntp17" id="con-tp17">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre17" class="msgdesastre17"></p>
+                            <p id="msgmtboa17" class="msgmtboa17"></p>
+                            <div class="tput">
+                                <p class="r17" id="random17"></p>
+                                <span class="sinal17" id="sinal17"></span>
+                                <span class="sga" id="sgaa17">&#40;</span>
+                                <p id="modf17"></p>
+                                <span class="sgb" id="sgab17">&#41;</span>
+                                <div id="lin17" class="lin"></div>
+                                <span id="total17" class="tot17"></span>
+                            </div>
+                            <span id="infs17" class="infs17"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla18()" id="die-18">
+    
+                        <h3>Usar bibliotecas</h3>
+    
+                        <input id="ag18" class="modificador" type="text" value="">
+                        <div class="con-tp cntp18" id="con-tp18">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre18" class="msgdesastre18"></p>
+                            <p id="msgmtboa18" class="msgmtboa18"></p>
+                            <div class="tput">
+                                <p class="r18" id="random18"></p>
+                                <span class="sinal18" id="sinal18"></span>
+                                <span class="sga" id="sgaa18">&#40;</span>
+                                <p id="modf18"></p>
+                                <span class="sgb" id="sgab18">&#41;</span>
+                                <div id="lin18" class="lin"></div>
+                                <span id="total18" class="tot18"></span>
+                            </div>
+                            <span id="infs18" class="infs18"></span>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <h1>Atributos de Sabedoria</h1>
+    
+                <div class="c-pericias">
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla19()" id="die-19">
+    
+                        <h3>Acalmar</h3>
+    
+                        <input id="ag19" class="modificador" type="text" value="">
+                        <div class="con-tp cntp19" id="con-tp19">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre19" class="msgdesastre19"></p>
+                            <p id="msgmtboa19" class="msgmtboa19"></p>
+                            <div class="tput">
+                                <p class="r19" id="random19"></p>
+                                <span class="sinal19" id="sinal19"></span>
+                                <span class="sga" id="sgaa19">&#40;</span>
+                                <p id="modf19"></p>
+                                <span class="sgb" id="sgab19">&#41;</span>
+                                <div id="lin19" class="lin"></div>
+                                <span id="total19" class="tot19"></span>
+                            </div>
+                            <span id="infs19" class="infs19"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla20()" id="die-20">
+    
+                        <h3>Arcano</h3>
+    
+                        <input id="ag20" class="modificador" type="text" value="">
+                        <div class="con-tp cntp20" id="con-tp20">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre20" class="msgdesastre20"></p>
+                            <p id="msgmtboa20" class="msgmtboa20"></p>
+                            <div class="tput">
+                                <p class="r20" id="random20"></p>
+                                <span class="sinal20" id="sinal20"></span>
+                                <span class="sga" id="sgaa20">&#40;</span>
+                                <p id="modf20"></p>
+                                <span class="sgb" id="sgab20">&#41;</span>
+                                <div id="lin20" class="lin"></div>
+                                <span id="total20" class="tot20"></span>
+                            </div>
+                            <span id="infs20" class="infs20"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla21()" id="die-21">
+    
+                        <h3>Enganar</h3>
+    
+                        <input id="ag21" class="modificador" type="text" value="">
+                        <div class="con-tp cntp21" id="con-tp21">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre21" class="msgdesastre21"></p>
+                            <p id="msgmtboa21" class="msgmtboa21"></p>
+                            <div class="tput">
+                                <p class="r21" id="random21"></p>
+                                <span class="sinal21" id="sinal21"></span>
+                                <span class="sga" id="sgaa21">&#40;</span>
+                                <p id="modf21"></p>
+                                <span class="sgb" id="sgab21">&#41;</span>
+                                <div id="lin21" class="lin"></div>
+                                <span id="total21" class="tot21"></span>
+                            </div>
+                            <span id="infs21" class="infs21"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla22()" id="die-22">
+    
+                        <h3>Investigação</h3>
+    
+                        <input id="ag22" class="modificador" type="text" value="">
+                        <div class="con-tp cntp22" id="con-tp22">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre22" class="msgdesastre22"></p>
+                            <p id="msgmtboa22" class="msgmtboa22"></p>
+                            <div class="tput">
+                                <p class="r22" id="random22"></p>
+                                <span class="sinal22" id="sinal22"></span>
+                                <span class="sga" id="sgaa22">&#40;</span>
+                                <p id="modf22"></p>
+                                <span class="sgb" id="sgab22">&#41;</span>
+                                <div id="lin22" class="lin"></div>
+                                <span id="total22" class="tot22"></span>
+                            </div>
+                            <span id="infs22" class="infs22"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla23()" id="die-23">
+    
+                        <h3>Percepção</h3>
+    
+                        <input id="ag23" class="modificador" type="text" value="">
+                        <div class="con-tp cntp23" id="con-tp23">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre23" class="msgdesastre23"></p>
+                            <p id="msgmtboa23" class="msgmtboa23"></p>
+                            <div class="tput">
+                                <p class="r23" id="random23"></p>
+                                <span class="sinal23" id="sinal23"></span>
+                                <span class="sga" id="sgaa23">&#40;</span>
+                                <p id="modf23"></p>
+                                <span class="sgb" id="sgab23">&#41;</span>
+                                <div id="lin23" class="lin"></div>
+                                <span id="total23" class="tot23"></span>
+                            </div>
+                            <span id="infs23" class="infs23"></span>
+                        </div>
+                    </div>
+    
+                    <div class="item-p">
+                        <img src="/images/dados/d20.png" onclick="rolla24()" id="die-24">
+    
+                        <h3>Vontade</h3>
+    
+                        <input id="ag24" class="modificador" type="text" value="">
+                        <div class="con-tp cntp24" id="con-tp24">
+                            <i class="uil uil-times"></i>
+                            <p id="msgdesastre24" class="msgdesastre24"></p>
+                            <p id="msgmtboa24" class="msgmtboa24"></p>
+                            <div class="tput">
+                                <p class="r24" id="random24"></p>
+                                <span class="sinal24" id="sinal24"></span>
+                                <span class="sga" id="sgaa24">&#40;</span>
+                                <p id="modf24"></p>
+                                <span class="sgb" id="sgab24">&#41;</span>
+                                <div id="lin24" class="lin"></div>
+                                <span id="total24" class="tot24"></span>
+                            </div>
+                            <span id="infs24" class="infs24"></span>
+                        </div>
+                    </div>
+    
+                </div>
 
-            <p id="output"></p>
-            <p id="msgdesastre1"></p>
+            <!-- Atributos de Batalha / Combate -->
+
+            <h1>Atributos de Combate</h1>
+
+            <div class="c-pericias">
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla25()" id="die-25">
+
+                <h3>Armas Ágeis</h3>
+        
+                <input id="ag25" class="modificador" type="text" value="">
+                <div class="con-tp cntp25" id="con-tp25">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre25" class="msgdesastre25"></p>
+                    <p id="msgmtboa25" class="msgmtboa25"></p>
+                    <div class="tput">
+                        <p class="r25" id="random25"></p>
+                        <span class="sinal25" id="sinal25"></span>
+                        <span class="sga" id="sgaa25">&#40;</span>
+                        <p id="modf25"></p>
+                        <span class="sgb" id="sgab25">&#41;</span>
+                        <div id="lin25" class="lin"></div>
+                        <span id="total25" class="tot25"></span>
+                    </div>
+                    <span id="infs25" class="infs25"></span>
+                </div>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla26()" id="die-26">
+
+                <h3>Armas Pesadas</h3>
+        
+                <input id="ag26" class="modificador" type="text" value="">
+                <div class="con-tp cntp26" id="con-tp26">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre26" class="msgdesastre26"></p>
+                    <p id="msgmtboa26" class="msgmtboa26"></p>
+                    <div class="tput">
+                        <p class="r26" id="random26"></p>
+                        <span class="sinal26" id="sinal26"></span>
+                        <span class="sga" id="sgaa26">&#40;</span>
+                        <p id="modf26"></p>
+                        <span class="sgb" id="sgab26">&#41;</span>
+                        <div id="lin26" class="lin"></div>
+                        <span id="total26" class="tot26"></span>
+                    </div>
+                    <span id="infs26" class="infs26"></span>
+                </div>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla27()" id="die-27">
+
+                <h3>Bloquear</h3>
+        
+                <input id="ag27" class="modificador" type="text" value="">
+                <div class="con-tp cntp27" id="con-tp27">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre27" class="msgdesastre27"></p>
+                    <p id="msgmtboa27" class="msgmtboa27"></p>
+                    <div class="tput">
+                        <p class="r27" id="random27"></p>
+                        <span class="sinal27" id="sinal27"></span>
+                        <span class="sga" id="sgaa27">&#40;</span>
+                        <p id="modf27"></p>
+                        <span class="sgb" id="sgab27">&#41;</span>
+                        <div id="lin27" class="lin"></div>
+                        <span id="total27" class="tot27"></span>
+                    </div>
+                    <span id="infs27" class="infs27"></span>
+                </div>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla28()" id="die-28">
+
+                <h3>Corpo a corpo</h3>
+        
+                <input id="ag28" class="modificador" type="text" value="">
+                <div class="con-tp cntp28" id="con-tp28">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre28" class="msgdesastre28"></p>
+                    <p id="msgmtboa28" class="msgmtboa28"></p>
+                    <div class="tput">
+                        <p class="r28" id="random28"></p>
+                        <span class="sinal28" id="sinal28"></span>
+                        <span class="sga" id="sgaa28">&#40;</span>
+                        <p id="modf28"></p>
+                        <span class="sgb" id="sgab28">&#41;</span>
+                        <div id="lin28" class="lin"></div>
+                        <span id="total28" class="tot28"></span>
+                    </div>
+                    <span id="infs28" class="infs28"></span>
+                </div>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla29()" id="die-29">
+
+                <h3>Esquivar</h3>
+                        
+                <input id="ag29" class="modificador" type="text" value="">
+                <div class="con-tp cntp29" id="con-tp29">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre29" class="msgdesastre29"></p>
+                    <p id="msgmtboa29" class="msgmtboa29"></p>
+                    <div class="tput">
+                        <p class="r29" id="random29"></p>
+                        <span class="sinal29" id="sinal29"></span>
+                        <span class="sga" id="sgaa29">&#40;</span>
+                        <p id="modf29"></p>
+                        <span class="sgb" id="sgab29">&#41;</span>
+                        <div id="lin29" class="lin"></div>
+                        <span id="total29" class="tot29"></span>
+                    </div>
+                    <span id="infs29" class="infs29"></span>
+                </div>
+            </div>
+
+            <div class="item-p">
+                <img src="/images/dados/d20.png" onclick="rolla30()" id="die-30">
+
+                <h3>Precisão</h3>
+        
+                <input id="ag30" class="modificador" type="text" value="">
+                <div class="con-tp cntp30" id="con-tp30">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre30" class="msgdesastre30"></p>
+                    <p id="msgmtboa30" class="msgmtboa30"></p>
+                    <div class="tput">
+                        <p class="r30" id="random30"></p>
+                        <span class="sinal30" id="sinal30"></span>
+                        <span class="sga" id="sgaa30">&#40;</span>
+                        <p id="modf30"></p>
+                        <span class="sgb" id="sgab30">&#41;</span>
+                        <div id="lin30" class="lin"></div>
+                        <span id="total30" class="tot30"></span>
+                    </div>
+                    <span id="infs30" class="infs30"></span>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="space">
+            <label class="btn-area">
+                <span class="btn1">Mostrar Mais</span>
+                <span class="btn2">Mostrar Menos</span>
+            </label>
+        </div>
+
+    </section>
+
+
+    <!-- Dados -->
+
+
+    <section class="s-t">
+        <h2 class="subtitle">
+            Dados
+        </h2>
+    </section>
+
+    <section class="s-pericias2">
+
+        <div class="c-pericias">
+
+            <div class="item-p2">
+                <img src="/images/dados/d4.png" onclick="rolla31()" id="die-31">
+
+                <h3>D4</h3>
+        
+                <div class="con-tp2 cntp31" id="con-tp31">
+                    <i class="uil uil-times"></i>
+                    <div class="tput2">
+                        <p class="r31" id="random31"></p>
+                    </div>
+                    <span id="infs31" class="infs31"></span>
+                </div>
+
+            </div>
+
+            <div class="item-p2">
+                <img src="/images/dados/d6.png" onclick="rolla32()" id="die-32">
+
+                <h3>D6</h3>
+        
+                <div class="con-tp2 cntp32" id="con-tp32">
+                    <i class="uil uil-times"></i>
+                    <div class="tput2">
+                        <p class="r32" id="random32"></p>
+                    </div>
+                    <span id="infs32" class="infs32"></span>
+                </div>
+
+            </div>
+
+            <div class="item-p2">
+                <img src="/images/dados/d8.png" onclick="rolla33()" id="die-33">
+
+                <h3>D8</h3>
+        
+                <div class="con-tp2 cntp33" id="con-tp33">
+                    <i class="uil uil-times"></i>
+                    <div class="tput2">
+                        <p class="r33" id="random33"></p>
+                    </div>
+                    <span id="infs33" class="infs33"></span>
+                </div>
+
+            </div>
+
+            <div class="item-p2">
+                <img src="/images/dados/d10.png" onclick="rolla34()" id="die-34">
+
+                <h3>D10</h3>
+        
+                <div class="con-tp2 cntp34" id="con-tp34">
+                    <i class="uil uil-times"></i>
+                    <div class="tput2">
+                        <p class="r34" id="random34"></p>
+                    </div>
+                    <span id="infs34" class="infs34"></span>
+                </div>
+
+            </div>
+
+            <div class="item-p2">
+                <img src="/images/dados/d12.png" onclick="rolla35()" id="die-35">
+
+                <h3>D12</h3>
+        
+                <div class="con-tp2 cntp35" id="con-tp35">
+                    <i class="uil uil-times"></i>
+                    <div class="tput2">
+                        <p class="r35" id="random35"></p>
+                    </div>
+                    <span id="infs35" class="infs35"></span>
+                </div>
+
+            </div>
+
+            <div class="item-p2">
+                <img src="/images/dados/d20.png" onclick="rolla36()" id="die-36">
+
+                <h3>D20</h3>
+        
+                <div class="con-tp2 cntp36" id="con-tp36">
+                    <i class="uil uil-times"></i>
+                    <p id="msgdesastre36" class="msgdesastre36"></p>
+                    <p id="msgmtboa36" class="msgmtboa36"></p>
+                    <div class="tput2">
+                        <p class="r36" id="random36"></p>
+                    </div>
+                    <span id="infs36" class="infs36"></span>
+                </div>
+
+            </div>
+
+            <div class="item-p2">
+                <img src="/images/dados/d100.png" onclick="rolla37()" id="die-37">
+
+                <h3>D100</h3>
+        
+                <div class="con-tp2 cntp37" id="con-tp37">
+                    <i class="uil uil-times"></i>
+                    <div class="tput2">
+                        <p class="r37" id="random37"></p>
+                    </div>
+                    <span id="infs37" class="infs37"></span>
+                </div>
+    
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- Combate -->
+
+    <section class="s-t2">
+        <h2 class="subtitle">
+            Combate
+        </h2>
+    </section>
+
+    <section class="s-combate">
+
+        <div id="todo-wrapper">
+        </div>
+
+        <div class="wrapper2">
+            <li class="add-box">
+                <div class="icon"><img src="/images/handgun.png"></div>
+                <p>Equipar Armas</p>
+            </li>
+        </div>
+
+    </section>
+
+    <div id="modal-popup" class="popup-box">
+        <div class="popup">
+            <div class="content">
+                <header>
+                    <p>Adicione uma Arma</p>
+                    <i class="uil uil-times"></i>
+                </header>
+                <form id="new-todo-form">
+                    <div class="row name">
+                        <label>Nome</label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+                    <div class="tipoedano">
+                        <div class="row tipo">
+                            <label class="sel">Tipo</label>
+                            <select name="tarma" id="tarma" required>
+                                <option selected disabled hidden>Escolha</option>
+                                <option>Cajado</option>
+                                <option>Distância</option>
+                                <option>Físico</option>
+                                <option>Imperial</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mmu">
+                        <div class="row municao-atual">
+                            <label>Munição Atual</label>
+                            <input type="text" name="matual" id="matual" required>
+                        </div>
+                        <div class="row municao-maxima">
+                            <label>Munição Máxima</label>
+                            <input type="text" name="maxima" id="maxima" required>
+                        </div>
+                        <div class="row uso-hab">
+                            <label>Uso Hab.</label>
+                            <input type="text" name="usohab" id="usohab" required>
+                        </div>
+                    </div>
+                    <div class="row descricao">
+                        <label>Descrição</label>
+                        <textarea name="desc" id="desc" required></textarea>
+                    </div>
+                    <div class="row habilidade">
+                        <label>Habilidade</label>
+                        <textarea name="hab" id="hab" required></textarea>
+                    </div>
+                    <input type="submit" value="Registrar Arma">
+                </form>
+            </div>
         </div>
     </div>
+
+    <section class="s-t">
+        <h2 class="subtitle">
+            Inventário
+        </h2>
+    </section>
+
+    <section class="s-inv">
+        <div class="cnt-inv">
+            <h1>Adicionar Itens</h1>
+            <form id="new-item-form" autocomplete="off">
+                <div class="br">
+                <input type="text" placeholder="ex.: comida" name="its"
+                id="its" required>
+                <input type="text" placeholder="ex.: 2kg" name="peso" id="peso" required>
+                </div>
+                <input id="new-item" type="submit" value="Guardar Item">
+            </form>
+        </div>
+
+            <div class="new-itens">
+                <div class="flex-tit">
+                    <h1>Itens Coletados</h1> <p id="pesoTotal">0</p>
+                </div>
+
+                <div id="td-itt">
+                    <div class="msg-mg">
+                        <img src="/images/bag.png" alt="">
+                        <p>Parece que não há nada por aqui <br>Que tal começar adicionando um item agora?</p>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <section class="s-t">
+        <h2 class="subtitle">
+            Habilidades & Passivas
+        </h2>
+    </section>
+
+    <section class="habilidades">
+        <div class="cnt-hab">
+
+            <form id="new-hab-form" autocomplete="off">
+
+                <div class="flex-hab">
+                    <div class="td-h">
+                        <div class="puts-h">
+                        <h1>Nome</h1>
+                        <input type="text" name="nan"
+                        id="nan" required>
+                        </div>
+                        <div class="puts-h">
+                        <h1>Descrição</h1>
+                        <textarea name="dd" id="dd" required></textarea>
+                        </div>
+                    </div>
+                    <div class="mg-td">
+                        <img src="/images/cards.png" alt="">
+                    </div>
+
+                </div>
+
+                <input id="new-hab" type="submit" value="Registrar">
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div id="nova-hab"></div>
+    </section>
+
+    <section class="s-t2 sbt">
+        <h2 class="subtitle">
+            Poderes
+        </h2>
+    </section>
+
+    <section>
+        <div id="newPower"></div>
+        <div id="newPower2"></div>
+
+        <div class="wppa">
+            <div id="newComum" class="icon twitter">
+                <div class="tooltip">
+                    Comum
+                </div>
+            <span><div class="das"><img src="/images/magic.png"></div></span>
+            </div>
+            <div id="newConquista" class="icon facebook">
+                <div class="tooltip">
+                    Conquistar
+                </div>
+            <span><div class="das"><img src="/images/magical.png"></div></span>
+            </div>
+        </div>
+
+        <div class="table-geral ct-table2">
+
+            <div class="lad">
+                
+                            <div class="i-geral">
+                                <div class="cn-img2"><div class="cn-cn4 cn3"><img src="/images/arma.png"></div>
+                                <div class="ca-g">
+                                    <h1>Perícias</h1>
+                                    <textarea id="textar1" spellcheck="false" placeholder="."></textarea>
+                                </div>
+                            </div>
+                            </div>
+                
+                
+                            <div class="i-geral">
+                                <div class="cn-img2"><div class="cn-cn4"><img src="/images/conversacao.png"></div>
+                                    <div class="ca-g">
+                                        <h1>Habilidades</h1>
+                                        <textarea id="textar0" spellcheck="false" placeholder="."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="i-geral">
+                                <div class="cn-img2"><div class="cn-cn4"><img src="/images/nom.png"></div>
+                                    <div class="ca-g">
+                                        <h1>Descrição</h1>
+                                        <textarea id="textar2" spellcheck="false" placeholder="."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+        </div>
+        
+    </section>
 
     <div id="modal-alert" class="modal-b">
         <div class="modal">
@@ -211,8 +1269,9 @@
     </div>
 
 	<!-- JS Import -->
-	<script src="/js/ficha.js"></script>
+	<script src="/js/players.js"></script>
     <script src="/js/dados.js"></script>
+
 
 </body>
 </html>
