@@ -3800,12 +3800,12 @@ window.addEventListener('load', (e) => {
 
 	const ag21 = document.querySelector('#ag21');
 
-	const pericia21 = localStorage.getItem('Enganar') || '0';
+	const pericia21 = localStorage.getItem('Diplomacia') || '0';
 
 	ag21.value = pericia21;
 
 	ag21.addEventListener('change', (e) => {
-		localStorage.setItem('Enganar', e.target.value);
+		localStorage.setItem('Diplomacia', e.target.value);
 	});
 
 	const ag22 = document.querySelector('#ag22');
