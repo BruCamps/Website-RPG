@@ -1760,7 +1760,6 @@ select::-ms-expand{
 .habs textarea {
 	width: 1000px;
 	resize: none;
-	word-break: break-all;
 	margin: 10px 0 0 10px;
 	border: none;
 	outline: none;
