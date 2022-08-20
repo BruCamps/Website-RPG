@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Importando Arquivo CSS -->
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/index.css">
     <!-- Importando Ícones do Iconscout CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
     <!-- Importando Ícones de FontAwesome -->
@@ -145,7 +146,7 @@
 
 
     <!-- Conteúdo da parte Geral -->
-    <section class="container geral__container" id="identificador2">
+    <section class="geral__container" id="identificador2">
 
         <!-- Container dos Títulos -->
         <div class="geral">
@@ -156,140 +157,80 @@
             <!-- Container do Título e Botões -->
             <h2>Menu Principal</h2>
 
+        </div>
 
-        <!-- Containers dos botões -->
-
-        <p class="carousel_button carousel_button--left">
-            <span class="prev control"><i class="uil uil-angle-left-b"></i></span>
-        </p>
-
-        <p class="carousel_button carousel_button--right">
-            <span class="next control"><i class="uil uil-angle-right-b"></i></span>
-        </p>
-
-
-        <!-- Container de Definição de Max-Width -->
-        <div class="wrapper">
-
-            <!-- Container do Carrossel -->
-            <div class="carrossel">
-
-                <!-- Item 1 -->
-                <a class="item current-item" href="#">
-
-                    <article class="g d1 item" data-body>
-
-                        <picture>
-                            <img class="skeleton" src="images/Combate.png">
-                        </picture>
-
-                        <div class="detail">
-                                <p>
-                                    <h4>Combate</h4>
-                                </p>
+        <div class="nananana">
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card d1 swiper-slide">
+                            <div class="image-content">
+                                <div class="card-image">
+                                    <img src="images/Combate.png" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Combate</h2>
+                            </div>
                         </div>
-
-                    </article>
-
-                </a>
-
-                <!-- Item 2 -->
-                <a class="item current-item d2">
-
-                    <article class="g d2">
-
-                        <picture>
-                            <img src="images/Ficha.png">
-                        </picture>
-
-                        <div class="detail">
-                                <p>
-                                    <h4>Ficha</h4>
-                                </p>
+                        <div class="card d2 swiper-slide">
+                            <div class="image-content">
+                                <div class="card-image">
+                                    <img src="images/Ficha.png" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Ficha</h2>
+                            </div>
                         </div>
-
-                    </article>
-
-                </a>
-
-                <!-- Item 3 -->
-                <a class="item current-item" href="#">
-
-                    <article class="g d3" data-body>
-
-                        <picture>
-                            <img src="images/Inventario.png">
-                        </picture>
-
-                        <div class="detail">
-                                <p>
-                                    <h4>Inventário</h4>
-                                </p>
+                        <div class="card d3 swiper-slide">
+                            <div class="image-content">
+                                <div class="card-image">
+                                    <img src="images/Inventario.png" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Inventário</h2>
+                            </div>
                         </div>
-
-                    </article>
-
-                </a>
-
-                <!-- Item 4 -->
-                <a class="item current-item" href="#">
-
-                    <article class="g d4" data-body>
-
-                        <picture>
-                            <img src="images/Magias.png">
-                        </picture>
-
-                        <div class="detail">
-                                <p>
-                                    <h4>Magias</h4>
-                                </p>
+                        <div class="card d4 swiper-slide">
+                            <div class="image-content">
+                                <div class="card-image">
+                                    <img src="images/Magias.png" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Magias</h2>
+                            </div>
                         </div>
-
-                    </article>
-
-                </a>
-
-                <!-- Item 5 -->
-                <a class="item current-item" href="funcoes/pericias.html">
-
-                    <article class="g d5" data-body>
-
-                        <picture>
-                            <img src="images/Pericias.png">
-                        </picture>
-
-                        <div class="detail">
-                                <p>
-                                    <h4>Perícias</h4>
-                                </p>
+                        <div class="card d5 swiper-slide">
+                            <div class="image-content">
+                                <div class="card-image">
+                                    <img src="images/Pericias.png" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Perícias</h2>
+                            </div>
                         </div>
-
-                    </article>
-
-                </a>
-
-                <!-- Item 6 -->
-                <a class="item current-item" href="funcoes/pericias.html">
-
-                    <article class="g d6" data-body>
-
-                        <picture>
-                            <img src="images/ddd.png">
-                        </picture>
-
-                        <div class="detail">
-                                <p>
-                                    <h4>Dados</h4>
-                                </p>
+                        <div class="card d6 swiper-slide">
+                            <div class="image-content">
+                                <div class="card-image">
+                                    <img src="images/ddd.png" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Dados</h2>
+                            </div>
                         </div>
-
-                    </article>
-                </a>
-
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
-        </div>
+
 
     </section>
 
@@ -352,7 +293,9 @@
 
 
     <!-- JS -->
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/script.js"></script>
 
 </body>
 

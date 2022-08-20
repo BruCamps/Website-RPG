@@ -11,8 +11,7 @@
 
         // Seta a Nav e adiciona um atributo para estilizá-la
         document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0);
-    })
-    
+    });
     
 
     // --------------------------------------------------------------------------------------
@@ -93,74 +92,6 @@
 
 
     // --------------------------------------------------------------------------------------
-    
-    // Carrossel Conteúdo Geral >>>>>>>>>>>>>>>>>>>>>>
-
-    // Seleciona os com a Class control
-    const controls = document.querySelectorAll(".control");
-
-    // Pega o container inicial -> inicio na lógica é 0
-    let currentItem = 0;
-
-    // Seleciona os com a Class item
-    const items = document.querySelectorAll(".item");
-
-    // Calcula quantos itens têm no carrossel
-    const maxItems = items.length;
-
-    controls.forEach((control) => {
-
-        // Função de Click nos botões
-        control.addEventListener("click", () => {
-
-            // Localiza a Class do botão da esquerda
-            const isLeft = control.classList.contains("prev");
-
-            // Passa a Const isLeft para definir quantas casas irá pular ou voltar
-            if (isLeft) {
-                
-                // Botão de Voltar
-                currentItem -= 1;
-            } else {
-
-                // Botão de Avançar
-                currentItem += 1;
-            }
-
-            // Volta para o primeiro quando chegar no último
-            if (currentItem === maxItems) {
-                currentItem = 0;
-                currentItem = currentItem + 1;        
-            }
-
-            // Volta para o último quando for o primeiro ao clicar no prev
-            if (currentItem === 0) {
-                currentItem = currentItem - 1;        
-            }
-            
-            // Faz o Loop e quando for o 1° vai para o último
-            if (currentItem < 0) {
-                currentItem = maxItems - 1;
-            }
-
-            // Remove a Class para os demais itens - os que não se sobressaem
-            items.forEach((item) => {
-                item.classList.remove("current-item")
-            });
-
-            // Adiciona scroll suave para o lado
-            items[currentItem].scrollIntoView({
-                behavior: "smooth",
-                inline: 'center',
-                block: 'nearest',
-            });
-            
-
-            // Adiciona a Class para os itens de cada vez
-            items[currentItem].classList.add("current-item");
-
-        });
-    });
 
     // Arquivo de Transição
 
@@ -267,5 +198,6 @@
             butt.disabled = true;
             butt.classList.remove("red");
         }
-    }); 
+    });
+    
         
