@@ -954,7 +954,7 @@ header {
     }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 540px) {
     .design {
         max-width: 75%;
         padding: 0 10px;
