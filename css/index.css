@@ -285,6 +285,9 @@ nav button {
     color: white;
 }
 
+.nav__menu.active {
+    right: 0;
+}
 
 /* Header */
 
@@ -806,14 +809,48 @@ header {
     display: none;
 }
 
+#close-menu-btn {
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+    display: flex;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.nanas {
+    animation: nanas 1s ease;
+} 
 
 @media screen and (max-width: 980px) {
+    .logo {
+        width: 10rem;
+    }
     #open-menu-btn {
         display: flex;
         cursor: pointer;
         background: transparent;
         color: white;
         font-size: 1.4rem;
+    }
+    .personl {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(to right bottom, #202025, #090a0d);
+        top: 0px;
+        max-width: 350px;
+        padding: 80px 50px;
+        transition: all 0.8s linear;
+        display: none;
+    }
+    .personl li {
+        margin-right: 10rem;
+    }
+    .personl li a:hover {
+        color: #747373;
     }
     .nav__menu {
         display: none;
@@ -952,6 +989,36 @@ header {
         margin: 3rem 1.5rem 0 1.5rem;
         transition: 0.5s ease-in-out;
     }
+}
+
+.closs {
+    animation: closs 1s ease;
+}
+
+@keyframes closs {
+    0% {
+		opacity: 1;
+		transform: translate(0, 0);
+        transform-origin: left;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(50px, 0);
+        transform-origin: left;
+	}
+}
+
+@keyframes nanas {
+    0% {
+		opacity: 0;
+		transform: translate(50px, 0);
+        transform-origin: right;
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+        transform-origin: right;
+	}
 }
 
 @media screen and (max-width: 550px) {

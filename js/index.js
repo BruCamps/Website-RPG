@@ -72,22 +72,60 @@
     // Seleciona o item com o Id close-menu-btn
     const closeBtn = document.querySelector("#close-menu-btn");
 
+    closeBtn.style.display = 'none';
+
     // Passa a função que define como o ícone de abertura estará na tela
-    // menuBtn.addEventListener('click', () => {
-    //     menu.style.display = 'flex';
-    //     closeBtn.style.display = 'inline-block';
-    //     menuBtn.style.display = 'none';
-    // })
+    menuBtn.addEventListener('click', () => {
+        menu.style.display = 'flex';
+        menu.classList.remove('closs');
+        menu.classList.add('active', 'personl', 'nanas');
+        menu.style.flexDirection = 'column';
+        closeBtn.style.display = 'inline-block';
+        menuBtn.style.display = 'none';
+    })
 
     // Passa a função que define como o ícone de fechamento estará na tela
-    // const closeNav = () => {
-    //     menu.style.display = 'none';
-    //     closeBtn.style.display = 'none';
-    //     menuBtn.style.display = 'inline-block';
-    // }
+    const closeNav = () => {
+        menu.style.display = 'none';
+        closeBtn.style.display = 'none';
+        menuBtn.style.display = 'inline-block';
+    }
+
+    const menuli = document.querySelector(".nav__menu .nav1");
+    const menuli2 = document.querySelector(".nav__menu .nav2");
+    const menuli3 = document.querySelector(".nav__menu .nav3");
+    const menuli4 = document.querySelector(".nav__menu .nav4");
+
+    menuli.addEventListener('click', () => {
+        menu.classList.add('closs');
+        menu.style.display = 'none';
+        closeBtn.style.display = 'none';
+        menuBtn.style.display = 'inline-block';
+    });
+
+    menuli2.addEventListener('click', () => {
+        menu.classList.add('closs');
+        menu.style.display = 'none';
+        closeBtn.style.display = 'none';
+        menuBtn.style.display = 'inline-block';
+    });
+
+    menuli3.addEventListener('click', () => {
+        menu.classList.add('closs');
+        menu.style.display = 'none';
+        closeBtn.style.display = 'none';
+        menuBtn.style.display = 'inline-block';
+    });
+
+    menuli4.addEventListener('click', () => {
+        menu.classList.add('closs');
+        menu.style.display = 'none';
+        closeBtn.style.display = 'none';
+        menuBtn.style.display = 'inline-block';
+    });
 
     // Executa a Função
-    // closeBtn.addEventListener('click', closeNav);
+    closeBtn.addEventListener('click', closeNav);
 
 
 

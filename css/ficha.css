@@ -2748,6 +2748,10 @@ input:checked ~ .bubble::after {
 		height: 45px;
 	}
 
+	.msg-mg {
+        width: 28rem;
+    }
+
 	.mg-td img  {	
 		display: none;
 	}

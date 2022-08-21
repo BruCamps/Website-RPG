@@ -135,6 +135,12 @@ iframe {
     transform: scale(1.1);
 }
 
+@media screen and (max-width: 550px) {
+    .social p {
+        font-size: 3rem;
+    }
+}
+
 @media screen and (max-width: 640px) {
     h1 {
         font-size: 22px;

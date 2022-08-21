@@ -4476,14 +4476,18 @@ window.addEventListener('load', (e) => {
 
 					if(rand100 > n6){
 						text12.innerHTML = "Falha";
-					} else if (rand100 >= 90){
+					} 
+					
+					if (rand100 >= 90){
 						text12.innerHTML = "Desastre";
 					}
 
 					if(rand100 <= n6){
 						text12.innerHTML = "Sucesso";
 						profs++;
-					} else if(rand100 <= 10){
+					}
+					
+					if(rand100 <= 10){
 						text12.innerHTML = "Extremo";
 						profs++;
 					}
@@ -4929,14 +4933,18 @@ window.addEventListener('load', (e) => {
 
 					if(rand100b > n3b){
 						text12b.innerHTML = "Falha";
-					} else if (rand100b >= 90){
+					} 
+					
+					if (rand100b >= 90){
 						text12b.innerHTML = "Desastre";
 					}
 
 					if(rand100b <= n3b){
 						text12b.innerHTML = "Sucesso";
 						profsb++;
-					} else if(rand100b <= 10){
+					} 
+					
+					if(rand100b <= 10){
 						text12b.innerHTML = "Extremo";
 						profsb++;
 					}
